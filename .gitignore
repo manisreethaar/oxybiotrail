@@ -1,0 +1,30 @@
+# System & Deps
+node_modules/
+dist/
+.env
+$RECYCLE.BIN/
+System Volume Information/
+
+# Media
+*.mkv
+*.mp4
+*.avi
+*.mov
+
+# Junk Folders (Root Drive debris)
+101_PANA/
+102_PANA/
+CS/
+E CONTENT/
+JUDY/
+New folder*/
+PDF/
+confernce 2024/
+
+# Junk Files
+Bonafide*.png
+Password*.txt
+*.xls
+*.xlsx
+*.doc
+*.docx

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Gen Z Light Mode Base */
+    --background: 270 50% 98%;
+    --foreground: 240 10% 3.9%;
+
+    /* Bio-Tech Mesh Pattern */
+    background-color: hsl(var(--background));
+    background-image:
+      radial-gradient(circle at center, hsla(var(--primary) / 0.15) 1px, transparent 1px),
+      radial-gradient(circle at center, hsla(var(--primary) / 0.05) 1px, transparent 1px);
+    background-size: 32px 32px, 16px 16px;
+    background-position: 0 0, 8px 8px;
+
+    /* Cards - White with style */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    /* Popovers */
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    /* Primary: Electric Violet/Indigo - High Energy */
+    --primary: 265 89% 66%;
+    /* #9d4edd - Vibrant Purple */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Soft but colorful - Lavender */
+    --secondary: 260 60% 96%;
+    --secondary-foreground: 265 89% 66%;
+
+    /* Muted */
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    /* Accent: Hot Pink / Solar Orange (Gradients prefered) */
+    --accent: 320 90% 64%;
+    /* #ec4899 - Pink */
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders */
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 265 89% 66%;
+
+    --radius: 1rem;
+    /* Rounded corners for friendly vibe */
+  }
+
+  .dark {
+    /* Keep compatible for now, but focus is on light */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 265 89% 66%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 320 90% 64%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    /* Vibrant Mesh Gradient */
+    background-image:
+      radial-gradient(at 0% 0%, hsla(265, 89%, 66%, 0.25) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(320, 90%, 64%, 0.25) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(180, 80%, 60%, 0.2) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(265, 89%, 66%, 0.25) 0px, transparent 50%);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Outfit', sans-serif;
+    @apply tracking-tight font-bold text-gray-900;
+  }
+}
+
+@layer components {
+  .container-width {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground font-medium px-6 py-3 rounded-full hover:bg-primary/90 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 active:scale-95;
+  }
+
+  .glass-card {
+    @apply bg-white/40 backdrop-blur-xl border border-white/60 shadow-xl rounded-2xl md:rounded-3xl transition-all duration-300 hover:shadow-2xl hover:bg-white/50 hover:-translate-y-1;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-32;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-purple-500 to-accent bg-clip-text text-transparent;
+  }
+
+  .blob {
+    @apply absolute blur-3xl opacity-30 pointer-events-none rounded-full mix-blend-multiply;
+  }
+}
