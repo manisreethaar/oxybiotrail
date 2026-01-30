@@ -18,7 +18,7 @@ export function OverviewSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Commercial Production */}
-          <div className="glass-card p-8 hover-lift group">
+          <div className="glass-card p-6 md:p-8 hover-lift group">
             <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
               <TrendingUp size={28} className="text-primary" />
             </div>
@@ -46,7 +46,7 @@ export function OverviewSection() {
           </div>
 
           {/* Research & Innovation */}
-          <div className="glass-card p-8 hover-lift group">
+          <div className="glass-card p-6 md:p-8 hover-lift group">
             <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
               <Beaker size={28} className="text-accent" />
             </div>

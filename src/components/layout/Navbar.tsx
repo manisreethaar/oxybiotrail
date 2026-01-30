@@ -226,7 +226,7 @@ export function Navbar() {
                           to={child.path}
                           onClick={() => setIsOpen(false)}
                           className={cn(
-                            'block px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300',
+                            'block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300',
                             location.pathname === child.path
                               ? 'text-primary bg-primary/5'
                               : 'text-slate-500 hover:text-primary hover:bg-slate-50'

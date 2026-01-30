@@ -53,8 +53,8 @@ export function FeaturedProducts() {
                             of consumer products designed for your daily life.
                         </p>
                     </div>
-                    <Button variant="outline" className="shrink-0" asChild>
-                        <Link to="/products" className="group">
+                    <Button variant="outline" className="shrink-0 w-full md:w-auto" asChild>
+                        <Link to="/products" className="group flex items-center justify-center">
                             Shop All Products
                             <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                         </Link>
