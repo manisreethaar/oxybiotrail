@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden py-20">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden py-12 md:py-20">
       {/* Background Effects - Toned Down */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 mix-blend-multiply animate-pulse-slow" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2 mix-blend-multiply animate-pulse-slow" style={{ animationDelay: '2s' }} />
@@ -32,19 +32,19 @@ export function HeroSection() {
             <span className="text-sm font-semibold text-primary tracking-wide uppercase">Precision Biology</span>
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-display font-extrabold leading-none mb-8 animate-fade-in tracking-tighter text-foreground relative" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-display font-extrabold leading-none mb-6 md:mb-8 animate-fade-in tracking-tighter text-foreground relative" style={{ animationDelay: '0.1s' }}>
             Nature's Blueprint.
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-accent">Perfected by Science.</span>
           </h1>
 
           {/* Tagline */}
-          <p className="text-2xl md:text-3xl font-display font-bold mb-8 animate-fade-in text-slate-800" style={{ animationDelay: '0.15s' }}>
+          <p className="text-xl md:text-3xl font-display font-bold mb-6 md:mb-8 animate-fade-in text-slate-800" style={{ animationDelay: '0.15s' }}>
             Innovate. Engage. Transform.
           </p>
 
           {/* Purpose Statement */}
-          <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-12 animate-fade-in leading-relaxed font-medium" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg md:text-2xl text-slate-600 max-w-3xl mx-auto mb-8 md:mb-12 animate-fade-in leading-relaxed font-medium" style={{ animationDelay: '0.2s' }}>
             We continuously innovate to bring you high-performance biocosmetic
             and functional foods that are <span className="text-primary font-bold">good for you</span> and the <span className="text-accent font-bold">planet</span>.
           </p>
