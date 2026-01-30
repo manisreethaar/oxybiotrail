@@ -5,9 +5,9 @@ import { Button } from '@/components/ui/button';
 export function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden py-20">
-      {/* Background Effects - Enhanced for vibrancy */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 mix-blend-multiply animate-pulse-slow" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent/20 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2 mix-blend-multiply animate-pulse-slow" style={{ animationDelay: '2s' }} />
+      {/* Background Effects - Toned Down */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 mix-blend-multiply animate-pulse-slow" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2 mix-blend-multiply animate-pulse-slow" style={{ animationDelay: '2s' }} />
 
       {/* Floating Elements - More opacity and playful */}
       <div className="absolute top-1/3 right-[15%] animate-float opacity-60 mix-blend-multiply">
@@ -23,8 +23,8 @@ export function HeroSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
 
-          {/* Giant Text Blob */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-r from-primary/10 via-purple-500/10 to-accent/10 blur-[80px] rounded-full pointer-events-none -z-10" />
+          {/* Giant Text Blob - Subtle */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-r from-primary/5 via-purple-500/5 to-accent/5 blur-[80px] rounded-full pointer-events-none -z-10" />
 
           {/* Company Name */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 backdrop-blur-md border border-white/60 shadow-sm mb-8 animate-fade-in">
@@ -32,10 +32,10 @@ export function HeroSection() {
             <span className="text-sm font-semibold text-primary tracking-wide uppercase">Precision Biology</span>
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-display font-extrabold leading-none mb-8 animate-fade-in tracking-tighter text-foreground drop-shadow-sm relative" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-6xl md:text-8xl font-display font-extrabold leading-none mb-8 animate-fade-in tracking-tighter text-foreground relative" style={{ animationDelay: '0.1s' }}>
             Nature's Blueprint.
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-accent drop-shadow-sm">Perfected by Science.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-accent">Perfected by Science.</span>
           </h1>
 
           {/* Tagline */}

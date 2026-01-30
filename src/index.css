@@ -93,12 +93,12 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
-    /* Vibrant Mesh Gradient */
+    /* Vibrant Mesh Gradient - Toned Down */
     background-image:
-      radial-gradient(at 0% 0%, hsla(265, 89%, 66%, 0.25) 0px, transparent 50%),
-      radial-gradient(at 100% 0%, hsla(320, 90%, 64%, 0.25) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, hsla(180, 80%, 60%, 0.2) 0px, transparent 50%),
-      radial-gradient(at 0% 100%, hsla(265, 89%, 66%, 0.25) 0px, transparent 50%);
+      radial-gradient(at 0% 0%, hsla(265, 89%, 66%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(320, 90%, 64%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(180, 80%, 60%, 0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(265, 89%, 66%, 0.15) 0px, transparent 50%);
     background-attachment: fixed;
     background-size: 100% 100%;
   }
