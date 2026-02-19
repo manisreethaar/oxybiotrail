@@ -16,7 +16,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed mb-4">
-              Pioneering sustainable solutions through microbial research and bio-engineering.
+              India's first honest precision nutrition system. Built on millet, mushrooms, and real science.
             </p>
 
             <div className="pt-2">
@@ -41,23 +41,22 @@ export function Footer() {
           <div>
             <h3 className="font-bold mb-4 font-display text-foreground text-lg">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link to="/innovations" className="hover:text-primary transition-colors">Innovations</Link></li>
-              <li><Link to="/science" className="hover:text-primary transition-colors">Technology</Link></li>
-              <li><Link to="/careers" className="hover:text-primary transition-colors">Careers</Link></li>
-              <li><Link to="/team" className="hover:text-primary transition-colors">Team</Link></li>
+              <li><Link to="/about" className="hover:text-primary transition-colors">Our Story</Link></li>
+              <li><Link to="/problem" className="hover:text-primary transition-colors">Our Science</Link></li>
+              <li><Link to="/ingredients" className="hover:text-primary transition-colors">Ingredients</Link></li>
+              <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
             </ul>
           </div>
 
           {/* Support */}
           <div>
-            <h3 className="font-bold mb-4 font-display text-slate-900">Support</h3>
+            <h3 className="font-bold mb-4 font-display text-slate-900">Get In Touch</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/contact" className="hover:text-primary transition-colors">Contact</Link>
+                <Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link>
               </li>
               <li>
-                <Link to="/partner" className="hover:text-primary transition-colors">Partner With Us</Link>
+                <Link to="/careers" className="hover:text-primary transition-colors">Careers</Link>
               </li>
             </ul>
           </div>
