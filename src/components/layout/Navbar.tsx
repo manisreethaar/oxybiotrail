@@ -8,7 +8,7 @@ import { useAuth } from "@/context/AuthContext";
 
 const navLinks = [
   { name: 'Our Science', path: '/problem', icon: FlaskConical },
-  { name: 'Ingredients', path: '/#ingredients', icon: Leaf },
+  { name: 'Ingredients', path: '/ingredients', icon: Leaf },
   { name: 'Our Story', path: '/about', icon: Users },
   { name: 'Blog', path: '/blog', icon: BookOpen },
 ];
