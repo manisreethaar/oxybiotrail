@@ -3,6 +3,7 @@ import { ArrowRight, Leaf, ShieldCheck, Microscope, Dna, FlaskConical, Network }
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import { WaitlistForm } from '@/components/WaitlistForm';
 
 const Index = () => {
   return (
@@ -44,7 +45,7 @@ const Index = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed font-light"
+              className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed font-light mb-8"
             >
               Junior research initiative investigating the <strong>Gut-Skin Axis</strong>.
               We engineer indigenous probiotic strains into bio-active solutions for wellness and cosmetics.
@@ -54,18 +55,19 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-5 justify-center pt-8"
+              className="flex flex-col items-center gap-6 pt-4"
             >
-              <Button size="lg" variant="default" className="rounded-full text-lg h-14 px-10 shadow-lg shadow-primary/10" asChild>
-                <Link to="/innovations">
-                  Pipeline Status <Network className="ml-2 w-4 h-4" />
+              <WaitlistForm variant="hero" />
+
+              <div className="flex gap-4 text-sm text-slate-500">
+                <Link to="/about" className="hover:text-primary underline underline-offset-4 transition-colors">
+                  Read Our Story
                 </Link>
-              </Button>
-              <Button size="lg" variant="ghost" className="rounded-full text-lg h-14 px-10 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600" asChild>
-                <Link to="/about">
-                  Our Mission <ArrowRight className="ml-2 w-4 h-4" />
+                <span>•</span>
+                <Link to="/partner" className="hover:text-primary underline underline-offset-4 transition-colors">
+                  Research Partnership
                 </Link>
-              </Button>
+              </div>
             </motion.div>
           </div>
         </div>

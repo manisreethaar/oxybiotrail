@@ -1,6 +1,6 @@
 
 import { Layout } from '@/components/layout/Layout';
-import { Target, Lightbulb, Heart, Globe, Building2, Microscope, Award } from 'lucide-react';
+import { Target, Lightbulb, Heart, Globe, Building2, Microscope, Award, User } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { GrantBadge } from '@/components/GrantBadge';
 
@@ -18,8 +18,8 @@ const About = () => {
             >
               <GrantBadge label="Est. 2026" className="mb-6 mx-auto" />
               <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight">
-                Bridging the Gap Between <br />
-                <span className="gradient-text">Agriculture & Wellness</span>
+                Rooted in India. <br />
+                <span className="gradient-text">Engineered for the World.</span>
               </h1>
             </motion.div>
 
@@ -29,8 +29,7 @@ const About = () => {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="text-xl text-muted-foreground leading-relaxed"
             >
-              We are tackling two critical global challenges: <strong>Agricultural Waste</strong> and <strong>Nutritional Deficiency</strong>.
-              By upcycling nutrient-rich by-products, we create sustainable solutions for a healthier planet and a healthier you.
+              Oxygen BioInnovations was born from a simple observation: <strong>India is maximizing crop production but minimizing nutrient retention.</strong> We set out to change this by building a bridge between agricultural abundance and human wellness.
             </motion.p>
           </div>
         </div>
@@ -110,6 +109,30 @@ const About = () => {
                   <span className="font-bold text-foreground">{value.label}</span>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row gap-10 items-center">
+              <div className="md:w-1/3">
+                <div className="aspect-square rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center border border-slate-200">
+                  <User size={64} className="text-slate-300" />
+                </div>
+              </div>
+              <div className="md:w-2/3 space-y-6">
+                <h2 className="text-3xl font-display font-bold">The Genesis</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  "During my research at Adhiyamaan College, I realized that the most potent bioactive compounds were being discarded as waste. It wasn't just an efficiency problem; it was a missed opportunity for affordable nutrition."
+                </p>
+                <div>
+                  <h4 className="font-bold text-foreground">Manisreethaar</h4>
+                  <p className="text-sm text-muted-foreground">Founder & Lead Researcher</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

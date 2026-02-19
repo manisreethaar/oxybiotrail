@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { WaitlistForm } from "@/components/WaitlistForm";
 
 export function Footer() {
   return (
@@ -16,12 +17,14 @@ export function Footer() {
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed mb-4">
               Pioneering sustainable solutions through microbial research and bio-engineering.
-              Creating a cleaner future, one molecule at a time.
             </p>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-600">
-              <span>🇮🇳</span> Made for the Future in India
+
+            <div className="pt-2">
+              <p className="text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">Join the Waitlist</p>
+              <WaitlistForm variant="footer" />
             </div>
-            <div className="flex gap-4">
+
+            <div className="flex gap-4 pt-4">
               <a href="#" className="p-2 rounded-full bg-white shadow-sm hover:shadow-md hover:text-primary transition-all border border-slate-100">
                 <Linkedin size={18} />
               </a>

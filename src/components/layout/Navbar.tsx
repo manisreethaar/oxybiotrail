@@ -1,18 +1,18 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, TestTube, Factory, Calendar, Users, Home, FlaskConical, GraduationCap } from 'lucide-react';
+import { Menu, X, TestTube, Factory, Calendar, Users, Home, FlaskConical, GraduationCap, Target, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useAuth } from "@/context/AuthContext";
 
 const navLinks = [
-  { name: 'About', path: '/about', icon: Home },
   { name: 'Home', path: '/', icon: Home },
-  { name: 'Roadmap', path: '/roadmap', icon: Calendar },
+  { name: 'The Problem', path: '/problem', icon: Target },
   { name: 'Innovations', path: '/innovations', icon: FlaskConical },
+  { name: 'Blog', path: '/blog', icon: BookOpen },
+  { name: 'Our Story', path: '/about', icon: Users },
   { name: 'Careers', path: '/careers', icon: GraduationCap },
-  { name: 'Team', path: '/team', icon: Users },
 ];
 
 export function Navbar() {
