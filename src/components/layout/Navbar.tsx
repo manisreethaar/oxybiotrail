@@ -52,11 +52,11 @@ export function Navbar() {
               </div>
             </div>
             <div className="flex flex-col justify-center">
-              <span className="text-xl font-bold font-display text-foreground tracking-tight leading-none">
-                Bio<span className="text-primary">Start</span>
+              <span className="text-lg font-bold font-display text-foreground tracking-tight leading-none">
+                Oxygen <span className="text-primary">BioInnovations</span>
               </span>
               <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-medium">
-                Innovations
+                Bridging Nature & Science
               </span>
             </div>
           </Link>

@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import About from "./pages/About";
 import Science from "./pages/Science";
 import Roadmap from "./pages/Roadmap";
 import Products from "./pages/products/Products";
@@ -30,6 +31,7 @@ const App = () => (
             {/* Navbar is handled within each page's Layout component to avoid duplication */}
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
               <Route path="/science" element={<Science />} />
               <Route path="/roadmap" element={<Roadmap />} />
               <Route path="/innovations" element={<Products />} />

@@ -9,63 +9,61 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Background blobs */}
-        <motion.div
-          animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -z-10"
-        />
-        <motion.div
-          animate={{ scale: [1, 1.3, 1], rotate: [0, -60, 0] }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-[100px] -z-10"
-        />
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+        {/* Background blobs - Toned down for professionalism */}
+        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -z-10" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-[120px] -z-10" />
 
-        <div className="container-width text-center z-10">
-          <div className="space-y-6 max-w-4xl mx-auto">
+        <div className="container-width text-center z-10 px-4">
+          <div className="space-y-8 max-w-5xl mx-auto">
+
+            {/* Credibility Badge (Top Priority) */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
+              className="inline-flex items-center gap-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md px-6 py-2 rounded-full border border-slate-200 shadow-sm mx-auto"
             >
-              <GrantBadge label="Launching April 2026" type="award" className="text-lg py-1 px-4 mb-4" />
+              <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+              <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
+                Incubated at <strong>TBI, Adhiyamaan College of Engineering</strong>
+              </span>
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-6xl md:text-8xl font-bold tracking-tight"
+              className="text-5xl md:text-7xl font-bold tracking-tight font-display text-slate-900 dark:text-white leading-tight"
             >
-              Innovating <span className="gradient-text">Nature</span> <br />
-              For Future Wellness
+              Transforming <span className="gradient-text">Agricultural Waste</span> <br />
+              into Bio-Wellness Solutions
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+              className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed font-light"
             >
-              Pioneering bio-fermented cosmetics and functional probiotic foods.
-              Bridging the gap between ancient wisdom and modern biotechnology.
+              We engineer advanced microbial fermentation processes to extract high-value
+              nutraceuticals and cosmeceuticals from indigenous biological resources.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center pt-8"
+              className="flex flex-col sm:flex-row gap-5 justify-center pt-8"
             >
-              <Button size="lg" className="rounded-full text-lg h-14 px-8 btn-primary" asChild>
-                <Link to="/science">
-                  Our Technology <Microscope className="ml-2 w-5 h-5" />
+              <Button size="lg" className="rounded-full text-lg h-14 px-10 btn-primary shadow-lg shadow-primary/20" asChild>
+                <Link to="/innovations">
+                  View R&D Pipeline <Microscope className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="rounded-full text-lg h-14 px-8 bg-white/50 border-slate-200 hover:bg-white" asChild>
-                <Link to="/roadmap">
-                  View Roadmap <ArrowRight className="ml-2 w-5 h-5" />
+              <Button size="lg" variant="outline" className="rounded-full text-lg h-14 px-10 border-slate-300 hover:bg-slate-50 text-slate-700" asChild>
+                <Link to="/about">
+                  Our Vision <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
             </motion.div>
