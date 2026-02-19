@@ -27,6 +27,62 @@ const About = () => {
         </div>
       </section>
 
+      {/* ─── THE VISION — Full-height cinematic statement ─── */}
+      <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-[#0f2419]">
+        {/* Subtle grain texture */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%270 0 256 256%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cfilter id=%27noise%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%270.8%27 numOctaves=%274%27 stitchTiles=%27stitch%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23noise)%27/%3E%3C/svg%3E")' }} />
+        <div className="container-width px-4 py-20 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <motion.span
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-[10px] font-bold uppercase tracking-[0.3em] text-emerald-400/60 block mb-8 text-center"
+            >
+              Our Vision
+            </motion.span>
+            <div className="text-center space-y-3">
+              {[
+                'An India where nutritional deficiency',
+                'is no longer a silent barrier to human potential —',
+                '',
+                'where a working professional in Chennai,',
+                'a student in Pune,',
+                'and an athlete in Delhi',
+                '',
+                'all have access to precision nutrition',
+                'that matches the scientific standard',
+                'of the world\'s best products,',
+                '',
+                'built from India\'s own',
+                'ancient ingredient wisdom.',
+              ].map((line, i) => (
+                <motion.p
+                  key={i}
+                  initial={{ opacity: 0, y: 8 }}
+                  whileInView={{ opacity: line ? 1 : 0, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.2, duration: 0.6 }}
+                  className={`font-display ${line ? 'text-2xl md:text-3xl lg:text-4xl font-bold text-white/90 leading-snug' : 'h-4'
+                    }`}
+                >
+                  {line || '\u00A0'}
+                </motion.p>
+              ))}
+            </div>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 3 }}
+              className="text-center mt-12 text-sm text-emerald-400/50 tracking-widest uppercase"
+            >
+              This is what we are building toward.
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
       {/* ─── CHAPTER 1: THE OBSERVATION ─── */}
       <ChapterSection
         number="01"

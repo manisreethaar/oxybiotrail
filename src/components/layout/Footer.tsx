@@ -15,6 +15,7 @@ export function Footer() {
                 Oxygen <span className="text-primary">BioInnovations</span>
               </span>
             </Link>
+            <p className="text-xs text-slate-400 italic">Precision nutrition for every ambitious Indian.</p>
             <p className="text-slate-500 text-sm leading-relaxed mb-4">
               India's first honest precision nutrition system. Built on millet, mushrooms, and real science.
             </p>
