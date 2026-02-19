@@ -1,168 +1,176 @@
+
 import { Layout } from '@/components/layout/Layout';
-import { Target, Lightbulb, Heart, Globe } from 'lucide-react';
+import { Target, Lightbulb, Heart, Globe, Building2, Microscope, Award } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { GrantBadge } from '@/components/GrantBadge';
 
 const About = () => {
   return (
     <Layout>
-      {/* Hero */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      {/* Hero Section: The Problem & The Pivot */}
+      <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="container mx-auto px-4">
-          {/* Header Section */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12 animate-fade-in">
-            {/* Logo */}
-            <div className="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0 flex items-center justify-center bg-white rounded-full shadow-lg hover-lift overflow-hidden p-1">
-              <img src="/logo.png" alt="Oxygen BioInnovations Logo" className="w-full h-full object-contain scale-110" />
-            </div>
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <GrantBadge label="Est. 2026" className="mb-6 mx-auto" />
+              <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight">
+                Bridging the Gap Between <br />
+                <span className="gradient-text">Agriculture & Wellness</span>
+              </h1>
+            </motion.div>
 
-            {/* Text */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-center md:text-left">
-              About <span className="gradient-text whitespace-nowrap">Oxygen BioInnovations</span>
-            </h1>
-          </div>
-
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Building a sustainable biotechnology enterprise through innovation,
-              indigenous resources, and responsible manufacturing.
-            </p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="text-xl text-muted-foreground leading-relaxed"
+            >
+              We are tackling two critical global challenges: <strong>Agricultural Waste</strong> and <strong>Nutritional Deficiency</strong>.
+              By upcycling nutrient-rich by-products, we create sustainable solutions for a healthier planet and a healthier you.
+            </motion.p>
           </div>
         </div>
       </section>
 
-      {/* Our Purpose & Identity - Consolidated Flow */}
-      <section className="py-12 relative overflow-hidden">
-        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
-        <div className="container mx-auto px-4 relative z-10 space-y-24">
-
-          {/* Who We Are */}
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="flex-1 space-y-6">
-              <h2 className="text-3xl md:text-4xl font-display font-bold">
-                Who We <span className="gradient-text">Are</span>
-              </h2>
-              <div className="glass-card p-8 border-l-4 border-l-primary">
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Oxygen Bioinnovations Private Limited is an early-stage biotechnology startup
-                  focused on sustainable product development using indigenous biological resources
-                  and advanced biotechnology approaches. Based in Tamil Nadu, India, we are committed
-                  to transforming local biological wealth into globally competitive products.
-                </p>
-              </div>
-            </div>
-            <div className="flex-1 flex justify-center">
-              <div className="w-full max-w-sm aspect-square bg-gradient-to-br from-primary/10 to-purple-100 rounded-3xl flex items-center justify-center shadow-inner relative overflow-hidden group">
-                <Globe size={120} className="text-primary/20 group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-white/40 blur-xl"></div>
-                <Globe size={80} className="text-primary relative z-10" />
-              </div>
-            </div>
-          </div>
-
-          {/* Vision - Reversed */}
-          <div className="flex flex-col md:flex-row-reverse items-center gap-12">
-            <div className="flex-1 space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-                  <Target size={24} className="text-accent" />
-                </div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold">
-                  Our <span className="text-accent">Vision</span>
-                </h2>
-              </div>
-              <p className="text-lg text-slate-700 leading-relaxed font-medium">
-                "To build a sustainable and innovation-driven biotechnology enterprise that transforms indigenous biological resources into globally competitive products."
-              </p>
-              <ul className="space-y-4">
-                {[
-                  'Advanced Biotechnology Approaches',
-                  'Circular Bioeconomy Principles',
-                  'Responsible Manufacturing'
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-accent" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="flex-1 flex justify-center">
-              <div className="glass-card p-8 w-full max-w-md hover-lift">
-                <div className="space-y-4">
-                  <div className="h-2 w-20 bg-accent/20 rounded-full" />
-                  <h3 className="text-xl font-bold text-foreground">Future Focused</h3>
-                  <p className="text-sm text-muted-foreground">Creating a legacy of sustainability for generations to come through science-backed innovation.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Mission */}
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="flex-1 space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Lightbulb size={24} className="text-primary" />
-                </div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold">
-                  Our <span className="gradient-text">Mission</span>
-                </h2>
-              </div>
-              <div className="grid grid-cols-1 gap-4">
-                {[
-                  { title: 'Commercial', desc: 'Develop safe, natural sustainable products.' },
-                  { title: 'Innovation', desc: 'Strengthen indigenous biotech research.' },
-                  { title: 'Impact', desc: 'Create environmental & social value.' }
-                ].map((m) => (
-                  <div key={m.title} className="flex gap-4 p-4 rounded-xl bg-white/40 hover:bg-white/60 transition-colors border border-white/40">
-                    <div className="w-1 h-full bg-gradient-to-b from-primary to-accent rounded-full" />
-                    <div>
-                      <h4 className="font-semibold text-foreground">{m.title}</h4>
-                      <p className="text-sm text-muted-foreground">{m.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="flex-1 flex justify-center">
-              {/* Abstract visual for Mission */}
-              <div className="relative w-full max-w-sm">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-accent/20 rounded-full blur-2xl" />
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
-                <div className="glass-card p-8 relative z-10 flex flex-col gap-6">
-                  <span className="text-6xl font-display font-bold text-primary/10 absolute top-4 right-4">03</span>
-                  <h3 className="text-2xl font-bold">Core Pillars</h3>
-                  <div className="space-y-3">
-                    <div className="h-10 w-full bg-primary/5 rounded-lg flex items-center px-4 text-sm font-medium text-primary">Sustainability</div>
-                    <div className="h-10 w-full bg-accent/5 rounded-lg flex items-center px-4 text-sm font-medium text-accent">Innovation</div>
-                    <div className="h-10 w-full bg-purple-500/5 rounded-lg flex items-center px-4 text-sm font-medium text-purple-600">Community</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="py-12 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
+      {/* Strategic Core: Vision, Mission, Values */}
+      <section className="py-20 bg-slate-50/50 dark:bg-slate-900/20 relative">
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-3xl font-display font-bold text-center mb-12">
-            Our <span className="gradient-text">Core Values</span>
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {[
-              { icon: Globe, label: 'Sustainability' },
-              { icon: Lightbulb, label: 'Innovation' },
-              { icon: Target, label: 'Credibility' },
-              { icon: Heart, label: 'Responsibility' },
-            ].map((value) => (
-              <div key={value.label} className="glass-card p-6 text-center hover-lift">
-                <value.icon size={32} className="text-primary mx-auto mb-4" />
-                <span className="text-sm font-medium text-foreground">{value.label}</span>
+
+          {/* Vision & Mission Grid */}
+          <div className="grid md:grid-cols-2 gap-12 mb-20">
+            {/* Vision */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="glass-card p-10 rounded-3xl border-t-4 border-t-primary"
+            >
+              <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
+                <Target size={32} />
               </div>
-            ))}
+              <h2 className="text-3xl font-display font-bold mb-4">Our Vision</h2>
+              <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed italic">
+                "To be a global leader in the circular bio-economy, transforming indigenous biological resources into world-class sustainable products."
+              </p>
+            </motion.div>
+
+            {/* Mission */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="glass-card p-10 rounded-3xl border-t-4 border-t-accent"
+            >
+              <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 text-accent">
+                <Lightbulb size={32} />
+              </div>
+              <h2 className="text-3xl font-display font-bold mb-4">Our Mission</h2>
+              <ul className="space-y-4 text-lg text-slate-600 dark:text-slate-300">
+                <li className="flex items-start gap-3">
+                  <span className="mt-2 w-2 h-2 rounded-full bg-accent shrink-0" />
+                  <span><strong>Democratize Nutrition:</strong> Make high-quality protein and probiotics accessible to all.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-2 w-2 h-2 rounded-full bg-accent shrink-0" />
+                  <span><strong>Minimize Waste:</strong> Utilize 100% of raw materials through upcycling.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-2 w-2 h-2 rounded-full bg-accent shrink-0" />
+                  <span><strong>Empower Farmers:</strong> Create new revenue streams from agricultural waste.</span>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+
+          {/* Core Values */}
+          <div className="text-center max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold mb-12">Driven by Core Values</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                { icon: Globe, label: 'Sustainability', color: 'text-green-500', bg: 'bg-green-50' },
+                { icon: Microscope, label: 'Innovation', color: 'text-blue-500', bg: 'bg-blue-50' },
+                { icon: Award, label: 'Integrity', color: 'text-purple-500', bg: 'bg-purple-50' },
+                { icon: Heart, label: 'Wellness', color: 'text-red-500', bg: 'bg-red-50' },
+              ].map((value, i) => (
+                <motion.div
+                  key={value.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className="glass-card p-6 rounded-2xl hover-lift"
+                >
+                  <div className={`w-12 h-12 mx-auto rounded-full ${value.bg} flex items-center justify-center mb-4`}>
+                    <value.icon size={24} className={value.color} />
+                  </div>
+                  <span className="font-bold text-foreground">{value.label}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Incubation & Support */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="glass-card p-8 md:p-16 rounded-[3rem] bg-gradient-to-br from-white to-primary/5 border border-primary/10 overflow-hidden relative">
+            <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">
+                  <Building2 size={14} />
+                  Incubated Startup
+                </div>
+                <h2 className="text-3xl md:text-5xl font-display font-bold">
+                  Powered by <br />
+                  <span className="text-primary">TBI & Adhiyamaan</span>
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  We are proud to be incubated at the <strong>Technology Business Incubator (TBI)</strong> at
+                  <strong> Adhiyamaan College of Engineering</strong>, Hosur. This partnership provides us with:
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    'Access to Advanced Bioscience Laboratories',
+                    'Mentorship from Industry Experts & Professors',
+                    'Infrastructure for Prototype Development',
+                    'A Vibrant Ecosystem of Innovation'
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-3 font-medium">
+                      <div className="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">
+                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Image / Logo Placeholder */}
+              <div className="relative h-80 bg-white rounded-3xl shadow-xl flex items-center justify-center p-8 border border-slate-100 group">
+                <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+                <div className="text-center space-y-4">
+                  {/* Placeholder for TBI Logo */}
+                  <div className="w-24 h-24 mx-auto bg-slate-100 rounded-full flex items-center justify-center text-slate-400">
+                    <Building2 size={40} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-xl text-slate-800">TBI - ACE</h4>
+                    <p className="text-sm text-slate-500">Adhiyamaan College of Engineering</p>
+                    <p className="text-xs text-slate-400 mt-1">Dr. M.G.R. Nagar, Hosur</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Background Decoration */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-primary/10 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
           </div>
         </div>
       </section>
