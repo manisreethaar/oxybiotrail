@@ -83,6 +83,101 @@ const About = () => {
         </div>
       </section>
 
+      {/* ─── THE MISSION ─── */}
+      <section className="section-padding bg-slate-50 dark:bg-slate-900/50">
+        <div className="container-width px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Mission Headline (Option 3 — direct) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary block mb-4">Our Mission</span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-6">
+                To make world-class nutrition accessible<br />
+                to every working Indian.
+              </h2>
+              <p className="text-lg text-slate-400 italic">
+                By combining India's ancient ingredient wisdom with modern nutritional science — and refusing to compromise on either.
+              </p>
+            </motion.div>
+
+            {/* Mission Body (Option 2 — emotional) */}
+            <div className="max-w-2xl mx-auto space-y-6 mb-20">
+              <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
+                className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed"
+              >
+                Oxygen exists to close the gap between what urban Indians need nutritionally and what the market currently offers them.
+              </motion.p>
+              <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.15 }}
+                className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed"
+              >
+                We believe Indian ingredients are world-class. We believe Indian consumers deserve products formulated to global scientific standards. We believe honesty about what is in a product is not a marketing strategy — <strong className="text-slate-900 dark:text-white">it is a minimum standard that the industry has failed to meet.</strong>
+              </motion.p>
+              <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
+                className="text-lg text-primary font-bold"
+              >
+                Our mission is to build the products that prove all three beliefs simultaneously.
+              </motion.p>
+            </div>
+
+            {/* 4 Mission Pillars */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  num: '01',
+                  title: 'Science First',
+                  icon: <FlaskConical size={22} />,
+                  body: 'Every formulation decision is evidence-based. We design with peer-reviewed literature, not market trends or cost calculations.',
+                },
+                {
+                  num: '02',
+                  title: 'India First',
+                  icon: <Leaf size={22} />,
+                  body: 'We start with Indian ingredients because they are genuinely superior. Ragi. Ashwagandha. Moringa. Ancient wisdom verified by modern science.',
+                },
+                {
+                  num: '03',
+                  title: 'Honesty Always',
+                  icon: <Search size={22} />,
+                  body: 'We publish our lab reports, cite our research, and name our suppliers. We tell you what our products cannot do as clearly as what they can.',
+                },
+                {
+                  num: '04',
+                  title: 'Access For All',
+                  icon: <Users size={22} />,
+                  body: 'Precision nutrition should not cost ₹500 per serving. We are building world-class products at prices urban Indians can sustain daily.',
+                },
+              ].map((pillar, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="p-6 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800"
+                >
+                  <motion.span
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1, type: 'spring', stiffness: 300 }}
+                    className="text-4xl font-display font-bold text-primary/15 block mb-3"
+                  >
+                    {pillar.num}
+                  </motion.span>
+                  <div className="text-primary mb-2">{pillar.icon}</div>
+                  <h3 className="font-display font-bold text-slate-900 dark:text-white mb-2">{pillar.title}</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{pillar.body}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── CHAPTER 1: THE OBSERVATION ─── */}
       <ChapterSection
         number="01"
