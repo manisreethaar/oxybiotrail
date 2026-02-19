@@ -9,7 +9,6 @@ import { useAuth } from "@/context/AuthContext";
 const navLinks = [
   { name: 'About', path: '/about', icon: Home },
   { name: 'Home', path: '/', icon: Home },
-  { name: 'Technology', path: '/science', icon: TestTube },
   { name: 'Roadmap', path: '/roadmap', icon: Calendar },
   { name: 'Innovations', path: '/innovations', icon: FlaskConical },
   { name: 'Careers', path: '/careers', icon: GraduationCap },

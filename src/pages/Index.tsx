@@ -1,32 +1,32 @@
 import { Layout } from '@/components/layout/Layout';
-import { ArrowRight, Leaf, ShieldCheck, Microscope } from 'lucide-react';
+import { ArrowRight, Leaf, ShieldCheck, Microscope, Dna, FlaskConical, Network } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { GrantBadge } from '@/components/GrantBadge';
 import { motion } from 'framer-motion';
 
 const Index = () => {
   return (
     <Layout>
-      {/* Hero Section */}
+      {/* Hero Section - Stealth/Academic Style */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
-        {/* Background blobs - Toned down for professionalism */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -z-10" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-[120px] -z-10" />
+        {/* Subtle, abstract background */}
+        <div className="absolute inset-0 bg-slate-50/50 dark:bg-slate-900/20 -z-20" />
+        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/5 rounded-full blur-[150px] -z-10" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/5 rounded-full blur-[150px] -z-10" />
 
         <div className="container-width text-center z-10 px-4">
           <div className="space-y-8 max-w-5xl mx-auto">
 
-            {/* Credibility Badge (Top Priority) */}
+            {/* Credibility/Incubation Badge */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="inline-flex items-center gap-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md px-6 py-2 rounded-full border border-slate-200 shadow-sm mx-auto"
+              className="inline-flex items-center gap-3 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md px-5 py-2 rounded-full border border-slate-200/60 dark:border-slate-800 shadow-sm mx-auto"
             >
-              <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-              <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
-                Incubated at <strong>TBI, Adhiyamaan College of Engineering</strong>
+              <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span className="text-xs md:text-sm font-mono text-slate-600 dark:text-slate-400 uppercase tracking-wider">
+                Incubated at TBI, Adhiyamaan College of Engineering
               </span>
             </motion.div>
 
@@ -34,10 +34,10 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-5xl md:text-7xl font-bold tracking-tight font-display text-slate-900 dark:text-white leading-tight"
+              className="text-5xl md:text-7xl font-bold tracking-tight font-display text-slate-900 dark:text-white leading-[1.1]"
             >
-              Transforming <span className="gradient-text">Agricultural Waste</span> <br />
-              into Bio-Wellness Solutions
+              Decoding the <br />
+              <span className="gradient-text">Microbiome-First</span> Future
             </motion.h1>
 
             <motion.p
@@ -46,8 +46,8 @@ const Index = () => {
               transition={{ delay: 0.4 }}
               className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed font-light"
             >
-              We engineer advanced microbial fermentation processes to extract high-value
-              nutraceuticals and cosmeceuticals from indigenous biological resources.
+              Junior research initiative investigating the <strong>Gut-Skin Axis</strong>.
+              We engineer indigenous probiotic strains into bio-active solutions for wellness and cosmetics.
             </motion.p>
 
             <motion.div
@@ -56,14 +56,14 @@ const Index = () => {
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-5 justify-center pt-8"
             >
-              <Button size="lg" className="rounded-full text-lg h-14 px-10 btn-primary shadow-lg shadow-primary/20" asChild>
+              <Button size="lg" variant="default" className="rounded-full text-lg h-14 px-10 shadow-lg shadow-primary/10" asChild>
                 <Link to="/innovations">
-                  View R&D Pipeline <Microscope className="ml-2 w-5 h-5" />
+                  Pipeline Status <Network className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="rounded-full text-lg h-14 px-10 border-slate-300 hover:bg-slate-50 text-slate-700" asChild>
+              <Button size="lg" variant="ghost" className="rounded-full text-lg h-14 px-10 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600" asChild>
                 <Link to="/about">
-                  Our Vision <ArrowRight className="ml-2 w-5 h-5" />
+                  Our Mission <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
             </motion.div>
@@ -71,24 +71,31 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Feature Grid (Why Us?) */}
-      <section className="section-padding bg-white/50 relative border-t border-slate-100 backdrop-blur-sm">
+      {/* Core Research Pillars (Replacing Technology Page) */}
+      <section className="section-padding bg-white dark:bg-black/20 relative border-t border-slate-100 dark:border-slate-800">
         <div className="container-width">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-display font-bold mb-4">Core Research Vectors</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Our R&D focuses on three critical intersections of biotechnology and sustainability.
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="glass-card p-8 text-center hover:-translate-y-2 transition-transform duration-300"
+              className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:border-primary/20 transition-all"
             >
-              <div className="w-16 h-16 mx-auto bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mb-6">
-                <Leaf size={32} />
+              <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-xl flex items-center justify-center mb-6">
+                <Dna size={28} />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Eco-Conscious</h3>
-              <p className="text-muted-foreground">
-                Zero-waste manufacturing processes using upcycled agricultural by-products.
-                Supported by PMEGP green initiatives.
+              <h3 className="text-xl font-bold mb-3">Strain Isolation</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Bio-prospecting rare probiotic strains from traditional Indian fermented foods.
+                Screening for high-efficacy metabolites and stability.
               </p>
             </motion.div>
 
@@ -97,15 +104,15 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="glass-card p-8 text-center hover:-translate-y-2 transition-transform duration-300"
+              className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:border-primary/20 transition-all"
             >
-              <div className="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                <Microscope size={32} />
+              <div className="w-14 h-14 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-xl flex items-center justify-center mb-6">
+                <FlaskConical size={28} />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Lab Verified</h3>
-              <p className="text-muted-foreground">
-                Rigorous efficacy testing for every batch.
-                Developing proprietary probiotic strains for targeted health benefits.
+              <h3 className="text-xl font-bold mb-3">Precision Fermentation</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Optimizing solid-state and submerged fermentation protocols to maximize yield
+                of postbiotics and enzymes from agri-waste substrates.
               </p>
             </motion.div>
 
@@ -114,44 +121,45 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="glass-card p-8 text-center hover:-translate-y-2 transition-transform duration-300"
+              className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:border-primary/20 transition-all"
             >
-              <div className="w-16 h-16 mx-auto bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6">
-                <ShieldCheck size={32} />
+              <div className="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-xl flex items-center justify-center mb-6">
+                <Microscope size={28} />
               </div>
-              <h3 className="text-2xl font-bold mb-4">GMP Ready</h3>
-              <p className="text-muted-foreground">
-                Designing our 2026 facility to meet global Good Manufacturing Practices
-                and ISO standards right from day one.
+              <h3 className="text-xl font-bold mb-3">Efficacy Testing</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Rigorous in-vitro validation of anti-microbial, anti-oxidant, and
+                barrier-repair properties for all confidential formulations.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="section-padding text-center">
+      {/* Call to Action - Research Collaboration */}
+      <section className="section-padding text-center overflow-hidden relative">
+        <div className="absolute inset-0 bg-primary/5 -z-10" />
         <div className="container-width max-w-3xl mx-auto">
           <motion.h2
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold mb-6"
+            className="text-3xl md:text-4xl font-display font-bold mb-6"
           >
-            Partner in our Growth Story
+            Collaborate on Future Science
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-muted-foreground mb-8"
+            className="text-lg text-muted-foreground mb-8"
           >
-            We are actively seeking grant partners and incubation support for our 2026 launch.
-            Join us in revolutionizing the bio-wellness sector.
+            We are actively seeking academic grants and research partnerships for our 2026-27 roadmap.
+            Access our confidential IP portfolio.
           </motion.p>
-          <Button size="lg" className="rounded-full px-10 h-14 text-lg btn-primary" asChild>
-            <Link to="/contact">Get in Touch</Link>
+          <Button size="lg" className="rounded-full px-12 h-14 text-lg btn-primary shadow-xl" asChild>
+            <Link to="/partner">Research Inquiry</Link>
           </Button>
         </div>
       </section>
