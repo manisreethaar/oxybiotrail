@@ -1,4 +1,8 @@
 
+import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+
 // STEALTH MODE: Specific products hidden
 const RESEARCH_HIGHLIGHTS = [
     {
