@@ -15,10 +15,10 @@ const Science = () => {
                         <GrantBadge label="Core Technology" className="mb-6" />
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                             Harnessing Nature's <br />
-                            <span className="gradient-text">Microbial Intelligence</span>
+                            <span className="gradient-text">Microbiome First</span> Architecture
                         </h1>
                         <p className="text-xl text-muted-foreground mb-8">
-                            We utilize advanced bio-fermentation processes to cultivate probiotic strains that enhance both skin health and gut immunity.
+                            We are decoding the <strong>Gut-Skin Axis</strong>. By isolating superior probiotic strains, we create dual-action solutions: functional foods for internal immunity and bio-active topicals for external radiance.
                         </p>
                     </motion.div>
                 </div>

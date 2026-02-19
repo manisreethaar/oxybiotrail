@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { FlaskConical, Microscope, Factory, CheckCircle2, Circle, ArrowRight } from "lucide-react";
 
 // Types for the pipeline
-type Stage = "Discovery" | "Lab Scale" | "Pilot Scale" | "Commercial";
+type Stage = "Ideation" | "Discovery" | "Lab Scale" | "Prototype";
 
 interface PipelineProject {
     id: string;
@@ -16,42 +16,41 @@ interface PipelineProject {
     progress: number; // 0-100
 }
 
-const PROJECTS: PipelineProject[] = [
-    {
-        id: "P-101",
-        name: "Myco-Protein isolate (Alt-Meat)",
-        category: "Nutraceuticals",
-        description: "High-fidelity textured protein from fungal fermentation.",
-        stage: "Pilot Scale",
-        progress: 75
-    },
-    {
-        id: "C-204",
-        name: "Bio-Surfactant Sophorolipids",
-        category: "Cosmeceuticals",
-        description: "Eco-friendly emulsifiers for skincare formulations.",
-        stage: "Lab Scale",
-        progress: 40
-    },
-    {
-        id: "N-305",
-        name: "Indigenous Probiotic Strains",
-        category: "Nutraceuticals",
-        description: "Gut-health optimizing strains isolated from traditional sources.",
-        stage: "Discovery",
-        progress: 15
-    },
-    {
-        id: "I-401",
-        name: "Enzymatic Bioconversion",
-        category: "Industrial",
-        description: "Agri-waste valorization process for bioplastics.",
-        stage: "Discovery",
-        progress: 10
-    }
+{
+    id: "PF-001",
+        name: "Synbiotic Fruit Yogurt",
+            category: "Nutraceuticals",
+                description: "Dairy-free, fruit-based yogurt fortified with indigenous probiotic strains.",
+                    stage: "Discovery",
+                        progress: 20
+},
+{
+    id: "BC-101",
+        name: "Postbiotic Glow Serum",
+            category: "Cosmeceuticals",
+                description: "Ferment lysate-based serum for skin barrier repair and hydration.",
+                    stage: "Discovery",
+                        progress: 15
+},
+{
+    id: "PF-002",
+        name: "Fermented Millet Drink",
+            category: "Nutraceuticals",
+                description: "Low-GI functional beverage fusing traditional millets with modern gut health.",
+                    stage: "Ideation",
+                        progress: 10
+},
+{
+    id: "BC-102",
+        name: "Enzymatic Exfoliating Peel",
+            category: "Cosmeceuticals",
+                description: "Natural fruit enzyme peel derived from agricultural fruit waste.",
+                    stage: "Ideation",
+                        progress: 5
+}
 ];
 
-const STAGES: Stage[] = ["Discovery", "Lab Scale", "Pilot Scale", "Commercial"];
+const STAGES: Stage[] = ["Ideation", "Discovery", "Lab Scale", "Prototype"];
 
 const Products = () => {
     return (

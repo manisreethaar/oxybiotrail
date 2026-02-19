@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 const Roadmap = () => {
     const milestones = [
-        { year: "April 2026", title: "Company Inception", desc: "Official registration and incubation start.", status: "Upcoming" },
-        { year: "Q3 2026", title: "Prototype Development", desc: "First batch of bio-cosmetic serums.", status: "Planned" },
-        { year: "Q1 2027", title: "Manufacturing Unit", desc: "Setup of GMP - compliant facility via PMEGP Loan.", status: "Planned" },
-        { year: "2027+", title: "Market Launch", desc: "Pan-India distribution of probiotic foods.", status: "Vision" }
+        { year: "Q1 2026", title: "Ideation & Concept", desc: "Market gap analysis for Probiotic Foods and Bio-Cosmetics. Strain literature review.", status: "Completed" },
+        { year: "Q2 2026", title: "Strain Acquisition", desc: "Procuring and banking indigenous probiotic cultures at TBI Labs.", status: "In Progress" },
+        { year: "Q3 2026", title: "Lab Formulation", desc: "Initial trials for Synbiotic Yogurt and Postbiotic Serum prototypes.", status: "Planned" },
+        { year: "Q4 2026", title: "Safety & Sensory", desc: "Small-scale efficacy testing and sensory panels for taste/texture optimization.", status: "Planned" }
     ];
 
     return (

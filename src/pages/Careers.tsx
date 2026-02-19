@@ -81,23 +81,36 @@ const Careers = () => {
                             </div>
 
                             <div className="space-y-4 mb-6">
-                                <p className="text-sm">We are seeking motivated freshers to assist in fermentation and product formulation. You will work directly with our senior scientists at the TBI labs.</p>
+                                <p className="text-sm">We are seeking a <strong>Junior Formulation Scientist</strong> to join our R&D team at TBI. You will work on developing novel probiotic foods and bio-cosmetic formulations.</p>
 
                                 <h4 className="font-bold text-sm">Key Responsibilities:</h4>
                                 <ul className="text-sm space-y-2 list-disc pl-4 text-muted-foreground">
-                                    <li>Conduct fermentation trials (Solid State & Submerged) and document parameters.</li>
-                                    <li>Assist in developing prototypes for functional foods, probiotics, and cosmeceuticals.</li>
-                                    <li>Perform downstream processing interactions and quality analysis.</li>
-                                    <li>Maintain lab standards, equipment calibration, and safety protocols.</li>
-                                    <li>Literature review and data compilation for patent filing.</li>
+                                    <li>Formulation of probiotic yogurts, drinks, and functional foods.</li>
+                                    <li>Development of variants for bio-fermented skincare serums.</li>
+                                    <li>Conducting shelf-life studies and sensory evaluation.</li>
+                                    <li>Documentation for patent filing and FSSAI/CDSCO compliance.</li>
                                 </ul>
 
                                 <h4 className="font-bold text-sm">Requirements:</h4>
                                 <ul className="text-sm space-y-2 list-disc pl-4 text-muted-foreground">
-                                    <li>B.Tech / B.Sc in Biotechnology, Food Technology, or Microbiology.</li>
-                                    <li>Strong understanding of basic fermenter operation and sterile techniques.</li>
-                                    <li>Passion for sustainable innovation and circular economy.</li>
+                                    <li>B.Tech / M.Sc in Food Technology, Biotechnology, or Cosmetic Science.</li>
+                                    <li>Knowledge of bacterial fermentation and emulsion chemistry.</li>
+                                    <li>Willingness to work in a startup environment.</li>
                                 </ul>
+
+                                <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-100 dark:border-slate-700 space-y-2">
+                                    <div className="flex justify-between text-sm">
+                                        <span className="text-muted-foreground">Compensation:</span>
+                                        <span className="font-bold text-foreground">₹18,000 - ₹22,000 / month</span>
+                                    </div>
+                                    <div className="flex justify-between text-sm">
+                                        <span className="text-muted-foreground">Probation Period:</span>
+                                        <span className="font-bold text-foreground">6 Months - 1 Year</span>
+                                    </div>
+                                    <p className="text-xs text-muted-foreground mt-2">
+                                        *Full-time confirmation subject to performance during probation.
+                                    </p>
+                                </div>
                             </div>
 
                             <div className="bg-slate-50 dark:bg-slate-900/50 p-4 rounded-lg mb-4 text-center border border-slate-100 dark:border-slate-800">
