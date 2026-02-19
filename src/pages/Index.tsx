@@ -1069,6 +1069,116 @@ const Index = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
+          SECTION 9: THE FOUNDER STORY — "Who is behind this?"
+          ═══════════════════════════════════════════════════════════════ */}
+      <section className="section-padding bg-white dark:bg-slate-950 relative overflow-hidden">
+        <div className="container-width px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Opening */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-sm font-bold uppercase tracking-widest text-primary mb-8"
+            >
+              We started with one observation:
+            </motion.p>
+
+            {/* Pull Quote — word by word */}
+            <div className="mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight">
+                {('India has the world\'s most powerful functional ingredients. Why does every serious nutrition product still come from abroad?').split(' ').map((word, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.05 }}
+                    className="inline-block mr-[0.3em]"
+                  >
+                    {word}
+                  </motion.span>
+                ))}
+              </h2>
+            </div>
+
+            {/* Story Paragraphs */}
+            <div className="grid md:grid-cols-2 gap-12 mb-20">
+              <div className="space-y-6">
+                <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                  <strong className="text-slate-900 dark:text-white">Manisreethaar</strong> watched classmates and colleagues reach for popular health drinks — products that listed impressive vitamin counts on the label but used the cheapest possible forms. Synthetic folic acid that 40% of Indians can't convert. Oxide minerals with single-digit absorption. Sugar content higher than most sodas. The data confirmed what seemed obvious: <strong>urban Indians are increasingly deficient in the nutrients that matter most.</strong>
+                </motion.p>
+                <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.15 }} className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                  The market response was not the answer. Products designed to <em>appear</em> healthy while being nutritionally mediocre. The same global brands selling inferior formulations in India. <strong>Nobody building something genuinely better.</strong>
+                </motion.p>
+              </div>
+              <div className="space-y-6">
+                <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                  So we decided to start with the science. Before the brand. Before the packaging. Before a single rupee of marketing. We spent <strong>3+ months designing formulations</strong> that we would personally want to consume. Then we built everything else around that.
+                </motion.p>
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
+                  className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 italic text-slate-500 dark:text-slate-400"
+                >
+                  "I keep working on this because someone has to prove that honest products can win in India. The science is there. The ingredients are here. The consumer is ready. Someone just needs to refuse to cut corners."
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Founder Credentials Block */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col md:flex-row gap-8 items-center p-8 md:p-10 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 mb-16"
+            >
+              {/* Photo placeholder */}
+              <div className="w-36 h-36 md:w-44 md:h-44 rounded-2xl bg-gradient-to-br from-primary/10 to-amber-500/10 flex items-center justify-center shrink-0">
+                <Users2 size={48} className="text-primary/30" />
+              </div>
+              <div className="text-center md:text-left space-y-4 flex-grow">
+                <div>
+                  <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white">Manisreethaar</h3>
+                  <p className="text-sm text-primary font-bold">Co-founder, Oxygen BioInnovations</p>
+                </div>
+                <div className="space-y-2">
+                  {[
+                    'Student Researcher, Adhiyamaan College of Engineering',
+                    'Incubated at TBI — Technology Business Incubator, ACE Hosur',
+                    '3+ months nutrition & formulation research before first prototype',
+                    'Deeply frustrated by India\'s nutrition gap — and determined to fix it',
+                  ].map((cred, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1 }}
+                      className="flex items-center gap-2"
+                    >
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                      <p className="text-sm text-slate-600 dark:text-slate-300">{cred}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Team Philosophy */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center max-w-2xl mx-auto"
+            >
+              <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed italic">
+                "We are not nutritionists who became entrepreneurs. We are people who were frustrated by what existed and decided to fix it properly. That means <strong className="text-slate-900 dark:text-white not-italic">getting the science right first.</strong> Everything else follows."
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
           SECTION 11: MAIN WAITLIST CTA — "What do I do now?"
           ═══════════════════════════════════════════════════════════════ */}
       <section id="waitlist" className="section-padding relative overflow-hidden">
