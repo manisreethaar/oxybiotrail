@@ -39,9 +39,9 @@ export function Footer() {
             <h3 className="font-bold mb-4 font-display text-foreground text-lg">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link to="/products" className="hover:text-primary transition-colors">Our Products</Link></li>
-              <li><Link to="/research" className="hover:text-primary transition-colors">Research</Link></li>
-              <li><Link to="/services" className="hover:text-primary transition-colors">Services</Link></li>
+              <li><Link to="/innovations" className="hover:text-primary transition-colors">Innovations</Link></li>
+              <li><Link to="/science" className="hover:text-primary transition-colors">Technology</Link></li>
+              <li><Link to="/careers" className="hover:text-primary transition-colors">Careers</Link></li>
               <li><Link to="/team" className="hover:text-primary transition-colors">Team</Link></li>
             </ul>
           </div>
@@ -51,17 +51,11 @@ export function Footer() {
             <h3 className="font-bold mb-4 font-display text-slate-900">Support</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/team" className="hover:text-primary transition-colors">Team</Link>
-              </li>
-              <li>
-                <Link to="/careers" className="hover:text-primary transition-colors">Careers</Link>
-              </li>
-              <li>
                 <Link to="/contact" className="hover:text-primary transition-colors">Contact</Link>
               </li>
-              <li><Link to="/seller" className="hover:text-primary transition-colors">Seller Dashboard</Link></li>
-              <li><Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link></li>
+              <li>
+                <Link to="/partner" className="hover:text-primary transition-colors">Partner With Us</Link>
+              </li>
             </ul>
           </div>
 

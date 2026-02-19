@@ -81,17 +81,35 @@ const Careers = () => {
                             </div>
 
                             <div className="space-y-4 mb-6">
-                                <p className="text-sm">We are seeking motivated freshers to assist in fermentation and product formulation.</p>
+                                <p className="text-sm">We are seeking motivated freshers to assist in fermentation and product formulation. You will work directly with our senior scientists at the TBI labs.</p>
+
+                                <h4 className="font-bold text-sm">Key Responsibilities:</h4>
                                 <ul className="text-sm space-y-2 list-disc pl-4 text-muted-foreground">
-                                    <li>Conduct fermentation trials and document parameters.</li>
-                                    <li>Assist in developing prototypes for functional foods & cosmetics.</li>
-                                    <li>Maintain lab standards and safety protocols.</li>
+                                    <li>Conduct fermentation trials (Solid State & Submerged) and document parameters.</li>
+                                    <li>Assist in developing prototypes for functional foods, probiotics, and cosmeceuticals.</li>
+                                    <li>Perform downstream processing interactions and quality analysis.</li>
+                                    <li>Maintain lab standards, equipment calibration, and safety protocols.</li>
+                                    <li>Literature review and data compilation for patent filing.</li>
+                                </ul>
+
+                                <h4 className="font-bold text-sm">Requirements:</h4>
+                                <ul className="text-sm space-y-2 list-disc pl-4 text-muted-foreground">
+                                    <li>B.Tech / B.Sc in Biotechnology, Food Technology, or Microbiology.</li>
+                                    <li>Strong understanding of basic fermenter operation and sterile techniques.</li>
+                                    <li>Passion for sustainable innovation and circular economy.</li>
                                 </ul>
                             </div>
 
+                            <div className="bg-slate-50 dark:bg-slate-900/50 p-4 rounded-lg mb-4 text-center border border-slate-100 dark:border-slate-800">
+                                <p className="text-sm text-muted-foreground mb-1">Send your CV/Resume to:</p>
+                                <a href="mailto:oxygenbioinnovations@gmail.com" className="text-primary font-bold hover:underline">
+                                    oxygenbioinnovations@gmail.com
+                                </a>
+                            </div>
+
                             <Button className="w-full" asChild>
-                                <a href="mailto:oxygenbioinnovations@gmail.com?subject=Application for Junior Researcher&body=Dear Hiring Team,%0D%0A%0D%0AI am writing to apply for the Junior Researcher position...">
-                                    Apply via Email
+                                <a href="mailto:oxygenbioinnovations@gmail.com?subject=Application for Junior Researcher&body=Dear Hiring Team,%0D%0A%0D%0AI am writing to apply for the Junior Researcher position. Please find my CV attached...">
+                                    Apply Now
                                 </a>
                             </Button>
                         </div>
