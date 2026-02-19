@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Leaf, Sparkles, ShoppingCart } from "lucide-react";
+import { Leaf, Sparkles, FlaskConical } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useCart } from "@/context/CartContext";
 
@@ -21,7 +21,6 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
     const isHandmade = product.category === 'handmade';
-    const { addToCart } = useCart();
 
     // Generate Initials
     const initials = product.name
@@ -66,11 +65,9 @@ export function ProductCard({ product }: ProductCardProps) {
                 )}
 
                 {/* Sales Urgency Badge (Demo Logic) */}
-                {['Cosmic Glow Serum', 'Millet Protein Mix'].includes(product.name) && (
-                    <div className="absolute top-3 right-3 text-[10px] font-bold px-2 py-1 rounded border border-red-500/50 bg-red-500/10 text-red-600 animate-pulse">
-                        🔥 Best Seller
-                    </div>
-                )}
+                <div className="absolute top-3 right-3 text-[10px] font-bold px-2 py-1 rounded border border-blue-500/50 bg-blue-500/10 text-blue-600">
+                    🔬 Prototype
+                </div>
 
                 <div className={cn(
                     "text-6xl font-display font-bold opacity-20 select-none",
@@ -80,7 +77,7 @@ export function ProductCard({ product }: ProductCardProps) {
                 </div>
 
                 <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6 justify-center">
-                    <span className="text-sm font-medium text-primary bg-white/90 px-4 py-2 rounded-full shadow-lg">Quick View</span>
+                    <span className="text-sm font-medium text-primary bg-white/90 px-4 py-2 rounded-full shadow-lg">View Specs</span>
                 </div>
             </div>
 
@@ -90,15 +87,12 @@ export function ProductCard({ product }: ProductCardProps) {
                         "flex items-center gap-2 text-xs font-medium uppercase tracking-wide",
                         isHandmade ? "text-amber-700" : "text-primary"
                     )}>
-                        {product.category === 'cosmetics' ? <Sparkles size={12} /> :
-                            product.category === 'handmade' ? <Leaf size={12} /> : <Leaf size={12} />}
+                        {product.category === 'cosmetics' ? <Sparkles size={12} /> : <Leaf size={12} />}
 
                         {product.category === 'cosmetics' ? 'Biocosmetics' :
                             product.category === 'handmade' ? 'Handmade' : 'Functional Food'}
                     </div>
-                    <span className="font-display font-semibold text-foreground">
-                        {product.price}
-                    </span>
+                    {/* Removed Price */}
                 </div>
 
                 <h3 className={cn("text-xl font-display font-bold mb-1 transition-colors group-hover:text-primary")}>
@@ -116,15 +110,11 @@ export function ProductCard({ product }: ProductCardProps) {
                 </p>
 
                 <Button
-                    variant={isHandmade ? "outline" : "default"}
-                    className={cn(
-                        "w-full gap-2 mt-4",
-                        isHandmade && "border-amber-200 text-amber-900 hover:bg-amber-50 hover:text-amber-900 hover:border-amber-300"
-                    )}
-                    onClick={() => addToCart(product)}
+                    variant="outline"
+                    className="w-full gap-2 mt-4 group-hover:bg-primary group-hover:text-white transition-all"
                 >
-                    <ShoppingCart size={16} />
-                    Add to Cart
+                    <FlaskConical size={16} />
+                    View Research Data
                 </Button>
             </div>
         </div>

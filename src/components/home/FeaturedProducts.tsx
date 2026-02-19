@@ -46,16 +46,16 @@ export function FeaturedProducts() {
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                     <div className="max-w-2xl">
                         <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                            Science You Can <span className="gradient-text">Experience</span>
+                            From Lab to <span className="gradient-text">Life</span>
                         </h2>
                         <p className="text-muted-foreground text-lg">
-                            Our breakthrough biotechnology isn't just for the lab. Discover our range
-                            of consumer products designed for your daily life.
+                            Explore our latest prototypes and research breakthroughs.
+                            Sustainable solutions currently in development at our TBI labs.
                         </p>
                     </div>
                     <Button variant="outline" className="shrink-0 w-full md:w-auto" asChild>
-                        <Link to="/products" className="group flex items-center justify-center">
-                            Shop All Products
+                        <Link to="/innovations" className="group flex items-center justify-center">
+                            View All Innovations
                             <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </Button>

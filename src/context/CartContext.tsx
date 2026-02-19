@@ -3,18 +3,21 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useToast } from "@/components/ui/use-toast";
 
 // Types
-export interface CartItem {
+export interface ProductInput {
     id: string;
     name: string;
-    price: string; // Store as string with symbol, handle parsing internally
-    numericPrice: number;
+    price: string;
     image: string;
+}
+
+export interface CartItem extends ProductInput {
     quantity: number;
+    numericPrice: number;
 }
 
 interface CartContextType {
     cart: CartItem[];
-    addToCart: (product: any, quantity?: number) => void;
+    addToCart: (product: ProductInput, quantity?: number) => void;
     removeFromCart: (id: string) => void;
     updateQuantity: (id: string, quantity: number) => void;
     clearCart: () => void;
@@ -47,7 +50,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
         return parseFloat(numericStr) || 0;
     };
 
-    const addToCart = (product: any, quantity: number = 1) => {
+    const addToCart = (product: ProductInput, quantity: number = 1) => {
         setCart(prevCart => {
             const existingItem = prevCart.find(item => item.id === product.id);
             if (existingItem) {

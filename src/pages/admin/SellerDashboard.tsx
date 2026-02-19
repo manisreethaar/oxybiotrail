@@ -22,9 +22,19 @@ import { MoreVertical, CheckCircle, Truck, Clock, ShieldAlert } from "lucide-rea
 import { useToast } from "@/components/ui/use-toast";
 import { Link, useNavigate } from "react-router-dom";
 
+interface Order {
+    id: string;
+    date: string;
+    customerName: string;
+    customerEmail: string;
+    items: { name: string; quantity: number }[];
+    total: number;
+    status: string;
+}
+
 const SellerDashboard = () => {
-    const { getAllOrders, updateOrderStatus, user } = useAuth(); // Get user
-    const [orders, setOrders] = useState<any[]>([]);
+    const { getAllOrders, updateOrderStatus, user } = useAuth();
+    const [orders, setOrders] = useState<Order[]>([]);
     const { toast } = useToast();
     const navigate = useNavigate();
 
@@ -59,6 +69,7 @@ const SellerDashboard = () => {
         );
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleStatusUpdate = (orderId: string, newStatus: any) => {
         updateOrderStatus(orderId, newStatus);
         setOrders(getAllOrders()); // Refresh local view

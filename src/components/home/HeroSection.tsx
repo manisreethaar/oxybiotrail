@@ -26,39 +26,39 @@ export function HeroSection() {
           {/* Giant Text Blob - Subtle */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-r from-primary/5 via-purple-500/5 to-accent/5 blur-[80px] rounded-full pointer-events-none -z-10" />
 
-          {/* Company Name */}
+          {/* Incubation Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 backdrop-blur-md border border-white/60 shadow-sm mb-8 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            <span className="text-sm font-semibold text-primary tracking-wide uppercase">Precision Biology</span>
+            <span className="text-sm font-semibold text-primary tracking-wide uppercase">Incubated at TBI - Adhiyamaan College of Engineering (Autonomous)</span>
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-display font-extrabold leading-none mb-6 md:mb-8 animate-fade-in tracking-tighter text-foreground relative" style={{ animationDelay: '0.1s' }}>
-            Nature's Blueprint.
+            Pioneering
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-accent">Perfected by Science.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-accent">Bio-Innovation.</span>
           </h1>
 
           {/* Tagline */}
           <p className="text-xl md:text-3xl font-display font-bold mb-6 md:mb-8 animate-fade-in text-slate-800" style={{ animationDelay: '0.15s' }}>
-            Innovate. Engage. Transform.
+            Developing Sustainable Food & Cosmetic Prototypes
           </p>
 
           {/* Purpose Statement */}
           <p className="text-lg md:text-2xl text-slate-600 max-w-3xl mx-auto mb-8 md:mb-12 animate-fade-in leading-relaxed font-medium" style={{ animationDelay: '0.2s' }}>
-            We continuously innovate to bring you high-performance biocosmetic
-            and functional foods that are <span className="text-primary font-bold">good for you</span> and the <span className="text-accent font-bold">planet</span>.
+            We research and develop high-performance biocosmetic
+            and functional food solutions. <span className="text-primary font-bold">Bridging the gap</span> between academic research and commercial viability.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <Button size="lg" className="h-16 px-10 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all bg-primary hover:bg-primary/90 text-white font-bold tracking-wide transform hover:-translate-y-1" asChild>
-              <Link to="/products">
-                Shop Products
-                <ArrowRight size={24} className="ml-2" />
+              <Link to="/innovations">
+                View Innovations
+                <FlaskConical size={24} className="ml-2" />
               </Link>
             </Button>
             <Button variant="outline" size="lg" className="h-16 px-10 text-lg rounded-full border-2 border-slate-200 bg-white/50 backdrop-blur-sm hover:bg-white hover:border-primary text-slate-700 font-bold tracking-wide transform hover:-translate-y-1" asChild>
-              <Link to="/services">Research Services</Link>
+              <Link to="/contact">Collaborate With Us</Link>
             </Button>
           </div>
 

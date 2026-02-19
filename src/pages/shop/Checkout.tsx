@@ -37,12 +37,12 @@ const Checkout = () => {
 
         // Simulate payment processing
         setTimeout(() => {
-            const newOrder: any = {
+            const newOrder = {
                 id: Math.random().toString(36).substr(2, 9).toUpperCase(),
                 date: new Date().toLocaleDateString(),
                 customerName: formData.name,
                 customerEmail: user?.email || 'guest@example.com',
-                status: 'Processing',
+                status: 'Processing' as const,
                 items: cart,
                 total: cartTotal
             };
