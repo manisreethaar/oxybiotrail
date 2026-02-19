@@ -6,127 +6,33 @@ import { Button } from '@/components/ui/button';
 import { useSearchParams } from 'react-router-dom';
 
 // Mock Data - Replace with real data later
-const PRODUCTS: Product[] = [
+// STEALTH MODE: Specific products hidden for patent protection
+const RESEARCH_PILLARS = [
     {
         id: '1',
-        name: 'Chettinad Mushroom Jerky',
-        description: 'Air-dried Oyster mushrooms marinated in traditional spices. A high-protein, chewy, savory snack that mimics meat texture without the guilt.',
-        price: '₹249.00',
+        title: 'Sustainable Nutrition',
+        description: 'Developing high-protein functional foods using precision fermentation of indigenous millet and mushroom strains.',
         image: 'https://images.unsplash.com/photo-1621855675471-26c713b41830?w=800&q=80',
-        category: 'food',
-        benefits: ['High Protein', 'Meat-like Texture', 'Zero Cholesterol'],
-        badge: 'First in India',
+        tags: ['Smart Protein', 'Fermentation', 'Food Security']
     },
     {
         id: '2',
-        name: 'Bio-Active Enzyme Millet Mix',
-        description: "Unlike standard health mixes, we use 'Living Sprouting Technology' to boost enzymatic activity, ensuring 3x better digestion for kids and elderly.",
-        price: '₹399.00',
-        image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=800&q=80',
-        category: 'food',
-        benefits: ['3x Better Digestion', 'Sprouted Millets', 'No Added Sugar'],
-        badge: 'Lab-Verified Absorption',
+        title: 'Green Cosmeceuticals',
+        description: 'Extracting bioactive compounds from agricultural by-products to create high-performance, circular skincare solutions.',
+        image: 'https://images.unsplash.com/photo-1608248597279-f99d160bfbc8?w=800&q=80',
+        tags: ['Circular Economy', 'Bio-Active', 'Upcycling']
     },
     {
         id: '3',
-        name: 'Heme-Boost Spirulina Bar',
-        description: 'The only energy bar scientifically formulated with Amla to unlock the iron absorption of Spirulina. Essential for fighting fatigue.',
-        price: '₹120.00',
+        title: 'Nutraceutical Delivery',
+        description: 'Novel encapsulation methods to enhance the bioavailability of traditional herbal extracts.',
         image: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=800&q=80',
-        category: 'food',
-        benefits: ['Iron Boost', 'Vitamin-C Rich', 'Instant Energy'],
-        badge: 'With Natural Vitamin-C',
-    },
-    {
-        id: '4',
-        name: 'Zero-Waste Myco-Scrub',
-        description: 'Upcycled mushroom fibers blended with essential oils. A sustainable, gentle exfoliant that turns farm waste into luxury skincare.',
-        price: '₹599.00',
-        image: 'https://images.unsplash.com/photo-1608248597279-f99d160bfbc8?w=800&q=80',
-        category: 'cosmetics',
-        benefits: ['Upcycled Fibers', 'Gentle Exfoliation', 'Plastic-Free'],
-        badge: 'Circular Economy',
-    },
-    // Handmade Bio-Cosmetics (Reclassified)
-    {
-        id: '5',
-        name: 'Seri-Glow Silk Soap',
-        tagline: 'Infused with Native Silk Protein.',
-        description: 'Handcrafted cold-process soap rich in Sericin protein to repair skin barriers. Sourced from local sericulture waste (Upcycled).',
-        price: '₹299.00',
-        image: 'https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=800&q=80',
-        category: 'cosmetics',
-        benefits: ['Skin Barrier Repair', 'Upcycled Silk', 'Cold Processed'],
-        badge: 'Handmade',
-    },
-    {
-        id: '6',
-        name: 'Ferment-X Hair Mist',
-        tagline: 'Controlled Fermentation Technology.',
-        description: 'Rice water fermented to the exact pH for hair strengthening, stabilized with essential oils. No sour smell, just science.',
-        price: '₹449.00',
-        image: 'https://images.unsplash.com/photo-1526947425960-94d0c9f136a7?w=800&q=80',
-        category: 'cosmetics',
-        benefits: ['pH Balanced', 'Hair Strengthening', 'Natural Shine'],
-        badge: 'Handmade',
-    },
-    {
-        id: '7',
-        name: 'Spirulina Bio-Dust Mask',
-        tagline: 'Waterless. Preservative-Free.',
-        description: 'A dry-active blend of Kaolin clay and Spirulina algae. Activates only when you mix it.',
-        price: '₹349.00',
-        image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&q=80',
-        category: 'cosmetics',
-        benefits: ['Preservative Free', 'Fresh Activation', 'Detoxifying'],
-        badge: 'Handmade',
-    },
-    {
-        id: '8',
-        name: 'Chromo-Lip Bio-Tint',
-        tagline: 'Edible-Grade Pigments.',
-        description: 'Natural red tint derived from Alkanet root and Beetroot. Zero synthetic dyes.',
-        price: '₹199.00',
-        image: 'https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=800&q=80',
-        category: 'cosmetics',
-        benefits: ['Synthetic Dye Free', 'Edible Grade', 'Long Lasting'],
-        badge: 'Handmade',
-    },
-    {
-        id: '9',
-        name: 'Vettiver Cold-Infusion Oil',
-        tagline: 'Solar-Extracted Hydration.',
-        description: 'Vettiver roots macerated in cold-pressed oil for 21 days to preserve heat-sensitive phyto-compounds.',
-        price: '₹399.00',
-        image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80',
-        category: 'cosmetics',
-        benefits: ['Cold Infused', 'Cooling Effect', 'Aromatherapeutic'],
-        badge: 'Handmade',
+        tags: ['Bioavailability', 'Nano-encapsulation', 'Health']
     }
 ];
 
+// State removed for simpler static display
 const Products = () => {
-    const [searchParams, setSearchParams] = useSearchParams();
-    const categoryParam = searchParams.get('category');
-    const [activeCategory, setActiveCategory] = useState<'all' | 'cosmetics' | 'food'>('all');
-
-    useEffect(() => {
-        if (categoryParam === 'cosmetics' || categoryParam === 'food') {
-            setActiveCategory(categoryParam);
-        } else {
-            setActiveCategory('all');
-        }
-    }, [categoryParam]);
-
-    const handleCategoryChange = (category: 'all' | 'cosmetics' | 'food') => {
-        setActiveCategory(category);
-        setSearchParams(category === 'all' ? {} : { category });
-    };
-
-    const filteredProducts = activeCategory === 'all'
-        ? PRODUCTS
-        : PRODUCTS.filter(p => p.category === activeCategory);
-
     return (
         <Layout>
             <div className="pt-24 pb-16 relative overflow-hidden">
@@ -136,41 +42,46 @@ const Products = () => {
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="text-center max-w-2xl mx-auto mb-16">
                         <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-                            Research <span className="gradient-text">Portfolio</span>
+                            Research <span className="gradient-text">Focus Areas</span>
                         </h1>
                         <p className="text-lg text-muted-foreground">
-                            Explore our current research projects and prototypes.
-                            From lab-scale proofs of concept to pilot-ready innovations.
+                            We are currently advancing research in three key domains, aiming to solve critical challenges in nutrition and cosmetics through biotechnology.
                         </p>
                     </div>
 
-                    {/* Filter Tabs */}
-                    <div className="flex justify-center gap-4 mb-12 flex-wrap">
-                        <Button
-                            variant={activeCategory === 'all' ? 'hero' : 'ghost'}
-                            onClick={() => handleCategoryChange('all')}
-                        >
-                            All Products
-                        </Button>
-                        <Button
-                            variant={activeCategory === 'cosmetics' ? 'hero' : 'ghost'}
-                            onClick={() => handleCategoryChange('cosmetics')}
-                        >
-                            Biocosmetics
-                        </Button>
-                        <Button
-                            variant={activeCategory === 'food' ? 'hero' : 'ghost'}
-                            onClick={() => handleCategoryChange('food')}
-                        >
-                            Functional Foods
-                        </Button>
+                    {/* Research Pillars Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        {RESEARCH_PILLARS.map((pillar) => (
+                            <div key={pillar.id} className="glass-card hover-lift overflow-hidden rounded-2xl group">
+                                <div className="relative h-64 overflow-hidden">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+                                    <img src={pillar.image} alt={pillar.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                    <div className="absolute bottom-4 left-4 z-20">
+                                        <h3 className="text-2xl font-bold text-white font-display">{pillar.title}</h3>
+                                    </div>
+                                </div>
+                                <div className="p-8">
+                                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                                        {pillar.description}
+                                    </p>
+                                    <div className="flex flex-wrap gap-2">
+                                        {pillar.tags.map(tag => (
+                                            <span key={tag} className="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full uppercase tracking-wide">
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
 
-                    {/* Product Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {filteredProducts.map((product) => (
-                            <ProductCard key={product.id} product={product} />
-                        ))}
+                    {/* Disclaimer */}
+                    <div className="mt-16 text-center max-w-2xl mx-auto p-6 bg-amber-50 rounded-xl border border-amber-100 dark:bg-amber-900/10 dark:border-amber-900/20">
+                        <p className="text-sm text-amber-800 dark:text-amber-200 font-medium">
+                            * Specific formulations and product details are currently undisclosed pending patent filings.
+                            Partner with us for detailed technical disclosures.
+                        </p>
                     </div>
                 </div>
             </div>

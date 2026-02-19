@@ -1,47 +1,29 @@
 
-import { ArrowRight, Sparkles } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { ProductCard } from '@/components/products/ProductCard';
-import { Link } from 'react-router-dom';
-
-// Using a subset of products for the homepage
-// Using a subset of products for the homepage
-const FEATURED_PRODUCTS = [
+// STEALTH MODE: Specific products hidden
+const RESEARCH_HIGHLIGHTS = [
     {
         id: '1',
-        name: 'Chettinad Mushroom Jerky',
-        description: 'Air-dried Oyster mushrooms marinated in traditional spices. A savory snack that mimics meat texture without the guilt.',
-        price: '₹249.00',
-        image: 'https://images.unsplash.com/photo-1621855675471-26c713b41830?w=800&q=80',
-        category: 'food' as const,
-        benefits: ['High Protein', 'Meat-like Texture'],
-        badge: 'First in India',
+        title: 'Smart Protein',
+        desc: 'Fermentation-derived protein alternatives.',
+        icon: '🧬'
     },
     {
-        id: '4',
-        name: 'Zero-Waste Myco-Scrub',
-        description: 'Upcycled mushroom fibers into luxury skincare. A sustainable, gentle exfoliant.',
-        price: '₹599.00',
-        image: 'https://images.unsplash.com/photo-1608248597279-f99d160bfbc8?w=800&q=80',
-        category: 'cosmetics' as const,
-        benefits: ['Circular Economy', 'Plastic-Free'],
-        badge: 'Best Seller',
+        id: '2',
+        title: 'Bio-Cosmetics',
+        desc: 'Circular skincare from agricultural waste.',
+        icon: '🌿'
     },
     {
         id: '3',
-        name: 'Heme-Boost Spirulina Bar',
-        description: 'The only energy bar scientifically formulated with Amla to unlock the iron absorption of Spirulina.',
-        price: '₹120.00',
-        image: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=800&q=80',
-        category: 'food' as const,
-        benefits: ['Iron Boost', 'Instant Energy'],
-        badge: 'Unique Formula',
+        title: 'Nutraceuticals',
+        desc: 'Enhanced bioavailability delivery systems.',
+        icon: '💊'
     }
 ];
 
 export function FeaturedProducts() {
     return (
-        <section className="py-8 relative overflow-hidden">
+        <section className="py-20 relative overflow-hidden bg-slate-50/50 dark:bg-slate-900/20">
             <div className="container mx-auto px-4 relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                     <div className="max-w-2xl">
@@ -55,15 +37,21 @@ export function FeaturedProducts() {
                     </div>
                     <Button variant="outline" className="shrink-0 w-full md:w-auto" asChild>
                         <Link to="/innovations" className="group flex items-center justify-center">
-                            View All Innovations
+                            View Research Portfolio
                             <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </Button>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {FEATURED_PRODUCTS.map((product) => (
-                        <ProductCard key={product.id} product={product} />
+                    {RESEARCH_HIGHLIGHTS.map((item) => (
+                        <div key={item.id} className="glass-card p-8 hover-lift rounded-2xl border border-white/40">
+                            <div className="text-4xl mb-6 bg-white/50 w-16 h-16 flex items-center justify-center rounded-2xl shadow-sm">
+                                {item.icon}
+                            </div>
+                            <h3 className="text-xl font-bold font-display mb-3">{item.title}</h3>
+                            <p className="text-muted-foreground">{item.desc}</p>
+                        </div>
                     ))}
                 </div>
             </div>
