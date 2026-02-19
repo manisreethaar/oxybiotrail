@@ -1,8 +1,8 @@
 import { Layout } from '@/components/layout/Layout';
-import { Network, ArrowRight, FlaskConical, Leaf, ShieldCheck, Microscope, FileCheck, CheckCircle2, Clock, ShieldOff, Globe, FileText, Beaker, Users2, Award, Rocket } from 'lucide-react';
+import { Network, ArrowRight, FlaskConical, Leaf, ShieldCheck, Microscope, FileCheck, CheckCircle2, Clock, ShieldOff, Globe, FileText, Beaker, Users2, Award, Rocket, Lock, Share2, Copy, Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { WaitlistForm } from '@/components/WaitlistForm';
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
 import { useCountUp } from '@/hooks/useCountUp';
@@ -148,6 +148,259 @@ const AbsorptionBar = ({ label, percentage, color, delay }: { label: string; per
           className={`h-full rounded-full ${color}`}
         />
       </div>
+    </div>
+  );
+};
+
+/* ─────────── WaitlistCTA (Section 11) ─────────── */
+const BENEFITS = [
+  'First access — before public launch',
+  'Founding member pricing (locked forever)',
+  'Monthly development updates (real behind-the-scenes, not marketing emails)',
+  'Clinical study results — first to know',
+  'Opportunity to shape final formulation (we survey waitlist for flavor preferences)',
+  'Free starter kit with first order',
+];
+
+const WaitlistCTA = () => {
+  const [submitted, setSubmitted] = useState(false);
+  const [firstName, setFirstName] = useState('');
+  const [email, setEmail] = useState('');
+  const [formula, setFormula] = useState('');
+  const [city, setCity] = useState('');
+  const [copied, setCopied] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!firstName.trim() || !email.trim()) {
+      toast({ title: 'Please fill in your name and email', variant: 'destructive' });
+      return;
+    }
+    setSubmitted(true);
+  };
+
+  const shareUrl = 'https://oxybiotrail.vercel.app';
+  const shareText = `I just joined the waitlist for OXYGEN — India's first honest precision nutrition drink. Built on Millet, Mushrooms, and real science. Join here: ${shareUrl}`;
+
+  const copyLink = () => {
+    navigator.clipboard.writeText(shareUrl);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div className="max-w-5xl mx-auto">
+      <AnimatePresence mode="wait">
+        {!submitted ? (
+          <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+            {/* Headline */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-4">
+                Be part of something<br />
+                <span className="text-primary">India has needed for years.</span>
+              </h2>
+              <p className="text-xl text-slate-500 dark:text-slate-400">Join our waitlist and receive:</p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              {/* Benefits */}
+              <div className="space-y-4">
+                {BENEFITS.map((benefit, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.15 }}
+                    className="flex items-start gap-3"
+                  >
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.15, type: 'spring', stiffness: 300 }}
+                      className="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center shrink-0 mt-0.5"
+                    >
+                      <Check size={14} className="text-emerald-600" />
+                    </motion.div>
+                    <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{benefit}</p>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Form */}
+              <motion.form
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                onSubmit={handleSubmit}
+                className="p-8 rounded-3xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 shadow-xl"
+              >
+                <div className="space-y-4 mb-6">
+                  <div>
+                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1.5">First Name *</label>
+                    <input
+                      type="text"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      placeholder="Your first name"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none transition-all"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1.5">Email Address *</label>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="you@email.com"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none transition-all"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1.5">Which formula interests you most?</label>
+                    <select
+                      value={formula}
+                      onChange={(e) => setFormula(e.target.value)}
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-sm text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none transition-all"
+                    >
+                      <option value="">Select one...</option>
+                      <option value="CORE">CORE — Daily Nutrition</option>
+                      <option value="FOCUS">FOCUS — Cognitive Performance</option>
+                      <option value="SURGE">SURGE — Athletic Recovery</option>
+                      <option value="BAR">The Honest Protein Bar</option>
+                      <option value="ALL">All of them</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1.5">Your City <span className="text-slate-300">(optional)</span></label>
+                    <input
+                      type="text"
+                      value={city}
+                      onChange={(e) => setCity(e.target.value)}
+                      placeholder="e.g., Bangalore"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none transition-all"
+                    />
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-primary text-white py-4 rounded-xl font-bold text-sm hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 active:scale-[0.98]"
+                >
+                  Join the Waitlist — I Want Early Access
+                </button>
+
+                <p className="text-[11px] text-slate-400 text-center mt-4 leading-relaxed">
+                  No payment required. No spam. Unsubscribe instantly anytime.<br />
+                  Your trust means everything to us.
+                </p>
+
+                <div className="flex items-center justify-center gap-1.5 mt-3 text-[10px] text-slate-300 dark:text-slate-600">
+                  <Lock size={10} /> Your data is never sold
+                </div>
+              </motion.form>
+            </div>
+          </motion.div>
+        ) : (
+          /* ─── Success State ─── */
+          <motion.div
+            key="success"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-center max-w-xl mx-auto py-12"
+          >
+            {/* Animated Checkmark */}
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+              className="w-24 h-24 mx-auto mb-8"
+            >
+              <svg viewBox="0 0 100 100" className="w-full h-full">
+                <motion.circle
+                  cx="50" cy="50" r="45"
+                  fill="none"
+                  stroke="hsl(var(--primary))"
+                  strokeWidth="3"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ duration: 0.8 }}
+                />
+                <motion.path
+                  d="M30 52 L45 67 L72 35"
+                  fill="none"
+                  stroke="hsl(var(--primary))"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                />
+              </svg>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}>
+              <h2 className="text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
+                You are in. 🌱
+              </h2>
+              <p className="text-lg text-slate-600 dark:text-slate-300 mb-2">
+                Welcome to the Oxygen waitlist, <strong className="text-primary">{firstName}</strong>.
+              </p>
+              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-8">
+                Check your inbox right now — we've sent you a welcome note with what happens next.
+              </p>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2 }} className="mb-10">
+              <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">While you wait:</p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <Link to="/ingredients" className="text-sm text-primary hover:underline font-medium">→ Read about our key ingredients</Link>
+                <Link to="/blog" className="text-sm text-primary hover:underline font-medium">→ Follow our development journey</Link>
+              </div>
+            </motion.div>
+
+            {/* Share Buttons */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5 }}>
+              <p className="text-xs text-slate-400 mb-4">Share with someone who should know about Oxygen:</p>
+              <div className="flex items-center justify-center gap-3">
+                <a
+                  href={`https://wa.me/?text=${encodeURIComponent(shareText)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-500 text-white text-sm font-bold hover:bg-emerald-600 transition-all"
+                >
+                  <Share2 size={14} /> WhatsApp
+                </a>
+                <a
+                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-blue-600 text-white text-sm font-bold hover:bg-blue-700 transition-all"
+                >
+                  <Share2 size={14} /> LinkedIn
+                </a>
+                <button
+                  onClick={copyLink}
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-white text-sm font-bold hover:bg-slate-300 dark:hover:bg-slate-600 transition-all"
+                >
+                  {copied ? <><Check size={14} /> Copied!</> : <><Copy size={14} /> Copy Link</>}
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
@@ -758,10 +1011,10 @@ const Index = () => {
                   {/* Status + Date */}
                   <div className="flex items-center gap-3 mb-2">
                     <span className={`text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full ${stage.status === 'completed'
-                        ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400'
-                        : stage.status === 'current'
-                          ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400'
-                          : 'bg-slate-100 dark:bg-slate-800 text-slate-400'
+                      ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400'
+                      : stage.status === 'current'
+                        ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400'
+                        : 'bg-slate-100 dark:bg-slate-800 text-slate-400'
                       }`}>
                       {stage.status === 'completed' ? '✓ Completed' : stage.status === 'current' ? '← You are here' : 'Upcoming'}
                     </span>
@@ -812,6 +1065,19 @@ const Index = () => {
             </div>
           </motion.div>
 
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          SECTION 11: MAIN WAITLIST CTA — "What do I do now?"
+          ═══════════════════════════════════════════════════════════════ */}
+      <section id="waitlist" className="section-padding relative overflow-hidden">
+        {/* Warm gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-white to-emerald-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(245,158,11,0.08),transparent_60%)]" />
+
+        <div className="container-width px-4 relative z-10">
+          <WaitlistCTA />
         </div>
       </section>
 
