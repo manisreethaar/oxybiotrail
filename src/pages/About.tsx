@@ -1,5 +1,5 @@
 import { Layout } from '@/components/layout/Layout';
-import { ArrowRight, BookOpen, FlaskConical, Search, Users, Rocket, Heart, Leaf } from 'lucide-react';
+import { ArrowRight, BookOpen, FlaskConical, Search, Users, Rocket, Heart, Leaf, Mail, MapPin, CheckCircle2, Beaker, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -178,218 +178,237 @@ const About = () => {
         </div>
       </section>
 
-      {/* ─── CHAPTER 1: THE OBSERVATION ─── */}
-      <ChapterSection
-        number="01"
-        title="The Observation"
-        icon={<Search size={28} />}
-        accentColor="amber"
-      >
-        <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-          It started with a simple question at a college canteen in Hosur.
-        </p>
-        <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-          I watched a classmate — someone who trained six days a week, studied twelve hours a day —
-          down a popular "health drink" that was 47% sugar with synthetic vitamins his body could barely absorb.
-          He thought he was doing the right thing. The label told him he was.
-        </p>
-        <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-          I started reading labels obsessively. Horlicks, Bournvita, Complan, Ensure. The more I looked,
-          the more a pattern emerged: <strong className="text-slate-900 dark:text-white">cheap vitamin forms, under-dosed actives, sugar as the primary ingredient,
-            and marketing that made it all sound scientific.</strong>
-        </p>
-        <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-          The same brands sold better formulations abroad. Indian consumers were getting the cost-optimized version.
-          Not the health-optimized version. That observation wouldn't leave me alone.
-        </p>
+      {/* ═══════════════════════════════════════════════════════════
+          CHAPTER 1: THE HOOK
+          ═══════════════════════════════════════════════════════════ */}
+      <ChapterSection number="01" title="The Hook" icon={<Search size={28} />} accentColor="amber">
+        <div className="space-y-6">
+          <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
+            We spent six months trying to find a daily nutrition product we would actually recommend to someone we cared about.
+          </p>
+          <p className="text-2xl font-display font-bold text-slate-900 dark:text-white">
+            We could not find one.
+          </p>
+          <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+            Either the science was inadequate, or the ingredients were compromised, or the price was inaccessible, or it was designed for a Western diet and simply repacked for India.
+          </p>
+          <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+            We analyzed blood reports from urban Indians across multiple cities. The pattern was consistent and alarming. <strong className="text-slate-900 dark:text-white">Seven out of ten showed at least one significant deficiency.</strong> Most were health-conscious people. Most were not eating badly by any measure. Most had no idea they were deficient.
+          </p>
+          <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+            The food system was failing people who were trying to do the right thing.
+          </p>
+          <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 mt-8">
+            <p className="text-lg text-primary font-bold italic">
+              "We decided the only option was to build it ourselves."
+            </p>
+          </div>
+        </div>
       </ChapterSection>
 
-      {/* ─── CHAPTER 2: THE RESEARCH ─── */}
-      <ChapterSection
-        number="02"
-        title="The Research"
-        icon={<BookOpen size={28} />}
-        accentColor="emerald"
-        alternate
-      >
-        <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-          Three months of research confirmed what the labels suggested. The data was worse than the observation.
+      {/* ═══════════════════════════════════════════════════════════
+          CHAPTER 2: THE FOUNDERS
+          ═══════════════════════════════════════════════════════════ */}
+      <ChapterSection number="02" title="The Founders" icon={<Users size={28} />} accentColor="emerald" alternate>
+        <div className="space-y-8">
+          {/* Founder Card */}
+          <div className="flex flex-col md:flex-row gap-8 p-8 rounded-3xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+            {/* Photo placeholder */}
+            <div className="w-40 h-48 md:w-48 md:h-56 rounded-2xl bg-gradient-to-br from-primary/10 to-amber-500/10 flex items-center justify-center shrink-0 mx-auto md:mx-0">
+              <Users size={48} className="text-primary/30" />
+            </div>
+            <div className="space-y-4 flex-grow">
+              <div>
+                <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white">Manisreethaar</h3>
+                <p className="text-sm text-primary font-bold">Co-founder + Chief Science Officer</p>
+              </div>
+
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Why I am the right person for this</p>
+                <div className="space-y-1.5">
+                  {[
+                    'Student Researcher, Adhiyamaan College of Engineering',
+                    'Incubated at TBI — Technology Business Incubator, ACE Hosur',
+                    '6+ months of nutrition & formulation research before first prototype',
+                    'Personally analyzed 200+ peer-reviewed studies for this project',
+                  ].map((cred, i) => (
+                    <motion.div key={i} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                      <p className="text-sm text-slate-600 dark:text-slate-300">{cred}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="p-5 rounded-xl bg-primary/5 border border-primary/10">
+                <p className="text-sm text-slate-700 dark:text-slate-200 leading-relaxed italic">
+                  "I am building Oxygen because I am genuinely angry at what the market currently offers people who are trying to take their health seriously. I have seen the research. I know what good nutrition science looks like. And I know that the gap between what is possible and what is being sold is not technical — <strong className="not-italic text-primary">it is a choice. We are choosing differently.</strong>"
+                </p>
+              </div>
+
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Responsible for at Oxygen</p>
+                <div className="flex flex-wrap gap-2">
+                  {['Formulation Design', 'Ingredient Sourcing', 'Clinical Study Protocol', 'Science Communication'].map((area) => (
+                    <span key={area} className="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-700 text-[11px] font-medium text-slate-600 dark:text-slate-300">{area}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 pt-2">
+                <Mail size={14} className="text-primary" />
+                <p className="text-sm text-slate-500">manisreethaar@oxygenbio.in · <span className="text-primary font-medium">I personally respond to science questions</span></p>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-sm text-slate-400 text-center">
+            Growing the team as we grow. Interested in joining?{' '}
+            <Link to="/careers" className="text-primary font-bold hover:underline">See open roles →</Link>
+          </p>
+        </div>
+      </ChapterSection>
+
+      {/* ═══════════════════════════════════════════════════════════
+          CHAPTER 3: THE APPROACH — 6 Principles
+          ═══════════════════════════════════════════════════════════ */}
+      <ChapterSection number="03" title="Our Approach" icon={<FlaskConical size={28} />} accentColor="blue">
+        <p className="text-lg text-slate-500 dark:text-slate-400 mb-10">
+          How we think about building Oxygen. These are not marketing copy — they are our operating principles.
         </p>
-        <div className="grid sm:grid-cols-3 gap-6 my-10">
+        <div className="grid md:grid-cols-2 gap-6">
           {[
-            { stat: "73%", label: "of urban Indians are Vitamin D deficient", source: "ICMR" },
-            { stat: "50%", label: "of working professionals skip at least one meal daily", source: "ASSOCHAM" },
-            { stat: "68%", label: "of health drinks fail their own label claims", source: "CSE 2023" },
-          ].map((s, i) => (
+            {
+              num: '01',
+              title: 'Science Before Marketing',
+              body: 'We designed the formulation before we designed the brand. We chose ingredients before we chose colors. We cited our evidence before we wrote our copy. This is backwards from how most nutrition companies work. We think it is the only sensible order.',
+              icon: <FlaskConical size={18} />,
+            },
+            {
+              num: '02',
+              title: 'India Is Not a Market Segment',
+              body: 'We did not take a Western formula and add Ashwagandha to make it Indian. We started from India. From what Indian bodies are deficient in. From what Indian ingredients can provide. From what Indian lifestyles demand. India is not an afterthought — it is the foundation.',
+              icon: <MapPin size={18} />,
+            },
+            {
+              num: '03',
+              title: 'Transparency Is Not Optional',
+              body: 'We will publish our lab reports. We will name our ingredient suppliers. We will cite the studies behind our claims. We will tell you when a study is preliminary and when it is robust. We will tell you what our products cannot do. This should be standard.',
+              icon: <Search size={18} />,
+            },
+            {
+              num: '04',
+              title: 'Dose Matters As Much As Ingredient',
+              body: 'Ashwagandha at 50mg is not the same as Ashwagandha at 300mg. Lion\'s Mane at 100mg is not what the research studied. We formulate at clinically relevant doses — not at doses that allow us to put the ingredient on the label.',
+              icon: <Beaker size={18} />,
+            },
+            {
+              num: '05',
+              title: 'Bioavailability Is the Real Metric',
+              body: 'A 100mg dose with 5% absorption delivers 5mg to your body. A 50mg dose with 35% absorption delivers 17.5mg. The nutrient that reaches your bloodstream is the only nutrient that matters. We optimize for absorption first. Always.',
+              icon: <Leaf size={18} />,
+            },
+            {
+              num: '06',
+              title: 'Clinical Evidence Is Non-Negotiable',
+              body: 'We designed our clinical study before we manufactured our first batch. Not because we are required to. But because we believe no company should sell a health product without evidence that it works. We are holding ourselves to that standard.',
+              icon: <Shield size={18} />,
+            },
+          ].map((principle, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="text-center p-6 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700"
+              className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow"
             >
-              <span className="text-3xl font-display font-bold text-primary">{s.stat}</span>
-              <p className="text-sm text-slate-500 mt-2">{s.label}</p>
-              <p className="text-[10px] text-slate-400 mt-1">{s.source}</p>
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl font-display font-bold text-primary/15">{principle.num}</span>
+                <div className="text-primary">{principle.icon}</div>
+              </div>
+              <h4 className="font-display font-bold text-slate-900 dark:text-white mb-2">{principle.title}</h4>
+              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{principle.body}</p>
             </motion.div>
           ))}
         </div>
-        <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-          We spoke to nutritionists, sports coaches, and working professionals. The same story repeated:
-          people wanted to eat better but lacked the time. They trusted brands that didn't deserve their trust.
-          And the products designed for Western deficiencies missed what Indian bodies actually needed.
-        </p>
-        <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-          The gap wasn't just real. It was enormous. And nobody was honestly addressing it.
-        </p>
       </ChapterSection>
 
-      {/* ─── CHAPTER 3: THE FORMULATION ─── */}
-      <ChapterSection
-        number="03"
-        title="The Formulation"
-        icon={<FlaskConical size={28} />}
-        accentColor="blue"
-      >
-        <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-          We didn't start with a product idea. We started with a set of principles and refused to compromise on any of them.
+      {/* ═══════════════════════════════════════════════════════════
+          CHAPTER 4: THE JOURNEY SO FAR
+          ═══════════════════════════════════════════════════════════ */}
+      <ChapterSection number="04" title="The Journey So Far" icon={<Rocket size={28} />} accentColor="purple" alternate>
+        <p className="text-lg text-slate-500 dark:text-slate-400 mb-4">
+          What we have built before we built anything physical.
         </p>
-        <div className="space-y-4 my-10">
+        <p className="text-sm text-slate-400 italic mb-10">
+          Most companies build first and think about science second. We spent months thinking about the science before building anything.
+        </p>
+        <div className="space-y-0">
           {[
-            { principle: "Every ingredient must have a peer-reviewed rationale", detail: "No marketing-driven inclusions. If the science isn't clear, it doesn't go in." },
-            { principle: "Every vitamin and mineral must be in its active form", detail: "Methylcobalamin, not Cyanocobalamin. 5-MTHF, not Folic Acid. P5P, not Pyridoxine. The absorption difference is 3-4x." },
-            { principle: "Every dose must be clinically meaningful", detail: "Not a 'dusting' of 50+ ingredients. Fewer ingredients at doses that actually work." },
-            { principle: "Every ingredient must be Indian where possible", detail: "Ragi, Ashwagandha, Moringa, Kokum, Bacopa. India's pharmacopeia is world-class. We just forgot." },
-          ].map((p, i) => (
+            {
+              title: '6+ months of nutritional deficiency research',
+              body: 'Analyzed ICMR, NFHS-5, WHO India data. Mapped exact deficiency profiles by demographic and lifestyle. Built the evidence base for product necessity.',
+              status: 'Completed',
+            },
+            {
+              title: 'Complete formulation design',
+              body: 'Reviewed 200+ peer-reviewed studies. Designed complete formulas for 3 drinks + 1 bar. Every ingredient evidence-based. Every dose clinically relevant. Every form bioavailability optimized.',
+              status: 'Completed',
+            },
+            {
+              title: 'Regulatory pathway fully mapped',
+              body: 'FSSAI compliance audited per ingredient. Clinical study protocol designed. Ethics committee application in process. Label compliance framework completed.',
+              status: 'In Progress',
+            },
+            {
+              title: 'TBI Incubation secured',
+              body: 'Accepted by Technology Business Incubator at ACE, Hosur. Prototype development currently underway. Sensory testing beginning soon.',
+              status: 'Active',
+            },
+            {
+              title: 'Waitlist growing',
+              body: 'Before a single product exists — validation that the demand is real. Real people who believe something better should exist.',
+              status: 'Growing',
+            },
+          ].map((milestone, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -15 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-6 rounded-2xl bg-blue-50/50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/30"
+              className="flex items-start gap-4"
             >
-              <h4 className="font-display font-bold text-slate-900 dark:text-white mb-1">{p.principle}</h4>
-              <p className="text-sm text-slate-500 dark:text-slate-400">{p.detail}</p>
+              <div className="flex flex-col items-center">
+                <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold shrink-0">
+                  {String(i + 1).padStart(2, '0')}
+                </div>
+                {i < 4 && <div className="w-0.5 h-16 bg-primary/10 mt-1" />}
+              </div>
+              <div className="pt-1.5 pb-6">
+                <div className="flex items-center gap-2 mb-1">
+                  <h4 className="font-display font-bold text-slate-900 dark:text-white text-sm">{milestone.title}</h4>
+                  <span className={`px-2 py-0.5 rounded-full text-[9px] font-bold ${milestone.status === 'Completed' ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400' :
+                    milestone.status === 'Growing' ? 'bg-primary/10 text-primary' :
+                      'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400'
+                    }`}>{milestone.status}</span>
+                </div>
+                <p className="text-sm text-slate-500 dark:text-slate-400">{milestone.body}</p>
+              </div>
             </motion.div>
           ))}
         </div>
-        <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-          The result: three distinct formulas — <strong className="text-blue-600">CORE</strong> for daily nutrition,
-          <strong className="text-emerald-600"> FOCUS</strong> for cognitive performance,
-          and <strong className="text-rose-700"> SURGE</strong> for athletic recovery.
-          Each designed for a specific need. All built on the same uncompromising foundation.
-        </p>
+
+        <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
+          className="text-primary font-bold text-center mt-8">
+          We believe this is why Oxygen will work when others have not.
+        </motion.p>
       </ChapterSection>
 
-      {/* ─── CHAPTER 4: THE TEAM ─── */}
-      <ChapterSection
-        number="04"
-        title="The Team"
-        icon={<Users size={28} />}
-        accentColor="purple"
-        alternate
-      >
-        <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-10">
-          Oxygen isn't a faceless corporation. It's built by people who personally care about this problem.
-        </p>
-
-        {/* Founder Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex flex-col md:flex-row gap-8 items-center p-8 rounded-3xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 mb-8"
-        >
-          <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-gradient-to-br from-primary/10 to-amber-500/10 flex items-center justify-center shrink-0">
-            <Users size={48} className="text-primary/40" />
-          </div>
-          <div className="text-center md:text-left space-y-3">
-            <div>
-              <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white">Manisreethaar</h3>
-              <p className="text-sm text-primary font-bold">Founder & Lead Researcher</p>
-            </div>
-            <p className="text-slate-500 dark:text-slate-400 leading-relaxed">
-              Student researcher at Adhiyamaan College of Engineering. Started with a frustration about how Indian
-              health products underserve Indian consumers. Spent 3+ months in research before writing a single
-              line of formulation. Believes Indian ingredients deserve Indian innovation — not cost-cutting.
-            </p>
-            <p className="text-sm text-slate-400 italic">
-              "I keep working on this because someone has to prove that honest products can win in India."
-            </p>
-          </div>
-        </motion.div>
-
-        <p className="text-sm text-slate-400 text-center">
-          Growing the team as we grow. Interested in joining?{' '}
-          <Link to="/careers" className="text-primary font-bold hover:underline">See open roles →</Link>
-        </p>
-      </ChapterSection>
-
-      {/* ─── CHAPTER 5: THE MISSION ─── */}
-      <section className="section-padding bg-slate-900 dark:bg-slate-950 relative overflow-hidden">
-        <div className="container-width px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-6 block">Chapter 05 — The Mission</span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white leading-tight mb-12">
-              Oxygen exists to prove three things.
-            </h2>
-
-            <div className="space-y-10 text-left max-w-2xl mx-auto">
-              {[
-                {
-                  num: "1",
-                  title: "Indian ingredients are world-class.",
-                  body: "They always have been. Ragi, Ashwagandha, Lion's Mane, Moringa — these aren't alternatives. They're originals.",
-                },
-                {
-                  num: "2",
-                  title: "Honest products can succeed commercially.",
-                  body: "Quality and transparency are competitive advantages, not liabilities. We refuse to believe that cutting corners is the only way to build a business in India.",
-                },
-                {
-                  num: "3",
-                  title: "The Indian nutrition consumer is intelligent.",
-                  body: "They deserve products that respect their intelligence. Not misleading labels. Not token doses. Not sugar disguised as science.",
-                },
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.15 }}
-                  className="flex gap-6"
-                >
-                  <span className="text-5xl font-display font-bold text-primary/30">{item.num}</span>
-                  <div>
-                    <h3 className="text-xl font-display font-bold text-white mb-2">{item.title}</h3>
-                    <p className="text-slate-400 leading-relaxed">{item.body}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              className="text-lg text-primary font-bold mt-16"
-            >
-              We are building all three proofs simultaneously.
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ─── CHAPTER 6: JOIN THE JOURNEY ─── */}
+      {/* ═══════════════════════════════════════════════════════════
+          CHAPTER 5: THE INVITATION
+          ═══════════════════════════════════════════════════════════ */}
       <section className="section-padding bg-white dark:bg-slate-950">
         <div className="container-width px-4">
           <motion.div
@@ -398,48 +417,58 @@ const About = () => {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-6 block">Chapter 06</span>
+            <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-6 block">Chapter 05 — The Invitation</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-slate-900 dark:text-white">
-              Join the journey.
+              Join us.
             </h2>
-            <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed mb-12">
-              We're building this in public. Every breakthrough, every setback, every decision — documented and shared.
+            <p className="text-lg text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+              Oxygen is currently in development. We are not asking you to buy anything. We are asking you to believe that something better is possible — and to hold us accountable to delivering it.
+            </p>
+            <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-12">
+              Join our waitlist. Read our research. Follow our development. Tell us what you need from a nutrition product. <strong className="text-primary">We are listening. And we are building.</strong>
             </p>
 
             <div className="grid sm:grid-cols-3 gap-6 mb-12">
               {[
-                { label: "Read the Blog", desc: "Science deep-dives & building updates", link: "/blog", icon: <BookOpen size={24} /> },
-                { label: "See the Roadmap", desc: "Our development timeline", link: "/", icon: <Rocket size={24} /> },
-                { label: "Explore Ingredients", desc: "What goes into Oxygen", link: "/#ingredients", icon: <Leaf size={24} /> },
-              ].map((item, i) => (
+                {
+                  title: 'Join the Waitlist',
+                  desc: 'Get first access when we launch. Founding member pricing locked forever. First to receive clinical study results.',
+                  link: '/#waitlist',
+                  cta: 'Join Waitlist →',
+                  icon: <CheckCircle2 size={24} />,
+                },
+                {
+                  title: 'Follow the Journey',
+                  desc: 'We document everything. The science. The setbacks. The breakthroughs. The honest reality of building this in India.',
+                  link: '/blog',
+                  cta: 'Read Our Journal →',
+                  icon: <BookOpen size={24} />,
+                },
+                {
+                  title: 'Talk to Us',
+                  desc: 'If you have a question about our formulation, our ingredients, or our approach — ask us. We will give you a real answer.',
+                  link: '/contact',
+                  cta: 'Contact Us →',
+                  icon: <Mail size={24} />,
+                },
+              ].map((way, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
+                  transition={{ delay: i * 0.15 }}
+                  className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:shadow-md hover:border-primary/20 transition-all"
                 >
-                  <Link
-                    to={item.link}
-                    className="block p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-primary/30 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 text-center"
-                  >
-                    <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                      {item.icon}
-                    </div>
-                    <h4 className="font-display font-bold text-slate-900 dark:text-white mb-1">{item.label}</h4>
-                    <p className="text-xs text-slate-400">{item.desc}</p>
+                  <div className="text-primary mb-3 flex justify-center">{way.icon}</div>
+                  <h3 className="font-display font-bold text-slate-900 dark:text-white mb-2">{way.title}</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4">{way.desc}</p>
+                  <Link to={way.link} className="text-sm text-primary font-bold hover:underline inline-flex items-center gap-1">
+                    {way.cta} <ArrowRight size={14} />
                   </Link>
                 </motion.div>
               ))}
             </div>
-
-            <a
-              href="/#waitlist"
-              className="inline-flex items-center gap-2 bg-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
-            >
-              Join the Waitlist <ArrowRight size={18} />
-            </a>
-            <p className="text-xs text-slate-400 mt-4">No payment. No commitment. Cancel anytime.</p>
           </motion.div>
         </div>
       </section>
