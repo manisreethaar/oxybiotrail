@@ -1,5 +1,5 @@
 import { Layout } from '@/components/layout/Layout';
-import { Network, ArrowRight, FlaskConical, Leaf, ShieldCheck, Microscope, FileCheck, CheckCircle2, Clock, ShieldOff, Globe } from 'lucide-react';
+import { Network, ArrowRight, FlaskConical, Leaf, ShieldCheck, Microscope, FileCheck, CheckCircle2, Clock, ShieldOff, Globe, FileText, Beaker, Users2, Award, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
@@ -628,6 +628,189 @@ const Index = () => {
               ))}
             </div>
           </div>
+
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          SECTION 8: THE JOURNEY — "Are these people real and credible?"
+          ═══════════════════════════════════════════════════════════════ */}
+      <section className="section-padding bg-slate-50 dark:bg-slate-900/50 relative overflow-hidden">
+        <div className="container-width px-4">
+
+          {/* Opening */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-6"
+          >
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-tight">
+              Building in public.<br />
+              <span className="text-primary">Every step. Every setback.<br />Every breakthrough.</span>
+            </h2>
+            <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed">
+              Most companies hide their development process. We think you should see exactly how your nutrition is being built.
+            </p>
+          </motion.div>
+
+          {/* Timeline */}
+          <div className="max-w-3xl mx-auto py-16 relative">
+            {/* Vertical Line */}
+            <motion.div
+              initial={{ height: 0 }}
+              whileInView={{ height: '100%' }}
+              viewport={{ once: true }}
+              transition={{ duration: 2, ease: "easeOut" }}
+              className="absolute left-6 md:left-8 top-0 w-0.5 bg-gradient-to-b from-emerald-500 via-amber-500 to-slate-200 dark:to-slate-700 origin-top"
+            />
+
+            {/* Stage Items */}
+            {[
+              {
+                status: 'completed' as const,
+                title: 'Nutritional Gap Research',
+                date: 'Aug 2025',
+                content: 'Analyzed ICMR, NFHS-5, and WHO data on Indian nutritional deficiencies. Mapped the exact nutrients most urban Indians are lacking.',
+                icon: <FileText size={18} />,
+              },
+              {
+                status: 'completed' as const,
+                title: 'Scientific Formulation Design',
+                date: 'Oct 2025',
+                content: 'Designed complete formulations for all three SKUs + protein bar. Every ingredient: peer-reviewed rationale. Every dose: clinical evidence base. Every form: bioavailability optimized.',
+                icon: <FlaskConical size={18} />,
+              },
+              {
+                status: 'completed' as const,
+                title: 'Regulatory Pathway Mapping',
+                date: 'Dec 2025',
+                content: 'Mapped complete FSSAI compliance pathway. Ingredient audit completed. Label compliance framework designed. Clinical study protocol drafted.',
+                icon: <FileCheck size={18} />,
+              },
+              {
+                status: 'current' as const,
+                title: 'TBI Incubation + Prototype Development',
+                date: 'Jan 2026 — Present',
+                content: 'Currently developing physical prototypes at TBI, Adhiyamaan College of Engineering. Sensory testing beginning. Flavor system under development. First tastings planned for March 2026.',
+                icon: <Beaker size={18} />,
+              },
+              {
+                status: 'upcoming' as const,
+                title: 'Clinical Pilot Study',
+                date: 'Target Q2 2026',
+                content: 'n=135 participants. 8-week intervention study. Three arms: Professionals, Students, Athletes. Ethics committee approval in process.',
+                icon: <Users2 size={18} />,
+              },
+              {
+                status: 'upcoming' as const,
+                title: 'FSSAI Licensing + Commercial Production',
+                date: 'Target Q3 2026',
+                content: 'FSSAI Central License application. Contract manufacturer finalization. First production batch.',
+                icon: <Award size={18} />,
+              },
+              {
+                status: 'upcoming' as const,
+                title: 'Launch — Waitlist First',
+                date: 'Target Q4 2026',
+                content: 'Waitlist members get access first. Founding member pricing locked. Public launch follows 30 days later.',
+                icon: <Rocket size={18} />,
+                cta: true,
+              },
+            ].map((stage, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="relative pl-16 md:pl-20 mb-12 last:mb-0"
+              >
+                {/* Timeline Dot */}
+                <div className="absolute left-0 top-0 z-10">
+                  <div className={`
+                    w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center border-2 transition-all
+                    ${stage.status === 'completed'
+                      ? 'bg-emerald-500 border-emerald-500 text-white shadow-lg shadow-emerald-500/20'
+                      : stage.status === 'current'
+                        ? 'bg-amber-500 border-amber-500 text-white shadow-lg shadow-amber-500/30'
+                        : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-400'
+                    }
+                  `}>
+                    {stage.icon}
+                  </div>
+                  {/* Pulsing ring for current stage */}
+                  {stage.status === 'current' && (
+                    <div className="absolute inset-0 w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-amber-500 animate-ping opacity-30" />
+                  )}
+                </div>
+
+                {/* Content Card */}
+                <div className={`
+                  p-6 rounded-2xl border transition-all
+                  ${stage.status === 'completed'
+                    ? 'bg-white dark:bg-slate-800/50 border-emerald-100 dark:border-emerald-900/30'
+                    : stage.status === 'current'
+                      ? 'bg-amber-50/50 dark:bg-amber-900/10 border-amber-200 dark:border-amber-800/50 shadow-lg shadow-amber-500/5'
+                      : 'bg-white/50 dark:bg-slate-800/30 border-slate-100 dark:border-slate-800 opacity-70'
+                  }
+                `}>
+                  {/* Status + Date */}
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className={`text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full ${stage.status === 'completed'
+                        ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400'
+                        : stage.status === 'current'
+                          ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400'
+                          : 'bg-slate-100 dark:bg-slate-800 text-slate-400'
+                      }`}>
+                      {stage.status === 'completed' ? '✓ Completed' : stage.status === 'current' ? '← You are here' : 'Upcoming'}
+                    </span>
+                    <span className="text-xs text-slate-400">{stage.date}</span>
+                  </div>
+
+                  {/* Title */}
+                  <h4 className={`text-lg font-display font-bold mb-2 ${stage.status === 'upcoming' ? 'text-slate-500' : 'text-slate-900 dark:text-white'
+                    }`}>
+                    {stage.title}
+                  </h4>
+
+                  {/* Content */}
+                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                    {stage.content}
+                  </p>
+
+                  {/* CTA for Launch stage */}
+                  {stage.cta && (
+                    <a href="#waitlist" className="inline-flex items-center gap-2 mt-4 text-sm font-bold text-primary hover:text-primary/80 transition-colors">
+                      Get waitlist access <ArrowRight size={14} />
+                    </a>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* TBI Incubator Credibility Block */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-2xl mx-auto text-center mt-8 p-8 rounded-3xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700"
+          >
+            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <Network size={32} className="text-primary" />
+            </div>
+            <h3 className="text-xl font-display font-bold mb-2 text-slate-900 dark:text-white">
+              Incubated at TBI, Adhiyamaan College of Engineering
+            </h3>
+            <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+              Technology Business Incubator — supporting deep-tech and biotech startups with mentorship, lab access, and industry connections.
+            </p>
+            <div className="flex items-center justify-center gap-2 text-xs text-slate-400">
+              <span className="flex h-2 w-2 rounded-full bg-emerald-500"></span>
+              Actively incubated since January 2026
+            </div>
+          </motion.div>
 
         </div>
       </section>
