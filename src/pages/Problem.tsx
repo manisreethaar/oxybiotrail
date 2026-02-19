@@ -58,6 +58,236 @@ const Problem = () => {
         </div>
       </section>
 
+      {/* ═══ LAYER 1: THE MARKET PROBLEM ═══ */}
+      <section className="section-padding bg-white dark:bg-slate-950">
+        <div className="container-width px-4">
+          <div className="max-w-5xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-red-500 block mb-2">Layer 01 — The Data</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
+                India Has a Nutrition Crisis
+              </h2>
+              <p className="text-lg text-slate-500 dark:text-slate-400 max-w-3xl">
+                That nobody is talking about honestly. These are not estimates — these are ICMR, NFHS-5, and WHO measurements.
+              </p>
+            </motion.div>
+
+            {/* Deficiency Stats Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+              {[
+                { pct: '70-90%', label: 'Vitamin D Deficient', sub: 'Urban Indians', src: 'ICMR Task Force, 2022', color: 'text-red-500' },
+                { pct: '47%', label: 'B12 Deficient', sub: 'Total population', src: 'J. Nutritional Science', color: 'text-amber-500' },
+                { pct: '53%', label: 'Iron Deficient', sub: 'Working women', src: 'NFHS-5', color: 'text-rose-500' },
+                { pct: '68%', label: 'Multiple Deficiencies', sub: 'Urban professionals', src: 'Recent clinical data', color: 'text-red-600' },
+              ].map((stat, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center"
+                >
+                  <span className={`text-3xl md:text-4xl font-display font-bold ${stat.color} block mb-1`}>{stat.pct}</span>
+                  <p className="text-sm font-bold text-slate-700 dark:text-slate-300">{stat.label}</p>
+                  <p className="text-[10px] text-slate-400 mt-1">{stat.sub}</p>
+                  <p className="text-[9px] text-slate-300 dark:text-slate-600 mt-2 italic">{stat.src}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Consequence Cards */}
+            <div className="grid md:grid-cols-2 gap-4 mb-8">
+              {[
+                { icon: '🧠', title: 'Cognitive Impact', body: 'Iron deficiency reduces cognitive performance by 15-20% in working adults.', src: 'Am J Clinical Nutrition' },
+                { icon: '💰', title: 'Economic Impact', body: 'Nutritional deficiency costs India an estimated ₹4.5 lakh crore annually in lost productivity.', src: 'World Bank India Report' },
+                { icon: '⚡', title: 'Fatigue Burden', body: 'Chronic fatigue affects 38% of urban working population — directly tied to micronutrient gaps.', src: 'ASSOCHAM Survey' },
+                { icon: '📚', title: 'Student Impact', body: 'Micronutrient deficiency linked to 21% reduction in academic performance.', src: 'Nutrition Reviews Journal' },
+              ].map((card, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="p-5 rounded-xl bg-red-50/50 dark:bg-red-900/5 border border-red-100 dark:border-red-900/20 flex items-start gap-4"
+                >
+                  <span className="text-2xl">{card.icon}</span>
+                  <div>
+                    <h4 className="font-bold text-sm text-slate-800 dark:text-slate-200 mb-1">{card.title}</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{card.body}</p>
+                    <p className="text-[9px] text-slate-300 dark:text-slate-600 mt-1 italic">Source: {card.src}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
+              className="text-center text-sm text-slate-400 italic"
+            >
+              This is a public health crisis hiding in plain sight.
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ LAYER 2: THE BEHAVIORAL PROBLEM ═══ */}
+      <section className="section-padding bg-slate-50 dark:bg-slate-900/50">
+        <div className="container-width px-4">
+          <div className="max-w-5xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-amber-500 block mb-2">Layer 02 — The Psychology</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
+                The Intention-Action Gap
+              </h2>
+              <p className="text-lg text-slate-500 dark:text-slate-400 max-w-3xl">
+                Urban Indians are more health-aware than any previous generation. They read about nutrition. They follow wellness accounts. They know what protein is. <strong className="text-slate-700 dark:text-slate-200">And yet deficiency rates are rising.</strong>
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  num: '01',
+                  title: 'Time Scarcity',
+                  color: 'border-amber-500',
+                  body: 'The average working professional in Bangalore or Mumbai works 52 hours per week. Commutes consume another 2-3 hours daily. What remains is insufficient for meal planning, preparation, and consistent nutritional coverage.',
+                  callout: 'This is not laziness. It is mathematics.',
+                },
+                {
+                  num: '02',
+                  title: 'Trust Deficit',
+                  color: 'border-red-500',
+                  body: 'CSE (Centre for Science and Environment) found that 68% of tested health food products failed to meet their own label claims. Maggi. Baby food controversies. Protein spiking scandals. The rational response is skepticism.',
+                  callout: 'Why buy something you cannot trust?',
+                },
+                {
+                  num: '03',
+                  title: 'Relevance Gap',
+                  color: 'border-blue-500',
+                  body: 'Most nutrition science is conducted in Western populations. Indian bodies have different gut microbiome composition, dietary baselines (predominantly vegetarian), cooking methods, and specific deficiency profiles.',
+                  callout: 'A Western product is not optimally designed for an Indian professional.',
+                },
+              ].map((barrier, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.15 }}
+                  className={`p-6 rounded-2xl bg-white dark:bg-slate-800/50 border-t-4 ${barrier.color}`}
+                >
+                  <span className="text-3xl font-display font-bold text-slate-200 dark:text-slate-700 block mb-2">{barrier.num}</span>
+                  <h3 className="font-display font-bold text-lg text-slate-900 dark:text-white mb-3">{barrier.title}</h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">{barrier.body}</p>
+                  <p className="text-sm font-bold text-slate-800 dark:text-slate-200 italic">"{barrier.callout}"</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ LAYER 3: THE SUPPLY PROBLEM ═══ */}
+      <section className="section-padding bg-white dark:bg-slate-950">
+        <div className="container-width px-4">
+          <div className="max-w-5xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Layer 03 — The Market Failure</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
+                The Market Response Has Been Inadequate
+              </h2>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {[
+                {
+                  category: 'Traditional Health Drinks',
+                  examples: 'Horlicks, Complan, Bournvita, Boost',
+                  offer: 'Strong distribution and cultural familiarity.',
+                  fail: 'Sugar: 16-18g/serving. Cheapest synthetic vitamin forms. Zero adaptogens. Zero bioavailability optimization. Designed in the 1970s.',
+                },
+                {
+                  category: 'Protein Supplements',
+                  examples: 'MuscleBlaze, ON India',
+                  offer: 'High protein content for muscle building.',
+                  fail: 'Designed for one narrow outcome: muscle mass. Ignore micronutrient deficiency completely. Amino acid spiking documented. Relevant for gym users only — not 95% of working Indians.',
+                },
+                {
+                  category: 'Imported Premium Products',
+                  examples: 'AG1, Huel, Ritual',
+                  offer: 'Genuine science. Quality ingredients. Transparency.',
+                  fail: 'AG1: ₹350-500/serving — unsustainable daily. None use Indian ingredients. None understand Indian nutritional patterns. Import duty makes them prohibitively costly.',
+                },
+                {
+                  category: 'Nutraceutical Startups',
+                  examples: 'Emerging Indian brands',
+                  offer: 'Modern positioning, Indian origin.',
+                  fail: 'Most are marketing companies that make supplements — not science companies that make products. Label claims without clinical evidence. Doses not clinically relevant.',
+                },
+              ].map((cat, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
+                >
+                  <h3 className="font-display font-bold text-slate-900 dark:text-white mb-1">{cat.category}</h3>
+                  <p className="text-[10px] text-slate-400 mb-3 italic">{cat.examples}</p>
+                  <div className="space-y-3">
+                    <div>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-500">What they offer</span>
+                      <p className="text-sm text-slate-500 dark:text-slate-400">{cat.offer}</p>
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-red-500">Why it fails</span>
+                      <p className="text-sm text-slate-600 dark:text-slate-300">{cat.fail}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* The Empty Intersection — Dark conclusion card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="p-8 md:p-12 rounded-3xl bg-slate-900 dark:bg-slate-800 text-center"
+            >
+              <p className="text-sm text-slate-400 mb-6 leading-relaxed max-w-2xl mx-auto">
+                The market has: Affordable products that are inadequate. Quality products that are inaccessible. Indian products that lack rigour. Rigorous products that lack Indian relevance.
+              </p>
+              <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-3">
+                Affordable. Quality. Indian. Rigorous.
+              </h3>
+              <p className="text-primary font-bold text-lg">
+                This intersection is currently empty. Oxygen is being built to occupy it.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════
+          HOW WE SOLVE IT — Our Formulation Science
+          ═══════════════════════════════════════════════════════════ */}
+      <section className="section-padding bg-slate-50 dark:bg-slate-900/50">
+        <div className="container-width px-4 text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-4">Our Scientific Response</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
+              How We Close The Gap
+            </h2>
+            <p className="text-lg text-slate-500 dark:text-slate-400">
+              Our science exists to serve our mission. Every formulation decision below connects directly to the problem above.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ═══ SECTION 1: BIOAVAILABILITY ═══ */}
       <section className="section-padding bg-white dark:bg-slate-950">
         <div className="container-width px-4">
