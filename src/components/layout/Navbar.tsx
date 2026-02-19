@@ -82,7 +82,7 @@ export function Navbar() {
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center gap-3">
             <Button size="sm" asChild className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 shadow-md hover:shadow-lg transition-all">
-              <Link to="/contact">Partner With Us</Link>
+              <Link to="/partner">Partner With Us</Link>
             </Button>
           </div>
 

@@ -8,6 +8,7 @@ import Science from "./pages/Science";
 import Roadmap from "./pages/Roadmap";
 import Products from "./pages/products/Products";
 import Careers from "./pages/Careers";
+import Partner from "./pages/Partner";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -33,6 +34,7 @@ const App = () => (
               <Route path="/roadmap" element={<Roadmap />} />
               <Route path="/products" element={<Products />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/partner" element={<Partner />} />
               <Route path="/team" element={<Team />} />
               <Route path="/contact" element={<Contact />} />
 
