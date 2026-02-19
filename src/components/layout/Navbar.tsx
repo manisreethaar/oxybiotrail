@@ -1,18 +1,16 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, TestTube, Factory, Calendar, Users, Home, FlaskConical, GraduationCap, Target, BookOpen } from 'lucide-react';
+import { Menu, X, TestTube, Factory, Calendar, Users, Home, FlaskConical, GraduationCap, Target, BookOpen, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useAuth } from "@/context/AuthContext";
 
 const navLinks = [
-  { name: 'Home', path: '/', icon: Home },
-  { name: 'The Problem', path: '/problem', icon: Target },
-  { name: 'Innovations', path: '/innovations', icon: FlaskConical },
-  { name: 'Blog', path: '/blog', icon: BookOpen },
+  { name: 'Our Science', path: '/problem', icon: FlaskConical },
+  { name: 'Ingredients', path: '/#ingredients', icon: Leaf },
   { name: 'Our Story', path: '/about', icon: Users },
-  { name: 'Careers', path: '/careers', icon: GraduationCap },
+  { name: 'Blog', path: '/blog', icon: BookOpen },
 ];
 
 export function Navbar() {
@@ -44,18 +42,12 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 flex items-center justify-center bg-primary/10 rounded-xl transition-all duration-300 group-hover:bg-primary/20 border border-primary/20">
-              {/* Bio Leaf/DNA Icon representation */}
-              <div className="text-primary">
-                <TestTube size={20} />
-              </div>
-            </div>
             <div className="flex flex-col justify-center">
-              <span className="text-lg font-bold font-display text-foreground tracking-tight leading-none">
-                Oxygen <span className="text-primary">BioInnovations</span>
+              <span className="text-xl font-bold font-display text-foreground tracking-tight leading-none uppercase">
+                Oxygen
               </span>
-              <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-medium">
-                Bridging Nature & Science
+              <span className="text-[10px] tracking-widest text-muted-foreground font-medium">
+                Ancient Ingredients. Modern Science.
               </span>
             </div>
           </Link>
@@ -80,9 +72,14 @@ export function Navbar() {
           </div>
 
           {/* Right Side Actions */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-4">
+            {scrolled && (
+              <span className="text-xs font-medium text-muted-foreground animate-fade-in">
+                <span className="text-primary font-bold">847</span> people waiting
+              </span>
+            )}
             <Button size="sm" asChild className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 shadow-md hover:shadow-lg transition-all">
-              <Link to="/partner">Partner With Us</Link>
+              <a href="#waitlist">Join Waitlist</a>
             </Button>
           </div>
 

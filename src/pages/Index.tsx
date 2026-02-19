@@ -1,170 +1,100 @@
 import { Layout } from '@/components/layout/Layout';
-import { ArrowRight, Leaf, ShieldCheck, Microscope, Dna, FlaskConical, Network } from 'lucide-react';
+import { Network, ArrowRight, FlaskConical, Leaf, ShieldCheck, Microscope, FileCheck, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { WaitlistForm } from '@/components/WaitlistForm';
+import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
+
+const TRUST_ITEMS = [
+  { label: "TBI Incubated Startup", icon: <Network /> },
+  { label: "Science-First Formulation", icon: <FlaskConical /> },
+  { label: "FSSAI Licensing In Progress", icon: <ShieldCheck /> },
+  { label: "100% Indian Ingredients", icon: <Leaf /> },
+  { label: "Third-Party Testing Planned", icon: <CheckCircle2 /> },
+  { label: "Zero Artificial Ingredients", icon: <Leaf /> },
+  { label: "Clinical Study Protocol Ready", icon: <FileCheck /> },
+  { label: "Peer-Reviewed Formulation", icon: <Microscope /> },
+];
 
 const Index = () => {
   return (
     <Layout>
-      {/* Hero Section - Stealth/Academic Style */}
+      {/* Hero Section - The "What is this?" */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
-        {/* Subtle, abstract background */}
-        <div className="absolute inset-0 bg-slate-50/50 dark:bg-slate-900/20 -z-20" />
-        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/5 rounded-full blur-[150px] -z-10" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/5 rounded-full blur-[150px] -z-10" />
-
-        <div className="container-width text-center z-10 px-4">
-          <div className="space-y-8 max-w-5xl mx-auto">
-
-            {/* Credibility/Incubation Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="inline-flex items-center gap-3 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md px-5 py-2 rounded-full border border-slate-200/60 dark:border-slate-800 shadow-sm mx-auto"
-            >
-              <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span className="text-xs md:text-sm font-mono text-slate-600 dark:text-slate-400 uppercase tracking-wider">
-                Incubated at TBI, Adhiyamaan College of Engineering
-              </span>
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-5xl md:text-7xl font-bold tracking-tight font-display text-slate-900 dark:text-white leading-[1.1]"
-            >
-              Decoding the <br />
-              <span className="gradient-text">Microbiome-First</span> Future
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed font-light mb-8"
-            >
-              Junior research initiative investigating the <strong>Gut-Skin Axis</strong>.
-              We engineer indigenous probiotic strains into bio-active solutions for wellness and cosmetics.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="flex flex-col items-center gap-6 pt-4"
-            >
-              <WaitlistForm variant="hero" />
-
-              <div className="flex gap-4 text-sm text-slate-500">
-                <Link to="/about" className="hover:text-primary underline underline-offset-4 transition-colors">
-                  Read Our Story
-                </Link>
+        <div className="container-width z-10 px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Copy & Form */}
+            <div className="text-left space-y-8">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <span>🌱 Currently in Development</span>
                 <span>•</span>
-                <Link to="/partner" className="hover:text-primary underline underline-offset-4 transition-colors">
-                  Research Partnership
-                </Link>
+                <span>TBI Incubated</span>
+                <span>•</span>
+                <span>Clinical Study Designed</span>
               </div>
-            </motion.div>
+
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight font-display text-slate-900 dark:text-white leading-[1.1]">
+                Ancient Ingredients. <br />
+                Modern Science. <br />
+                <span className="text-primary">No Compromise.</span>
+              </h1>
+
+              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed font-light">
+                India is building its first precision nutrition system.
+                Built on Millet, Medicinal Mushrooms, and decades of nutritional science.
+                Designed for working Indians who deserve better than what currently exists.
+              </p>
+
+              <div className="pt-4">
+                <WaitlistForm variant="hero" />
+              </div>
+            </div>
+
+            {/* Right: Abstract Visuals */}
+            <div className="relative h-[500px] flex items-center justify-center">
+              {/* Circle 1: Millet Gold */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
+                className="absolute w-64 h-64 border border-amber-500/30 rounded-full flex items-center justify-center backdrop-blur-sm bg-amber-500/5 -translate-x-10 -translate-y-10"
+              >
+                <span className="font-display text-amber-600/50 font-bold tracking-widest text-xs uppercase transform -rotate-45">Millet Matrix</span>
+              </motion.div>
+
+              {/* Circle 2: Jade Green */}
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
+                className="absolute w-64 h-64 border border-emerald-500/30 rounded-full flex items-center justify-center backdrop-blur-sm bg-emerald-500/5 translate-x-10 translate-y-5"
+              >
+                <span className="font-display text-emerald-600/50 font-bold tracking-widest text-xs uppercase transform rotate-12">Bio-Actives</span>
+              </motion.div>
+
+              {/* Circle 3: Burgundy */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 140, repeat: Infinity, ease: "linear" }}
+                className="absolute w-40 h-40 border border-rose-900/20 rounded-full flex items-center justify-center backdrop-blur-sm bg-rose-900/5 translate-y-20 -translate-x-20"
+              >
+                <span className="font-display text-rose-900/40 font-bold tracking-widest text-xs uppercase">Adaptogens</span>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Core Research Pillars (Replacing Technology Page) */}
-      <section className="section-padding bg-white dark:bg-black/20 relative border-t border-slate-100 dark:border-slate-800">
+      {/* Section 3: Trust Bar - "Is this legitimate?" */}
+      <section className="border-y border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 py-8 overflow-hidden">
         <div className="container-width">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-display font-bold mb-4">Core Research Vectors</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our R&D focuses on three critical intersections of biotechnology and sustainability.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:border-primary/20 transition-all"
-            >
-              <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-xl flex items-center justify-center mb-6">
-                <Dna size={28} />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Strain Isolation</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Bio-prospecting rare probiotic strains from traditional Indian fermented foods.
-                Screening for high-efficacy metabolites and stability.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:border-primary/20 transition-all"
-            >
-              <div className="w-14 h-14 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-xl flex items-center justify-center mb-6">
-                <FlaskConical size={28} />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Precision Fermentation</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Optimizing solid-state and submerged fermentation protocols to maximize yield
-                of postbiotics and enzymes from agri-waste substrates.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:border-primary/20 transition-all"
-            >
-              <div className="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-xl flex items-center justify-center mb-6">
-                <Microscope size={28} />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Efficacy Testing</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Rigorous in-vitro validation of anti-microbial, anti-oxidant, and
-                barrier-repair properties for all confidential formulations.
-              </p>
-            </motion.div>
-          </div>
+          <InfiniteMovingCards items={TRUST_ITEMS} direction="left" speed="normal" className="bg-transparent" />
         </div>
       </section>
 
-      {/* Call to Action - Research Collaboration */}
-      <section className="section-padding text-center overflow-hidden relative">
-        <div className="absolute inset-0 bg-primary/5 -z-10" />
-        <div className="container-width max-w-3xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-display font-bold mb-6"
-          >
-            Collaborate on Future Science
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-lg text-muted-foreground mb-8"
-          >
-            We are actively seeking academic grants and research partnerships for our 2026-27 roadmap.
-            Access our confidential IP portfolio.
-          </motion.p>
-          <Button size="lg" className="rounded-full px-12 h-14 text-lg btn-primary shadow-xl" asChild>
-            <Link to="/partner">Research Inquiry</Link>
-          </Button>
-        </div>
-      </section>
+      {/* Ingredient Section Anchor */}
+      <div id="ingredients"></div>
+
     </Layout>
   );
 };

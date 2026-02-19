@@ -52,41 +52,57 @@ export const WaitlistForm = ({ variant = 'hero' }: WaitlistFormProps) => {
     }
 
     return (
-        <form onSubmit={handleSubmit} className={`relative max-w-md w-full ${variant === 'hero' ? 'mx-auto' : ''}`}>
-            <div className="flex gap-2">
+        <form onSubmit={handleSubmit} className={`relative max-w-lg w-full ${variant === 'hero' ? 'mx-auto' : ''}`}>
+            <div className="flex flex-col sm:flex-row gap-2">
+                <Input
+                    type="text"
+                    placeholder="First Name"
+                    required
+                    className={`h-12 rounded-full px-6 bg-white/80 border-slate-200 focus:ring-2 focus:ring-primary/20 transition-all sm:w-1/3 ${variant === 'footer'
+                        ? 'bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20'
+                        : 'shadow-sm'
+                        }`}
+                />
                 <Input
                     type="email"
-                    placeholder="Enter your email address"
+                    placeholder="Email address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className={`h-12 rounded-full px-6 bg-white/80 border-slate-200 focus:ring-2 focus:ring-primary/20 transition-all ${variant === 'footer'
-                            ? 'bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20'
-                            : 'shadow-sm'
+                    className={`h-12 rounded-full px-6 bg-white/80 border-slate-200 focus:ring-2 focus:ring-primary/20 transition-all sm:w-2/3 ${variant === 'footer'
+                        ? 'bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20'
+                        : 'shadow-sm'
                         }`}
                 />
                 <Button
                     type="submit"
                     disabled={isLoading}
-                    className={`h-12 rounded-full px-6 transition-all ${variant === 'footer'
-                            ? 'bg-white text-primary hover:bg-white/90'
-                            : 'bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20'
+                    className={`h-12 rounded-full px-8 transition-all whitespace-nowrap ${variant === 'footer'
+                        ? 'bg-white text-primary hover:bg-white/90 w-full sm:w-auto mt-2 sm:mt-0'
+                        : 'bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20'
                         }`}
                 >
                     {isLoading ? (
                         <Loader2 className="w-5 h-5 animate-spin" />
                     ) : (
                         <>
-                            {variant === 'hero' ? 'Join Waitlist' : 'Join'}
-                            <ArrowRight className="ml-2 w-4 h-4" />
+                            Join Waitlist
                         </>
                     )}
                 </Button>
             </div>
             {variant === 'hero' && (
-                <p className="text-xs text-muted-foreground mt-3 text-center">
-                    Join 850+ researchers & innovators waiting for launch.
-                </p>
+                <div className="mt-4 text-center space-y-2">
+                    <p className="text-xs font-bold text-primary tracking-wide uppercase">
+                        Get Early Access
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                        Joined by <span className="font-bold text-foreground">847</span> people from Bangalore, Mumbai, Delhi, Chennai, Hyderabad
+                    </p>
+                    <p className="text-[10px] text-slate-400">
+                        No payment. No commitment. Cancel anytime.
+                    </p>
+                </div>
             )}
         </form>
     );
