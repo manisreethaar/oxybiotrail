@@ -16,38 +16,39 @@ interface PipelineProject {
     progress: number; // 0-100
 }
 
-{
-    id: "PF-001",
-        name: "Synbiotic Fruit Yogurt",
-            category: "Nutraceuticals",
-                description: "Dairy-free, fruit-based yogurt fortified with indigenous probiotic strains.",
-                    stage: "Discovery",
-                        progress: 20
-},
-{
-    id: "BC-101",
-        name: "Postbiotic Glow Serum",
-            category: "Cosmeceuticals",
-                description: "Ferment lysate-based serum for skin barrier repair and hydration.",
-                    stage: "Discovery",
-                        progress: 15
-},
-{
-    id: "PF-002",
-        name: "Fermented Millet Drink",
-            category: "Nutraceuticals",
-                description: "Low-GI functional beverage fusing traditional millets with modern gut health.",
-                    stage: "Ideation",
-                        progress: 10
-},
-{
-    id: "BC-102",
-        name: "Enzymatic Exfoliating Peel",
-            category: "Cosmeceuticals",
-                description: "Natural fruit enzyme peel derived from agricultural fruit waste.",
-                    stage: "Ideation",
-                        progress: 5
-}
+const PROJECTS: PipelineProject[] = [
+    {
+        id: "Project: VITALITY",
+        name: "Confidential Probiotic Matrix (Food)",
+        category: "Nutraceuticals",
+        description: "A breakthrough functional food formulations using rare indigenous strains. (Patent Pending)",
+        stage: "Discovery",
+        progress: 20
+    },
+    {
+        id: "Project: RADIANCE",
+        name: "Advanced Bio-Active Complex (Skin)",
+        category: "Cosmeceuticals",
+        description: "Novel ferment-lysate technology for cellular repair. Details classified.",
+        stage: "Discovery",
+        progress: 15
+    },
+    {
+        id: "Project: GUT-X",
+        name: "Next-Gen Synbiotic Delivery",
+        category: "Nutraceuticals",
+        description: "Proprietary delivery system for maximum gut colonization. Currently in stealth mode.",
+        stage: "Ideation",
+        progress: 10
+    },
+    {
+        id: "Project: DERMA-Q",
+        name: "Enzymatic Resurfacing Agent",
+        category: "Cosmeceuticals",
+        description: "Eco-sourced enzymatic formulation for clinical-grade exfoliation.",
+        stage: "Ideation",
+        progress: 5
+    }
 ];
 
 const STAGES: Stage[] = ["Ideation", "Discovery", "Lab Scale", "Prototype"];

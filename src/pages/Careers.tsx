@@ -81,7 +81,7 @@ const Careers = () => {
                             </div>
 
                             <div className="space-y-4 mb-6">
-                                <p className="text-sm">We are seeking a <strong>Junior Formulation Scientist</strong> to join our R&D team at TBI. You will work on developing novel probiotic foods and bio-cosmetic formulations.</p>
+                                <p className="text-sm">We are seeking a <strong>Junior Researcher</strong> to join our R&D team at TBI. You will work on developing novel probiotic foods and bio-cosmetic formulations.</p>
 
                                 <h4 className="font-bold text-sm">Key Responsibilities:</h4>
                                 <ul className="text-sm space-y-2 list-disc pl-4 text-muted-foreground">

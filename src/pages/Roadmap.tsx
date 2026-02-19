@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 const Roadmap = () => {
     const milestones = [
-        { year: "Q1 2026", title: "Ideation & Concept", desc: "Market gap analysis for Probiotic Foods and Bio-Cosmetics. Strain literature review.", status: "Completed" },
+        { year: "Q1 2026", title: "Ideation & Concept", desc: "Market gap analysis for 'Project Vitality' and 'Project Radiance'. Strain literature review.", status: "Completed" },
         { year: "Q2 2026", title: "Strain Acquisition", desc: "Procuring and banking indigenous probiotic cultures at TBI Labs.", status: "In Progress" },
-        { year: "Q3 2026", title: "Lab Formulation", desc: "Initial trials for Synbiotic Yogurt and Postbiotic Serum prototypes.", status: "Planned" },
-        { year: "Q4 2026", title: "Safety & Sensory", desc: "Small-scale efficacy testing and sensory panels for taste/texture optimization.", status: "Planned" }
+        { year: "Q3 2026", title: "Lab Formulation", desc: "Initial trials for confidential functional food prototypes.", status: "Planned" },
+        { year: "Q4 2026", title: "Safety & Sensory", desc: "Internal efficacy testing and sensory panels for stealth formulations.", status: "Planned" }
     ];
 
     return (
