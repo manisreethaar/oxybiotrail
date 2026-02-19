@@ -121,13 +121,34 @@ const FormulaCard = ({ name, badge, badgeColor, tagline, audience, benefits, ing
         onClick={handleNotify}
         disabled={notified}
         className={`w-full py-3 rounded-full text-sm font-bold transition-all duration-300 ${notified
-            ? 'bg-green-50 text-green-600 border border-green-200 cursor-default'
-            : `${colors.bg} ${colors.text} border ${colors.border} hover:shadow-md`
+          ? 'bg-green-50 text-green-600 border border-green-200 cursor-default'
+          : `${colors.bg} ${colors.text} border ${colors.border} hover:shadow-md`
           }`}
       >
         {notified ? 'You are on the list ✓' : `Notify me when ${name} launches →`}
       </button>
     </motion.div>
+  );
+};
+
+/* ─────────── AbsorptionBar (animated grow bar) ─────────── */
+const AbsorptionBar = ({ label, percentage, color, delay }: { label: string; percentage: number; color: string; delay: number }) => {
+  return (
+    <div>
+      <div className="flex justify-between mb-2">
+        <span className="text-sm text-slate-600 dark:text-slate-300">{label}</span>
+        <span className="text-sm font-bold text-slate-900 dark:text-white">{percentage}%</span>
+      </div>
+      <div className="h-4 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: `${percentage}%` }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, delay, ease: "easeOut" }}
+          className={`h-full rounded-full ${color}`}
+        />
+      </div>
+    </div>
   );
 };
 
@@ -422,6 +443,192 @@ const Index = () => {
               ))}
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          SECTION 6: THE SCIENCE — "Why should I believe this works?"
+          ═══════════════════════════════════════════════════════════════ */}
+      <section className="section-padding bg-white dark:bg-slate-950 relative overflow-hidden">
+        <div className="container-width px-4">
+
+          {/* Opening */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-24"
+          >
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white">
+              We show our work.
+            </h2>
+            <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed">
+              Every formulation decision has a peer-reviewed reason.
+              Every ingredient has a verified source. Every claim is something we can prove.
+            </p>
+          </motion.div>
+
+          {/* Three Science Pillars */}
+          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-24">
+
+            {/* Pillar 1: Active Forms */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 }}
+              className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
+            >
+              <div className="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+                <FlaskConical size={28} />
+              </div>
+              <h3 className="text-xl font-display font-bold mb-4 text-slate-900 dark:text-white">Active forms only</h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
+                Most products use the cheapest permitted form of each vitamin and mineral. We use:
+              </p>
+              <ul className="space-y-2 text-sm mb-6">
+                {[
+                  { ours: "Methylcobalamin", theirs: "not Cyanocobalamin" },
+                  { ours: "Pyridoxal-5-Phosphate", theirs: "not Pyridoxine HCl" },
+                  { ours: "5-MTHF Folate", theirs: "not Folic Acid" },
+                  { ours: "Albion TRAACS® Chelated Minerals", theirs: "" },
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <CheckCircle2 size={14} className="text-amber-600 mt-0.5 shrink-0" />
+                    <span className="text-slate-700 dark:text-slate-300">
+                      <strong>{item.ours}</strong>
+                      {item.theirs && <span className="text-slate-400 ml-1">({item.theirs})</span>}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                The difference: <strong className="text-primary">3-4x better absorption.</strong><br />
+                The cost difference per serving: ₹2. The choice was obvious.
+              </p>
+            </motion.div>
+
+            {/* Pillar 2: Standardized Extracts */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.15 }}
+              className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
+            >
+              <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+                <Microscope size={28} />
+              </div>
+              <h3 className="text-xl font-display font-bold mb-4 text-slate-900 dark:text-white">Verified, not assumed</h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
+                Our Lion's Mane extract is verified at minimum <strong className="text-emerald-600">30% β-glucan content</strong> using
+                the Megazyme AOAC method — the gold standard verification method.
+              </p>
+              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
+                Not marketing weight. Not assumed potency. <strong className="text-slate-700 dark:text-slate-200">Verified active compound content.</strong>
+              </p>
+              <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800">
+                <p className="text-xs text-emerald-700 dark:text-emerald-400 font-medium">
+                  Most brands do not do this. We consider it non-negotiable.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Pillar 3: Clinical Transparency */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
+            >
+              <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <FileCheck size={28} />
+              </div>
+              <h3 className="text-xl font-display font-bold mb-4 text-slate-900 dark:text-white">Proving it, not just claiming it</h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
+                We have designed a clinical study for <strong className="text-blue-600">135 participants across 8 weeks</strong> —
+                before we launch commercially.
+              </p>
+              {/* Clinical Study Mini-Diagram */}
+              <div className="space-y-3 mb-6">
+                {[
+                  { label: "Three arms", detail: "Professionals, Students, Athletes" },
+                  { label: "Primary outcomes", detail: "Biomarkers + cognitive tests" },
+                  { label: "Ethics committee", detail: "Approval in process" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-2 text-sm">
+                    <CheckCircle2 size={14} className="text-blue-600 mt-0.5 shrink-0" />
+                    <span className="text-slate-700 dark:text-slate-300">
+                      <strong>{item.label}:</strong> {item.detail}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="p-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800">
+                <p className="text-xs text-blue-700 dark:text-blue-400 font-medium">
+                  Results will be published. Regardless of outcome.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Absorption Comparison Bars */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto mb-24"
+          >
+            <h3 className="text-2xl font-display font-bold text-center mb-10 text-slate-900 dark:text-white">
+              The absorption difference
+            </h3>
+            <div className="space-y-8">
+              <AbsorptionBar label="Standard mineral form (Oxide/Sulfate)" percentage={8} color="bg-slate-300 dark:bg-slate-700" delay={0} />
+              <AbsorptionBar label="Oxygen chelated mineral (Albion TRAACS®)" percentage={28} color="bg-primary" delay={0.3} />
+            </div>
+            <p className="text-center text-sm text-primary font-bold mt-6">3.5x better absorption</p>
+          </motion.div>
+
+          {/* Comparison Table */}
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-2xl font-display font-bold text-center mb-10 text-slate-900 dark:text-white">
+              How we compare
+            </h3>
+            <div className="rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+              {/* Table Header */}
+              <div className="grid grid-cols-3 bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
+                <div className="p-4 text-xs font-bold uppercase tracking-wider text-slate-400">Feature</div>
+                <div className="p-4 text-xs font-bold uppercase tracking-wider text-primary text-center">What we do</div>
+                <div className="p-4 text-xs font-bold uppercase tracking-wider text-slate-400 text-center">What most brands do</div>
+              </div>
+              {/* Table Rows */}
+              {[
+                { feature: "Vitamin B12", ours: "Methylcobalamin", theirs: "Cyanocobalamin" },
+                { feature: "Minerals", ours: "Chelated (TRAACS®)", theirs: "Oxide/Sulfate forms" },
+                { feature: "Mushroom extracts", ours: "Verified β-glucan", theirs: "Unverified weight" },
+                { feature: "Lab reports", ours: "Public CoA", theirs: "No transparency" },
+                { feature: "Efficacy data", ours: "Clinical study", theirs: "No efficacy data" },
+                { feature: "Suppliers", ours: "Named sources", theirs: "Anonymous suppliers" },
+                { feature: "Vitamin forms", ours: "Active (bioavailable)", theirs: "Synthetic forms" },
+              ].map((row, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className={`grid grid-cols-3 border-b border-slate-100 dark:border-slate-800 last:border-b-0 ${i % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-slate-50/50 dark:bg-slate-900/50'
+                    }`}
+                >
+                  <div className="p-4 text-sm font-medium text-slate-600 dark:text-slate-300">{row.feature}</div>
+                  <div className="p-4 text-sm font-bold text-primary text-center">{row.ours}</div>
+                  <div className="p-4 text-sm text-slate-400 text-center">{row.theirs}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 
