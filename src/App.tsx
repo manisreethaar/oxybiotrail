@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Science from "./pages/Science";
 import Roadmap from "./pages/Roadmap";
 import Products from "./pages/products/Products";
+import Careers from "./pages/Careers";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -30,7 +31,8 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/science" element={<Science />} />
               <Route path="/roadmap" element={<Roadmap />} />
-              <Route path="/innovations" element={<Products />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/careers" element={<Careers />} />
               <Route path="/team" element={<Team />} />
               <Route path="/contact" element={<Contact />} />
 

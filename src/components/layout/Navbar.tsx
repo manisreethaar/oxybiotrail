@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, TestTube, Factory, Calendar, Users, Home, FlaskConical } from 'lucide-react';
+import { Menu, X, TestTube, Factory, Calendar, Users, Home, FlaskConical, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useAuth } from "@/context/AuthContext";
@@ -11,6 +11,7 @@ const navLinks = [
   { name: 'Technology', path: '/science', icon: TestTube },
   { name: 'Roadmap', path: '/roadmap', icon: Calendar },
   { name: 'Innovations', path: '/innovations', icon: FlaskConical },
+  { name: 'Careers', path: '/careers', icon: GraduationCap },
   { name: 'Team', path: '/team', icon: Users },
 ];
 
