@@ -62,6 +62,16 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Legal */}
+          <div>
+            <h3 className="font-bold mb-4 font-display text-slate-900">Legal</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact */}
           <div>
             <h3 className="font-bold mb-4 font-display text-foreground text-lg">Contact Us</h3>
