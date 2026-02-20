@@ -273,9 +273,9 @@ const WaitlistCTA = () => {
                       className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-sm text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none transition-all"
                     >
                       <option value="">Select one...</option>
-                      <option value="CORE">CORE — Daily Nutrition</option>
-                      <option value="FOCUS">FOCUS — Cognitive Performance</option>
-                      <option value="SURGE">SURGE — Athletic Recovery</option>
+                      <option value="VITALITY">Project VITALITY — Daily Baseline</option>
+                      <option value="CLARITY">Project CLARITY — Cognitive Focus</option>
+                      <option value="MOMENTUM">Project MOMENTUM — Cellular Recovery</option>
                       <option value="BAR">The Honest Protein Bar</option>
                       <option value="ALL">All of them</option>
                     </select>
@@ -611,57 +611,57 @@ const Index = () => {
 
           {/* Three Formula Cards */}
           <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
-            {/* CORE */}
+            {/* CORE / VITALITY */}
             <FormulaCard
-              name="CORE"
-              badge="Daily Nutrition"
+              name="Project VITALITY"
+              badge="Target: Daily Deficiencies"
               badgeColor="amber"
-              tagline="For when you cannot eat well but refuse to feel it."
-              audience="Working professionals · Busy parents · Anyone with an irregular eating schedule"
+              tagline="For when you cannot eat well but refuse to function sub-optimally. An everyday nutritional baseline."
+              audience="Status: Pre-Clinical Optimization"
               benefits={[
                 "Covers 50% of your daily nutrient needs",
                 "Sustained energy without sugar spikes",
                 "Stress adaptation with KSM-66 Ashwagandha",
               ]}
               ingredients={["Finger Millet", "Ashwagandha KSM-66", "Lion's Mane", "Moringa", "22 Chelated Nutrients"]}
-              format="Coming as: Shot (60ml) · Sachet (15g)"
-              price="From ₹79 per serving"
+              format="Format: Under Evaluation"
+              price="Pricing: Access-First Protocol (TBA)"
               delay={0}
             />
 
-            {/* FOCUS */}
+            {/* FOCUS / CLARITY */}
             <FormulaCard
-              name="FOCUS"
-              badge="Cognitive Performance"
+              name="Project CLARITY"
+              badge="Target: Cognitive Fatigue"
               badgeColor="emerald"
-              tagline="The honest alternative to Red Bull and coffee."
-              audience="Students · Working professionals · Anyone replacing energy drinks"
+              tagline="The honest alternative to high-sugar energy drinks. Built for sustained focus and the dreaded 3PM crash."
+              audience="Status: Sensory Trials & Taste Profiling"
               benefits={[
                 "Clean focus without caffeine crash",
                 "Memory and attention support (Lion's Mane)",
                 "L-Theanine:Caffeine ratio 2.5:1 (clinically studied)",
               ]}
               ingredients={["Lion's Mane", "Bacopa Monnieri", "L-Theanine", "Natural Caffeine", "Active B Vitamins"]}
-              format="Coming as: Shot (60ml) · Sachet (15g)"
-              price="From ₹89 per serving"
+              format="Format: Under Evaluation"
+              price="Pricing: Access-First Protocol (TBA)"
               delay={0.15}
             />
 
-            {/* SURGE */}
+            {/* SURGE / MOMENTUM */}
             <FormulaCard
-              name="SURGE"
-              badge="Athletic Performance"
+              name="Project MOMENTUM"
+              badge="Target: Cellular Recovery"
               badgeColor="rose"
-              tagline="Recovery and performance. Built for people who train seriously."
-              audience="Gym goers · Runners · Anyone who trains 3+ times per week"
+              tagline="An athletic recovery matrix built around ATP production and true muscle repair, rather than synthetic stimulation."
+              audience="Status: Formulation Finalized"
               benefits={[
                 "Faster muscle recovery (Kokum + Tart Cherry)",
                 "ATP production support (Cordyceps militaris)",
                 "Strength and endurance (Creatine HCl + Citrulline)",
               ]}
               ingredients={["Cordyceps", "Creatine HCl", "Kokum Extract", "L-Citrulline", "Electrolytes"]}
-              format="Coming as: Shot (60ml) · Sachet (15g)"
-              price="From ₹99 per serving"
+              format="Format: Under Evaluation"
+              price="Pricing: Access-First Protocol (TBA)"
               delay={0.3}
             />
           </div>
@@ -1106,7 +1106,7 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-12 mb-20">
               <div className="space-y-6">
                 <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                  <strong className="text-slate-900 dark:text-white">Manisreethaar</strong> watched classmates and colleagues reach for popular health drinks — products that listed impressive vitamin counts on the label but used the cheapest possible forms. Synthetic folic acid that 40% of Indians can't convert. Oxide minerals with single-digit absorption. Sugar content higher than most sodas. The data confirmed what seemed obvious: <strong>urban Indians are increasingly deficient in the nutrients that matter most.</strong>
+                  <strong className="text-slate-900 dark:text-white">We</strong> watched classmates and colleagues reach for popular health drinks — products that listed impressive vitamin counts on the label but used the cheapest possible forms. Synthetic folic acid that 40% of Indians can't convert. Oxide minerals with single-digit absorption. Sugar content higher than most sodas. The data confirmed what seemed obvious: <strong>urban Indians are increasingly deficient in the nutrients that matter most.</strong>
                 </motion.p>
                 <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.15 }} className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
                   The market response was not the answer. Products designed to <em>appear</em> healthy while being nutritionally mediocre. The same global brands selling inferior formulations in India. <strong>Nobody building something genuinely better.</strong>

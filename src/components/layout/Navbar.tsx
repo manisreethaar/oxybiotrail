@@ -43,7 +43,7 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="flex flex-col justify-center">
-              <span className="text-xl font-bold font-display text-foreground tracking-tight leading-none uppercase">
+              <span className="text-lg font-medium font-display text-foreground tracking-tight leading-none uppercase">
                 Oxygen
               </span>
               <span className="text-[10px] tracking-widest text-muted-foreground font-medium">
