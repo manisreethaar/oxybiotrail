@@ -71,7 +71,7 @@ const Contact = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
+            <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
               Get in <span className="gradient-text">Touch</span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -88,7 +88,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Contact Info */}
             <div>
-              <h2 className="text-2xl font-display font-bold mb-8">Contact Information</h2>
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Contact Information</h2>
               <div className="space-y-6 mb-12">
                 {contactInfo.map((info) => (
                   <div key={info.title} className="flex items-start gap-4">
@@ -131,7 +131,7 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="glass-card p-8 md:p-10">
-              <h2 className="text-2xl font-display font-bold mb-6">Send Us a Message</h2>
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="md:col-span-2">

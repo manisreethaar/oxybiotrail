@@ -201,7 +201,7 @@ const WaitlistCTA = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-4">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-4">
                 Be part of something<br />
                 <span className="text-primary">India has needed for years.</span>
               </h2>
@@ -351,7 +351,7 @@ const WaitlistCTA = () => {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}>
-              <h2 className="text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-4">
                 You are in. 🌱
               </h2>
               <p className="text-lg text-slate-600 dark:text-slate-300 mb-2">
@@ -525,7 +525,7 @@ const Index = () => {
               <div className="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
                 <Clock size={28} />
               </div>
-              <h3 className="text-xl font-display font-bold mb-4 text-slate-900 dark:text-white">No time for real nutrition</h3>
+              <h3 className="text-2xl font-display font-bold mb-4 text-slate-900 dark:text-white">No time for real nutrition</h3>
               <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
                 The average working professional has 22 minutes for lunch, often at their desk.
                 Students skip meals before exams. Athletes eat whatever is convenient after training.
@@ -544,7 +544,7 @@ const Index = () => {
               <div className="w-14 h-14 bg-red-100 dark:bg-red-900/30 text-red-600 rounded-2xl flex items-center justify-center mb-6">
                 <ShieldOff size={28} />
               </div>
-              <h3 className="text-xl font-display font-bold mb-4 text-slate-900 dark:text-white">Existing products deceive you</h3>
+              <h3 className="text-2xl font-display font-bold mb-4 text-slate-900 dark:text-white">Existing products deceive you</h3>
               <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
                 Most Indian health drinks are primarily sugar with token doses of vitamins your body cannot absorb.
                 Cheap synthetic forms, under-dosed actives, misleading labels.
@@ -563,7 +563,7 @@ const Index = () => {
               <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
                 <Globe size={28} />
               </div>
-              <h3 className="text-xl font-display font-bold mb-4 text-slate-900 dark:text-white">Imported solutions do not fit India</h3>
+              <h3 className="text-2xl font-display font-bold mb-4 text-slate-900 dark:text-white">Imported solutions do not fit India</h3>
               <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
                 Products designed for Western nutritional deficiencies miss what Indian bodies need.
                 They do not understand Ragi, Moringa, or Ashwagandha.
@@ -735,7 +735,7 @@ const Index = () => {
               <div className="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
                 <FlaskConical size={28} />
               </div>
-              <h3 className="text-xl font-display font-bold mb-4 text-slate-900 dark:text-white">Active forms only</h3>
+              <h3 className="text-2xl font-display font-bold mb-4 text-slate-900 dark:text-white">Active forms only</h3>
               <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
                 Most products use the cheapest permitted form of each vitamin and mineral. We use:
               </p>
@@ -772,7 +772,7 @@ const Index = () => {
               <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">
                 <Microscope size={28} />
               </div>
-              <h3 className="text-xl font-display font-bold mb-4 text-slate-900 dark:text-white">Verified, not assumed</h3>
+              <h3 className="text-2xl font-display font-bold mb-4 text-slate-900 dark:text-white">Verified, not assumed</h3>
               <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
                 Our Lion's Mane extract is verified at minimum <strong className="text-emerald-600">30% β-glucan content</strong> using
                 the Megazyme AOAC method — the gold standard verification method.
@@ -798,7 +798,7 @@ const Index = () => {
               <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
                 <FileCheck size={28} />
               </div>
-              <h3 className="text-xl font-display font-bold mb-4 text-slate-900 dark:text-white">Proving it, not just claiming it</h3>
+              <h3 className="text-2xl font-display font-bold mb-4 text-slate-900 dark:text-white">Proving it, not just claiming it</h3>
               <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
                 We have designed a clinical study for <strong className="text-blue-600">135 participants across 8 weeks</strong> —
                 before we launch commercially.
@@ -1053,7 +1053,7 @@ const Index = () => {
             <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Network size={32} className="text-primary" />
             </div>
-            <h3 className="text-xl font-display font-bold mb-2 text-slate-900 dark:text-white">
+            <h3 className="text-2xl font-display font-bold mb-2 text-slate-900 dark:text-white">
               Incubated at TBI, Adhiyamaan College of Engineering
             </h3>
             <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
@@ -1086,7 +1086,7 @@ const Index = () => {
 
             {/* Pull Quote — word by word */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white leading-tight">
                 {('India has the world\'s most powerful functional ingredients. Why does every serious nutrition product still come from abroad?').split(' ').map((word, i) => (
                   <motion.span
                     key={i}

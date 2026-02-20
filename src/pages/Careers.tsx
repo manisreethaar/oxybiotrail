@@ -50,7 +50,7 @@ const Careers = () => {
                 {/* Header */}
                 <div className="container mx-auto px-4 text-center mb-16">
                     <GrantBadge label="Join Our Mission" className="mb-4 mx-auto" />
-                    <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
+                    <h1 className="text-5xl md:text-7xl font-display font-bold mb-4">
                         Build the Future of <span className="gradient-text">Bio-Innovation</span>
                     </h1>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -64,14 +64,14 @@ const Careers = () => {
                     <div className="space-y-8">
                         <div className="flex items-center gap-3 mb-6">
                             <Briefcase className="text-primary h-6 w-6" />
-                            <h2 className="text-2xl font-bold">Current Openings</h2>
+                            <h2 className="text-3xl font-display font-bold">Current Openings</h2>
                         </div>
 
                         <div className="glass-card p-8 rounded-xl border-l-4 border-primary/50 relative overflow-hidden group hover-lift">
                             <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                                 2 Vacancies
                             </div>
-                            <h3 className="text-xl font-bold mb-2">Junior Researcher (Bio/Food Tech)</h3>
+                            <h3 className="text-xl font-display font-bold mb-2">Junior Researcher (Bio/Food Tech)</h3>
                             <div className="flex gap-4 text-sm text-muted-foreground mb-4">
                                 <span>Full Time</span>
                                 <span>•</span>
@@ -132,7 +132,7 @@ const Careers = () => {
                     <div className="glass-card p-8 rounded-xl">
                         <div className="flex items-center gap-3 mb-6">
                             <GraduationCap className="text-primary h-6 w-6" />
-                            <h2 className="text-2xl font-bold">Student Internship Portal</h2>
+                            <h2 className="text-3xl font-display font-bold">Student Internship Portal</h2>
                         </div>
                         <p className="text-sm text-muted-foreground mb-6">
                             Open to Final Year B.Tech / B.Sc Students. Work on live R&D projects.

@@ -169,7 +169,7 @@ const About = () => {
                     {pillar.num}
                   </motion.span>
                   <div className="text-primary mb-2">{pillar.icon}</div>
-                  <h3 className="font-display font-bold text-slate-900 dark:text-white mb-2">{pillar.title}</h3>
+                  <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-2">{pillar.title}</h3>
                   <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{pillar.body}</p>
                 </motion.div>
               ))}
@@ -418,8 +418,8 @@ const About = () => {
             className="max-w-3xl mx-auto text-center"
           >
             <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-6 block">Chapter 05 — The Invitation</span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-slate-900 dark:text-white">
-              Join us.
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white">
+              Still have questions?
             </h2>
             <p className="text-lg text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
               Oxygen is currently in development. We are not asking you to buy anything. We are asking you to believe that something better is possible — and to hold us accountable to delivering it.
@@ -461,7 +461,7 @@ const About = () => {
                   className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:shadow-md hover:border-primary/20 transition-all"
                 >
                   <div className="text-primary mb-3 flex justify-center">{way.icon}</div>
-                  <h3 className="font-display font-bold text-slate-900 dark:text-white mb-2">{way.title}</h3>
+                  <h3 className="text-xl font-display font-bold text-slate-900 dark:text-white mb-2">{way.title}</h3>
                   <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4">{way.desc}</p>
                   <Link to={way.link} className="text-sm text-primary font-bold hover:underline inline-flex items-center gap-1">
                     {way.cta} <ArrowRight size={14} />
