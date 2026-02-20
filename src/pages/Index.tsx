@@ -201,7 +201,7 @@ const WaitlistCTA = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-4">
                 Be part of something<br />
                 <span className="text-primary">India has needed for years.</span>
               </h2>
@@ -423,7 +423,7 @@ const Index = () => {
                 <span>Clinical Study Designed</span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight font-display text-slate-900 dark:text-white leading-[1.1]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight font-display text-slate-900 dark:text-white leading-[1.1]">
                 Ancient Ingredients. <br />
                 Modern Science. <br />
                 <span className="text-primary">No Compromise.</span>
@@ -492,7 +492,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto mb-20"
           >
-            <h2 className="text-4xl md:text-6xl font-display font-bold leading-tight text-slate-900 dark:text-white mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold leading-tight text-slate-900 dark:text-white mb-6">
               You are probably <br />
               <span className="text-primary">nutritionally deficient.</span>
             </h2>
@@ -580,7 +580,7 @@ const Index = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-center"
           >
-            <h3 className="text-5xl md:text-7xl font-display font-bold text-slate-900 dark:text-white">
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white">
               So we built one.
             </h3>
           </motion.div>
@@ -599,7 +599,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-20"
           >
-            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 text-slate-900 dark:text-white">
               Meet <span className="text-primary">Oxygen</span>
             </h2>
             <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed">
@@ -712,7 +712,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-24"
           >
-            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 text-slate-900 dark:text-white">
               We show our work.
             </h2>
             <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed">
@@ -845,7 +845,7 @@ const Index = () => {
 
           {/* Comparison Table */}
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-display font-bold text-center mb-10 text-slate-900 dark:text-white">
+            <h3 className="text-xl md:text-2xl font-display font-bold text-center mb-10 text-slate-900 dark:text-white">
               How we compare
             </h3>
             <div className="rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
@@ -898,7 +898,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-6"
           >
-            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-tight">
               Building in public.<br />
               <span className="text-primary">Every step. Every setback.<br />Every breakthrough.</span>
             </h2>
@@ -1086,7 +1086,7 @@ const Index = () => {
 
             {/* Pull Quote — word by word */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white leading-tight">
                 {('India has the world\'s most powerful functional ingredients. Why does every serious nutrition product still come from abroad?').split(' ').map((word, i) => (
                   <motion.span
                     key={i}

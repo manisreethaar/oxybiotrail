@@ -136,7 +136,7 @@ const Blog = () => {
                         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-6">
                             <BookOpen size={12} /> Development Journal & Research
                         </span>
-                        <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white">
                             The Oxygen <span className="text-primary">Blog</span>
                         </h1>
                         <p className="text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
