@@ -63,7 +63,7 @@ const About = () => {
                   whileInView={{ opacity: line ? 1 : 0, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.2, duration: 0.6 }}
-                  className={`font-display ${line ? 'text-2xl md:text-3xl lg:text-4xl font-bold text-white/90 leading-snug' : 'h-4'
+                  className={`font-display ${line ? 'text-3xl md:text-4xl lg:text-5xl font-bold text-white/90 leading-snug' : 'h-4'
                     }`}
                 >
                   {line || '\u00A0'}
@@ -94,8 +94,8 @@ const About = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary block mb-4">Our Mission</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-6">
+              <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary block mb-4">Our Mission</span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-6">
                 To make world-class nutrition accessible<br />
                 to every working Indian.
               </h2>
@@ -224,19 +224,19 @@ const About = () => {
               </div>
 
               <div>
-                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Why I am the right person for this</p>
-                <div className="space-y-1.5">
-                  {[
-                    'Student Researcher, Adhiyamaan College of Engineering',
-                    'Incubated at TBI — Technology Business Incubator, ACE Hosur',
-                    '6+ months of nutrition & formulation research before first prototype',
-                    'Personally analyzed 200+ peer-reviewed studies for this project',
-                  ].map((cred, i) => (
-                    <motion.div key={i} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                      <p className="text-sm text-slate-600 dark:text-slate-300">{cred}</p>
-                    </motion.div>
-                  ))}
+                <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Who is building this</p>
+                <div className="space-y-4">
+                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                    A pharmaceutical scientist who turned fermentation into food — with the precision of a lab and the soul of a craft.
+                  </p>
+                  <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
+                    <p className="text-sm text-slate-700 dark:text-slate-200 font-medium">
+                      Operating at the intersection of:
+                    </p>
+                    <p className="text-sm mt-2 text-primary font-bold">
+                      🔬 Pharmaceutical Bioprocessing × 🧬 Nanoscience × 🌾 Fermented Food
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -514,8 +514,7 @@ const ChapterSection = ({
               {icon}
             </div>
             <div>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block">Chapter {number}</span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white">{title}</h2>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white">{title}</h2>
             </div>
           </motion.div>
           <motion.div

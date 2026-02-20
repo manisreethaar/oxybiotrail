@@ -1140,25 +1140,18 @@ const Index = () => {
                   <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white">Manisreethaar</h3>
                   <p className="text-sm text-primary font-bold">Co-founder, Oxygen BioInnovations</p>
                 </div>
-                <div className="space-y-2">
-                  {[
-                    'Student Researcher, Adhiyamaan College of Engineering',
-                    'Incubated at TBI — Technology Business Incubator, ACE Hosur',
-                    '3+ months nutrition & formulation research before first prototype',
-                    'Deeply frustrated by India\'s nutrition gap — and determined to fix it',
-                  ].map((cred, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.1 }}
-                      className="flex items-center gap-2"
-                    >
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                      <p className="text-sm text-slate-600 dark:text-slate-300">{cred}</p>
-                    </motion.div>
-                  ))}
+                <div className="space-y-4">
+                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                    A pharmaceutical scientist who turned fermentation into food — with the precision of a lab and the soul of a craft.
+                  </p>
+                  <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
+                    <p className="text-sm text-slate-700 dark:text-slate-200 font-medium">
+                      Operating at the intersection of:
+                    </p>
+                    <p className="text-sm mt-2 text-primary font-bold">
+                      🔬 Pharmaceutical Bioprocessing × 🧬 Nanoscience × 🌾 Fermented Food
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
