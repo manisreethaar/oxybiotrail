@@ -8,11 +8,7 @@ import About from "./pages/About";
 import Problem from "./pages/Problem";
 import Blog from "./pages/Blog";
 import Ingredients from "./pages/Ingredients";
-import Roadmap from "./pages/Roadmap";
-import Products from "./pages/products/Products";
 import Careers from "./pages/Careers";
-import Partner from "./pages/Partner";
-import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { AuthProvider } from "./context/AuthContext";
@@ -37,11 +33,7 @@ const App = () => (
               <Route path="/problem" element={<Problem />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/ingredients" element={<Ingredients />} />
-              <Route path="/roadmap" element={<Roadmap />} />
-              <Route path="/innovations" element={<Products />} />
               <Route path="/careers" element={<Careers />} />
-              <Route path="/partner" element={<Partner />} />
-              <Route path="/team" element={<Team />} />
               <Route path="/contact" element={<Contact />} />
 
               {/* Fallback */}

@@ -16,13 +16,13 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    value: '+1 (555) 123-4567',
-    link: 'tel:+15551234567',
+    value: '+91 (800) 123-4567',
+    link: 'tel:+918001234567',
   },
   {
     icon: MapPin,
     title: 'Address',
-    value: 'Innovation District, San Francisco, CA 94102',
+    value: 'TBI @ Adhiyamaan College of Engineering, Dr MGR Nagar, Hosur',
   },
   {
     icon: Clock,
