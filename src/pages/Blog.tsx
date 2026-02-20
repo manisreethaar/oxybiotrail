@@ -16,7 +16,6 @@ interface BlogPost {
     readTime: string;
     featured?: boolean;
     week: string;
-    status?: 'published' | 'upcoming';
 }
 
 const BLOG_POSTS: BlogPost[] = [
@@ -48,72 +47,66 @@ const BLOG_POSTS: BlogPost[] = [
         title: "Lion's Mane mushroom: What the research actually says (and what it doesn't)",
         excerpt:
             "Hericenones, erinacines, and nerve growth factor. The science is promising, but incomplete. Here's an honest look at what Lion's Mane can and cannot do — and why we still chose it.",
-        date: "Upcoming",
+        date: "Feb 27, 2026",
         author: "Research Team",
         category: "science",
         readTime: "10 min read",
         week: "Week 2",
-        status: "upcoming",
     },
     {
         id: 4,
         title: "We analyzed the ingredients in India's 10 most popular health drinks. Here is what we found.",
         excerpt:
             "Horlicks. Complan. Bournvita. Ensure. Protinex. Boost. We looked at their vitamin forms, actual doses, sugar content, and artificial ingredients. The results were... revealing.",
-        date: "Upcoming",
+        date: "Feb 27, 2026",
         author: "Research Team",
         category: "science",
         readTime: "12 min read",
         week: "Week 2",
-        status: "upcoming",
     },
     {
         id: 5,
         title: "Week 1 at TBI: What startup incubation actually looks like",
         excerpt:
             "No glamorous office. No Silicon Valley pitch deck. Just a lab bench, a formulation spreadsheet, and a lot of questions. Here's what the first week of building Oxygen actually involved.",
-        date: "Upcoming",
+        date: "Mar 6, 2026",
         author: "Founder",
         category: "building",
         readTime: "4 min read",
         week: "Week 3",
-        status: "upcoming",
     },
     {
         id: 6,
         title: "Ragi: Why India forgot about its most nutritious grain",
         excerpt:
             "Finger millet has more calcium than milk, more iron than spinach, and a glycemic index lower than rice. It fed generations of Indians. Then we abandoned it. The story of why — and the science of its revival.",
-        date: "Upcoming",
+        date: "Mar 6, 2026",
         author: "Research Team",
         category: "science",
         readTime: "9 min read",
         week: "Week 3",
-        status: "upcoming",
     },
     {
         id: 7,
         title: "The MTHFR gene: Why synthetic folic acid might not work for you",
         excerpt:
             "About 40% of Indians carry an MTHFR variant that impairs folic acid conversion. If you're one of them, your supplement might not be doing what you think. Here's what the science says.",
-        date: "Upcoming",
+        date: "Mar 13, 2026",
         author: "Research Team",
         category: "science",
         readTime: "8 min read",
         week: "Week 4",
-        status: "upcoming",
     },
     {
         id: 8,
         title: "Our clinical study design: Why we're testing before launching",
         excerpt:
             "135 participants. 8 weeks. Three arms. Most supplement brands never test their products on humans. We designed a clinical study before our first commercial batch. Here's why and how.",
-        date: "Upcoming",
+        date: "Mar 13, 2026",
         author: "Founder",
         category: "building",
         readTime: "6 min read",
         week: "Week 4",
-        status: "upcoming",
     },
 ];
 
@@ -143,7 +136,7 @@ const Blog = () => {
                         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-6">
                             <BookOpen size={12} /> Development Journal & Research
                         </span>
-                        <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-[1.1]">
+                        <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white">
                             The Oxygen <span className="text-primary">Blog</span>
                         </h1>
                         <p className="text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
@@ -182,7 +175,7 @@ const Blog = () => {
                                     </span>
                                     <span className="text-xs text-slate-400">{featuredPost.week}</span>
                                 </div>
-                                <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-slate-900 dark:text-white group-hover:text-primary transition-colors leading-tight">
+                                <h2 className="text-2xl md:text-3xl font-display font-bold mb-4 text-slate-900 dark:text-white group-hover:text-primary transition-colors leading-tight">
                                     {featuredPost.title}
                                 </h2>
                                 <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
@@ -254,7 +247,7 @@ const Blog = () => {
                     className="container-width px-4 mt-24 text-center"
                 >
                     <div className="p-12 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
-                        <h3 className="text-3xl md:text-4xl font-display font-bold mb-4 text-slate-900 dark:text-white">
+                        <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 text-slate-900 dark:text-white">
                             New article every week
                         </h3>
                         <p className="text-slate-500 dark:text-slate-400 mb-6 max-w-lg mx-auto">
@@ -275,17 +268,10 @@ const Blog = () => {
 
 /* ─────────── Article Card ─────────── */
 const ArticleCard = ({ post, index }: { post: BlogPost; index: number }) => {
-    const isUpcoming = post.status === "upcoming";
-
-    // Dynamic colors based on category and status
-    let categoryColor;
-    if (isUpcoming) {
-        categoryColor = { bg: "bg-slate-100 dark:bg-slate-800/80", text: "text-slate-500 dark:text-slate-400", accent: "from-slate-100 dark:from-slate-800 to-slate-50 dark:to-slate-900" };
-    } else {
-        categoryColor = post.category === "science"
+    const categoryColor =
+        post.category === "science"
             ? { bg: "bg-emerald-50 dark:bg-emerald-900/20", text: "text-emerald-700 dark:text-emerald-400", accent: "from-emerald-500/10 to-teal-500/10" }
             : { bg: "bg-amber-50 dark:bg-amber-900/20", text: "text-amber-700 dark:text-amber-400", accent: "from-amber-500/10 to-orange-500/10" };
-    }
 
     const categoryLabel = post.category === "science" ? "Nutrition Science" : "Building Oxygen";
 
@@ -294,15 +280,15 @@ const ArticleCard = ({ post, index }: { post: BlogPost; index: number }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.08 }}
-            className={`group flex flex-col rounded-2xl overflow-hidden bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 transition-all duration-300 ${isUpcoming ? 'opacity-80 grayscale-[30%]' : 'hover:shadow-xl hover:-translate-y-1'}`}
+            className="group flex flex-col rounded-2xl overflow-hidden bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
         >
             {/* Card Image Placeholder */}
             <div className={`h-44 bg-gradient-to-br ${categoryColor.accent} flex items-center justify-center relative`}>
                 <div className="w-12 h-12 bg-white/80 dark:bg-slate-800/80 rounded-xl flex items-center justify-center">
                     {post.category === "science" ? (
-                        <FlaskConical size={24} className={isUpcoming ? "text-slate-400" : "text-emerald-600"} />
+                        <FlaskConical size={24} className="text-emerald-600" />
                     ) : (
-                        <Rocket size={24} className={isUpcoming ? "text-slate-400" : "text-amber-600"} />
+                        <Rocket size={24} className="text-amber-600" />
                     )}
                 </div>
                 <div className="absolute top-4 left-4">
@@ -320,17 +306,11 @@ const ArticleCard = ({ post, index }: { post: BlogPost; index: number }) => {
             {/* Card Content */}
             <div className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center gap-3 text-xs text-slate-400 mb-3">
-                    {isUpcoming ? (
-                        <span className="flex items-center gap-1 font-medium px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded">Upcoming post</span>
-                    ) : (
-                        <>
-                            <span className="flex items-center gap-1"><Calendar size={11} /> {post.date}</span>
-                            <span className="flex items-center gap-1"><Clock size={11} /> {post.readTime}</span>
-                        </>
-                    )}
+                    <span className="flex items-center gap-1"><Calendar size={11} /> {post.date}</span>
+                    <span className="flex items-center gap-1"><Clock size={11} /> {post.readTime}</span>
                 </div>
 
-                <h3 className={`text-lg font-display font-bold mb-3 transition-colors leading-snug ${isUpcoming ? 'text-slate-500 dark:text-slate-400' : 'text-slate-900 dark:text-white group-hover:text-primary'}`}>
+                <h3 className="text-lg font-display font-bold mb-3 text-slate-900 dark:text-white group-hover:text-primary transition-colors leading-snug">
                     {post.title}
                 </h3>
 
@@ -340,13 +320,11 @@ const ArticleCard = ({ post, index }: { post: BlogPost; index: number }) => {
 
                 <div className="flex items-center justify-between mt-auto">
                     <span className="flex items-center gap-1 text-xs text-slate-400">
-                        {isUpcoming ? "Expected updates later" : <><User size={11} /> {post.author}</>}
+                        <User size={11} /> {post.author}
                     </span>
-                    {!isUpcoming && (
-                        <Link to="#" className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:gap-2 transition-all">
-                            Read <ArrowRight size={14} />
-                        </Link>
-                    )}
+                    <Link to="#" className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:gap-2 transition-all">
+                        Read <ArrowRight size={14} />
+                    </Link>
                 </div>
             </div>
         </motion.div>

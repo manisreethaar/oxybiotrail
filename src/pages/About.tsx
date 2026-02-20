@@ -37,7 +37,7 @@ const About = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-[10px] font-bold uppercase tracking-[0.3em] text-emerald-400/60 block mb-8 text-center"
+              className="text-sm md:text-base font-bold uppercase tracking-widest text-emerald-400/80 block mb-8 text-center"
             >
               Our Vision
             </motion.span>
@@ -63,7 +63,7 @@ const About = () => {
                   whileInView={{ opacity: line ? 1 : 0, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.2, duration: 0.6 }}
-                  className={`font-display ${line ? 'text-3xl md:text-4xl lg:text-5xl font-bold text-white/90 leading-snug' : 'h-4'
+                  className={`font-display ${line ? 'text-2xl md:text-3xl lg:text-4xl font-bold text-white/90 leading-snug' : 'h-4'
                     }`}
                 >
                   {line || '\u00A0'}
@@ -94,8 +94,8 @@ const About = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary block mb-4">Our Mission</span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-6">
+              <span className="text-sm md:text-base font-bold uppercase tracking-widest text-primary block mb-4">Our Mission</span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-6">
                 To make world-class nutrition accessible<br />
                 to every working Indian.
               </h2>
@@ -169,7 +169,7 @@ const About = () => {
                     {pillar.num}
                   </motion.span>
                   <div className="text-primary mb-2">{pillar.icon}</div>
-                  <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-2">{pillar.title}</h3>
+                  <h3 className="font-display font-bold text-slate-900 dark:text-white mb-2">{pillar.title}</h3>
                   <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{pillar.body}</p>
                 </motion.div>
               ))}
@@ -224,19 +224,19 @@ const About = () => {
               </div>
 
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Who is building this</p>
-                <div className="space-y-4">
-                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                    A pharmaceutical scientist who turned fermentation into food — with the precision of a lab and the soul of a craft.
-                  </p>
-                  <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
-                    <p className="text-sm text-slate-700 dark:text-slate-200 font-medium">
-                      Operating at the intersection of:
-                    </p>
-                    <p className="text-sm mt-2 text-primary font-bold">
-                      🔬 Pharmaceutical Bioprocessing × 🧬 Nanoscience × 🌾 Fermented Food
-                    </p>
-                  </div>
+                <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Why I am the right person for this</p>
+                <div className="space-y-1.5">
+                  {[
+                    'A pharmaceutical scientist who turned fermentation into food — with the precision of a lab and the soul of a craft.',
+                    'Founder operating at the intersection of: 🔬 Pharmaceutical Bioprocessing × 🧬 Nanoscience × 🌾 Fermented Food',
+                    'Incubated at TBI — Technology Business Incubator, ACE Hosur',
+                    'Personally analyzed 200+ peer-reviewed studies for this project',
+                  ].map((cred, i) => (
+                    <motion.div key={i} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                      <p className="text-sm text-slate-600 dark:text-slate-300">{cred}</p>
+                    </motion.div>
+                  ))}
                 </div>
               </div>
 
@@ -417,9 +417,9 @@ const About = () => {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-6 block">Chapter 05 — The Invitation</span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white">
-              Still have questions?
+            <span className="text-sm md:text-base font-bold uppercase tracking-widest text-primary mb-6 block">The Invitation</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-slate-900 dark:text-white">
+              Join us.
             </h2>
             <p className="text-lg text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
               Oxygen is currently in development. We are not asking you to buy anything. We are asking you to believe that something better is possible — and to hold us accountable to delivering it.
@@ -461,7 +461,7 @@ const About = () => {
                   className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:shadow-md hover:border-primary/20 transition-all"
                 >
                   <div className="text-primary mb-3 flex justify-center">{way.icon}</div>
-                  <h3 className="text-xl font-display font-bold text-slate-900 dark:text-white mb-2">{way.title}</h3>
+                  <h3 className="font-display font-bold text-slate-900 dark:text-white mb-2">{way.title}</h3>
                   <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4">{way.desc}</p>
                   <Link to={way.link} className="text-sm text-primary font-bold hover:underline inline-flex items-center gap-1">
                     {way.cta} <ArrowRight size={14} />
@@ -514,7 +514,7 @@ const ChapterSection = ({
               {icon}
             </div>
             <div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white">{title}</h2>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white">{title}</h2>
             </div>
           </motion.div>
           <motion.div

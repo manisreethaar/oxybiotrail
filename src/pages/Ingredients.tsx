@@ -21,8 +21,8 @@ const Ingredients = () => {
                         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-6">
                             <FlaskConical size={12} /> Full Transparency
                         </span>
-                        <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 text-slate-900 dark:text-white">
-                            Sourcing <span className="text-primary">&</span> Science
+                        <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white">
+                            Every ingredient. <span className="text-primary">Every reason.</span>
                         </h1>
                         <p className="text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
                             Nothing in Oxygen is there by accident. Nothing is there for label appeal.
@@ -97,7 +97,7 @@ const Ingredients = () => {
                 <div className="container-width px-4">
                     <div className="max-w-3xl mx-auto text-center p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
                         <Leaf size={32} className="text-primary mx-auto mb-4" />
-                        <h3 className="text-2xl font-display font-bold mb-3 text-slate-900 dark:text-white">
+                        <h3 className="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">
                             Full Certificate of Analysis for every batch
                         </h3>
                         <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">
@@ -108,7 +108,7 @@ const Ingredients = () => {
                     </div>
                 </div>
             </section>
-        </Layout >
+        </Layout>
     );
 };
 
@@ -133,7 +133,7 @@ const IngredientCard = ({ ingredient, index, isExpanded, onToggle }: {
                 </div>
                 <div className="flex-grow min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
-                        <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white">{ingredient.name}</h3>
+                        <h3 className="text-lg font-display font-bold text-slate-900 dark:text-white">{ingredient.name}</h3>
                         {ingredient.skus.map((sku) => (
                             <span key={sku} className={`text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full ${sku === 'CORE' ? 'bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-400' :
                                 sku === 'FOCUS' ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-900/20 dark:text-emerald-400' :

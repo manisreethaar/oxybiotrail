@@ -48,7 +48,7 @@ const Problem = () => {
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-6">
               <FlaskConical size={12} /> Formulation Science
             </span>
-            <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-tight">
+            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-tight">
               The Science Behind <span className="text-primary">Oxygen</span>
             </h1>
             <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed">
@@ -64,7 +64,7 @@ const Problem = () => {
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
               <span className="text-[10px] font-bold uppercase tracking-widest text-red-500 block mb-2">Layer 01 — The Data</span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
                 India Has a Nutrition Crisis
               </h2>
               <p className="text-lg text-slate-500 dark:text-slate-400 max-w-3xl">
@@ -137,7 +137,7 @@ const Problem = () => {
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
               <span className="text-[10px] font-bold uppercase tracking-widest text-amber-500 block mb-2">Layer 02 — The Psychology</span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
                 The Intention-Action Gap
               </h2>
               <p className="text-lg text-slate-500 dark:text-slate-400 max-w-3xl">
@@ -178,7 +178,7 @@ const Problem = () => {
                   className={`p-6 rounded-2xl bg-white dark:bg-slate-800/50 border-t-4 ${barrier.color}`}
                 >
                   <span className="text-3xl font-display font-bold text-slate-200 dark:text-slate-700 block mb-2">{barrier.num}</span>
-                  <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-3">{barrier.title}</h3>
+                  <h3 className="font-display font-bold text-lg text-slate-900 dark:text-white mb-3">{barrier.title}</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">{barrier.body}</p>
                   <p className="text-sm font-bold text-slate-800 dark:text-slate-200 italic">"{barrier.callout}"</p>
                 </motion.div>
@@ -194,7 +194,7 @@ const Problem = () => {
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
               <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Layer 03 — The Market Failure</span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
                 The Market Response Has Been Inadequate
               </h2>
             </motion.div>
@@ -234,7 +234,7 @@ const Problem = () => {
                   transition={{ delay: i * 0.1 }}
                   className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
                 >
-                  <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-1">{cat.category}</h3>
+                  <h3 className="font-display font-bold text-slate-900 dark:text-white mb-1">{cat.category}</h3>
                   <p className="text-[10px] text-slate-400 mb-3 italic">{cat.examples}</p>
                   <div className="space-y-3">
                     <div>
