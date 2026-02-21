@@ -10,7 +10,7 @@ import { useWaitlistCount } from '@/hooks/useWaitlistCount';
 const navLinks = [
   { name: 'Our Science', path: '/problem', icon: FlaskConical },
   { name: 'Ingredients', path: '/ingredients', icon: Leaf },
-  { name: 'Our Story', path: '/about', icon: Users },
+  { name: 'About Us', path: '/about', icon: Users },
   { name: 'Blog', path: '/blog', icon: BookOpen },
 ];
 

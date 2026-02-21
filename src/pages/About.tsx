@@ -15,7 +15,7 @@ const About = () => {
             className="max-w-4xl mx-auto text-center space-y-6"
           >
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
-              <Heart size={12} /> Our Story
+              <Heart size={12} /> About Us
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight text-slate-900 dark:text-white">
               Why Oxygen <span className="text-primary">exists.</span>
@@ -310,7 +310,7 @@ const About = () => {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-slate-900 dark:text-white">Have a technical question?</p>
-                  <p className="text-sm text-slate-500">hello@oxygenbioinnovations.com · <span className="text-primary font-medium">I personally respond to science questions</span></p>
+                  <p className="text-sm text-slate-500">info@oxygenbioinnovations.com · <span className="text-primary font-medium">We personally respond to science questions</span></p>
                 </div>
               </div>
             </div>
