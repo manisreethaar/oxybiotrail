@@ -28,8 +28,7 @@ const Privacy = () => {
                                 <span>Effective from: October 2026</span>
                             </div>
                         </div>
-
-                        <div className="prose prose-slate dark:prose-invert max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:mt-12 prose-h3:text-lg md:prose-h3:text-xl prose-h3:mt-8 prose-p:leading-relaxed prose-p:font-light prose-li:leading-relaxed prose-li:font-light">
+                        <div className="prose prose-slate dark:prose-invert max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6 prose-h3:text-lg md:prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-p:leading-relaxed prose-p:font-light prose-p:mb-6 prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-8 prose-li:leading-relaxed prose-li:font-light prose-li:my-2 prose-strong:font-bold prose-strong:text-slate-900 dark:prose-strong:text-white">
 
                             <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 mb-12">
                                 <h2 className="mt-0 text-2xl md:text-3xl font-display font-bold tracking-tight text-slate-900 dark:text-white mb-4">Summary in Plain Language</h2>
