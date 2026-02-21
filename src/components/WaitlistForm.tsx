@@ -108,8 +108,8 @@ export const WaitlistForm = ({ variant = 'hero' }: WaitlistFormProps) => {
                 </div>
             )}
 
-            <p className="absolute -bottom-6 left-0 w-full text-center text-[10px] text-slate-500 dark:text-slate-400 dark:text-slate-500">
-                By joining, you agree to our <a href="/privacy" className="underline hover:text-slate-600 dark:hover:text-slate-500 dark:text-slate-400">Privacy Policy</a>
+            <p className="absolute -bottom-6 left-0 w-full text-center text-[10px] text-slate-500 dark:text-slate-400">
+                By joining, you agree to our <a href="/privacy" className="underline hover:text-slate-600 dark:hover:text-slate-300">Privacy Policy</a>
             </p>
         </form>
     );
