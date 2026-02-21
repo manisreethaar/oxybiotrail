@@ -30,7 +30,7 @@ const Terms = () => {
 
                             <h2>1. AGREEMENT TO TERMS</h2>
                             <p>
-                                By accessing supra.in or oxygenbioinnovations.in ('our websites'), you agree to be bound by these Terms and Conditions.
+                                By accessing oxygenbioinnovations.com ('our website'), you agree to be bound by these Terms and Conditions.
                             </p>
                             <p>
                                 If you disagree with any part of these terms, please do not use our websites.
@@ -48,10 +48,10 @@ const Terms = () => {
                                 <strong>Oxygen Bioinnovations Private Limited</strong><br />
                                 CIN: [Number]<br />
                                 Registered Office: [Address]<br />
-                                Email: hello@oxygenbio.in<br />
+                                Email: info@oxygenbioinnovations.com<br />
                                 FSSAI License: [Number when issued]
                             </p>
-                            <p>We develop and market precision nutrition products under the SUPRA brand.</p>
+                            <p>We develop and market precision nutrition products under the RIZE brand.</p>
 
                             <h2>3. PRE-LAUNCH STATUS</h2>
                             <div className="p-5 rounded-xl border border-amber-200 bg-amber-50 dark:bg-amber-900/10 dark:border-amber-800/50 my-8">
@@ -78,7 +78,7 @@ const Terms = () => {
                             <p>All content on our websites is owned by or licensed to Oxygen Bioinnovations Private Limited, including:</p>
                             <ul>
                                 <li>'Oxygen Bioinnovations' company name</li>
-                                <li>'SUPRA' brand name and all sub-brands (SUPRA CORE, FOCUS, SURGE, BAR)</li>
+                                <li>'RIZE' brand name and all its sub-brands</li>
                                 <li>Logo, visual identity, design system</li>
                                 <li>All website text and copy</li>
                                 <li>Blog articles and research content</li>
@@ -106,7 +106,7 @@ const Terms = () => {
 
                             <h3>4.3 PERMISSION REQUESTS</h3>
                             <p>
-                                <strong>Email:</strong> legal@oxygenbio.in<br />
+                                <strong>Email:</strong> info@oxygenbioinnovations.com<br />
                                 <strong>Include:</strong> Content requested, intended use, your organization and contact details
                             </p>
 
@@ -123,7 +123,7 @@ const Terms = () => {
                             </ul>
 
                             <h3>5.2 PRODUCT STATUS</h3>
-                            <p>SUPRA products are food supplements regulated as food under the Food Safety and Standards Act 2006.</p>
+                            <p>RIZE products are food supplements regulated as food under the Food Safety and Standards Act 2006.</p>
                             <p>They are NOT:</p>
                             <ul>
                                 <li>Medicines or drugs</li>
@@ -141,7 +141,7 @@ const Terms = () => {
                             </ul>
 
                             <h3>5.4 CONSULT YOUR DOCTOR</h3>
-                            <p>Please consult a qualified healthcare professional before using SUPRA if you:</p>
+                            <p>Please consult a qualified healthcare professional before using RIZE if you:</p>
                             <ul>
                                 <li>Are pregnant or breastfeeding</li>
                                 <li>Are under 18 years of age</li>
@@ -191,7 +191,7 @@ const Terms = () => {
 
                             <h3>9.2 DISPUTE RESOLUTION</h3>
                             <ul>
-                                <li><strong>Step 1:</strong> Contact us at <a href="mailto:legal@oxygenbio.in">legal@oxygenbio.in</a>. We attempt to resolve all disputes amicably within 30 days.</li>
+                                <li><strong>Step 1:</strong> Contact us at <a href="mailto:info@oxygenbioinnovations.com">info@oxygenbioinnovations.com</a>. We attempt to resolve all disputes amicably within 30 days.</li>
                                 <li><strong>Step 2:</strong> If unresolved: Disputes shall be subject to the exclusive jurisdiction of courts in Hosur, India.</li>
                             </ul>
 
