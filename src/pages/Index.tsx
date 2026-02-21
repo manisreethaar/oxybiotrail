@@ -423,16 +423,16 @@ const Index = () => {
                 <span>Clinical Study Designed</span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight font-display text-slate-900 dark:text-white leading-[1.1]">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter font-display text-slate-900 dark:text-white leading-[1.05]">
                 Ancient Ingredients. <br />
                 Modern Science. <br />
                 <span className="text-primary">No Compromise.</span>
               </h1>
 
-              <p className="text-xl text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed font-light">
+              <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed font-light mt-6">
                 India is building its first precision nutrition system.
-                Built on Millet, Medicinal Mushrooms, and decades of nutritional science.
-                Designed for working Indians who deserve better than what currently exists.
+                Built on Millet, Medicinal Mushrooms, and decades of scientific research.
+                Designed for ambitious Indians who deserve better than what currently exists.
               </p>
 
               <div className="pt-4">
@@ -490,13 +490,13 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto mb-20"
+            className="text-center max-w-4xl mx-auto mb-16 md:mb-20"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold leading-tight text-slate-900 dark:text-white mb-6">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-tight text-slate-900 dark:text-white mb-6">
               You are probably <br />
               <span className="text-primary">nutritionally deficient.</span>
             </h2>
-            <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto font-light">
               Not because you are careless. Because modern Indian life makes proper nutrition almost impossible.
             </p>
           </motion.div>
@@ -597,12 +597,12 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-20"
+            className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 text-slate-900 dark:text-white">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
               Meet <span className="text-primary">Oxygen</span>
             </h2>
-            <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed font-light">
               Three precision formulas. Each scientifically designed for a specific need.
               All built on the same uncompromising foundation: Indian ingredients, active nutrient forms,
               and doses that actually work.
@@ -710,12 +710,12 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-24"
+            className="text-center max-w-3xl mx-auto mb-16 md:mb-24"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 text-slate-900 dark:text-white">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
               We show our work.
             </h2>
-            <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed font-light">
               Every formulation decision has a peer-reviewed reason.
               Every ingredient has a verified source. Every claim is something we can prove.
             </p>
@@ -896,13 +896,13 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-6"
+            className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-tight">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-tight tracking-tight">
               Building in public.<br />
               <span className="text-primary">Every step. Every setback.<br />Every breakthrough.</span>
             </h2>
-            <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed font-light">
               Most companies hide their development process. We think you should see exactly how your nutrition is being built.
             </p>
           </motion.div>

@@ -17,10 +17,10 @@ const About = () => {
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
               <Heart size={12} /> About Us
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight text-slate-900 dark:text-white">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.05] tracking-tighter text-slate-900 dark:text-white">
               Why Oxygen <span className="text-primary">exists.</span>
             </h1>
-            <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed font-light max-w-2xl mx-auto">
               This is not a corporate origin story. This is the honest account of a problem we couldn't ignore, a gap nobody was filling, and a decision to build something better.
             </p>
           </motion.div>
@@ -60,7 +60,7 @@ const About = () => {
                   whileInView={{ opacity: line ? 1 : 0, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.2, duration: 0.6 }}
-                  className={`font-display ${line ? 'text-xl md:text-2xl lg:text-3xl font-bold text-white/90 leading-snug' : 'h-4'
+                  className={`font-display ${line ? 'text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white/90 leading-tight' : 'h-6'
                     }`}
                 >
                   {line || '\u00A0'}
@@ -92,26 +92,26 @@ const About = () => {
               className="text-center mb-16"
             >
               <span className="text-sm md:text-base font-bold uppercase tracking-widest text-primary block mb-4">Our Mission</span>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-6">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white leading-tight tracking-tight mb-6">
                 To make world-class nutrition accessible<br />
-                to every working Indian.
+                to every ambitious Indian.
               </h2>
-              <p className="text-lg text-slate-400 italic">
+              <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 font-light italic">
                 By combining India's ancient ingredient wisdom with modern nutritional science — and refusing to compromise on either.
               </p>
             </motion.div>
 
             {/* Mission Body (Option 2 — emotional) */}
-            <div className="max-w-2xl mx-auto space-y-6 mb-20">
+            <div className="max-w-3xl mx-auto space-y-6 mb-20 text-center">
               <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-                className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed"
+                className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed font-light"
               >
                 Oxygen exists to close the gap between what urban Indians need nutritionally and what the market currently offers them.
               </motion.p>
               <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.15 }}
-                className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed"
+                className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed font-light"
               >
-                We believe Indian ingredients are world-class. We believe Indian consumers deserve products formulated to global scientific standards. We believe honesty about what is in a product is not a marketing strategy — <strong className="text-slate-900 dark:text-white">it is a minimum standard that the industry has failed to meet.</strong>
+                We believe Indian ingredients are world-class. We believe Indian consumers deserve products formulated to global scientific standards. We believe honesty about what is in a product is not a marketing strategy — <strong className="text-slate-900 dark:text-white font-medium">it is a minimum standard that the industry has failed to meet.</strong>
               </motion.p>
               <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
                 className="text-lg text-primary font-bold"
@@ -160,7 +160,7 @@ const About = () => {
               className="text-center mb-16"
             >
               <span className="text-sm md:text-base font-bold uppercase tracking-widest text-primary block mb-4">Our Core Values</span>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-6">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white leading-tight tracking-tight mb-6">
                 The principles driving our research.
               </h2>
             </motion.div>
@@ -235,7 +235,7 @@ const About = () => {
           <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
             We spent six months trying to find a daily nutrition product we would actually recommend to someone we cared about.
           </p>
-          <p className="text-2xl font-display font-bold text-slate-900 dark:text-white">
+          <p className="text-2xl md:text-3xl font-display font-bold text-slate-900 dark:text-white tracking-tight">
             We could not find one.
           </p>
           <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -472,14 +472,14 @@ const About = () => {
             className="max-w-3xl mx-auto text-center"
           >
             <span className="text-sm md:text-base font-bold uppercase tracking-widest text-primary mb-6 block">The Invitation</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 text-slate-900 dark:text-white">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
               Join us.
             </h2>
-            <p className="text-lg text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+            <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed font-light mb-4">
               Oxygen is currently in development. We are not asking you to buy anything. We are asking you to believe that something better is possible — and to hold us accountable to delivering it.
             </p>
-            <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-12">
-              Join our waitlist. Read our research. Follow our development. Tell us what you need from a nutrition product. <strong className="text-primary">We are listening. And we are building.</strong>
+            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed font-light mb-12">
+              Join our waitlist. Read our research. Follow our development. Tell us what you need from a nutrition product. <strong className="text-primary font-medium">We are listening. And we are building.</strong>
             </p>
 
             <div className="grid sm:grid-cols-3 gap-6 mb-12">
@@ -568,7 +568,7 @@ const ChapterSection = ({
               {icon}
             </div>
             <div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white">{title}</h2>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-slate-900 dark:text-white">{title}</h2>
             </div>
           </motion.div>
           <motion.div
