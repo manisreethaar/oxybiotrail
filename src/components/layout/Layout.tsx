@@ -11,7 +11,7 @@ export function Layout({ children }: LayoutProps) {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden w-full relative">
+    <div className="min-h-screen flex flex-col bg-background text-foreground w-full">
       <Navbar />
       <main key={location.pathname} className="flex-1 pt-20 animate-fade-in">
         {children}
