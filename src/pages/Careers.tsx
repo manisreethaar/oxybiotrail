@@ -38,13 +38,49 @@ const Careers = () => {
         setIsJobSubmitting(true);
         const form = e.currentTarget;
         const formDataObj = new FormData(form);
-        formDataObj.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY_HERE");
-        formDataObj.append("subject", "Junior Researcher Application - " + formDataObj.get("name"));
+
+        const file = formDataObj.get('attachment') as File;
+        let attachmentData = null;
+
+        if (file && file.size > 0) {
+            if (file.size > 4 * 1024 * 1024) {
+                toast({
+                    title: "File too large",
+                    description: "Please upload a CV under 4MB.",
+                    variant: "destructive"
+                });
+                setIsJobSubmitting(false);
+                return;
+            }
+            try {
+                const base64Content = await new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = () => resolve(reader.result?.toString().split(',')[1]);
+                    reader.onerror = error => reject(error);
+                });
+                attachmentData = {
+                    name: file.name,
+                    content: base64Content
+                };
+            } catch (err) {
+                console.error("Error converting file to base64", err);
+            }
+        }
+
+        const payload = {
+            subject: "Junior Researcher Application - " + formDataObj.get("name"),
+            name: formDataObj.get("name"),
+            email: formDataObj.get("email"),
+            message: formDataObj.get("message"),
+            attachment: attachmentData
+        };
 
         try {
-            const response = await fetch("https://api.web3forms.com/submit", {
+            const response = await fetch("/api/submit", {
                 method: "POST",
-                body: formDataObj
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
             });
             const result = await response.json();
             if (result.success) {
@@ -75,16 +111,14 @@ const Careers = () => {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch("https://api.web3forms.com/submit", {
+            const response = await fetch("/api/submit", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                     Accept: "application/json",
                 },
                 body: JSON.stringify({
-                    access_key: "YOUR_WEB3FORMS_ACCESS_KEY_HERE",
                     subject: `Internship Application - ${formData.name} (${formData.degree})`,
-                    from_name: formData.name,
                     ...formData
                 }),
             });

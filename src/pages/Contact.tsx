@@ -52,16 +52,14 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("/api/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "YOUR_WEB3FORMS_ACCESS_KEY_HERE",
           subject: formData.subject || "New Contact Form Submission",
-          from_name: formData.name,
           ...formData
         }),
       });
