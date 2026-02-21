@@ -44,6 +44,7 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
+            <img src="/logo.png" alt="Oxygen Bioinnovations" className="h-8 w-auto object-contain" />
             <div className="flex flex-col justify-center">
               <span className="text-lg font-medium font-display text-foreground tracking-tight leading-none uppercase">
                 Oxygen

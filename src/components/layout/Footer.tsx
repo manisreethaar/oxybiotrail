@@ -11,6 +11,7 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
+              <img src="/logo.png" alt="Oxygen Bioinnovations Logo" className="h-8 w-auto object-contain" />
               <span className="text-xl font-bold font-display text-slate-900">
                 Oxygen <span className="text-primary">BioInnovations</span>
               </span>

@@ -43,19 +43,16 @@ const About = () => {
             </motion.span>
             <div className="text-center space-y-3">
               {[
-                'An India where nutritional deficiency',
-                'is no longer a silent barrier to human potential —',
+                'To build a sustainable and innovation-driven',
+                'biotechnology enterprise',
                 '',
-                'where a working professional in Chennai,',
-                'a student in Pune,',
-                'and an athlete in Delhi',
+                'that transforms indigenous biological resources',
+                'into globally competitive',
+                'biocosmetic and food products',
                 '',
-                'all have access to precision nutrition',
-                'that matches the scientific standard',
-                'of the world\'s best products,',
-                '',
-                'built from India\'s own',
-                'ancient ingredient wisdom.',
+                'through advanced biotechnology,',
+                'circular bioeconomy principles,',
+                'and responsible manufacturing.',
               ].map((line, i) => (
                 <motion.p
                   key={i}
@@ -123,54 +120,106 @@ const About = () => {
               </motion.p>
             </div>
 
-            {/* 4 Mission Pillars */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* 3 Mission Pillars */}
+            <div className="grid md:grid-cols-3 gap-8 mb-32">
               {[
                 {
-                  num: '01',
-                  title: 'Science First',
+                  title: '1. Product & Commercial Mission',
+                  body: 'To develop and commercialize safe, natural, and sustainable biocosmetic and food products using innovative bioprocessing, fermentation, and formulation technologies, ensuring financial viability and market competitiveness.',
+                },
+                {
+                  title: '2. Research & Innovation Mission',
+                  body: 'To strengthen indigenous biotechnology innovation by advancing research in bioprocess engineering, microbial fermentation, and nanotechnology, supported through government grants, academic collaboration, and applied research programs.',
+                },
+                {
+                  title: '3. Impact & Ecosystem Mission',
+                  body: 'To create long-term environmental, social, and economic impact by supporting circular bioeconomy practices, enabling skill development through student mentorship and internships, generating employment, and aligning operations with national initiatives such as Make in India and sustainability-driven growth.',
+                }
+              ].map((mission, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-white dark:bg-slate-950 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-800"
+                >
+                  <h3 className="text-xl font-bold font-display text-slate-900 dark:text-white mb-4">{mission.title}</h3>
+                  <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                    {mission.body}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Our Values */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <span className="text-sm md:text-base font-bold uppercase tracking-widest text-primary block mb-4">Our Core Values</span>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-6">
+                The principles driving our research.
+              </h2>
+            </motion.div>
+
+            <div className="grid sm:grid-cols-2 gap-6">
+              {[
+                {
+                  title: 'Scientific Rigor',
                   icon: <FlaskConical size={22} />,
-                  body: 'Every formulation decision is evidence-based. We design with peer-reviewed literature, not market trends or cost calculations.',
+                  body: 'Evidence-based, research-driven approach to every product and process',
                 },
                 {
-                  num: '02',
-                  title: 'India First',
+                  title: 'Sustainability First',
                   icon: <Leaf size={22} />,
-                  body: 'We start with Indian ingredients because they are genuinely superior. Ragi. Ashwagandha. Moringa. Ancient wisdom verified by modern science.',
+                  body: 'Circular bioeconomy, minimal waste, maximum resource utilization',
                 },
                 {
-                  num: '03',
-                  title: 'Honesty Always',
-                  icon: <Search size={22} />,
-                  body: 'We publish our lab reports, cite our research, and name our suppliers. We tell you what our products cannot do as clearly as what they can.',
-                },
-                {
-                  num: '04',
-                  title: 'Access For All',
+                  title: 'Collaboration',
                   icon: <Users size={22} />,
-                  body: 'Precision nutrition should not cost ₹500 per serving. We are building world-class products at prices urban Indians can sustain daily.',
+                  body: 'Building bridges between academia, industry, farmers, and consumers',
                 },
-              ].map((pillar, i) => (
+                {
+                  title: 'Innovation with Purpose',
+                  icon: <Rocket size={22} />,
+                  body: 'Technology that solves real problems for real stakeholders',
+                },
+                {
+                  title: 'Indigenous Pride',
+                  icon: <MapPin size={22} />,
+                  body: "Celebrating and valorizing India's biological and knowledge wealth",
+                },
+                {
+                  title: 'Education & Empowerment',
+                  icon: <BookOpen size={22} />,
+                  body: 'Developing the next generation of biotech innovators',
+                },
+                {
+                  title: 'Integrity & Transparency',
+                  icon: <Search size={22} />,
+                  body: 'Honest communication about capabilities, challenges, and progress',
+                }
+              ].map((value, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-6 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800"
+                  className="flex gap-4 p-6 bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-colors"
                 >
-                  <motion.span
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1, type: 'spring', stiffness: 300 }}
-                    className="text-4xl font-display font-bold text-primary/15 block mb-3"
-                  >
-                    {pillar.num}
-                  </motion.span>
-                  <div className="text-primary mb-2">{pillar.icon}</div>
-                  <h3 className="font-display font-bold text-slate-900 dark:text-white mb-2">{pillar.title}</h3>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{pillar.body}</p>
+                  <div className="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                    {value.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-slate-900 dark:text-white mb-2">{value.title}</h3>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                      {value.body}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </div>
