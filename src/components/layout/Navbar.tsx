@@ -51,13 +51,12 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3 group">
-            <img src="/logo.png" alt="Oxygen Bioinnovations" className="h-10 w-auto object-contain" />
+          <Link to="/" className="flex items-center gap-2 group">
             <div className="flex flex-col justify-center">
-              <span className="text-xl font-bold text-foreground tracking-tight leading-none uppercase">
-                OXYGEN
+              <span className="text-base font-extrabold text-primary tracking-tight leading-none uppercase">
+                OXYGEN BIOINNOVATIONS
               </span>
-              <span className="text-[10px] sm:text-xs tracking-widest text-muted-foreground font-medium mt-1">
+              <span className="text-[10px] sm:text-xs tracking-widest text-muted-foreground font-medium mt-0.5">
                 Ancient Ingredients. Modern Science.
               </span>
             </div>
