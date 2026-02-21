@@ -501,7 +501,7 @@ const Index = () => {
           </motion.div>
 
           {/* Statistics Block */}
-          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-16 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-10 max-w-5xl mx-auto">
             {[
               { end: 73, suffix: '%', label: 'of urban Indians are Vitamin D deficient', source: 'ICMR National Nutrition Survey' },
               { end: 50, suffix: '%', label: 'of working professionals skip at least one meal per day', source: 'ASSOCHAM Health Survey' },
@@ -512,7 +512,7 @@ const Index = () => {
           </div>
 
           {/* Problem Cards */}
-          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-16 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-10 max-w-6xl mx-auto">
             {/* Card 1: Time Problem */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -609,7 +609,7 @@ const Index = () => {
           </motion.div>
 
           {/* Three Formula Cards */}
-          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto mb-8 md:mb-12">
+          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto mb-6 md:mb-10">
             {/* CORE / VITALITY */}
             <FormulaCard
               name="Project VITALITY"
@@ -721,7 +721,7 @@ const Index = () => {
           </motion.div>
 
           {/* Three Science Pillars */}
-          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto mb-10 md:mb-20">
+          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto mb-8 md:mb-12">
 
             {/* Pillar 1: Active Forms */}
             <motion.div
