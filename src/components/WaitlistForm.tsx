@@ -61,9 +61,9 @@ export const WaitlistForm = ({ variant = 'hero' }: WaitlistFormProps) => {
                     type="text"
                     placeholder="First Name"
                     required
-                    className={`h-12 rounded-full px-6 bg-white/80 border-slate-200 focus:ring-2 focus:ring-primary/20 transition-all sm:w-1/3 ${variant === 'footer'
+                    className={`h-12 rounded-full px-6 transition-all sm:w-1/3 ${variant === 'footer'
                         ? 'bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20'
-                        : 'shadow-sm'
+                        : 'bg-white border-slate-200 text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary/20 shadow-sm'
                         }`}
                 />
                 <Input
@@ -72,9 +72,9 @@ export const WaitlistForm = ({ variant = 'hero' }: WaitlistFormProps) => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className={`h-12 rounded-full px-6 bg-white/80 border-slate-200 focus:ring-2 focus:ring-primary/20 transition-all sm:w-2/3 ${variant === 'footer'
+                    className={`h-12 rounded-full px-6 transition-all sm:w-2/3 ${variant === 'footer'
                         ? 'bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20'
-                        : 'shadow-sm'
+                        : 'bg-white border-slate-200 text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary/20 shadow-sm'
                         }`}
                 />
                 <Button
