@@ -1137,8 +1137,8 @@ const Index = () => {
               </div>
               <div className="text-center md:text-left space-y-4 flex-grow">
                 <div>
-                  <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white">Manisreethaar</h3>
-                  <p className="text-sm text-primary font-bold">Co-founder, Oxygen BioInnovations</p>
+                  <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white">The Founder</h3>
+                  <p className="text-sm text-primary font-bold">Chief Science Officer, Oxygen BioInnovations</p>
                 </div>
                 <div className="space-y-2">
                   {[

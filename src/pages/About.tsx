@@ -268,8 +268,8 @@ const About = () => {
             </div>
             <div className="space-y-4 flex-grow">
               <div>
-                <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white">Manisreethaar</h3>
-                <p className="text-sm text-primary font-bold">Co-founder + Chief Science Officer</p>
+                <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white">Our Founder</h3>
+                <p className="text-sm text-primary font-bold">Chief Science Officer</p>
               </div>
 
               <div>
@@ -304,9 +304,14 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 pt-2">
-                <Mail size={14} className="text-primary" />
-                <p className="text-sm text-slate-500">manisreethaar@oxygenbio.in · <span className="text-primary font-medium">I personally respond to science questions</span></p>
+              <div className="pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center gap-4 hidden">
+                <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0">
+                  <Mail size={16} className="text-slate-500" />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-slate-900 dark:text-white">Have a technical question?</p>
+                  <p className="text-sm text-slate-500">hello@oxygenbioinnovations.com · <span className="text-primary font-medium">I personally respond to science questions</span></p>
+                </div>
               </div>
             </div>
           </div>
