@@ -15,7 +15,7 @@ const Ingredients = () => {
     return (
         <Layout>
             {/* Hero */}
-            <section className="pt-24 md:pt-32 pb-8 md:pb-12">
+            <section className="pt-20 md:pt-32 pb-6 md:pb-12">
                 <div className="container-width px-4 text-center">
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
                         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-6">
@@ -95,7 +95,7 @@ const Ingredients = () => {
             {/* Bottom Note */}
             <section className="pb-8 md:pb-12">
                 <div className="container-width px-4">
-                    <div className="max-w-3xl mx-auto text-center p-6 md:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
+                    <div className="max-w-3xl mx-auto text-center p-5 md:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
                         <Leaf size={32} className="text-primary mx-auto mb-4" />
                         <h3 className="text-2xl md:text-3xl font-display font-bold mb-3 text-slate-900 dark:text-white tracking-tight">
                             Full Certificate of Analysis for every batch

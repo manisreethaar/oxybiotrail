@@ -7,7 +7,7 @@ const About = () => {
   return (
     <Layout>
       {/* ─── HERO ─── */}
-      <section className="pt-24 md:pt-32 pb-12 md:pb-16 relative overflow-hidden">
+      <section className="pt-20 md:pt-32 pb-8 md:pb-16 relative overflow-hidden">
         <div className="container-width px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -28,7 +28,7 @@ const About = () => {
       </section>
 
       {/* ─── THE VISION — Full-height cinematic statement ─── */}
-      <section className="min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-[#0f2419]">
+      <section className="min-h-[50svh] lg:min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-[#0f2419]">
         {/* Subtle grain texture */}
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%270 0 256 256%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cfilter id=%27noise%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%270.8%27 numOctaves=%274%27 stitchTiles=%27stitch%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23noise)%27/%3E%3C/svg%3E")' }} />
         <div className="container-width px-4 py-12 relative z-10">
@@ -147,7 +147,7 @@ const About = () => {
             </div>
 
             {/* 3 Mission Pillars */}
-            <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <div className="grid md:grid-cols-3 gap-6 mb-10 md:mb-16">
               {[
                 {
                   title: '1. Product & Commercial Mission',
@@ -168,7 +168,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="bg-white dark:bg-slate-950 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-800"
+                  className="bg-white dark:bg-slate-950 p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-800"
                 >
                   <h3 className="text-xl font-bold font-display text-slate-900 dark:text-white mb-4">{mission.title}</h3>
                   <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
@@ -235,7 +235,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex gap-4 p-6 bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-colors"
+                  className="flex gap-4 p-5 md:p-6 bg-white dark:bg-slate-950 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-colors"
                 >
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
                     {value.icon}
@@ -287,7 +287,7 @@ const About = () => {
       <ChapterSection number="02" title="The Founders" icon={<Users size={28} />} accentColor="emerald" alternate>
         <div className="space-y-8">
           {/* Founder Card */}
-          <div className="flex flex-col md:flex-row gap-8 p-8 rounded-3xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8 p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
             {/* Photo placeholder */}
             <div className="w-40 h-48 md:w-48 md:h-56 rounded-2xl bg-gradient-to-br from-primary/10 to-amber-500/10 flex items-center justify-center shrink-0 mx-auto md:mx-0">
               <Users size={48} className="text-primary/30" />
@@ -401,7 +401,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow"
+              className="p-5 md:p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow"
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl font-display font-bold text-slate-400 dark:text-slate-500">{principle.num}</span>
@@ -538,7 +538,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.15 }}
-                  className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:shadow-md hover:border-primary/20 transition-all"
+                  className="p-5 md:p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center hover:shadow-md hover:border-primary/20 transition-all"
                 >
                   <div className="text-primary mb-3 flex justify-center">{way.icon}</div>
                   <h3 className="font-display font-bold text-slate-900 dark:text-white mb-2">{way.title}</h3>

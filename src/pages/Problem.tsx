@@ -42,7 +42,7 @@ const Problem = () => {
   return (
     <Layout>
       {/* ═══ HERO ═══ */}
-      <section className="pt-24 md:pt-32 pb-12 md:pb-16">
+      <section className="pt-20 md:pt-32 pb-8 md:pb-16">
         <div className="container-width px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-6">
@@ -85,7 +85,7 @@ const Problem = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center"
+                  className="p-5 md:p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center"
                 >
                   <span className={`text-3xl md:text-4xl font-display font-bold ${stat.color} block mb-2`}>{stat.pct}</span>
                   <p className="text-sm font-bold text-slate-700 dark:text-slate-300">{stat.label}</p>
@@ -109,7 +109,7 @@ const Problem = () => {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-start gap-5 shadow-sm hover:shadow-md transition-all duration-300"
+                  className="p-5 md:p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-start gap-5 shadow-sm hover:shadow-md transition-all duration-300"
                 >
                   <div className="shrink-0 mt-1 p-2 bg-white dark:bg-slate-800 rounded-full border border-slate-100 dark:border-slate-700">{card.icon}</div>
                   <div>
@@ -251,7 +251,7 @@ const Problem = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="p-8 md:p-12 rounded-3xl bg-slate-900 dark:bg-slate-800 text-center"
+              className="p-6 md:p-12 rounded-3xl bg-slate-900 dark:bg-slate-800 text-center"
             >
               <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed max-w-2xl mx-auto">
                 The market has: Affordable products that are inadequate. Quality products that are inaccessible. Indian products that lack rigour. Rigorous products that lack Indian relevance.
@@ -295,7 +295,7 @@ const Problem = () => {
 
             {/* The Core Argument */}
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="grid md:grid-cols-2 gap-8 mb-10">
-              <div className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
+              <div className="p-6 md:p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
                 <h3 className="font-display font-bold text-lg mb-4 text-slate-900 dark:text-white">The claim vs. the reality</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
                   A product can list <strong>100% RDA of iron.</strong> If it uses Ferrous Oxide (5% absorption), you absorb 5mg of the listed 18mg.
@@ -307,7 +307,7 @@ const Problem = () => {
                   "Wait — that sounds similar?"
                 </p>
               </div>
-              <div className="p-8 rounded-2xl bg-primary/5 border border-primary/10">
+              <div className="p-6 md:p-8 rounded-2xl bg-primary/5 border border-primary/10">
                 <h3 className="font-display font-bold text-lg mb-4 text-primary">No. Because we also ensure:</h3>
                 <ul className="space-y-3">
                   {[
@@ -354,7 +354,7 @@ const Problem = () => {
             </motion.div>
 
             {/* Infographic 2: MTHFR Visual */}
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="p-8 md:p-12 rounded-3xl bg-slate-900 dark:bg-slate-800 text-white">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="p-6 md:p-12 rounded-3xl bg-slate-900 dark:bg-slate-800 text-white">
               <h3 className="text-2xl font-display font-bold mb-2 text-center">Why synthetic folic acid fails 40% of people</h3>
               <p className="text-sm text-slate-500 dark:text-slate-400 text-center mb-10">The MTHFR Gene Variant</p>
 
@@ -444,7 +444,7 @@ const Problem = () => {
 
               {/* Process Diagram */}
               <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-                className="p-6 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700"
+                className="p-5 md:p-6 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700"
               >
                 <h4 className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-6">Our Processing</h4>
                 <div className="space-y-0">
@@ -475,7 +475,7 @@ const Problem = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* Most Brands */}
               <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-                className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800"
+                className="p-6 md:p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800"
               >
                 <h3 className="text-lg font-display font-bold text-slate-500 dark:text-slate-400 mb-6">Most Brands</h3>
                 <ul className="space-y-4">
@@ -498,7 +498,7 @@ const Problem = () => {
 
               {/* Oxygen */}
               <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-                className="p-8 rounded-2xl bg-primary/5 border border-primary/10"
+                className="p-6 md:p-8 rounded-2xl bg-primary/5 border border-primary/10"
               >
                 <h3 className="text-lg font-display font-bold text-primary mb-6">Oxygen's Approach</h3>
                 <ul className="space-y-4">
@@ -522,7 +522,7 @@ const Problem = () => {
 
             {/* Extraction Diagram */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center"
+              className="p-6 md:p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center"
             >
               <h4 className="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-6">Dual Extraction Process</h4>
               <div className="flex flex-col md:flex-row items-center justify-center gap-4">

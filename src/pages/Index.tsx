@@ -30,7 +30,7 @@ const StatCard = ({ end, suffix, label, source, delay }: { end: number; suffix: 
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay }}
-      className="text-center p-6 md:p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex flex-col items-center justify-center"
+      className="text-center p-5 md:p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex flex-col items-center justify-center"
     >
       <span className="text-5xl md:text-7xl font-display font-bold text-primary">{count}{suffix}</span>
       <p className="text-sm text-slate-600 dark:text-slate-300 mt-3 md:mt-4 leading-relaxed">{label}</p>
@@ -68,7 +68,7 @@ const FormulaCard = ({ name, badge, badgeColor, tagline, audience, benefits, ing
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay }}
-      className={`group relative flex flex-col p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-800/50 border ${colors.border} hover:-translate-y-2 hover:shadow-2xl transition-all duration-300`}
+      className={`group relative flex flex-col p-5 md:p-8 rounded-3xl bg-white dark:bg-slate-800/50 border ${colors.border} hover:-translate-y-2 hover:shadow-2xl transition-all duration-300`}
     >
       {/* Badge */}
       <span className={`inline-block self-start text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full ${colors.bg} ${colors.text} mb-4`}>
@@ -409,9 +409,9 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section - The "What is this?" */}
-      <section className="relative min-h-[100svh] lg:min-h-[90vh] flex flex-col justify-center overflow-hidden pt-24 pb-12 lg:pt-20 lg:pb-0">
+      <section className="relative min-h-[80svh] lg:min-h-[90vh] flex flex-col justify-center overflow-hidden pt-20 pb-8 lg:pt-20 lg:pb-0">
         <div className="container-width z-10 px-4">
-          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left: Copy & Form */}
             <div className="text-center lg:text-left space-y-6 lg:space-y-8 w-full max-w-2xl mx-auto lg:mx-0 flex flex-col items-center lg:items-start">
               <div className="inline-flex flex-wrap justify-center items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
@@ -482,7 +482,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════════════════
           SECTION 4: THE PROBLEM — "Do these people understand my problem?"
           ═══════════════════════════════════════════════════════════════ */}
-      <section className="py-12 md:py-16 bg-white dark:bg-slate-950 relative overflow-hidden">
+      <section className="section-padding bg-white dark:bg-slate-950 relative overflow-hidden">
         <div className="container-width px-4">
           {/* Opening Statement */}
           <motion.div
@@ -519,7 +519,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0 }}
-              className="group p-6 md:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-amber-500/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
+              className="group p-5 md:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-amber-500/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
             >
               <div className="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
                 <Clock size={28} />
@@ -538,7 +538,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="group p-6 md:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-red-500/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
+              className="group p-5 md:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-red-500/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
             >
               <div className="w-14 h-14 bg-red-100 dark:bg-red-900/30 text-red-600 rounded-2xl flex items-center justify-center mb-6">
                 <ShieldOff size={28} />
@@ -557,7 +557,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="group p-6 md:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-blue-500/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
+              className="group p-5 md:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-blue-500/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
             >
               <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
                 <Globe size={28} />
@@ -589,7 +589,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════════════════
           SECTION 5: THE SOLUTION — "What exactly is this?"
           ═══════════════════════════════════════════════════════════════ */}
-      <section id="ingredients" className="py-12 md:py-16 bg-slate-50 dark:bg-slate-900/50 relative overflow-hidden">
+      <section id="ingredients" className="section-padding bg-slate-50 dark:bg-slate-900/50 relative overflow-hidden">
         <div className="container-width px-4">
           {/* Opening */}
           <motion.div
@@ -701,7 +701,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════════════════
           SECTION 6: THE SCIENCE — "Why should I believe this works?"
           ═══════════════════════════════════════════════════════════════ */}
-      <section className="py-12 md:py-16 bg-white dark:bg-slate-950 relative overflow-hidden">
+      <section className="section-padding bg-white dark:bg-slate-950 relative overflow-hidden">
         <div className="container-width px-4">
 
           {/* Opening */}
@@ -721,7 +721,7 @@ const Index = () => {
           </motion.div>
 
           {/* Three Science Pillars */}
-          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto mb-16 md:mb-24">
+          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto mb-10 md:mb-20">
 
             {/* Pillar 1: Active Forms */}
             <motion.div
@@ -729,7 +729,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0 }}
-              className="p-6 md:p-8 rounded-2xl md:rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
+              className="p-5 md:p-8 rounded-2xl md:rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
             >
               <div className="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
                 <FlaskConical size={28} />
@@ -766,7 +766,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.15 }}
-              className="p-6 md:p-8 rounded-2xl md:rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
+              className="p-5 md:p-8 rounded-2xl md:rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
             >
               <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">
                 <Microscope size={28} />
@@ -792,7 +792,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="p-6 md:p-8 rounded-2xl md:rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
+              className="p-5 md:p-8 rounded-2xl md:rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
             >
               <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
                 <FileCheck size={28} />
@@ -830,7 +830,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto mb-16 md:mb-24"
+            className="max-w-3xl mx-auto mb-10 md:mb-20"
           >
             <h3 className="text-2xl font-display font-bold text-center mb-10 text-slate-900 dark:text-white">
               The absorption difference
@@ -895,7 +895,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
+            className="text-center max-w-3xl mx-auto mb-10 md:mb-16"
           >
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-tight tracking-tight">
               Building in public.<br />
