@@ -30,118 +30,21 @@ const Careers = () => {
         setFormData(prev => ({ ...prev, interest: value }));
     };
 
-    const [isJobSubmitting, setIsJobSubmitting] = useState(false);
-    const [jobDialogOpen, setJobDialogOpen] = useState(false);
 
-    const handleJobSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        setIsJobSubmitting(true);
-        const form = e.currentTarget;
-        const formDataObj = new FormData(form);
-
-        const file = formDataObj.get('attachment') as File;
-        let attachmentData = null;
-
-        if (file && file.size > 0) {
-            if (file.size > 4 * 1024 * 1024) {
-                toast({
-                    title: "File too large",
-                    description: "Please upload a CV under 4MB.",
-                    variant: "destructive"
-                });
-                setIsJobSubmitting(false);
-                return;
-            }
-            try {
-                const base64Content = await new Promise((resolve, reject) => {
-                    const reader = new FileReader();
-                    reader.readAsDataURL(file);
-                    reader.onload = () => resolve(reader.result?.toString().split(',')[1]);
-                    reader.onerror = error => reject(error);
-                });
-                attachmentData = {
-                    name: file.name,
-                    content: base64Content
-                };
-            } catch (err) {
-                console.error("Error converting file to base64", err);
-            }
-        }
-
-        const payload = {
-            subject: "Junior Researcher Application - " + formDataObj.get("name"),
-            name: formDataObj.get("name"),
-            email: formDataObj.get("email"),
-            message: formDataObj.get("message"),
-            attachment: attachmentData
-        };
-
-        try {
-            const response = await fetch("/api/submit", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload)
-            });
-            const result = await response.json();
-            if (result.success) {
-                toast({
-                    title: "Application Submitted",
-                    description: "We've received your application and CV.",
-                });
-                setJobDialogOpen(false);
-                form.reset();
-            } else {
-                throw new Error("Submission failed");
-            }
-        } catch (error) {
-            toast({
-                title: "Error",
-                description: "Could not submit. Please email careers@oxygenbioinnovations.com directly.",
-                variant: "destructive"
-            });
-        } finally {
-            setIsJobSubmitting(false);
-        }
-    };
-
-    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setIsSubmitting(true);
 
-        try {
-            const response = await fetch("/api/submit", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json",
-                },
-                body: JSON.stringify({
-                    subject: `Internship Application - ${formData.name} (${formData.degree})`,
-                    ...formData
-                }),
-            });
+        const subject = `Internship Application - ${formData.name} (${formData.degree})`;
+        const body = `Name: ${formData.name}\nCollege: ${formData.college}\nDegree: ${formData.degree}\nYear of Passing: ${formData.year}\nArea of Interest: ${formData.interest}\n\nMessage/Cover Letter:\n${formData.message}`;
 
-            const result = await response.json();
-            if (result.success) {
-                toast({
-                    title: "Application Submitted",
-                    description: "We have received your internship application.",
-                });
-                setFormData({ name: "", college: "", degree: "", year: "", interest: "", message: "" });
-            } else {
-                throw new Error("Form submission failed");
-            }
-        } catch (error) {
-            toast({
-                title: "Error",
-                description: "Could not submit application. Please email careers@oxygenbioinnovations.com directly.",
-                variant: "destructive"
-            });
-        } finally {
-            setIsSubmitting(false);
-        }
+        window.location.href = `mailto:careers@oxygenbioinnovations.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        toast({
+            title: "Opening Email Client...",
+            description: "Please complete your application in your email app.",
+        });
+        setFormData({ name: "", college: "", degree: "", year: "", interest: "", message: "" });
     };
 
     return (
@@ -195,21 +98,17 @@ const Careers = () => {
                                 <ul className="text-sm space-y-2 list-disc pl-4 text-muted-foreground">
                                     <li>B.Tech / M.Sc in Food Technology, Biotechnology, or Cosmetic Science.</li>
                                     <li>Knowledge of bacterial fermentation and emulsion chemistry.</li>
-                                    <li>Willingness to work in a startup environment.</li>
+                                    <li>Strong willingness to work in a dynamic Startup environment.</li>
                                 </ul>
 
                                 <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-100 dark:border-slate-700 space-y-2">
-                                    <div className="flex justify-between text-sm">
-                                        <span className="text-muted-foreground">Compensation:</span>
-                                        <span className="font-bold text-foreground">₹18,000 - ₹22,000 / month</span>
+                                    <div className="flex justify-between items-center text-sm">
+                                        <span className="text-muted-foreground">Salary:</span>
+                                        <div className="text-right">
+                                            <span className="font-bold text-foreground block">₹18,000 - ₹25,000 / month</span>
+                                            <span className="text-xs text-muted-foreground block font-normal">(Based on skill and knowledge)</span>
+                                        </div>
                                     </div>
-                                    <div className="flex justify-between text-sm">
-                                        <span className="text-muted-foreground">Probation Period:</span>
-                                        <span className="font-bold text-foreground">6 Months - 1 Year</span>
-                                    </div>
-                                    <p className="text-xs text-muted-foreground mt-2">
-                                        *Full-time confirmation subject to performance during probation.
-                                    </p>
                                 </div>
                             </div>
 
@@ -220,40 +119,11 @@ const Careers = () => {
                                 </a>
                             </div>
 
-                            <Dialog open={jobDialogOpen} onOpenChange={setJobDialogOpen}>
-                                <DialogTrigger asChild>
-                                    <Button className="w-full">Apply Now</Button>
-                                </DialogTrigger>
-                                <DialogContent className="sm:max-w-[425px]">
-                                    <DialogHeader>
-                                        <DialogTitle>Apply for Junior Researcher</DialogTitle>
-                                        <DialogDescription>
-                                            Submit your application and CV/Resume directly to our team.
-                                        </DialogDescription>
-                                    </DialogHeader>
-                                    <form onSubmit={handleJobSubmit} className="space-y-4 mt-4">
-                                        <div className="space-y-2">
-                                            <label className="text-sm font-medium">Full Name *</label>
-                                            <Input required name="name" placeholder="John Doe" />
-                                        </div>
-                                        <div className="space-y-2">
-                                            <label className="text-sm font-medium">Email Address *</label>
-                                            <Input required type="email" name="email" placeholder="john@example.com" />
-                                        </div>
-                                        <div className="space-y-2">
-                                            <label className="text-sm font-medium">CV / Resume (PDF/Word) *</label>
-                                            <Input required type="file" name="attachment" accept=".pdf,.doc,.docx" className="file:text-primary file:font-semibold" />
-                                        </div>
-                                        <div className="space-y-2">
-                                            <label className="text-sm font-medium">Cover Letter / Note</label>
-                                            <Textarea name="message" placeholder="Brief introduction about your experience..." className="min-h-[100px]" />
-                                        </div>
-                                        <Button type="submit" className="w-full" disabled={isJobSubmitting}>
-                                            {isJobSubmitting ? "Submitting..." : "Submit Application"}
-                                        </Button>
-                                    </form>
-                                </DialogContent>
-                            </Dialog>
+                            <Button className="w-full" asChild>
+                                <a href="mailto:careers@oxygenbioinnovations.com?subject=Application%20for%20Junior%20Researcher">
+                                    Apply Now
+                                </a>
+                            </Button>
                         </div>
                     </div>
 
@@ -314,13 +184,9 @@ const Careers = () => {
                                 />
                             </div>
 
-                            <Button type="submit" className="w-full gap-2" disabled={isSubmitting}>
-                                {isSubmitting ? 'Submitting...' : (
-                                    <>
-                                        <Send size={16} />
-                                        Submit Application
-                                    </>
-                                )}
+                            <Button type="submit" className="w-full gap-2">
+                                <Send size={16} />
+                                Submit Application (via Email)
                             </Button>
                         </form>
                     </div>
