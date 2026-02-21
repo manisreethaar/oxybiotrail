@@ -409,7 +409,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section - The "What is this?" */}
-      <section className="relative min-h-[80svh] lg:min-h-[90vh] flex flex-col justify-center overflow-hidden pt-20 pb-8 lg:pt-20 lg:pb-0">
+      <section className="relative overflow-hidden pt-8 pb-16 lg:pt-12 lg:pb-20">
         <div className="container-width z-10 px-4">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left: Copy & Form */}
