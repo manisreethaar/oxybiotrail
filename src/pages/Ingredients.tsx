@@ -46,11 +46,11 @@ const Ingredients = () => {
                                     onClick={() => setActiveFilter(cat.value)}
                                     className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 ${activeFilter === cat.value
                                         ? 'bg-primary text-white shadow-sm'
-                                        : 'bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-700 dark:hover:text-slate-300'
+                                        : 'bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-700 dark:hover:text-slate-500 dark:text-slate-400'
                                         }`}
                                 >
                                     {cat.label}
-                                    <span className={`text-[10px] font-bold ${activeFilter === cat.value ? 'text-white/70' : 'text-slate-400'}`}>
+                                    <span className={`text-[10px] font-bold ${activeFilter === cat.value ? 'text-white/70' : 'text-slate-500 dark:text-slate-400'}`}>
                                         {count}
                                     </span>
                                 </button>
@@ -86,7 +86,7 @@ const Ingredients = () => {
 
                     {filtered.length === 0 && (
                         <div className="text-center py-20">
-                            <p className="text-slate-400">No ingredients in this category.</p>
+                            <p className="text-slate-500 dark:text-slate-400">No ingredients in this category.</p>
                         </div>
                     )}
                 </div>
@@ -143,10 +143,10 @@ const IngredientCard = ({ ingredient, index, isExpanded, onToggle }: {
                             </span>
                         ))}
                     </div>
-                    <p className="text-sm text-slate-400 italic">{ingredient.scientificName}</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 italic">{ingredient.scientificName}</p>
                     <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">{ingredient.tagline}</p>
                 </div>
-                <ChevronDown size={20} className={`text-slate-400 shrink-0 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+                <ChevronDown size={20} className={`text-slate-500 dark:text-slate-400 shrink-0 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
             </button>
 
             {/* Expanded Deep-Dive */}
@@ -202,7 +202,7 @@ const IngredientCard = ({ ingredient, index, isExpanded, onToggle }: {
                                     <div className="space-y-3">
                                         {ingredient.studies.map((study, i) => (
                                             <div key={i} className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
-                                                <p className="text-xs text-slate-400 font-medium mb-1">{study.citation}</p>
+                                                <p className="text-xs text-slate-500 dark:text-slate-400 font-medium mb-1">{study.citation}</p>
                                                 <p className="text-sm text-slate-600 dark:text-slate-300">{study.finding}</p>
                                                 {study.doi && (
                                                     <a
@@ -227,7 +227,7 @@ const IngredientCard = ({ ingredient, index, isExpanded, onToggle }: {
                                         <ShieldCheck size={16} className="text-primary" /> Safety Profile
                                     </h4>
                                     <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-2">{ingredient.safety}</p>
-                                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">FSSAI: {ingredient.fssaiStatus}</span>
+                                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">FSSAI: {ingredient.fssaiStatus}</span>
                                 </div>
                                 <div>
                                     <h4 className="flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white mb-3">
@@ -246,7 +246,7 @@ const IngredientCard = ({ ingredient, index, isExpanded, onToggle }: {
 
                             {/* Batch Testing Note */}
                             <div className="text-center p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-dashed border-slate-200 dark:border-slate-700">
-                                <p className="text-xs text-slate-400">
+                                <p className="text-xs text-slate-500 dark:text-slate-400">
                                     🔬 <strong>Batch Testing:</strong> Full third-party CoA will be available for every production batch at launch.
                                 </p>
                             </div>
@@ -261,16 +261,16 @@ const IngredientCard = ({ ingredient, index, isExpanded, onToggle }: {
 /* ─── Helper Components ─── */
 const InfoBlock = ({ label, value }: { label: string; value: string }) => (
     <div>
-        <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-0.5">{label}</span>
+        <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-0.5">{label}</span>
         <p className="text-sm text-slate-700 dark:text-slate-300">{value}</p>
     </div>
 );
 
 const SpecBlock = ({ label, value, sub }: { label: string; value: string; sub?: string }) => (
     <div className="p-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
-        <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-0.5">{label}</span>
+        <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-0.5">{label}</span>
         <p className="text-sm font-bold text-slate-800 dark:text-slate-200">{value}</p>
-        {sub && <p className="text-[11px] text-slate-400 mt-0.5">{sub}</p>}
+        {sub && <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">{sub}</p>}
     </div>
 );
 

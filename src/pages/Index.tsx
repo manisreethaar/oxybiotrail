@@ -34,7 +34,7 @@ const StatCard = ({ end, suffix, label, source, delay }: { end: number; suffix: 
     >
       <span className="text-6xl md:text-7xl font-display font-bold text-primary">{count}{suffix}</span>
       <p className="text-sm text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">{label}</p>
-      <p className="text-[10px] text-slate-400 mt-2 uppercase tracking-wider">Source: {source}</p>
+      <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-2 uppercase tracking-wider">Source: {source}</p>
     </motion.div>
   );
 };
@@ -82,7 +82,7 @@ const FormulaCard = ({ name, badge, badgeColor, tagline, audience, benefits, ing
       <p className="text-sm text-slate-600 dark:text-slate-300 italic mb-4">{tagline}</p>
 
       {/* Audience */}
-      <p className="text-[11px] text-slate-400 mb-6 uppercase tracking-wide">{audience}</p>
+      <p className="text-[11px] text-slate-500 dark:text-slate-400 mb-6 uppercase tracking-wide">{audience}</p>
 
       {/* Benefits */}
       <ul className="space-y-3 mb-6 flex-grow">
@@ -111,7 +111,7 @@ const FormulaCard = ({ name, badge, badgeColor, tagline, audience, benefits, ing
       </div>
 
       {/* Format & Price */}
-      <div className="text-xs text-slate-400 mb-6 space-y-1">
+      <div className="text-xs text-slate-500 dark:text-slate-400 mb-6 space-y-1">
         <p>{format}</p>
         <p className="font-bold text-slate-600 dark:text-slate-300">{price}</p>
       </div>
@@ -244,29 +244,29 @@ const WaitlistCTA = () => {
               >
                 <div className="space-y-4 mb-6">
                   <div>
-                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1.5">First Name *</label>
+                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-1.5">First Name *</label>
                     <input
                       type="text"
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
                       placeholder="Your first name"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-sm text-slate-900 dark:text-white placeholder:text-slate-500 dark:text-slate-400 focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none transition-all"
                       required
                     />
                   </div>
                   <div>
-                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1.5">Email Address *</label>
+                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-1.5">Email Address *</label>
                     <input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="you@email.com"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-sm text-slate-900 dark:text-white placeholder:text-slate-500 dark:text-slate-400 focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none transition-all"
                       required
                     />
                   </div>
                   <div>
-                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1.5">Which formula interests you most?</label>
+                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-1.5">Which formula interests you most?</label>
                     <select
                       value={formula}
                       onChange={(e) => setFormula(e.target.value)}
@@ -281,13 +281,13 @@ const WaitlistCTA = () => {
                     </select>
                   </div>
                   <div>
-                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1.5">Your City <span className="text-slate-300">(optional)</span></label>
+                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-1.5">Your City <span className="text-slate-500 dark:text-slate-400">(optional)</span></label>
                     <input
                       type="text"
                       value={city}
                       onChange={(e) => setCity(e.target.value)}
                       placeholder="e.g., Bangalore"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-sm text-slate-900 dark:text-white placeholder:text-slate-500 dark:text-slate-400 focus:ring-2 focus:ring-primary/30 focus:border-primary outline-none transition-all"
                     />
                   </div>
                 </div>
@@ -299,12 +299,12 @@ const WaitlistCTA = () => {
                   Join the Waitlist — I Want Early Access
                 </button>
 
-                <p className="text-[11px] text-slate-400 text-center mt-4 leading-relaxed">
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 text-center mt-4 leading-relaxed">
                   No payment required. No spam. Unsubscribe instantly anytime.<br />
                   Your trust means everything to us.
                 </p>
 
-                <div className="flex items-center justify-center gap-1.5 mt-3 text-[10px] text-slate-300 dark:text-slate-600">
+                <div className="flex items-center justify-center gap-1.5 mt-3 text-[10px] text-slate-500 dark:text-slate-400">
                   <Lock size={10} /> Your data is never sold
                 </div>
               </motion.form>
@@ -372,7 +372,7 @@ const WaitlistCTA = () => {
 
             {/* Share Buttons */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5 }}>
-              <p className="text-xs text-slate-400 mb-4">Share with someone who should know about Oxygen:</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mb-4">Share with someone who should know about Oxygen:</p>
               <div className="flex items-center justify-center gap-3">
                 <a
                   href={`https://wa.me/?text=${encodeURIComponent(shareText)}`}
@@ -750,12 +750,12 @@ const Index = () => {
                     <CheckCircle2 size={14} className="text-amber-600 mt-0.5 shrink-0" />
                     <span className="text-slate-700 dark:text-slate-300">
                       <strong>{item.ours}</strong>
-                      {item.theirs && <span className="text-slate-400 ml-1">({item.theirs})</span>}
+                      {item.theirs && <span className="text-slate-500 dark:text-slate-400 ml-1">({item.theirs})</span>}
                     </span>
                   </li>
                 ))}
               </ul>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                 The difference: <strong className="text-primary">3-4x better absorption.</strong><br />
                 The cost difference per serving: ₹2. The choice was obvious.
               </p>
@@ -851,9 +851,9 @@ const Index = () => {
             <div className="rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
               {/* Table Header */}
               <div className="grid grid-cols-3 bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
-                <div className="p-4 text-xs font-bold uppercase tracking-wider text-slate-400">Feature</div>
+                <div className="p-4 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Feature</div>
                 <div className="p-4 text-xs font-bold uppercase tracking-wider text-primary text-center">What we do</div>
-                <div className="p-4 text-xs font-bold uppercase tracking-wider text-slate-400 text-center">What most brands do</div>
+                <div className="p-4 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 text-center">What most brands do</div>
               </div>
               {/* Table Rows */}
               {[
@@ -876,7 +876,7 @@ const Index = () => {
                 >
                   <div className="p-4 text-sm font-medium text-slate-600 dark:text-slate-300">{row.feature}</div>
                   <div className="p-4 text-sm font-bold text-primary text-center">{row.ours}</div>
-                  <div className="p-4 text-sm text-slate-400 text-center">{row.theirs}</div>
+                  <div className="p-4 text-sm text-slate-500 dark:text-slate-400 text-center">{row.theirs}</div>
                 </motion.div>
               ))}
             </div>
@@ -987,7 +987,7 @@ const Index = () => {
                       ? 'bg-emerald-500 border-emerald-500 text-white shadow-lg shadow-emerald-500/20'
                       : stage.status === 'current'
                         ? 'bg-amber-500 border-amber-500 text-white shadow-lg shadow-amber-500/30'
-                        : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-400'
+                        : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400'
                     }
                   `}>
                     {stage.icon}
@@ -1014,11 +1014,11 @@ const Index = () => {
                       ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400'
                       : stage.status === 'current'
                         ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400'
-                        : 'bg-slate-100 dark:bg-slate-800 text-slate-400'
+                        : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
                       }`}>
                       {stage.status === 'completed' ? '✓ Completed' : stage.status === 'current' ? '← You are here' : 'Upcoming'}
                     </span>
-                    <span className="text-xs text-slate-400">{stage.date}</span>
+                    <span className="text-xs text-slate-500 dark:text-slate-400">{stage.date}</span>
                   </div>
 
                   {/* Title */}
@@ -1059,7 +1059,7 @@ const Index = () => {
             <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
               Technology Business Incubator — supporting deep-tech and biotech startups with mentorship, lab access, and industry connections.
             </p>
-            <div className="flex items-center justify-center gap-2 text-xs text-slate-400">
+            <div className="flex items-center justify-center gap-2 text-xs text-slate-500 dark:text-slate-400">
               <span className="flex h-2 w-2 rounded-full bg-emerald-500"></span>
               Actively incubated since January 2026
             </div>

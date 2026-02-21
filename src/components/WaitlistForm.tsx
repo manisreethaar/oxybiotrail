@@ -102,14 +102,14 @@ export const WaitlistForm = ({ variant = 'hero' }: WaitlistFormProps) => {
                     <p className="text-xs text-muted-foreground">
                         Joined by <span className="font-bold text-foreground">{count}</span> people from Bangalore, Mumbai, Delhi, Chennai, Hyderabad
                     </p>
-                    <p className="text-[10px] text-slate-400">
+                    <p className="text-[10px] text-slate-500 dark:text-slate-400">
                         No payment. No commitment. Cancel anytime.
                     </p>
                 </div>
             )}
 
-            <p className="absolute -bottom-6 left-0 w-full text-center text-[10px] text-slate-400 dark:text-slate-500">
-                By joining, you agree to our <a href="/privacy" className="underline hover:text-slate-600 dark:hover:text-slate-300">Privacy Policy</a>
+            <p className="absolute -bottom-6 left-0 w-full text-center text-[10px] text-slate-500 dark:text-slate-400 dark:text-slate-500">
+                By joining, you agree to our <a href="/privacy" className="underline hover:text-slate-600 dark:hover:text-slate-500 dark:text-slate-400">Privacy Policy</a>
             </p>
         </form>
     );

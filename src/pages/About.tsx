@@ -273,7 +273,7 @@ const About = () => {
               </div>
 
               <div>
-                <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Why I am the right person for this</p>
+                <p className="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-2">Why I am the right person for this</p>
                 <div className="space-y-1.5">
                   {[
                     'A pharmaceutical scientist who turned fermentation into food — with the precision of a lab and the soul of a craft.',
@@ -296,7 +296,7 @@ const About = () => {
               </div>
 
               <div>
-                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Responsible for at Oxygen</p>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-2">Responsible for at Oxygen</p>
                 <div className="flex flex-wrap gap-2">
                   {['Formulation Design', 'Ingredient Sourcing', 'Clinical Study Protocol', 'Science Communication'].map((area) => (
                     <span key={area} className="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-700 text-[11px] font-medium text-slate-600 dark:text-slate-300">{area}</span>
@@ -316,7 +316,7 @@ const About = () => {
             </div>
           </div>
 
-          <p className="text-sm text-slate-400 text-center">
+          <p className="text-sm text-slate-500 dark:text-slate-400 text-center">
             Growing the team as we grow. Interested in joining?{' '}
             <Link to="/careers" className="text-primary font-bold hover:underline">See open roles →</Link>
           </p>
@@ -395,7 +395,7 @@ const About = () => {
         <p className="text-lg text-slate-500 dark:text-slate-400 mb-4">
           What we have built before we built anything physical.
         </p>
-        <p className="text-sm text-slate-400 italic mb-10">
+        <p className="text-sm text-slate-500 dark:text-slate-400 italic mb-10">
           Most companies build first and think about science second. We spent months thinking about the science before building anything.
         </p>
         <div className="space-y-0">

@@ -8,7 +8,7 @@ const CompBar = ({ label, form, pct, color, delay }: { label: string; form: stri
   <div className="flex items-center gap-4">
     <div className="w-28 sm:w-36 shrink-0 text-right">
       <p className="text-xs font-bold text-slate-700 dark:text-slate-300">{label}</p>
-      <p className="text-[10px] text-slate-400">{form}</p>
+      <p className="text-[10px] text-slate-500 dark:text-slate-400">{form}</p>
     </div>
     <div className="flex-grow h-7 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden relative">
       <motion.div
@@ -90,8 +90,8 @@ const Problem = () => {
                 >
                   <span className={`text-3xl md:text-4xl font-display font-bold ${stat.color} block mb-1`}>{stat.pct}</span>
                   <p className="text-sm font-bold text-slate-700 dark:text-slate-300">{stat.label}</p>
-                  <p className="text-[10px] text-slate-400 mt-1">{stat.sub}</p>
-                  <p className="text-[9px] text-slate-300 dark:text-slate-600 mt-2 italic">{stat.src}</p>
+                  <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">{stat.sub}</p>
+                  <p className="text-[9px] text-slate-500 dark:text-slate-400 mt-2 italic">{stat.src}</p>
                 </motion.div>
               ))}
             </div>
@@ -116,14 +116,14 @@ const Problem = () => {
                   <div>
                     <h4 className="font-bold text-sm text-slate-800 dark:text-slate-200 mb-1">{card.title}</h4>
                     <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{card.body}</p>
-                    <p className="text-[9px] text-slate-300 dark:text-slate-600 mt-1 italic">Source: {card.src}</p>
+                    <p className="text-[9px] text-slate-500 dark:text-slate-400 mt-1 italic">Source: {card.src}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
 
             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-              className="text-center text-sm text-slate-400 italic"
+              className="text-center text-sm text-slate-500 dark:text-slate-400 italic"
             >
               This is a public health crisis hiding in plain sight.
             </motion.p>
@@ -193,7 +193,7 @@ const Problem = () => {
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Layer 03 — The Market Failure</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-2">Layer 03 — The Market Failure</span>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
                 The Market Response Has Been Inadequate
               </h2>
@@ -235,7 +235,7 @@ const Problem = () => {
                   className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
                 >
                   <h3 className="font-display font-bold text-slate-900 dark:text-white mb-1">{cat.category}</h3>
-                  <p className="text-[10px] text-slate-400 mb-3 italic">{cat.examples}</p>
+                  <p className="text-[10px] text-slate-500 dark:text-slate-400 mb-3 italic">{cat.examples}</p>
                   <div className="space-y-3">
                     <div>
                       <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-500">What they offer</span>
@@ -257,7 +257,7 @@ const Problem = () => {
               viewport={{ once: true }}
               className="p-8 md:p-12 rounded-3xl bg-slate-900 dark:bg-slate-800 text-center"
             >
-              <p className="text-sm text-slate-400 mb-6 leading-relaxed max-w-2xl mx-auto">
+              <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed max-w-2xl mx-auto">
                 The market has: Affordable products that are inadequate. Quality products that are inaccessible. Indian products that lack rigour. Rigorous products that lack Indian relevance.
               </p>
               <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-3">
@@ -361,12 +361,12 @@ const Problem = () => {
             {/* Infographic 2: MTHFR Visual */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="p-8 md:p-12 rounded-3xl bg-slate-900 dark:bg-slate-800 text-white">
               <h3 className="text-2xl font-display font-bold mb-2 text-center">Why synthetic folic acid fails 40% of people</h3>
-              <p className="text-sm text-slate-400 text-center mb-10">The MTHFR Gene Variant</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400 text-center mb-10">The MTHFR Gene Variant</p>
 
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Generic Path */}
                 <div className="space-y-4">
-                  <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400">Generic Supplements</h4>
+                  <h4 className="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">Generic Supplements</h4>
                   <div className="flex items-center gap-3">
                     <div className="px-4 py-2 rounded-lg bg-slate-700 text-sm font-bold">Folic Acid</div>
                     <ArrowRight size={16} className="text-slate-500" />
@@ -433,7 +433,7 @@ const Problem = () => {
                     <p className="text-[10px] text-slate-500 mt-1">Calcium per 100g (Ragi)</p>
                   </div>
                   <div className="p-4 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center">
-                    <span className="text-2xl font-display font-bold text-slate-400">125mg</span>
+                    <span className="text-2xl font-display font-bold text-slate-500 dark:text-slate-400">125mg</span>
                     <p className="text-[10px] text-slate-500 mt-1">Calcium per 100ml (Milk)</p>
                   </div>
                 </div>
@@ -452,7 +452,7 @@ const Problem = () => {
               <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                 className="p-6 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700"
               >
-                <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Our Processing</h4>
+                <h4 className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-6">Our Processing</h4>
                 <div className="space-y-0">
                   <ProcessStep num="1" title="Sourcing" detail="Organic finger millet from Karnataka smallholder farms" />
                   <ProcessStep num="2" title="Sprouting (Malting)" detail="48hrs controlled germination → Phytase activation → 60% phytic acid reduction" />
@@ -484,7 +484,7 @@ const Problem = () => {
               <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                 className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800"
               >
-                <h3 className="text-lg font-display font-bold text-slate-400 mb-6">Most Brands</h3>
+                <h3 className="text-lg font-display font-bold text-slate-500 dark:text-slate-400 mb-6">Most Brands</h3>
                 <ul className="space-y-4">
                   {[
                     { label: 'Mycelium grown on grain', detail: 'Much of the "mushroom powder" is actually grain filler' },
@@ -496,7 +496,7 @@ const Problem = () => {
                       <span className="w-5 h-5 rounded-full bg-red-100 dark:bg-red-900/30 text-red-500 flex items-center justify-center text-xs shrink-0 mt-0.5">✕</span>
                       <div>
                         <p className="text-sm font-bold text-slate-600 dark:text-slate-300">{item.label}</p>
-                        <p className="text-xs text-slate-400">{item.detail}</p>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">{item.detail}</p>
                       </div>
                     </li>
                   ))}
@@ -531,27 +531,27 @@ const Problem = () => {
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center"
             >
-              <h4 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">Dual Extraction Process</h4>
+              <h4 className="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-6">Dual Extraction Process</h4>
               <div className="flex flex-col md:flex-row items-center justify-center gap-4">
                 <div className="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 w-36">
                   <Leaf size={24} className="text-emerald-500 mx-auto mb-2" />
                   <p className="text-xs font-bold text-slate-700 dark:text-slate-300">Fruiting Body</p>
                 </div>
-                <ArrowRight size={20} className="text-slate-300 rotate-90 md:rotate-0" />
+                <ArrowRight size={20} className="text-slate-500 dark:text-slate-400 rotate-90 md:rotate-0" />
                 <div className="flex flex-col sm:flex-row gap-4">
                   <div className="p-4 rounded-xl bg-blue-50 dark:bg-blue-900/10 border border-blue-200 dark:border-blue-800/50 w-44">
                     <Beaker size={20} className="text-blue-500 mx-auto mb-2" />
                     <p className="text-xs font-bold text-blue-700 dark:text-blue-400">Hot Water Extract</p>
                     <p className="text-[10px] text-blue-500">β-glucans, polysaccharides</p>
                   </div>
-                  <div className="text-sm font-bold text-slate-300 self-center">+</div>
+                  <div className="text-sm font-bold text-slate-500 dark:text-slate-400 self-center">+</div>
                   <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-800/50 w-44">
                     <FlaskConical size={20} className="text-amber-500 mx-auto mb-2" />
                     <p className="text-xs font-bold text-amber-700 dark:text-amber-400">Ethanol Extract</p>
                     <p className="text-[10px] text-amber-500">Triterpenes, hericenones</p>
                   </div>
                 </div>
-                <ArrowRight size={20} className="text-slate-300 rotate-90 md:rotate-0" />
+                <ArrowRight size={20} className="text-slate-500 dark:text-slate-400 rotate-90 md:rotate-0" />
                 <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-200 dark:border-emerald-800/50 w-40">
                   <p className="text-xs font-bold text-emerald-700 dark:text-emerald-400">Complete Profile</p>
                   <p className="text-[10px] text-emerald-500">Full-spectrum verified</p>

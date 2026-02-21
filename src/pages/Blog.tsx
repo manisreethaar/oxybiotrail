@@ -173,7 +173,7 @@ const Blog = () => {
                                     <span className="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest rounded-full">
                                         Building Oxygen
                                     </span>
-                                    <span className="text-xs text-slate-400">{featuredPost.week}</span>
+                                    <span className="text-xs text-slate-500 dark:text-slate-400">{featuredPost.week}</span>
                                 </div>
                                 <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 text-slate-900 dark:text-white group-hover:text-primary transition-colors leading-[1.1] tracking-tight">
                                     {featuredPost.title}
@@ -182,7 +182,7 @@ const Blog = () => {
                                     {featuredPost.excerpt}
                                 </p>
                                 <div className="flex items-center justify-between">
-                                    <div className="flex items-center gap-4 text-xs text-slate-400">
+                                    <div className="flex items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
                                         <span className="flex items-center gap-1"><Calendar size={12} /> {featuredPost.date}</span>
                                         <span className="flex items-center gap-1"><User size={12} /> {featuredPost.author}</span>
                                         <span className="flex items-center gap-1"><Clock size={12} /> {featuredPost.readTime}</span>
@@ -205,7 +205,7 @@ const Blog = () => {
                                 onClick={() => setActiveTab(tab.value)}
                                 className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 ${activeTab === tab.value
                                     ? "bg-white dark:bg-slate-700 text-primary shadow-sm"
-                                    : "text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
+                                    : "text-slate-500 hover:text-slate-700 dark:hover:text-slate-500 dark:text-slate-400"
                                     }`}
                             >
                                 {tab.icon}
@@ -234,7 +234,7 @@ const Blog = () => {
 
                     {filteredPosts.length === 0 && (
                         <div className="text-center py-20">
-                            <p className="text-slate-400">No articles in this category yet. Check back soon!</p>
+                            <p className="text-slate-500 dark:text-slate-400">No articles in this category yet. Check back soon!</p>
                         </div>
                     )}
                 </div>
@@ -305,7 +305,7 @@ const ArticleCard = ({ post, index }: { post: BlogPost; index: number }) => {
 
             {/* Card Content */}
             <div className="p-6 flex flex-col flex-grow">
-                <div className="flex items-center gap-3 text-xs text-slate-400 mb-3">
+                <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 mb-3">
                     <span className="flex items-center gap-1"><Calendar size={11} /> {post.date}</span>
                     <span className="flex items-center gap-1"><Clock size={11} /> {post.readTime}</span>
                 </div>
@@ -319,7 +319,7 @@ const ArticleCard = ({ post, index }: { post: BlogPost; index: number }) => {
                 </p>
 
                 <div className="flex items-center justify-between mt-auto">
-                    <span className="flex items-center gap-1 text-xs text-slate-400">
+                    <span className="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400">
                         <User size={11} /> {post.author}
                     </span>
                     <Link to="#" className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:gap-2 transition-all">

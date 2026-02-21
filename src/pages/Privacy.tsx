@@ -22,7 +22,7 @@ const Privacy = () => {
                                 Oxygen Bioinnovations<br />
                                 Brand: RIZE
                             </p>
-                            <div className="flex items-center justify-center gap-4 mt-6 text-xs font-bold uppercase tracking-widest text-slate-400">
+                            <div className="flex items-center justify-center gap-4 mt-6 text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
                                 <span>Last updated: October 2026</span>
                                 <span>•</span>
                                 <span>Effective from: October 2026</span>
