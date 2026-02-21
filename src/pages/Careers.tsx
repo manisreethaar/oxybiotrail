@@ -39,7 +39,7 @@ const Careers = () => {
         const subject = `Internship Application - ${formData.name} (${formData.degree})`;
         const body = `Name: ${formData.name}\nCollege: ${formData.college}\nDegree: ${formData.degree}\nYear of Passing: ${formData.year}\nArea of Interest: ${formData.interest}\n\nMessage/Cover Letter:\n${formData.message}`;
 
-        window.location.href = `mailto:careers@oxygenbioinnovations.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = `mailto:info@oxygenbioinnovations.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
         toast({
             title: "Opening Email Client...",
