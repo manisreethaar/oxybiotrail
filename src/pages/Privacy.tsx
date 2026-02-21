@@ -15,7 +15,7 @@ const Privacy = () => {
                             <span className="inline-block px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-6">
                                 Legal
                             </span>
-                            <h1 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">
+                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-slate-900 dark:text-white mb-6 leading-[1.05] tracking-tighter">
                                 Privacy Policy
                             </h1>
                             <p className="text-sm text-slate-500">
@@ -29,11 +29,11 @@ const Privacy = () => {
                             </div>
                         </div>
 
-                        <div className="prose prose-slate dark:prose-invert max-w-none prose-headings:font-display prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-12 prose-h3:text-lg prose-h3:mt-8 prose-p:leading-relaxed prose-li:leading-relaxed">
+                        <div className="prose prose-slate dark:prose-invert max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:mt-12 prose-h3:text-lg md:prose-h3:text-xl prose-h3:mt-8 prose-p:leading-relaxed prose-p:font-light prose-li:leading-relaxed prose-li:font-light">
 
                             <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 mb-12">
-                                <h2 className="mt-0 text-xl text-slate-900 dark:text-white mb-4">Summary in Plain Language</h2>
-                                <p className="text-slate-600 dark:text-slate-400 font-medium">
+                                <h2 className="mt-0 text-2xl md:text-3xl font-display font-bold tracking-tight text-slate-900 dark:text-white mb-4">Summary in Plain Language</h2>
+                                <p className="text-slate-600 dark:text-slate-400 font-light">
                                     Before the legal details — here is what matters in simple words:
                                 </p>
                                 <ul className="text-slate-600 dark:text-slate-400 space-y-2 mt-4">

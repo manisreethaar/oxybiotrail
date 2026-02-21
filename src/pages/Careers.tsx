@@ -50,10 +50,10 @@ const Careers = () => {
                 {/* Header */}
                 <div className="container mx-auto px-4 text-center mb-16">
                     <GrantBadge label="Join Our Mission" className="mb-4 mx-auto" />
-                    <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-[1.05] tracking-tighter">
                         Build the Future of <span className="gradient-text">Bio-Innovation</span>
                     </h1>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
                         We are looking for passionate researchers and students to join our team at TBI, Adhiyamaan College of Engineering.
                     </p>
                 </div>
@@ -64,7 +64,7 @@ const Careers = () => {
                     <div className="space-y-8">
                         <div className="flex items-center gap-3 mb-6">
                             <Briefcase className="text-primary h-6 w-6" />
-                            <h2 className="text-2xl font-bold">Current Openings</h2>
+                            <h2 className="text-2xl md:text-3xl font-display font-bold tracking-tight">Current Openings</h2>
                         </div>
 
                         <div className="glass-card p-8 rounded-xl border-l-4 border-primary/50 relative overflow-hidden group hover-lift">
@@ -132,9 +132,9 @@ const Careers = () => {
                     <div className="glass-card p-8 rounded-xl">
                         <div className="flex items-center gap-3 mb-6">
                             <GraduationCap className="text-primary h-6 w-6" />
-                            <h2 className="text-2xl font-bold">Student Internship Portal</h2>
+                            <h2 className="text-2xl md:text-3xl font-display font-bold tracking-tight">Student Internship Portal</h2>
                         </div>
-                        <p className="text-sm text-muted-foreground mb-6">
+                        <p className="text-sm md:text-base text-muted-foreground mb-6 font-light">
                             Open to Final Year B.Tech / B.Sc Students. Work on live R&D projects.
                         </p>
 
