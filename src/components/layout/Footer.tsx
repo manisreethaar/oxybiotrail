@@ -7,6 +7,13 @@ export function Footer() {
   return (
     <footer className="bg-white/40 backdrop-blur-lg border-t border-white/50 pt-16 pb-8 text-muted-foreground mt-20">
       <div className="container mx-auto px-4">
+        {/* Dedicated Waitlist Section */}
+        <div className="flex flex-col items-center justify-center text-center space-y-4 mb-16 max-w-2xl mx-auto">
+          <h3 className="text-2xl font-bold font-display text-slate-900">Join the Waitlist</h3>
+          <p className="text-slate-500 mb-4">Be the first to access our precision nutrition ecosystem.</p>
+          <WaitlistForm variant="hero" />
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
@@ -21,10 +28,7 @@ export function Footer() {
               India's first honest precision nutrition system. Built on millet, mushrooms, and real science.
             </p>
 
-            <div className="pt-2">
-              <p className="text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">Join the Waitlist</p>
-              <WaitlistForm variant="footer" />
-            </div>
+
 
             <div className="flex gap-4 pt-4">
               <a href="#" className="p-2 rounded-full bg-white shadow-sm hover:shadow-md hover:text-primary transition-all border border-slate-100">
