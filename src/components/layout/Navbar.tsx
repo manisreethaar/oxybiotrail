@@ -76,7 +76,7 @@ export function Navbar() {
 
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center gap-4">
-            {scrolled && (
+            {scrolled && count > 0 && (
               <span className="text-xs font-medium text-muted-foreground animate-fade-in">
                 <span className="text-primary font-bold">{count}</span> people waiting
               </span>

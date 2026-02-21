@@ -86,7 +86,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-primary shrink-0" />
-                <a href="mailto:info@oxygenbio.com" className="hover:text-primary transition-colors">info@oxygenbio.com</a>
+                <a href="mailto:info@oxygenbioinnovations.com" className="hover:text-primary transition-colors">info@oxygenbioinnovations.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-primary shrink-0" />

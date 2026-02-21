@@ -10,8 +10,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    value: 'info@oxygenbio.com',
-    link: 'mailto:info@oxygenbio.com',
+    value: 'info@oxygenbioinnovations.com',
+    link: 'mailto:info@oxygenbioinnovations.com',
   },
   {
     icon: Phone,
