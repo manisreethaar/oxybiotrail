@@ -180,7 +180,7 @@ const WaitlistCTA = () => {
     setSubmitted(true);
   };
 
-  const shareUrl = 'https://oxybiotrail.vercel.app';
+  const shareUrl = 'https://www.oxygenbioinnovations.com';
   const shareText = `I just joined the waitlist for OXYGEN — India's first honest precision nutrition drink. Built on Millet, Mushrooms, and real science. Join here: ${shareUrl}`;
 
   const copyLink = () => {

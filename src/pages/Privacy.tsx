@@ -59,7 +59,7 @@ const Privacy = () => {
                             <p>We develop precision nutrition products under the brand name RIZE.</p>
                             <p>This policy applies to all personal data collected through:</p>
                             <ul>
-                                <li>Our website: oxybiotrail.vercel.app / oxygenbio.in</li>
+                                <li>Our website: www.oxygenbioinnovations.com</li>
                                 <li>Our future website: drinkrize.in</li>
                                 <li>Any forms, surveys, or communications operated by us</li>
                                 <li>Any future mobile applications</li>
