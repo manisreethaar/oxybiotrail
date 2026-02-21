@@ -384,7 +384,7 @@ const Problem = () => {
                 {/* Oxygen Path */}
                 <div className="space-y-4">
                   <h4 className="text-xs font-bold uppercase tracking-widest text-emerald-400">Oxygen's Approach</h4>
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-wrap items-center gap-3">
                     <div className="px-4 py-2 rounded-lg bg-emerald-500/20 text-emerald-400 text-sm font-bold border border-emerald-500/30">5-MTHF (Direct)</div>
                     <ArrowRight size={16} className="text-emerald-500" />
                     <div className="px-4 py-2 rounded-lg bg-emerald-500 text-white text-sm font-bold">Ready to Use ✓</div>
@@ -525,27 +525,27 @@ const Problem = () => {
               className="p-6 md:p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center"
             >
               <h4 className="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-6">Dual Extraction Process</h4>
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4 flex-wrap">
                 <div className="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 w-36">
                   <Leaf size={24} className="text-emerald-500 mx-auto mb-2" />
                   <p className="text-xs font-bold text-slate-700 dark:text-slate-300">Fruiting Body</p>
                 </div>
                 <ArrowRight size={20} className="text-slate-500 dark:text-slate-400 rotate-90 md:rotate-0" />
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="p-4 rounded-xl bg-blue-50 dark:bg-blue-900/10 border border-blue-200 dark:border-blue-800/50 w-44">
+                  <div className="p-4 rounded-xl bg-blue-50 dark:bg-blue-900/10 border border-blue-200 dark:border-blue-800/50 sm:w-44">
                     <Beaker size={20} className="text-blue-500 mx-auto mb-2" />
                     <p className="text-xs font-bold text-blue-700 dark:text-blue-400">Hot Water Extract</p>
                     <p className="text-[10px] text-blue-500">β-glucans, polysaccharides</p>
                   </div>
                   <div className="text-sm font-bold text-slate-500 dark:text-slate-400 self-center">+</div>
-                  <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-800/50 w-44">
+                  <div className="p-4 rounded-xl bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-800/50 sm:w-44">
                     <FlaskConical size={20} className="text-amber-500 mx-auto mb-2" />
                     <p className="text-xs font-bold text-amber-700 dark:text-amber-400">Ethanol Extract</p>
                     <p className="text-[10px] text-amber-500">Triterpenes, hericenones</p>
                   </div>
                 </div>
                 <ArrowRight size={20} className="text-slate-500 dark:text-slate-400 rotate-90 md:rotate-0" />
-                <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-200 dark:border-emerald-800/50 w-40">
+                <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-200 dark:border-emerald-800/50 sm:w-40">
                   <p className="text-xs font-bold text-emerald-700 dark:text-emerald-400">Complete Profile</p>
                   <p className="text-[10px] text-emerald-500">Full-spectrum verified</p>
                 </div>

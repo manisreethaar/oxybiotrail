@@ -42,7 +42,7 @@ const VisionMission = () => {
                         </motion.span>
                         <div className="grid md:grid-cols-12 gap-12 md:gap-8 items-start relative z-10">
                             {/* Left Column - Large Typography */}
-                            <div className="md:col-span-12 lg:col-span-5 md:sticky md:top-32">
+                            <div className="md:col-span-12 lg:col-span-5">
                                 <motion.h2
                                     initial={{ opacity: 0, x: -20 }}
                                     whileInView={{ opacity: 1, x: 0 }}

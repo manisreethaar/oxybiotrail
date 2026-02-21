@@ -440,7 +440,7 @@ const Index = () => {
             </div>
 
             {/* Right: Abstract Visuals */}
-            <div className="relative h-[250px] sm:h-[350px] w-full flex items-center justify-center mt-8 lg:mt-0 border-t lg:border-t-0 border-transparent">
+            <div className="relative h-[250px] sm:h-[350px] w-full flex items-center justify-center mt-8 lg:mt-0 overflow-hidden">
               {/* Circle 1: Millet Gold */}
               <motion.div
                 animate={{ rotate: 360 }}
