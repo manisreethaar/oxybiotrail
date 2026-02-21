@@ -4,10 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { GrantBadge } from "@/components/GrantBadge";
 import { Briefcase, GraduationCap, Send } from "lucide-react";
 import { useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 const Careers = () => {
     const { toast } = useToast();
@@ -29,19 +30,84 @@ const Careers = () => {
         setFormData(prev => ({ ...prev, interest: value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const [isJobSubmitting, setIsJobSubmitting] = useState(false);
+    const [jobDialogOpen, setJobDialogOpen] = useState(false);
+
+    const handleJobSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        setIsJobSubmitting(true);
+        const form = e.currentTarget;
+        const formDataObj = new FormData(form);
+        formDataObj.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY_HERE");
+        formDataObj.append("subject", "Junior Researcher Application - " + formDataObj.get("name"));
 
-        // Construct Mailto Link
-        const subject = `Internship Application - ${formData.name} (${formData.degree})`;
-        const body = `Name: ${formData.name}%0D%0ACollege: ${formData.college}%0D%0ADegree: ${formData.degree} (${formData.year})%0D%0AArea of Interest: ${formData.interest}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formDataObj
+            });
+            const result = await response.json();
+            if (result.success) {
+                toast({
+                    title: "Application Submitted",
+                    description: "We've received your application and CV.",
+                });
+                setJobDialogOpen(false);
+                form.reset();
+            } else {
+                throw new Error("Submission failed");
+            }
+        } catch (error) {
+            toast({
+                title: "Error",
+                description: "Could not submit. Please email careers@oxygenbioinnovations.com directly.",
+                variant: "destructive"
+            });
+        } finally {
+            setIsJobSubmitting(false);
+        }
+    };
 
-        window.location.href = `mailto:careers@oxygenbioinnovations.com?subject=${subject}&body=${body}`;
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-        toast({
-            title: "Opening Email Client",
-            description: "Please attach your CV/Resume in the email draft.",
-        });
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: "YOUR_WEB3FORMS_ACCESS_KEY_HERE",
+                    subject: `Internship Application - ${formData.name} (${formData.degree})`,
+                    from_name: formData.name,
+                    ...formData
+                }),
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                toast({
+                    title: "Application Submitted",
+                    description: "We have received your internship application.",
+                });
+                setFormData({ name: "", college: "", degree: "", year: "", interest: "", message: "" });
+            } else {
+                throw new Error("Form submission failed");
+            }
+        } catch (error) {
+            toast({
+                title: "Error",
+                description: "Could not submit application. Please email careers@oxygenbioinnovations.com directly.",
+                variant: "destructive"
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -120,11 +186,40 @@ const Careers = () => {
                                 </a>
                             </div>
 
-                            <Button className="w-full" asChild>
-                                <a href="mailto:careers@oxygenbioinnovations.com?subject=Application for Junior Researcher&body=Dear Hiring Team,%0D%0A%0D%0AI am writing to apply for the Junior Researcher position. Please find my CV attached...">
-                                    Apply Now
-                                </a>
-                            </Button>
+                            <Dialog open={jobDialogOpen} onOpenChange={setJobDialogOpen}>
+                                <DialogTrigger asChild>
+                                    <Button className="w-full">Apply Now</Button>
+                                </DialogTrigger>
+                                <DialogContent className="sm:max-w-[425px]">
+                                    <DialogHeader>
+                                        <DialogTitle>Apply for Junior Researcher</DialogTitle>
+                                        <DialogDescription>
+                                            Submit your application and CV/Resume directly to our team.
+                                        </DialogDescription>
+                                    </DialogHeader>
+                                    <form onSubmit={handleJobSubmit} className="space-y-4 mt-4">
+                                        <div className="space-y-2">
+                                            <label className="text-sm font-medium">Full Name *</label>
+                                            <Input required name="name" placeholder="John Doe" />
+                                        </div>
+                                        <div className="space-y-2">
+                                            <label className="text-sm font-medium">Email Address *</label>
+                                            <Input required type="email" name="email" placeholder="john@example.com" />
+                                        </div>
+                                        <div className="space-y-2">
+                                            <label className="text-sm font-medium">CV / Resume (PDF/Word) *</label>
+                                            <Input required type="file" name="attachment" accept=".pdf,.doc,.docx" className="file:text-primary file:font-semibold" />
+                                        </div>
+                                        <div className="space-y-2">
+                                            <label className="text-sm font-medium">Cover Letter / Note</label>
+                                            <Textarea name="message" placeholder="Brief introduction about your experience..." className="min-h-[100px]" />
+                                        </div>
+                                        <Button type="submit" className="w-full" disabled={isJobSubmitting}>
+                                            {isJobSubmitting ? "Submitting..." : "Submit Application"}
+                                        </Button>
+                                    </form>
+                                </DialogContent>
+                            </Dialog>
                         </div>
                     </div>
 
@@ -185,13 +280,14 @@ const Careers = () => {
                                 />
                             </div>
 
-                            <Button type="submit" className="w-full gap-2">
-                                <Send size={16} />
-                                Submit Application
+                            <Button type="submit" className="w-full gap-2" disabled={isSubmitting}>
+                                {isSubmitting ? 'Submitting...' : (
+                                    <>
+                                        <Send size={16} />
+                                        Submit Application
+                                    </>
+                                )}
                             </Button>
-                            <p className="text-xs text-center text-muted-foreground mt-2">
-                                * Clicking submit will open your email client to send the application.
-                            </p>
                         </form>
                     </div>
                 </div>

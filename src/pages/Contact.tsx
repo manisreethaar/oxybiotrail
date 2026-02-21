@@ -51,16 +51,40 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "YOUR_WEB3FORMS_ACCESS_KEY_HERE",
+          subject: formData.subject || "New Contact Form Submission",
+          from_name: formData.name,
+          ...formData
+        }),
+      });
 
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24-48 hours.",
-    });
-
-    setFormData({ name: '', email: '', company: '', subject: '', message: '', type: '' });
-    setIsSubmitting(false);
+      const result = await response.json();
+      if (result.success) {
+        toast({
+          title: "Message Sent!",
+          description: "We'll get back to you within 24-48 hours.",
+        });
+        setFormData({ name: '', email: '', company: '', subject: '', message: '', type: '' });
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Could not send message. Please email info@oxygenbioinnovations.com directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
