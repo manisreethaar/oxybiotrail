@@ -48,10 +48,10 @@ const Problem = () => {
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-6">
               <FlaskConical size={12} /> Formulation Science
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-[1.05] tracking-tighter">
               The Science Behind <span className="text-primary">Oxygen</span>
             </h1>
-            <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed font-light">
               Every formulation decision has a reason. Every reason has a reference. Every reference is available to you.
             </p>
           </motion.div>
@@ -64,10 +64,10 @@ const Problem = () => {
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
               <span className="text-[10px] font-bold uppercase tracking-widest text-red-500 block mb-2">Layer 01 — The Data</span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
                 India Has a Nutrition Crisis
               </h2>
-              <p className="text-lg text-slate-500 dark:text-slate-400 max-w-3xl">
+              <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-3xl font-light leading-relaxed">
                 That nobody is talking about honestly. These are not estimates — these are ICMR, NFHS-5, and WHO measurements.
               </p>
             </motion.div>
@@ -137,11 +137,11 @@ const Problem = () => {
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
               <span className="text-[10px] font-bold uppercase tracking-widest text-amber-500 block mb-2">Layer 02 — The Psychology</span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
                 The Intention-Action Gap
               </h2>
-              <p className="text-lg text-slate-500 dark:text-slate-400 max-w-3xl">
-                Urban Indians are more health-aware than any previous generation. They read about nutrition. They follow wellness accounts. They know what protein is. <strong className="text-slate-700 dark:text-slate-200">And yet deficiency rates are rising.</strong>
+              <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-3xl font-light leading-relaxed">
+                Urban Indians are more health-aware than any previous generation. They read about nutrition. They follow wellness accounts. They know what protein is. <strong className="text-slate-700 dark:text-slate-200 font-medium">And yet deficiency rates are rising.</strong>
               </p>
             </motion.div>
 
@@ -194,7 +194,7 @@ const Problem = () => {
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
               <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Layer 03 — The Market Failure</span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
                 The Market Response Has Been Inadequate
               </h2>
             </motion.div>
@@ -278,10 +278,10 @@ const Problem = () => {
         <div className="container-width px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto">
             <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-4">Our Scientific Response</span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
               How We Close The Gap
             </h2>
-            <p className="text-lg text-slate-500 dark:text-slate-400">
+            <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 font-light leading-relaxed">
               Our science exists to serve our mission. Every formulation decision below connects directly to the problem above.
             </p>
           </motion.div>
@@ -294,8 +294,8 @@ const Problem = () => {
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
               <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-2">Section 01</span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">The Bioavailability Problem</h2>
-              <p className="text-lg text-slate-500 dark:text-slate-400 max-w-3xl">Why the <em>form</em> of a nutrient matters more than the dose.</p>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">The Bioavailability Problem</h2>
+              <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-3xl font-light leading-relaxed">Why the <em>form</em> of a nutrient matters more than the dose.</p>
             </motion.div>
 
             {/* The Core Argument */}
@@ -417,8 +417,8 @@ const Problem = () => {
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
               <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-2">Section 02</span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">The Millet System</h2>
-              <p className="text-lg text-slate-500 dark:text-slate-400">Ancient grain. Modern science.</p>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">The Millet System</h2>
+              <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 font-light leading-relaxed">Ancient grain. Modern science.</p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -474,8 +474,8 @@ const Problem = () => {
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
               <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-2">Section 03</span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">The Mushroom Science</h2>
-              <p className="text-lg text-slate-500 dark:text-slate-400">Why extraction method determines everything.</p>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">The Mushroom Science</h2>
+              <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 font-light leading-relaxed">Why extraction method determines everything.</p>
             </motion.div>
 
             {/* Two Column Comparison */}
@@ -568,8 +568,8 @@ const Problem = () => {
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
               <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-2">Section 04</span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">References</h2>
-              <p className="text-lg text-slate-500 dark:text-slate-400 max-w-3xl">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">References</h2>
+              <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-3xl font-light leading-relaxed">
                 We cite our sources. Always. These are the studies that informed our formulation decisions. We encourage you to read them. Form your own conclusions.
               </p>
             </motion.div>
@@ -604,8 +604,8 @@ const Problem = () => {
       <section className="section-padding bg-white dark:bg-slate-950">
         <div className="container-width px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto">
-            <h2 className="text-3xl font-display font-bold mb-4 text-slate-900 dark:text-white">See every ingredient in detail</h2>
-            <p className="text-slate-500 dark:text-slate-400 mb-8">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-6 tracking-tight text-slate-900 dark:text-white">See every ingredient in detail</h2>
+            <p className="text-lg md:text-xl font-light text-slate-500 dark:text-slate-400 mb-8">
               Explore our full ingredient database — every form, every dose, every clinical study.
             </p>
             <Link to="/ingredients" className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">

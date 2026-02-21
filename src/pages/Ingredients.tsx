@@ -21,10 +21,10 @@ const Ingredients = () => {
                         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-6">
                             <FlaskConical size={12} /> Full Transparency
                         </span>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white">
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-[1.05] tracking-tighter">
                             Every ingredient. <span className="text-primary">Every reason.</span>
                         </h1>
-                        <p className="text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed font-light">
                             Nothing in Oxygen is there by accident. Nothing is there for label appeal.
                             Everything has peer-reviewed evidence for its inclusion.
                         </p>
@@ -97,10 +97,10 @@ const Ingredients = () => {
                 <div className="container-width px-4">
                     <div className="max-w-3xl mx-auto text-center p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
                         <Leaf size={32} className="text-primary mx-auto mb-4" />
-                        <h3 className="text-xl font-display font-bold mb-3 text-slate-900 dark:text-white">
+                        <h3 className="text-2xl md:text-3xl font-display font-bold mb-3 text-slate-900 dark:text-white tracking-tight">
                             Full Certificate of Analysis for every batch
                         </h3>
-                        <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">
+                        <p className="text-sm md:text-base text-slate-500 dark:text-slate-400 mb-4 font-light">
                             When we launch, every batch will have a publicly available CoA with third-party verified test results.
                             Scan the QR code on any product to see the exact test report for your batch.
                         </p>

@@ -71,10 +71,10 @@ const Contact = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-[1.05] tracking-tighter">
               Get in <span className="gradient-text">Touch</span>
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-light">
               Whether you're an investor, researcher, or potential partner,
               we'd love to hear from you. Let's explore how we can collaborate.
             </p>
