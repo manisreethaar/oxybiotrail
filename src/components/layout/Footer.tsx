@@ -70,6 +70,9 @@ export function Footer() {
               <li>
                 <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
               </li>
+              <li>
+                <Link to="/terms" className="hover:text-primary transition-colors">Terms & Conditions</Link>
+              </li>
             </ul>
           </div>
 
