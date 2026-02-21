@@ -41,41 +41,67 @@ const About = () => {
             >
               Our Vision
             </motion.span>
-            <div className="text-center space-y-3">
-              {[
-                'To build a sustainable and innovation-driven',
-                'biotechnology enterprise',
-                '',
-                'that transforms indigenous biological resources',
-                'into globally competitive',
-                'biocosmetic and food products',
-                '',
-                'through advanced biotechnology,',
-                'circular bioeconomy principles,',
-                'and responsible manufacturing.',
-              ].map((line, i) => (
-                <motion.p
-                  key={i}
-                  initial={{ opacity: 0, y: 8 }}
-                  whileInView={{ opacity: line ? 1 : 0, y: 0 }}
+            <div className="grid md:grid-cols-12 gap-12 md:gap-8 items-start relative z-10">
+              {/* Left Column - Large Typography */}
+              <div className="md:col-span-12 lg:col-span-5 md:sticky md:top-32">
+                <motion.h2
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.2, duration: 0.6 }}
-                  className={`font-display ${line ? 'text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white/90 leading-tight' : 'h-6'
-                    }`}
+                  transition={{ duration: 0.8 }}
+                  className="text-4xl md:text-5xl lg:text-7xl font-display font-bold tracking-tighter text-white leading-[1.1] mb-6"
                 >
-                  {line || '\u00A0'}
+                  Building<br />
+                  India's First<br />
+                  <span className="text-emerald-400">Precision</span><br />
+                  <span className="text-emerald-400">Nutrition</span><br />
+                  System.
+                </motion.h2>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                  className="text-emerald-400/60 font-medium tracking-widest uppercase text-xs"
+                >
+                  Sustainable • Indigenous • Circular
                 </motion.p>
-              ))}
+              </div>
+
+              {/* Right Column - Breakdown */}
+              <div className="md:col-span-12 lg:col-span-7 space-y-6">
+                {[
+                  {
+                    title: "Sustainable Enterprise",
+                    text: "To build an innovation-driven biotechnology enterprise that prioritizes planetary health alongside human health."
+                  },
+                  {
+                    title: "Indigenous Resources",
+                    text: "To transform India's rich biological resources into globally competitive biocosmetic and food products."
+                  },
+                  {
+                    title: "Circular Bioeconomy",
+                    text: "To operate strictly through advanced biotechnology, circular bioeconomy principles, and responsible manufacturing."
+                  }
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.15, duration: 0.6 }}
+                    className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-emerald-500/30 transition-all duration-300"
+                  >
+                    <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-3 tracking-tight">
+                      {item.title}
+                    </h3>
+                    <p className="text-slate-300 leading-relaxed font-light text-base md:text-lg">
+                      {item.text}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 3 }}
-              className="text-center mt-12 text-sm text-emerald-400/50 tracking-widest uppercase"
-            >
-              This is what we are building toward.
-            </motion.p>
           </div>
         </div>
       </section>
@@ -378,7 +404,7 @@ const About = () => {
               className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:shadow-md transition-shadow"
             >
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl font-display font-bold text-primary/15">{principle.num}</span>
+                <span className="text-2xl font-display font-bold text-slate-400 dark:text-slate-500">{principle.num}</span>
                 <div className="text-primary">{principle.icon}</div>
               </div>
               <h4 className="font-display font-bold text-slate-900 dark:text-white mb-2">{principle.title}</h4>
@@ -568,7 +594,7 @@ const ChapterSection = ({
               {icon}
             </div>
             <div>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-slate-900 dark:text-white">{title}</h2>
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight text-slate-900 dark:text-white">{title}</h2>
             </div>
           </motion.div>
           <motion.div

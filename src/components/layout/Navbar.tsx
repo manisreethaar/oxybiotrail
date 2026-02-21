@@ -8,6 +8,7 @@ import { useAuth } from "@/context/AuthContext";
 import { useWaitlistCount } from '@/hooks/useWaitlistCount';
 
 const navLinks = [
+  { name: 'Home', path: '/', icon: Home },
   { name: 'Our Science', path: '/problem', icon: FlaskConical },
   { name: 'Ingredients', path: '/ingredients', icon: Leaf },
   { name: 'About Us', path: '/about', icon: Users },
@@ -42,36 +43,37 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img src="/logo.png" alt="Oxygen Bioinnovations" className="h-8 w-auto object-contain" />
+            <img src="/logo.png" alt="Oxygen Bioinnovations" className="h-10 w-auto object-contain" />
             <div className="flex flex-col justify-center">
-              <span className="text-lg font-medium font-display text-foreground tracking-tight leading-none uppercase">
-                Oxygen
+              <span className="text-xl font-bold text-foreground tracking-tight leading-none uppercase">
+                OXYGEN
               </span>
-              <span className="text-[10px] tracking-widest text-muted-foreground font-medium">
+              <span className="text-[10px] tracking-widest text-muted-foreground font-medium mt-1">
                 Ancient Ingredients. Modern Science.
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1 bg-white/50 dark:bg-black/20 p-1 rounded-full border border-white/20 backdrop-blur-sm">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={cn(
-                  'px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2',
-                  location.pathname === link.path
-                    ? 'text-primary bg-white shadow-sm font-bold'
-                    : 'text-muted-foreground hover:text-primary hover:bg-white/50'
-                )}
-              >
-                {/* <link.icon size={14} /> */}
-                {link.name}
-              </Link>
-            ))}
+          <div className="hidden lg:flex items-center justify-center absolute left-1/2 -translate-x-1/2">
+            <div className="flex items-center gap-1 bg-white/50 dark:bg-black/20 p-1 rounded-full border border-white/20 backdrop-blur-sm">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={cn(
+                    'px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2',
+                    location.pathname === link.path
+                      ? 'text-primary bg-white shadow-sm font-bold'
+                      : 'text-muted-foreground hover:text-primary hover:bg-white/50'
+                  )}
+                >
+                  {/* <link.icon size={14} /> */}
+                  {link.name}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* Right Side Actions */}

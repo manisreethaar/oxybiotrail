@@ -22,7 +22,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Address',
-    value: 'TBI @ Adhiyamaan College of Engineering, Dr MGR Nagar, Hosur',
+    value: 'Cabin D, Technology Business Incubater, Adhiyamaan College of Engineering Campus, Dr MGR Nagar, Hosur, tamil nadu - 635130',
   },
   {
     icon: Clock,

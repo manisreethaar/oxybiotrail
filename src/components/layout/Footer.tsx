@@ -86,7 +86,7 @@ export function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
-                <span>TBI @ Adhiyamaan College of Engineering, Dr MGR Nagar, Hosur</span>
+                <span>Cabin D, Technology Business Incubater, Adhiyamaan College of Engineering Campus, Dr MGR Nagar, Hosur, tamil nadu - 635130</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-primary shrink-0" />

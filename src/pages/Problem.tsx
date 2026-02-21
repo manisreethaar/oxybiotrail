@@ -1,6 +1,6 @@
 import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
-import { FlaskConical, ArrowRight, Beaker, Leaf, BookOpen, ExternalLink, ChevronRight } from 'lucide-react';
+import { FlaskConical, ArrowRight, Beaker, Leaf, BookOpen, ExternalLink, ChevronRight, Brain, Coins, BatteryWarning, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 /* ─── Animated Bar ─── */
@@ -45,13 +45,13 @@ const Problem = () => {
       <section className="pt-32 pb-16">
         <div className="container-width px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-6">
-              <FlaskConical size={12} /> Formulation Science
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-6">
+              <FlaskConical size={14} /> Formulation Science
             </span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-[1.05] tracking-tighter">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-[1.05] tracking-tighter">
               The Science Behind <span className="text-primary">Oxygen</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed font-light">
+            <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 leading-relaxed font-light max-w-2xl mx-auto">
               Every formulation decision has a reason. Every reason has a reference. Every reference is available to you.
             </p>
           </motion.div>
@@ -62,12 +62,11 @@ const Problem = () => {
       <section className="section-padding bg-white dark:bg-slate-950">
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-red-500 block mb-2">Layer 01 — The Data</span>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
                 India Has a Nutrition Crisis
               </h2>
-              <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-3xl font-light leading-relaxed">
+              <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 max-w-2xl font-light leading-relaxed">
                 That nobody is talking about honestly. These are not estimates — these are ICMR, NFHS-5, and WHO measurements.
               </p>
             </motion.div>
@@ -88,10 +87,10 @@ const Problem = () => {
                   transition={{ delay: i * 0.1 }}
                   className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-center"
                 >
-                  <span className={`text-3xl md:text-4xl font-display font-bold ${stat.color} block mb-1`}>{stat.pct}</span>
+                  <span className={`text-3xl md:text-4xl font-display font-bold ${stat.color} block mb-2`}>{stat.pct}</span>
                   <p className="text-sm font-bold text-slate-700 dark:text-slate-300">{stat.label}</p>
-                  <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">{stat.sub}</p>
-                  <p className="text-[9px] text-slate-500 dark:text-slate-400 mt-2 italic">{stat.src}</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">{stat.sub}</p>
+                  <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-2 italic border-t border-slate-100 dark:border-slate-800 pt-2 inline-block">Source: {stat.src}</p>
                 </motion.div>
               ))}
             </div>
@@ -99,10 +98,10 @@ const Problem = () => {
             {/* Consequence Cards */}
             <div className="grid md:grid-cols-2 gap-4 mb-8">
               {[
-                { icon: '🧠', title: 'Cognitive Impact', body: 'Iron deficiency reduces cognitive performance by 15-20% in working adults.', src: 'Am J Clinical Nutrition' },
-                { icon: '💰', title: 'Economic Impact', body: 'Nutritional deficiency costs India an estimated ₹4.5 lakh crore annually in lost productivity.', src: 'World Bank India Report' },
-                { icon: '⚡', title: 'Fatigue Burden', body: 'Chronic fatigue affects 38% of urban working population — directly tied to micronutrient gaps.', src: 'ASSOCHAM Survey' },
-                { icon: '📚', title: 'Student Impact', body: 'Micronutrient deficiency linked to 21% reduction in academic performance.', src: 'Nutrition Reviews Journal' },
+                { icon: <Brain className="w-6 h-6 text-rose-500" />, title: 'Cognitive Impact', body: 'Iron deficiency reduces cognitive performance by 15-20% in working adults.', src: 'Am J Clinical Nutrition' },
+                { icon: <Coins className="w-6 h-6 text-amber-500" />, title: 'Economic Impact', body: 'Nutritional deficiency costs India an estimated ₹4.5 lakh crore annually in lost productivity.', src: 'World Bank India Report' },
+                { icon: <BatteryWarning className="w-6 h-6 text-orange-500" />, title: 'Fatigue Burden', body: 'Chronic fatigue affects 38% of urban working population — directly tied to micronutrient gaps.', src: 'ASSOCHAM Survey' },
+                { icon: <GraduationCap className="w-6 h-6 text-blue-500" />, title: 'Student Impact', body: 'Micronutrient deficiency linked to 21% reduction in academic performance.', src: 'Nutrition Reviews Journal' },
               ].map((card, i) => (
                 <motion.div
                   key={i}
@@ -110,13 +109,13 @@ const Problem = () => {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-5 rounded-xl bg-red-50/50 dark:bg-red-900/5 border border-red-100 dark:border-red-900/20 flex items-start gap-4"
+                  className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex items-start gap-5 shadow-sm hover:shadow-md transition-all duration-300"
                 >
-                  <span className="text-2xl">{card.icon}</span>
+                  <div className="shrink-0 mt-1 p-2 bg-white dark:bg-slate-800 rounded-full border border-slate-100 dark:border-slate-700">{card.icon}</div>
                   <div>
-                    <h4 className="font-bold text-sm text-slate-800 dark:text-slate-200 mb-1">{card.title}</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{card.body}</p>
-                    <p className="text-[9px] text-slate-500 dark:text-slate-400 mt-1 italic">Source: {card.src}</p>
+                    <h4 className="font-bold text-sm text-slate-800 dark:text-slate-200 mb-2">{card.title}</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-3">{card.body}</p>
+                    <p className="text-[10px] text-slate-500 dark:text-slate-400 italic">Source: {card.src}</p>
                   </div>
                 </motion.div>
               ))}
@@ -136,15 +135,13 @@ const Problem = () => {
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-amber-500 block mb-2">Layer 02 — The Psychology</span>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
                 The Intention-Action Gap
               </h2>
-              <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-3xl font-light leading-relaxed">
+              <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 max-w-2xl font-light leading-relaxed">
                 Urban Indians are more health-aware than any previous generation. They read about nutrition. They follow wellness accounts. They know what protein is. <strong className="text-slate-700 dark:text-slate-200 font-medium">And yet deficiency rates are rising.</strong>
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
@@ -175,12 +172,12 @@ const Problem = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.15 }}
-                  className={`p-6 rounded-2xl bg-white dark:bg-slate-800/50 border-t-4 ${barrier.color}`}
+                  className={`p-6 rounded-2xl bg-white dark:bg-slate-800/50 border-t-4 ${barrier.color} shadow-sm hover:shadow-md transition-shadow`}
                 >
-                  <span className="text-3xl font-display font-bold text-slate-200 dark:text-slate-700 block mb-2">{barrier.num}</span>
+                  <span className="text-2xl font-display font-bold text-slate-200 dark:text-slate-700 block mb-3">{barrier.num}</span>
                   <h3 className="font-display font-bold text-lg text-slate-900 dark:text-white mb-3">{barrier.title}</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">{barrier.body}</p>
-                  <p className="text-sm font-bold text-slate-800 dark:text-slate-200 italic">"{barrier.callout}"</p>
+                  <p className="text-sm font-medium text-slate-800 dark:text-slate-200 italic border-t border-slate-100 dark:border-slate-700 pt-3 inline-block">"{barrier.callout}"</p>
                 </motion.div>
               ))}
             </div>
@@ -193,8 +190,7 @@ const Problem = () => {
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-2">Layer 03 — The Market Failure</span>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
                 The Market Response Has Been Inadequate
               </h2>
             </motion.div>
@@ -234,15 +230,15 @@ const Problem = () => {
                   transition={{ delay: i * 0.1 }}
                   className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
                 >
-                  <h3 className="font-display font-bold text-slate-900 dark:text-white mb-1">{cat.category}</h3>
-                  <p className="text-[10px] text-slate-500 dark:text-slate-400 mb-3 italic">{cat.examples}</p>
-                  <div className="space-y-3">
+                  <h3 className="text-lg font-display font-bold text-slate-900 dark:text-white mb-1">{cat.category}</h3>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mb-4 italic pb-3 border-b border-slate-100 dark:border-slate-800">{cat.examples}</p>
+                  <div className="space-y-4">
                     <div>
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-500">What they offer</span>
-                      <p className="text-sm text-slate-500 dark:text-slate-400">{cat.offer}</p>
+                      <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-500 block mb-1">What they offer</span>
+                      <p className="text-sm text-slate-600 dark:text-slate-400">{cat.offer}</p>
                     </div>
                     <div>
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-red-500">Why it fails</span>
+                      <span className="text-xs font-bold uppercase tracking-widest text-rose-600 dark:text-rose-500 block mb-1">Why it fails</span>
                       <p className="text-sm text-slate-600 dark:text-slate-300">{cat.fail}</p>
                     </div>
                   </div>
@@ -277,11 +273,11 @@ const Problem = () => {
       <section className="section-padding bg-slate-50 dark:bg-slate-900/50">
         <div className="container-width px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-4">Our Scientific Response</span>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
+            <span className="text-xs font-bold uppercase tracking-widest text-primary block mb-3">Our Scientific Response</span>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
               How We Close The Gap
             </h2>
-            <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 font-light leading-relaxed">
+            <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
               Our science exists to serve our mission. Every formulation decision below connects directly to the problem above.
             </p>
           </motion.div>
@@ -293,9 +289,8 @@ const Problem = () => {
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-2">Section 01</span>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">The Bioavailability Problem</h2>
-              <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-3xl font-light leading-relaxed">Why the <em>form</em> of a nutrient matters more than the dose.</p>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">The Bioavailability Problem</h2>
+              <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 max-w-2xl font-light leading-relaxed">Why the <em className="font-semibold text-slate-700 dark:text-slate-300">form</em> of a nutrient matters more than the dose.</p>
             </motion.div>
 
             {/* The Core Argument */}
@@ -382,7 +377,7 @@ const Problem = () => {
                     <div className="mt-3 h-3 bg-slate-800 rounded-full overflow-hidden">
                       <div className="h-full w-[40%] bg-red-500/60 rounded-full" />
                     </div>
-                    <p className="text-[10px] text-slate-500 mt-1">40% of population affected</p>
+                    <p className="text-xs font-medium text-slate-500 mt-2">40% of population affected</p>
                   </div>
                 </div>
 
@@ -402,7 +397,7 @@ const Problem = () => {
                     <div className="mt-3 h-3 bg-slate-800 rounded-full overflow-hidden">
                       <div className="h-full w-full bg-emerald-500/60 rounded-full" />
                     </div>
-                    <p className="text-[10px] text-slate-500 mt-1">100% of population benefits</p>
+                    <p className="text-xs font-medium text-slate-500 mt-2">100% of population benefits</p>
                   </div>
                 </div>
               </div>
@@ -416,9 +411,8 @@ const Problem = () => {
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-2">Section 02</span>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">The Millet System</h2>
-              <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 font-light leading-relaxed">Ancient grain. Modern science.</p>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">The Millet System</h2>
+              <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 max-w-2xl font-light leading-relaxed">Ancient grain. Modern science.</p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -473,9 +467,8 @@ const Problem = () => {
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-2">Section 03</span>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">The Mushroom Science</h2>
-              <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 font-light leading-relaxed">Why extraction method determines everything.</p>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">The Mushroom Science</h2>
+              <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 max-w-2xl font-light leading-relaxed">Why extraction method determines everything.</p>
             </motion.div>
 
             {/* Two Column Comparison */}
@@ -567,9 +560,8 @@ const Problem = () => {
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-primary block mb-2">Section 04</span>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">References</h2>
-              <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-3xl font-light leading-relaxed">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">References</h2>
+              <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 max-w-2xl font-light leading-relaxed">
                 We cite our sources. Always. These are the studies that informed our formulation decisions. We encourage you to read them. Form your own conclusions.
               </p>
             </motion.div>
@@ -604,8 +596,8 @@ const Problem = () => {
       <section className="section-padding bg-white dark:bg-slate-950">
         <div className="container-width px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-6 tracking-tight text-slate-900 dark:text-white">See every ingredient in detail</h2>
-            <p className="text-lg md:text-xl font-light text-slate-500 dark:text-slate-400 mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-6 tracking-tight text-slate-900 dark:text-white">See every ingredient in detail</h2>
+            <p className="text-base md:text-lg font-light max-w-2xl mx-auto text-slate-500 dark:text-slate-400 mb-8">
               Explore our full ingredient database — every form, every dose, every clinical study.
             </p>
             <Link to="/ingredients" className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">

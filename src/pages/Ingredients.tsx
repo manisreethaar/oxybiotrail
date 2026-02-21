@@ -21,7 +21,7 @@ const Ingredients = () => {
                         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-6">
                             <FlaskConical size={12} /> Full Transparency
                         </span>
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-[1.05] tracking-tighter">
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-[1.05] tracking-tighter">
                             Every ingredient. <span className="text-primary">Every reason.</span>
                         </h1>
                         <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed font-light">

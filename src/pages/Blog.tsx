@@ -1,8 +1,13 @@
 import { Layout } from '@/components/layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, User, ArrowRight, Clock, FlaskConical, Rocket, BookOpen } from 'lucide-react';
+import { Calendar, User, ArrowRight, Clock, FlaskConical, Rocket, BookOpen, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+
+// Helper to check if a post is locked based on its date
+const isFutureDate = (dateString: string) => {
+    return new Date(dateString) > new Date();
+};
 
 type Category = 'all' | 'science' | 'building';
 
@@ -168,8 +173,16 @@ const Blog = () => {
                             </div>
 
                             {/* Featured Content */}
-                            <div className="p-8 md:p-12 flex flex-col justify-center">
-                                <div className="flex items-center gap-3 mb-4">
+                            <div className="p-8 md:p-12 flex flex-col justify-center relative">
+                                {isFutureDate(featuredPost.date) && (
+                                    <div className="absolute inset-0 bg-white/60 dark:bg-slate-900/60 backdrop-blur-[2px] z-10 flex flex-col items-center justify-center">
+                                        <div className="bg-white dark:bg-slate-800 p-4 rounded-full shadow-lg mb-4 text-slate-400">
+                                            <Lock size={32} />
+                                        </div>
+                                        <p className="font-display font-bold text-lg text-slate-900 dark:text-white">Coming {featuredPost.date}</p>
+                                    </div>
+                                )}
+                                <div className={`flex items-center gap-3 mb-4 ${isFutureDate(featuredPost.date) ? 'opacity-40' : ''}`}>
                                     <span className="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest rounded-full">
                                         Building Oxygen
                                     </span>
@@ -188,9 +201,15 @@ const Blog = () => {
                                         <span className="flex items-center gap-1"><Clock size={12} /> {featuredPost.readTime}</span>
                                     </div>
                                 </div>
-                                <Link to="#" className="inline-flex items-center gap-2 mt-6 text-sm font-bold text-primary hover:gap-3 transition-all">
-                                    Read Article <ArrowRight size={14} />
-                                </Link>
+                                {!isFutureDate(featuredPost.date) ? (
+                                    <Link to={`/blog/${featuredPost.id}`} className="inline-flex items-center gap-2 mt-6 text-sm font-bold text-primary hover:gap-3 transition-all">
+                                        Read Article <ArrowRight size={14} />
+                                    </Link>
+                                ) : (
+                                    <div className="inline-flex items-center gap-2 mt-6 text-sm font-bold text-slate-400 opacity-40">
+                                        Locked <Lock size={14} />
+                                    </div>
+                                )}
                             </div>
                         </motion.div>
                     </div>
@@ -280,8 +299,18 @@ const ArticleCard = ({ post, index }: { post: BlogPost; index: number }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.08 }}
-            className="group flex flex-col rounded-2xl overflow-hidden bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            className={`group flex flex-col rounded-2xl overflow-hidden bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 transition-all duration-300 relative ${isFutureDate(post.date) ? 'opacity-75 grayscale-[0.5]' : 'hover:shadow-xl hover:-translate-y-1'}`}
         >
+            {isFutureDate(post.date) && (
+                <div className="absolute inset-0 bg-white/40 dark:bg-slate-900/40 backdrop-blur-[1px] z-20 flex flex-col items-center justify-center">
+                    <div className="bg-white/90 dark:bg-slate-800/90 p-3 rounded-full shadow-md mb-2 text-slate-400">
+                        <Lock size={24} />
+                    </div>
+                    <span className="font-display font-semibold text-sm text-slate-800 dark:text-slate-200 bg-white/80 dark:bg-slate-900/80 px-3 py-1 rounded-full shadow-sm">
+                        Unlocks {post.date}
+                    </span>
+                </div>
+            )}
             {/* Card Image Placeholder */}
             <div className={`h-44 bg-gradient-to-br ${categoryColor.accent} flex items-center justify-center relative`}>
                 <div className="w-12 h-12 bg-white/80 dark:bg-slate-800/80 rounded-xl flex items-center justify-center">
@@ -318,13 +347,19 @@ const ArticleCard = ({ post, index }: { post: BlogPost; index: number }) => {
                     {post.excerpt}
                 </p>
 
-                <div className="flex items-center justify-between mt-auto">
+                <div className="flex items-center justify-between mt-auto relative z-10">
                     <span className="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400">
                         <User size={11} /> {post.author}
                     </span>
-                    <Link to="#" className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:gap-2 transition-all">
-                        Read <ArrowRight size={14} />
-                    </Link>
+                    {!isFutureDate(post.date) ? (
+                        <Link to={`/blog/${post.id}`} className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:gap-2 transition-all">
+                            Read <ArrowRight size={14} />
+                        </Link>
+                    ) : (
+                        <span className="inline-flex items-center gap-1 text-sm font-bold text-slate-400">
+                            Locked <Lock size={14} />
+                        </span>
+                    )}
                 </div>
             </div>
         </motion.div>

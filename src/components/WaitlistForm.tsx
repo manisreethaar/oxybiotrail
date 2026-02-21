@@ -99,9 +99,7 @@ export const WaitlistForm = ({ variant = 'hero' }: WaitlistFormProps) => {
                     <p className="text-xs font-bold text-primary tracking-wide uppercase">
                         Get Early Access
                     </p>
-                    <p className="text-xs text-muted-foreground">
-                        Joined by <span className="font-bold text-foreground">{count}</span> people from Bangalore, Mumbai, Delhi, Chennai, Hyderabad
-                    </p>
+
                     <p className="text-[10px] text-slate-500 dark:text-slate-400">
                         No payment. No commitment. Cancel anytime.
                     </p>

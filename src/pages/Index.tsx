@@ -71,7 +71,7 @@ const FormulaCard = ({ name, badge, badgeColor, tagline, audience, benefits, ing
       className={`group relative flex flex-col p-8 rounded-3xl bg-white dark:bg-slate-800/50 border ${colors.border} hover:-translate-y-2 hover:shadow-2xl transition-all duration-300`}
     >
       {/* Badge */}
-      <span className={`inline-block self-start text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full ${colors.bg} ${colors.text} mb-4`}>
+      <span className={`inline-block self-start text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full ${colors.bg} ${colors.text} mb-4`}>
         {badge}
       </span>
 
@@ -82,7 +82,7 @@ const FormulaCard = ({ name, badge, badgeColor, tagline, audience, benefits, ing
       <p className="text-sm text-slate-600 dark:text-slate-300 italic mb-4">{tagline}</p>
 
       {/* Audience */}
-      <p className="text-[11px] text-slate-500 dark:text-slate-400 mb-6 uppercase tracking-wide">{audience}</p>
+      <p className="text-xs text-slate-500 dark:text-slate-400 mb-6 uppercase tracking-wide">{audience}</p>
 
       {/* Benefits */}
       <ul className="space-y-3 mb-6 flex-grow">
@@ -103,7 +103,7 @@ const FormulaCard = ({ name, badge, badgeColor, tagline, audience, benefits, ing
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: delay + 0.3 + i * 0.08 }}
-            className={`px-2.5 py-1 text-[10px] font-bold rounded-full border ${colors.pill} ${colors.pillText}`}
+            className={`px-2.5 py-1 text-xs font-bold rounded-full border ${colors.pill} ${colors.pillText}`}
           >
             {ing}
           </motion.span>
@@ -201,7 +201,7 @@ const WaitlistCTA = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-4">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white leading-tight mb-4">
                 Be part of something<br />
                 <span className="text-primary">India has needed for years.</span>
               </h2>
@@ -244,7 +244,7 @@ const WaitlistCTA = () => {
               >
                 <div className="space-y-4 mb-6">
                   <div>
-                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-1.5">First Name *</label>
+                    <label className="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-1.5">First Name *</label>
                     <input
                       type="text"
                       value={firstName}
@@ -255,7 +255,7 @@ const WaitlistCTA = () => {
                     />
                   </div>
                   <div>
-                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-1.5">Email Address *</label>
+                    <label className="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-1.5">Email Address *</label>
                     <input
                       type="email"
                       value={email}
@@ -266,7 +266,7 @@ const WaitlistCTA = () => {
                     />
                   </div>
                   <div>
-                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-1.5">Which formula interests you most?</label>
+                    <label className="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-1.5">Which formula interests you most?</label>
                     <select
                       value={formula}
                       onChange={(e) => setFormula(e.target.value)}
@@ -281,7 +281,7 @@ const WaitlistCTA = () => {
                     </select>
                   </div>
                   <div>
-                    <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-1.5">Your City <span className="text-slate-500 dark:text-slate-400">(optional)</span></label>
+                    <label className="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 block mb-1.5">Your City <span className="text-slate-500 dark:text-slate-400">(optional)</span></label>
                     <input
                       type="text"
                       value={city}
@@ -299,13 +299,13 @@ const WaitlistCTA = () => {
                   Join the Waitlist — I Want Early Access
                 </button>
 
-                <p className="text-[11px] text-slate-500 dark:text-slate-400 text-center mt-4 leading-relaxed">
+                <p className="text-xs text-slate-500 dark:text-slate-400 text-center mt-4 leading-relaxed">
                   No payment required. No spam. Unsubscribe instantly anytime.<br />
                   Your trust means everything to us.
                 </p>
 
-                <div className="flex items-center justify-center gap-1.5 mt-3 text-[10px] text-slate-500 dark:text-slate-400">
-                  <Lock size={10} /> Your data is never sold
+                <div className="flex items-center justify-center gap-1.5 mt-3 text-xs text-slate-500 dark:text-slate-400">
+                  <Lock size={12} /> Your data is never sold
                 </div>
               </motion.form>
             </div>
@@ -414,8 +414,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Copy & Form */}
             <div className="text-left space-y-8">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
                 <span>🌱 Currently in Development</span>
                 <span>•</span>
                 <span>TBI Incubated</span>
@@ -423,13 +422,13 @@ const Index = () => {
                 <span>Clinical Study Designed</span>
               </div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter font-display text-slate-900 dark:text-white leading-[1.05]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter font-display text-slate-900 dark:text-white leading-[1.05]">
                 Ancient Ingredients. <br />
                 Modern Science. <br />
                 <span className="text-primary">No Compromise.</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed font-light mt-6">
+              <p className="text-base md:text-lg text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed font-light mt-6">
                 India is building its first precision nutrition system.
                 Built on Millet, Medicinal Mushrooms, and decades of scientific research.
                 Designed for ambitious Indians who deserve better than what currently exists.
@@ -446,27 +445,27 @@ const Index = () => {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
-                className="absolute w-64 h-64 border border-amber-500/30 rounded-full flex items-center justify-center backdrop-blur-sm bg-amber-500/5 -translate-x-10 -translate-y-10"
+                className="absolute w-64 h-64 border border-amber-500/30 rounded-full flex items-center justify-center backdrop-blur-md bg-amber-500/5 -translate-x-16 -translate-y-16"
               >
-                <span className="font-display text-amber-600/50 font-bold tracking-widest text-xs uppercase transform -rotate-45">Millet Matrix</span>
+                <span className="font-display text-amber-600/70 font-bold tracking-widest text-xs uppercase transform -rotate-45">Millet Matrix</span>
               </motion.div>
 
               {/* Circle 2: Jade Green */}
               <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
-                className="absolute w-64 h-64 border border-emerald-500/30 rounded-full flex items-center justify-center backdrop-blur-sm bg-emerald-500/5 translate-x-10 translate-y-5"
+                className="absolute w-64 h-64 border border-emerald-500/30 rounded-full flex items-center justify-center backdrop-blur-md bg-emerald-500/5 translate-x-16 translate-y-16"
               >
-                <span className="font-display text-emerald-600/50 font-bold tracking-widest text-xs uppercase transform rotate-12">Bio-Actives</span>
+                <span className="font-display text-emerald-600/70 font-bold tracking-widest text-xs uppercase transform rotate-12">Bio-Actives</span>
               </motion.div>
 
               {/* Circle 3: Burgundy */}
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 140, repeat: Infinity, ease: "linear" }}
-                className="absolute w-40 h-40 border border-rose-900/20 rounded-full flex items-center justify-center backdrop-blur-sm bg-rose-900/5 translate-y-20 -translate-x-20"
+                className="absolute w-40 h-40 border border-rose-900/20 rounded-full flex items-center justify-center backdrop-blur-md bg-rose-900/5 translate-x-20 -translate-y-4"
               >
-                <span className="font-display text-rose-900/40 font-bold tracking-widest text-xs uppercase">Adaptogens</span>
+                <span className="font-display text-rose-900/50 font-bold tracking-widest text-xs uppercase">Adaptogens</span>
               </motion.div>
             </div>
           </div>
@@ -492,11 +491,11 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto mb-16 md:mb-20"
           >
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-tight text-slate-900 dark:text-white mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold tracking-tight leading-tight text-slate-900 dark:text-white mb-4">
               You are probably <br />
               <span className="text-primary">nutritionally deficient.</span>
             </h2>
-            <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto font-light">
+            <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto font-light">
               Not because you are careless. Because modern Indian life makes proper nutrition almost impossible.
             </p>
           </motion.div>
@@ -580,7 +579,7 @@ const Index = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-center"
           >
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white">
+            <h3 className="text-3xl md:text-4xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white">
               So we built one.
             </h3>
           </motion.div>
@@ -599,10 +598,10 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
           >
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
               Meet <span className="text-primary">Oxygen</span>
             </h2>
-            <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed font-light">
+            <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto font-light">
               Three precision formulas. Each scientifically designed for a specific need.
               All built on the same uncompromising foundation: Indian ingredients, active nutrient forms,
               and doses that actually work.
@@ -712,7 +711,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-16 md:mb-24"
           >
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
               We show our work.
             </h2>
             <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed font-light">
@@ -898,7 +897,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
           >
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-tight tracking-tight">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-tight tracking-tight">
               Building in public.<br />
               <span className="text-primary">Every step. Every setback.<br />Every breakthrough.</span>
             </h2>
