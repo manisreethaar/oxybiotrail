@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { GrantBadge } from "@/components/GrantBadge";
 import { Briefcase, GraduationCap, Send } from "lucide-react";
@@ -61,7 +62,7 @@ const Careers = () => {
                     </p>
                 </div>
 
-                <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 max-w-6xl">
+                <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-10 lg:gap-12 max-w-6xl mb-16">
 
                     {/* Job Openings */}
                     <div className="space-y-8">
@@ -80,73 +81,76 @@ const Careers = () => {
                                 <span>Hosur, Tamil Nadu</span>
                             </div>
 
-                            <div className="space-y-4 mb-8">
+                            <div className="space-y-4">
                                 <p className="text-sm text-muted-foreground leading-relaxed">
-                                    We are building a next-generation bio-innovation platform at the intersection of probiotic science, functional nutrition, and bio-based cosmetic technology. Our mission is to translate cutting-edge fermentation science and formulation research into scalable, regulatory-compliant, and commercially viable products.
-                                </p>
-                                <p className="text-sm text-muted-foreground leading-relaxed">
-                                    We are seeking ambitious and research-driven individuals who aspire to build—not just join—a company. This opportunity is ideal for candidates who are passionate about deep-tech innovation and are prepared to grow as the organization scales from laboratory research to full-scale commercialization.
-                                </p>
-                                <div className="p-3 bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-900/30 rounded-lg">
-                                    <p className="text-sm text-amber-800 dark:text-amber-300 font-medium">
-                                        This is not a routine laboratory role. It is a high-ownership position within a performance-driven startup ecosystem, where scientific rigor meets entrepreneurial execution.
-                                    </p>
-                                </div>
-
-                                <h4 className="font-bold text-sm text-foreground mt-6">Role Overview</h4>
-                                <p className="text-sm text-muted-foreground leading-relaxed">
-                                    As a Junior Research Associate / Research Associate, you will contribute to the development, validation, and scale-up of advanced probiotic formulations, functional beverages, nutraceutical systems, and bio-fermented cosmetic products. You will work across R&D, regulatory alignment, pilot production, and commercialization strategy.
+                                    We are building a next-generation bio-innovation platform at the intersection of probiotic science, functional nutrition, and bio-based cosmetic technology.
                                 </p>
 
-                                <h4 className="font-bold text-sm text-foreground mt-6">Key Responsibilities</h4>
-                                <ul className="text-sm space-y-2 list-disc pl-4 text-muted-foreground">
-                                    <li>Design and develop innovative probiotic and functional food formulations grounded in fermentation science.</li>
-                                    <li>Develop and optimize bio-fermented cosmetic and skincare systems with stability and efficacy focus.</li>
-                                    <li>Execute laboratory-scale fermentation studies, formulation optimization, and analytical validation.</li>
-                                    <li>Conduct structured shelf-life, stability, and sensory evaluation studies following scientific protocols.</li>
-                                    <li>Prepare and maintain SOPs, batch manufacturing records, and regulatory documentation (FSSAI/CDSCO aligned).</li>
-                                    <li>Support pilot-scale trials, technology transfer, and scale-up processes.</li>
-                                    <li>Contribute to IP documentation, technical dossiers, and innovation pipeline development.</li>
-                                    <li>Actively participate in research problem-solving, process refinement, and continuous improvement initiatives.</li>
-                                </ul>
+                                <Accordion type="single" collapsible className="w-full">
+                                    <AccordionItem value="details" className="border-slate-200 dark:border-slate-800">
+                                        <AccordionTrigger className="text-sm font-bold text-primary hover:no-underline">
+                                            View Full Description & Requirements
+                                        </AccordionTrigger>
+                                        <AccordionContent className="space-y-6 pt-4 text-sm text-muted-foreground">
+                                            <p className="leading-relaxed">
+                                                We are seeking ambitious and research-driven individuals who aspire to build—not just join—a company. This opportunity is ideal for candidates who are passionate about deep-tech innovation and are prepared to grow as the organization scales from laboratory research to full-scale commercialization.
+                                            </p>
+                                            <div className="p-3 bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-900/30 rounded-lg">
+                                                <p className="text-sm text-amber-800 dark:text-amber-300 font-medium">
+                                                    This is not a routine laboratory role. It is a high-ownership position within a performance-driven startup ecosystem, where scientific rigor meets entrepreneurial execution.
+                                                </p>
+                                            </div>
 
-                                <h4 className="font-bold text-sm text-foreground mt-6">Who We Are Looking For</h4>
-                                <ul className="text-sm space-y-2 list-disc pl-4 text-muted-foreground">
-                                    <li>B.Tech / B.Sc. / M.Sc. in Food Technology, Biotechnology, Cosmetic Science, or a related discipline.</li>
-                                    <li>Strong foundation in microbial fermentation, food process engineering, or emulsion chemistry.</li>
-                                    <li>Analytical thinker with strong documentation discipline and scientific integrity.</li>
-                                    <li>Entrepreneurial mindset with willingness to work in a fast-paced, evolving startup environment.</li>
-                                    <li>Self-driven, adaptable, and motivated to take ownership beyond defined job boundaries.</li>
-                                    <li>Candidates who aspire to build long-term leadership roles as the company grows.</li>
-                                </ul>
+                                            <div>
+                                                <h4 className="font-bold text-foreground mb-2">Role Overview</h4>
+                                                <p className="leading-relaxed">
+                                                    As a Junior Research Associate / Research Associate, you will contribute to the development, validation, and scale-up of advanced probiotic formulations, functional beverages, nutraceutical systems, and bio-fermented cosmetic products. You will work across R&D, regulatory alignment, pilot production, and commercialization strategy.
+                                                </p>
+                                            </div>
 
-                                <h4 className="font-bold text-sm text-foreground mt-6">What We Offer</h4>
-                                <ul className="text-sm space-y-2 list-disc pl-4 text-muted-foreground">
-                                    <li><strong>Deep-Tech Innovation Exposure:</strong> Work on high-impact R&D projects with real commercialization pathways.</li>
-                                    <li><strong>Accelerated Career Growth:</strong> Performance-based responsibility expansion with leadership opportunities as the organization scales.</li>
-                                    <li><strong>End-to-End Product Development Experience:</strong> From lab-scale concept to regulatory approval and market launch.</li>
-                                    <li><strong>Innovation & IP Participation:</strong> Exposure to patent drafting, technology validation, and research-driven commercialization.</li>
-                                    <li><strong>Founder-Level Mentorship:</strong> Direct collaboration with leadership in a high-visibility growth environment.</li>
-                                    <li><strong>Performance-Linked Incentives:</strong> Competitive compensation aligned with capability, contribution, and company milestones.</li>
-                                    <li><strong>Opportunity to Build, Not Just Execute:</strong> Be part of the foundational team shaping a scalable bio-innovation enterprise.</li>
-                                </ul>
+                                            <div>
+                                                <h4 className="font-bold text-foreground mb-2">Key Responsibilities</h4>
+                                                <ul className="space-y-2 list-disc pl-4">
+                                                    <li>Design and develop innovative probiotic and functional food formulations grounded in fermentation science.</li>
+                                                    <li>Develop and optimize bio-fermented cosmetic and skincare systems with stability and efficacy focus.</li>
+                                                    <li>Execute laboratory-scale fermentation studies, formulation optimization, and analytical validation.</li>
+                                                    <li>Conduct structured shelf-life, stability, and sensory evaluation studies following scientific protocols.</li>
+                                                    <li>Prepare and maintain SOPs, batch manufacturing records, and regulatory documentation (FSSAI/CDSCO aligned).</li>
+                                                    <li>Support pilot-scale trials, technology transfer, and scale-up processes.</li>
+                                                    <li>Contribute to IP documentation, technical dossiers, and innovation pipeline development.</li>
+                                                    <li>Actively participate in research problem-solving, process refinement, and continuous improvement initiatives.</li>
+                                                </ul>
+                                            </div>
+
+                                            <div>
+                                                <h4 className="font-bold text-foreground mb-2">Who We Are Looking For</h4>
+                                                <ul className="space-y-2 list-disc pl-4">
+                                                    <li>B.Tech / B.Sc. / M.Sc. in Food Technology, Biotechnology, Cosmetic Science, or a related discipline.</li>
+                                                    <li>Strong foundation in microbial fermentation, food process engineering, or emulsion chemistry.</li>
+                                                    <li>Analytical thinker with strong documentation discipline and scientific integrity.</li>
+                                                    <li>Entrepreneurial mindset with willingness to work in a fast-paced, evolving startup environment.</li>
+                                                    <li>Self-driven, adaptable, and motivated to take ownership beyond defined job boundaries.</li>
+                                                    <li>Candidates who aspire to build long-term leadership roles as the company grows.</li>
+                                                </ul>
+                                            </div>
+
+                                            <div>
+                                                <h4 className="font-bold text-foreground mb-2">What We Offer</h4>
+                                                <ul className="space-y-2 list-disc pl-4">
+                                                    <li><strong>Deep-Tech Innovation Exposure:</strong> Work on high-impact R&D projects with real commercialization pathways.</li>
+                                                    <li><strong>Accelerated Career Growth:</strong> Performance-based responsibility expansion with leadership opportunities as the organization scales.</li>
+                                                    <li><strong>End-to-End Product Development Experience:</strong> From lab-scale concept to regulatory approval and market launch.</li>
+                                                    <li><strong>Innovation & IP Participation:</strong> Exposure to patent drafting, technology validation, and research-driven commercialization.</li>
+                                                    <li><strong>Founder-Level Mentorship:</strong> Direct collaboration with leadership in a high-visibility growth environment.</li>
+                                                    <li><strong>Performance-Linked Incentives:</strong> Competitive compensation aligned with capability, contribution, and company milestones.</li>
+                                                    <li><strong>Opportunity to Build, Not Just Execute:</strong> Be part of the foundational team shaping a scalable bio-innovation enterprise.</li>
+                                                </ul>
+                                            </div>
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                </Accordion>
+
                             </div>
-
-                            <div className="bg-slate-50 dark:bg-slate-900/50 p-4 rounded-lg mb-4 text-center border border-slate-100 dark:border-slate-800">
-                                <p className="text-sm text-muted-foreground mb-1">Ready to build with us? Send your CV to:</p>
-                                <a
-                                    href="mailto:careers@oxygenbioinnovations.com?subject=Application%20for%20Junior%20Research%20Associate"
-                                    className="text-primary font-bold hover:underline cursor-pointer block"
-                                >
-                                    careers@oxygenbioinnovations.com
-                                </a>
-                            </div>
-
-                            <Button className="w-full gap-2 shadow-lg hover:shadow-xl transition-all" asChild>
-                                <a href="mailto:careers@oxygenbioinnovations.com?subject=Application%20for%20Junior%20Research%20Associate">
-                                    <Send size={16} /> Apply Now
-                                </a>
-                            </Button>
                         </div>
                     </div>
 
@@ -206,12 +210,32 @@ const Careers = () => {
                                     onChange={handleInputChange}
                                 />
                             </div>
-
-                            <Button type="submit" className="w-full gap-2">
-                                <Send size={16} />
-                                Submit Application (via Email)
-                            </Button>
                         </form>
+                    </div>
+                </div>
+
+                {/* Common Call to Action Section */}
+                <div className="container mx-auto px-4 max-w-4xl mt-12">
+                    <div className="glass-card p-8 md:p-12 rounded-3xl text-center bg-gradient-to-br from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 border-primary/20">
+                        <h2 className="text-3xl font-display font-bold mb-4">Ready to Build With Us?</h2>
+                        <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+                            Whether you are applying for the Junior Research position or an internship, we want to hear from you. Send us your CV or application details via email.
+                        </p>
+
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <Button size="lg" className="w-full sm:w-auto gap-2 shadow-lg hover:shadow-xl transition-all" asChild>
+                                <a href="mailto:careers@oxygenbioinnovations.com?subject=Job%20Application%20-%20Junior%20Research%20Associate">
+                                    Apply for Job Role
+                                </a>
+                            </Button>
+                            <Button size="lg" variant="outline" className="w-full sm:w-auto gap-2 border-primary/20 hover:bg-primary/5" onClick={handleSubmit}>
+                                <Send size={16} /> Submit Internship Portal Form
+                            </Button>
+                        </div>
+
+                        <p className="text-sm text-muted-foreground mt-6">
+                            Direct email: <a href="mailto:careers@oxygenbioinnovations.com" className="text-primary font-bold hover:underline">careers@oxygenbioinnovations.com</a>
+                        </p>
                     </div>
                 </div>
             </div>
