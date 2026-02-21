@@ -19,7 +19,7 @@ const Privacy = () => {
                                 Privacy Policy
                             </h1>
                             <p className="text-sm text-slate-500">
-                                Oxygen Bioinnovations Private Limited<br />
+                                Oxygen Bioinnovations<br />
                                 Brand: RIZE
                             </p>
                             <div className="flex items-center justify-center gap-4 mt-6 text-xs font-bold uppercase tracking-widest text-slate-400">
@@ -47,20 +47,20 @@ const Privacy = () => {
                             <h2>1. Who We Are</h2>
                             <p>This Privacy Policy is issued by:</p>
                             <p>
-                                <strong>Oxygen Bioinnovations Private Limited</strong><br />
+                                <strong>Oxygen Bioinnovations</strong><br />
                                 ('Oxygen Bioinnovations', 'RIZE', 'we', 'us', 'our')
                             </p>
-                            <p>
-                                <strong>CIN:</strong> [Registration in process]<br />
-                                <strong>Registered Office:</strong> [Your registered address]<br />
-                                <strong>Principal Place of Business:</strong> TBI, Adhiyamaan College of Engineering, Hosur, Tamil Nadu<br />
-                                <strong>Email:</strong> privacy@drinkrize.in
+                            <p className="mt-6 mb-2">
+                                <strong>Principal Place of Business:</strong><br />
+                                TBI, Adhiyamaan College of Engineering, Hosur, Tamil Nadu
+                            </p>
+                            <p className="mt-0">
+                                <strong>Email:</strong> info@oxygenbioinnovations.com
                             </p>
                             <p>We develop precision nutrition products under the brand name RIZE.</p>
                             <p>This policy applies to all personal data collected through:</p>
                             <ul>
                                 <li>Our website: www.oxygenbioinnovations.com</li>
-                                <li>Our future website: drinkrize.in</li>
                                 <li>Any forms, surveys, or communications operated by us</li>
                                 <li>Any future mobile applications</li>
                             </ul>
@@ -353,7 +353,7 @@ const Privacy = () => {
                             </div>
 
                             <h3>How to Exercise Any Right</h3>
-                            <p>Send an email to: <a href="mailto:privacy@drinkrize.in">privacy@drinkrize.in</a><br />
+                            <p>Send an email to: <a href="mailto:info@oxygenbioinnovations.com">info@oxygenbioinnovations.com</a><br />
                                 <strong>Subject line:</strong> 'Data Rights Request — [Your Name]'<br />
                                 <strong>Include:</strong> Your name, your email address, and your specific request.</p>
                             <p><em>We will acknowledge within 24 hours. We will fulfill within 72 hours. No fees. No delays. No excuses.</em></p>
@@ -377,7 +377,7 @@ const Privacy = () => {
                             <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 mb-8">
                                 <p className="m-0 mb-1"><strong>Data Protection Officer:</strong></p>
                                 <p className="m-0 text-primary font-bold">Privacy Team, Oxygen Bioinnovations</p>
-                                <p className="m-0 mt-4 mb-1"><strong>Email:</strong> <a href="mailto:privacy@drinkrize.in">privacy@drinkrize.in</a></p>
+                                <p className="m-0 mt-4 mb-1"><strong>Email:</strong> <a href="mailto:info@oxygenbioinnovations.com">info@oxygenbioinnovations.com</a></p>
                                 <p className="m-0 mt-4"><strong>Postal Address:</strong></p>
                                 <p className="m-0 text-slate-600 dark:text-slate-400">
                                     Technology Business Incubator (TBI)<br />

@@ -19,7 +19,7 @@ const Terms = () => {
                                 Terms and Conditions
                             </h1>
                             <p className="text-sm text-slate-500">
-                                Oxygen Bioinnovations Private Limited
+                                Oxygen Bioinnovations
                             </p>
                             <div className="flex items-center justify-center gap-4 mt-6 text-xs font-bold uppercase tracking-widest text-slate-400">
                                 <span>Last updated: February 2026</span>
@@ -45,8 +45,7 @@ const Terms = () => {
 
                             <h2>2. ABOUT US</h2>
                             <p>
-                                <strong>Oxygen Bioinnovations Private Limited</strong><br />
-                                CIN: [Number]<br />
+                                <strong>Oxygen Bioinnovations</strong><br />
                                 Registered Office: [Address]<br />
                                 Email: info@oxygenbioinnovations.com<br />
                                 FSSAI License: [Number when issued]
@@ -75,7 +74,7 @@ const Terms = () => {
                             <h2>4. INTELLECTUAL PROPERTY</h2>
 
                             <h3>4.1 OUR INTELLECTUAL PROPERTY</h3>
-                            <p>All content on our websites is owned by or licensed to Oxygen Bioinnovations Private Limited, including:</p>
+                            <p>All content on our websites is owned by or licensed to Oxygen Bioinnovations, including:</p>
                             <ul>
                                 <li>'Oxygen Bioinnovations' company name</li>
                                 <li>'RIZE' brand name and all its sub-brands</li>
@@ -174,7 +173,7 @@ const Terms = () => {
                             <p>We recommend reviewing the privacy policy of any third-party site you visit.</p>
 
                             <h2>8. LIMITATION OF LIABILITY</h2>
-                            <p>To the maximum extent permitted by law, Oxygen Bioinnovations Private Limited shall not be liable for:</p>
+                            <p>To the maximum extent permitted by law, Oxygen Bioinnovations shall not be liable for:</p>
                             <ul>
                                 <li>Any indirect or consequential loss</li>
                                 <li>Loss of data or information</li>
