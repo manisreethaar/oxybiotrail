@@ -5,6 +5,7 @@ import { Menu, X, TestTube, Factory, Calendar, Users, Home, FlaskConical, Gradua
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useAuth } from "@/context/AuthContext";
+import { useWaitlistCount } from '@/hooks/useWaitlistCount';
 
 const navLinks = [
   { name: 'Our Science', path: '/problem', icon: FlaskConical },
@@ -17,6 +18,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { count } = useWaitlistCount(0);
 
   // Hooks
   const { user } = useAuth();
@@ -75,7 +77,7 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-4">
             {scrolled && (
               <span className="text-xs font-medium text-muted-foreground animate-fade-in">
-                <span className="text-primary font-bold">847</span> people waiting
+                <span className="text-primary font-bold">{count}</span> people waiting
               </span>
             )}
             <Button size="sm" asChild className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 shadow-md hover:shadow-lg transition-all">

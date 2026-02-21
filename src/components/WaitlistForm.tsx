@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { ArrowRight, CheckCircle2, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useWaitlistCount } from '@/hooks/useWaitlistCount';
 
 interface WaitlistFormProps {
     variant?: 'hero' | 'footer' | 'card';
@@ -14,6 +15,7 @@ export const WaitlistForm = ({ variant = 'hero' }: WaitlistFormProps) => {
     const [isLoading, setIsLoading] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const { toast } = useToast();
+    const { count, increment } = useWaitlistCount(0);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -26,6 +28,7 @@ export const WaitlistForm = ({ variant = 'hero' }: WaitlistFormProps) => {
 
         setIsLoading(false);
         setIsSuccess(true);
+        increment();
         toast({
             title: "Welcome to the Inner Circle! 🌿",
             description: "You've been added to our exclusive pre-launch waitlist.",
@@ -97,7 +100,7 @@ export const WaitlistForm = ({ variant = 'hero' }: WaitlistFormProps) => {
                         Get Early Access
                     </p>
                     <p className="text-xs text-muted-foreground">
-                        Joined by <span className="font-bold text-foreground">847</span> people from Bangalore, Mumbai, Delhi, Chennai, Hyderabad
+                        Joined by <span className="font-bold text-foreground">{count}</span> people from Bangalore, Mumbai, Delhi, Chennai, Hyderabad
                     </p>
                     <p className="text-[10px] text-slate-400">
                         No payment. No commitment. Cancel anytime.
