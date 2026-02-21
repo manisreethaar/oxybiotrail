@@ -62,7 +62,7 @@ const Problem = () => {
       <section className="section-padding bg-white dark:bg-slate-950">
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8 md:mb-12">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-6 md:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
                 India Has a Nutrition Crisis
               </h2>
@@ -72,7 +72,7 @@ const Problem = () => {
             </motion.div>
 
             {/* Deficiency Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-8 md:mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-6 md:mb-10">
               {[
                 { pct: '70-90%', label: 'Vitamin D Deficient', sub: 'Urban Indians', src: 'ICMR Task Force, 2022', color: 'text-red-500' },
                 { pct: '47%', label: 'B12 Deficient', sub: 'Total population', src: 'J. Nutritional Science', color: 'text-amber-500' },
@@ -134,7 +134,7 @@ const Problem = () => {
       <section className="section-padding bg-slate-50 dark:bg-slate-900/50">
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8 md:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
                 The Intention-Action Gap
               </h2>
@@ -189,7 +189,7 @@ const Problem = () => {
       <section className="section-padding bg-white dark:bg-slate-950">
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8 md:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
                 The Market Response Has Been Inadequate
               </h2>
@@ -288,13 +288,13 @@ const Problem = () => {
       <section className="section-padding bg-white dark:bg-slate-950">
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8 md:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">The Bioavailability Problem</h2>
               <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 max-w-2xl font-light leading-relaxed">Why the <em className="font-semibold text-slate-700 dark:text-slate-300">form</em> of a nutrient matters more than the dose.</p>
             </motion.div>
 
             {/* The Core Argument */}
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="grid md:grid-cols-2 gap-8 mb-16">
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="grid md:grid-cols-2 gap-8 mb-10">
               <div className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
                 <h3 className="font-display font-bold text-lg mb-4 text-slate-900 dark:text-white">The claim vs. the reality</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
@@ -410,7 +410,7 @@ const Problem = () => {
       <section className="section-padding bg-slate-50 dark:bg-slate-900/50">
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8 md:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">The Millet System</h2>
               <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 max-w-2xl font-light leading-relaxed">Ancient grain. Modern science.</p>
             </motion.div>
@@ -466,7 +466,7 @@ const Problem = () => {
       <section className="section-padding bg-white dark:bg-slate-950">
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8 md:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">The Mushroom Science</h2>
               <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 max-w-2xl font-light leading-relaxed">Why extraction method determines everything.</p>
             </motion.div>
@@ -559,7 +559,7 @@ const Problem = () => {
       <section className="section-padding bg-slate-50 dark:bg-slate-900/50">
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8 md:mb-10">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">References</h2>
               <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 max-w-2xl font-light leading-relaxed">
                 We cite our sources. Always. These are the studies that informed our formulation decisions. We encourage you to read them. Form your own conclusions.

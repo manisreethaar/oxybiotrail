@@ -482,14 +482,14 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════════════════
           SECTION 4: THE PROBLEM — "Do these people understand my problem?"
           ═══════════════════════════════════════════════════════════════ */}
-      <section className="section-padding bg-white dark:bg-slate-950 relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-white dark:bg-slate-950 relative overflow-hidden">
         <div className="container-width px-4">
           {/* Opening Statement */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto mb-10 md:mb-20"
+            className="text-center max-w-4xl mx-auto mb-8 md:mb-12"
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold tracking-tight leading-tight text-slate-900 dark:text-white mb-4">
               You are probably <br />
@@ -501,7 +501,7 @@ const Index = () => {
           </motion.div>
 
           {/* Statistics Block */}
-          <div className="grid md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-24 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-16 max-w-5xl mx-auto">
             {[
               { end: 73, suffix: '%', label: 'of urban Indians are Vitamin D deficient', source: 'ICMR National Nutrition Survey' },
               { end: 50, suffix: '%', label: 'of working professionals skip at least one meal per day', source: 'ASSOCHAM Health Survey' },
@@ -512,7 +512,7 @@ const Index = () => {
           </div>
 
           {/* Problem Cards */}
-          <div className="grid md:grid-cols-3 gap-5 md:gap-8 mb-10 md:mb-24 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-16 max-w-6xl mx-auto">
             {/* Card 1: Time Problem */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -589,14 +589,14 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════════════════
           SECTION 5: THE SOLUTION — "What exactly is this?"
           ═══════════════════════════════════════════════════════════════ */}
-      <section id="ingredients" className="section-padding bg-slate-50 dark:bg-slate-900/50 relative overflow-hidden">
+      <section id="ingredients" className="py-12 md:py-16 bg-slate-50 dark:bg-slate-900/50 relative overflow-hidden">
         <div className="container-width px-4">
           {/* Opening */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-10 md:mb-20"
+            className="text-center max-w-3xl mx-auto mb-8 md:mb-12"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
               Meet <span className="text-primary">Oxygen</span>
@@ -609,7 +609,7 @@ const Index = () => {
           </motion.div>
 
           {/* Three Formula Cards */}
-          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto mb-10 md:mb-16">
+          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto mb-8 md:mb-12">
             {/* CORE / VITALITY */}
             <FormulaCard
               name="Project VITALITY"
@@ -701,7 +701,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════════════════════════
           SECTION 6: THE SCIENCE — "Why should I believe this works?"
           ═══════════════════════════════════════════════════════════════ */}
-      <section className="section-padding bg-white dark:bg-slate-950 relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-white dark:bg-slate-950 relative overflow-hidden">
         <div className="container-width px-4">
 
           {/* Opening */}
@@ -709,7 +709,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-10 md:mb-24"
+            className="text-center max-w-3xl mx-auto mb-8 md:mb-12"
           >
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
               We show our work.

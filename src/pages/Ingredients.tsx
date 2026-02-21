@@ -15,7 +15,7 @@ const Ingredients = () => {
     return (
         <Layout>
             {/* Hero */}
-            <section className="pt-24 md:pt-32 pb-12 md:pb-16">
+            <section className="pt-24 md:pt-32 pb-8 md:pb-12">
                 <div className="container-width px-4 text-center">
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
                         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-6">
@@ -93,7 +93,7 @@ const Ingredients = () => {
             </section>
 
             {/* Bottom Note */}
-            <section className="pb-12 md:pb-20">
+            <section className="pb-8 md:pb-12">
                 <div className="container-width px-4">
                     <div className="max-w-3xl mx-auto text-center p-6 md:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
                         <Leaf size={32} className="text-primary mx-auto mb-4" />

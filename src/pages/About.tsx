@@ -28,10 +28,10 @@ const About = () => {
       </section>
 
       {/* ─── THE VISION — Full-height cinematic statement ─── */}
-      <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden bg-[#0f2419]">
+      <section className="min-h-[60vh] flex items-center justify-center relative overflow-hidden bg-[#0f2419]">
         {/* Subtle grain texture */}
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%270 0 256 256%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cfilter id=%27noise%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%270.8%27 numOctaves=%274%27 stitchTiles=%27stitch%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23noise)%27/%3E%3C/svg%3E")' }} />
-        <div className="container-width px-4 py-20 relative z-10">
+        <div className="container-width px-4 py-12 relative z-10">
           <div className="max-w-4xl mx-auto">
             <motion.span
               initial={{ opacity: 0 }}
@@ -115,7 +115,7 @@ const About = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-10"
             >
               <span className="text-sm md:text-base font-bold uppercase tracking-widest text-primary block mb-4">Our Mission</span>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white leading-tight tracking-tight mb-6">
@@ -128,7 +128,7 @@ const About = () => {
             </motion.div>
 
             {/* Mission Body (Option 2 — emotional) */}
-            <div className="max-w-3xl mx-auto space-y-6 mb-20 text-center">
+            <div className="max-w-3xl mx-auto space-y-6 mb-12 text-center">
               <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
                 className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed font-light"
               >
@@ -147,7 +147,7 @@ const About = () => {
             </div>
 
             {/* 3 Mission Pillars */}
-            <div className="grid md:grid-cols-3 gap-8 mb-32">
+            <div className="grid md:grid-cols-3 gap-6 mb-16">
               {[
                 {
                   title: '1. Product & Commercial Mission',
@@ -183,7 +183,7 @@ const About = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-10"
             >
               <span className="text-sm md:text-base font-bold uppercase tracking-widest text-primary block mb-4">Our Core Values</span>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white leading-tight tracking-tight mb-6">
