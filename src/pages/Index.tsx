@@ -409,9 +409,9 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section - The "What is this?" */}
-      <section className="relative overflow-hidden pt-8 pb-16 lg:pt-12 lg:pb-20">
+      <section className="relative overflow-hidden pb-12 lg:pb-20">
         <div className="container-width z-10 px-4">
-          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 lg:items-start pt-4 lg:pt-8">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 lg:items-start">
             {/* Left: Copy & Form */}
             <div className="text-center lg:text-left space-y-6 lg:space-y-8 w-full max-w-2xl mx-auto lg:mx-0 flex flex-col items-center lg:items-start">
               <div className="inline-flex flex-wrap justify-center items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
@@ -439,8 +439,8 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Right: Abstract Visuals */}
-            <div className="relative h-[250px] sm:h-[350px] w-full flex items-center justify-center mt-8 lg:mt-0 overflow-hidden">
+            {/* Right: Abstract Visuals — hidden on mobile, shown on sm+ */}
+            <div className="hidden sm:flex relative sm:h-[300px] lg:h-[400px] w-full items-center justify-center overflow-hidden">
               {/* Circle 1: Millet Gold */}
               <motion.div
                 animate={{ rotate: 360 }}
