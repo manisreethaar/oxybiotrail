@@ -93,25 +93,25 @@ export function Navbar() {
                       <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-border rounded-2xl">
                         <li className="row-span-3">
                           <div className="flex h-full w-full select-none flex-col justify-end rounded-xl bg-gradient-to-b from-emerald-500/10 to-emerald-500/5 p-6 border border-emerald-500/10">
-                            <Users className="h-6 w-6 text-emerald-500 mb-2" />
-                            <div className="mb-2 mt-4 text-lg font-display font-medium">
+                            <Users className="h-6 w-6 text-emerald-600 mb-2" />
+                            <div className="mb-2 mt-4 text-lg font-display font-bold text-slate-900 dark:text-white">
                               Who is Oxygen?
                             </div>
-                            <p className="text-sm leading-tight text-muted-foreground">
+                            <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                               Built by scientists who were frustrated with what the market had to offer.
                             </p>
                           </div>
                         </li>
                         <li>
-                          <Link to="/about/vision-mission" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                            <div className="text-sm font-medium leading-none">Vision & Mission</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground mt-1">Our goals and the future we're building towards.</p>
+                          <Link to="/about/vision-mission" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-all hover:bg-slate-100 dark:hover:bg-slate-800 focus:bg-slate-100 dark:focus:bg-slate-800">
+                            <div className="text-sm font-semibold text-slate-900 dark:text-white leading-none">Vision & Mission</div>
+                            <p className="line-clamp-2 text-sm leading-relaxed text-slate-500 dark:text-slate-400 mt-1.5">Our goals and the future we're building towards.</p>
                           </Link>
                         </li>
                         <li>
-                          <Link to="/about/founder-team" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                            <div className="text-sm font-medium leading-none">Founder & Team</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground mt-1">The origin hook and the people driving the science.</p>
+                          <Link to="/about/founder-team" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-all hover:bg-slate-100 dark:hover:bg-slate-800 focus:bg-slate-100 dark:focus:bg-slate-800">
+                            <div className="text-sm font-semibold text-slate-900 dark:text-white leading-none">Founder & Team</div>
+                            <p className="line-clamp-2 text-sm leading-relaxed text-slate-500 dark:text-slate-400 mt-1.5">The origin hook and the people driving the science.</p>
                           </Link>
                         </li>
                       </ul>
@@ -130,25 +130,25 @@ export function Navbar() {
                       <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-border rounded-2xl">
                         <li className="row-span-3">
                           <div className="flex h-full w-full select-none flex-col justify-end rounded-xl bg-gradient-to-b from-amber-500/10 to-amber-500/5 p-6 border border-amber-500/10">
-                            <FlaskConical className="h-6 w-6 text-amber-500 mb-2" />
-                            <div className="mb-2 mt-4 text-lg font-display font-medium">
+                            <FlaskConical className="h-6 w-6 text-amber-600 mb-2" />
+                            <div className="mb-2 mt-4 text-lg font-display font-bold text-slate-900 dark:text-white">
                               Evidence-Based
                             </div>
-                            <p className="text-sm leading-tight text-muted-foreground">
+                            <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                               We formulate with clinical precision and indigenous botanical wisdom.
                             </p>
                           </div>
                         </li>
                         <li>
-                          <Link to="/science/the-problem" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                            <div className="text-sm font-medium leading-none">The Problem</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground mt-1">Understand the nutritional breakdown in urban India.</p>
+                          <Link to="/science/the-problem" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-all hover:bg-slate-100 dark:hover:bg-slate-800 focus:bg-slate-100 dark:focus:bg-slate-800">
+                            <div className="text-sm font-semibold text-slate-900 dark:text-white leading-none">The Problem</div>
+                            <p className="line-clamp-2 text-sm leading-relaxed text-slate-500 dark:text-slate-400 mt-1.5">Understand the nutritional breakdown in urban India.</p>
                           </Link>
                         </li>
                         <li>
-                          <Link to="/science/ingredients" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                            <div className="text-sm font-medium leading-none">Ingredients Index</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground mt-1">Deep dive into every component of our formulations.</p>
+                          <Link to="/science/ingredients" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-all hover:bg-slate-100 dark:hover:bg-slate-800 focus:bg-slate-100 dark:focus:bg-slate-800">
+                            <div className="text-sm font-semibold text-slate-900 dark:text-white leading-none">Ingredients Index</div>
+                            <p className="line-clamp-2 text-sm leading-relaxed text-slate-500 dark:text-slate-400 mt-1.5">Deep dive into every component of our formulations.</p>
                           </Link>
                         </li>
                       </ul>
