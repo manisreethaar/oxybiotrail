@@ -36,7 +36,7 @@ const Careers = () => {
         const subject = `Internship Application - ${formData.name} (${formData.degree})`;
         const body = `Name: ${formData.name}%0D%0ACollege: ${formData.college}%0D%0ADegree: ${formData.degree} (${formData.year})%0D%0AArea of Interest: ${formData.interest}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
 
-        window.location.href = `mailto:oxygenbioinnovations@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:careers@oxygenbioinnovations.com?subject=${subject}&body=${body}`;
 
         toast({
             title: "Opening Email Client",
@@ -115,13 +115,13 @@ const Careers = () => {
 
                             <div className="bg-slate-50 dark:bg-slate-900/50 p-4 rounded-lg mb-4 text-center border border-slate-100 dark:border-slate-800">
                                 <p className="text-sm text-muted-foreground mb-1">Send your CV/Resume to:</p>
-                                <a href="mailto:oxygenbioinnovations@gmail.com" className="text-primary font-bold hover:underline">
-                                    oxygenbioinnovations@gmail.com
+                                <a href="mailto:careers@oxygenbioinnovations.com" className="text-primary font-bold hover:underline">
+                                    careers@oxygenbioinnovations.com
                                 </a>
                             </div>
 
                             <Button className="w-full" asChild>
-                                <a href="mailto:oxygenbioinnovations@gmail.com?subject=Application for Junior Researcher&body=Dear Hiring Team,%0D%0A%0D%0AI am writing to apply for the Junior Researcher position. Please find my CV attached...">
+                                <a href="mailto:careers@oxygenbioinnovations.com?subject=Application for Junior Researcher&body=Dear Hiring Team,%0D%0A%0D%0AI am writing to apply for the Junior Researcher position. Please find my CV attached...">
                                     Apply Now
                                 </a>
                             </Button>
