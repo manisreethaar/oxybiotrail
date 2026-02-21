@@ -244,8 +244,21 @@
     padding-bottom: var(--section-padding-y);
   }
 
+  /* ─── PAGE HERO ENTRY ────────────────────────────────────────────
+     Applied to the FIRST section of every page so the distance
+     from the navbar edge to the first badge/heading is identical
+     across all pages. Use this instead of arbitrary pt-* values.
+  ─────────────────────────────────────────────────────────────── */
+  .page-hero {
+    padding-top: var(--section-padding-y);
+    /* matches section-padding exactly */
+    padding-bottom: var(--section-padding-y);
+  }
+
   @media (max-width: 768px) {
-    .section-padding {
+
+    .section-padding,
+    .page-hero {
       --section-padding-y: 48px;
     }
   }
