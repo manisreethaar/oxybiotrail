@@ -136,10 +136,10 @@ const Blog = () => {
                         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-6">
                             <BookOpen size={12} /> Development Journal & Research
                         </span>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white">
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-[1.05] tracking-tighter">
                             The Oxygen <span className="text-primary">Blog</span>
                         </h1>
-                        <p className="text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed font-light">
                             Science deep-dives, ingredient breakdowns, and honest updates from the lab. Building India's first precision nutrition system — in public.
                         </p>
                     </motion.div>
@@ -175,7 +175,7 @@ const Blog = () => {
                                     </span>
                                     <span className="text-xs text-slate-400">{featuredPost.week}</span>
                                 </div>
-                                <h2 className="text-2xl md:text-3xl font-display font-bold mb-4 text-slate-900 dark:text-white group-hover:text-primary transition-colors leading-tight">
+                                <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 text-slate-900 dark:text-white group-hover:text-primary transition-colors leading-[1.1] tracking-tight">
                                     {featuredPost.title}
                                 </h2>
                                 <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
@@ -247,7 +247,7 @@ const Blog = () => {
                     className="container-width px-4 mt-24 text-center"
                 >
                     <div className="p-12 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
-                        <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 text-slate-900 dark:text-white">
+                        <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 text-slate-900 dark:text-white tracking-tight">
                             New article every week
                         </h3>
                         <p className="text-slate-500 dark:text-slate-400 mb-6 max-w-lg mx-auto">
@@ -310,7 +310,7 @@ const ArticleCard = ({ post, index }: { post: BlogPost; index: number }) => {
                     <span className="flex items-center gap-1"><Clock size={11} /> {post.readTime}</span>
                 </div>
 
-                <h3 className="text-lg font-display font-bold mb-3 text-slate-900 dark:text-white group-hover:text-primary transition-colors leading-snug">
+                <h3 className="text-lg md:text-xl font-display font-bold mb-3 text-slate-900 dark:text-white group-hover:text-primary transition-colors leading-snug tracking-tight">
                     {post.title}
                 </h3>
 
