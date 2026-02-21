@@ -114,7 +114,10 @@ const Careers = () => {
 
                             <div className="bg-slate-50 dark:bg-slate-900/50 p-4 rounded-lg mb-4 text-center border border-slate-100 dark:border-slate-800">
                                 <p className="text-sm text-muted-foreground mb-1">Send your CV/Resume to:</p>
-                                <a href="mailto:careers@oxygenbioinnovations.com" className="text-primary font-bold hover:underline">
+                                <a
+                                    href="mailto:careers@oxygenbioinnovations.com?subject=Application%20for%20Junior%20Researcher"
+                                    className="text-primary font-bold hover:underline cursor-pointer block"
+                                >
                                     careers@oxygenbioinnovations.com
                                 </a>
                             </div>
