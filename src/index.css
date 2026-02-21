@@ -6,11 +6,11 @@
 
 @layer base {
   :root {
+    /* ─── SHADCN/UI Theme Tokens ─── */
     /* Bio-Tech Light Mode Base */
     --background: 180 20% 99%;
     --foreground: 180 50% 10%;
 
-    /* Scientific Cleanliness */
     background-color: hsl(var(--background));
     /* Subtle grid pattern for technical feel */
     background-image:
@@ -18,7 +18,7 @@
       linear-gradient(to bottom, hsla(var(--primary) / 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
 
-    /* Cards - Frosted Glass effect */
+    /* Cards */
     --card: 0 0% 100%;
     --card-foreground: 180 50% 10%;
 
@@ -26,13 +26,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 180 50% 10%;
 
-    /* Primary: Deep Teal - Trust, Science, Nature */
-    /* #0f766e - Teal-700 equivalent roughly */
+    /* Primary: Deep Teal */
     --primary: 175 80% 30%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Soft Sage - Growth, Biology */
-    /* #ccfbf1 - Teal-100 equivalent */
+    /* Secondary: Soft Sage */
     --secondary: 170 60% 94%;
     --secondary-foreground: 175 80% 30%;
 
@@ -40,8 +38,7 @@
     --muted: 180 20% 96%;
     --muted-foreground: 180 20% 40%;
 
-    /* Accent: Biological Coral/Gold - Energy and Innovation */
-    /* #f59e0b - Amber-500 */
+    /* Accent: Amber */
     --accent: 35 90% 55%;
     --accent-foreground: 0 0% 100%;
 
@@ -53,13 +50,58 @@
     --border: 175 20% 90%;
     --input: 175 20% 90%;
     --ring: 175 80% 30%;
-
     --radius: 0.75rem;
-    /* Slightly more technical/sharp than 1rem */
+
+    /* ─── SPACING SYSTEM ─── */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 32px;
+    --space-lg: 48px;
+    --space-xl: 64px;
+    --space-2xl: 96px;
+
+    /* Section rhythm */
+    --section-padding-y: 64px;
+    /* desktop */
+    --section-gap: 40px;
+    /* between cards inside a section */
+
+    /* ─── TYPOGRAPHY SYSTEM ─── */
+    --text-xs: 0.75rem;
+    /* 12px */
+    --text-sm: 0.875rem;
+    /* 14px */
+    --text-base: 1rem;
+    /* 16px */
+    --text-md: 1.125rem;
+    /* 18px */
+    --text-lg: 1.25rem;
+    /* 20px */
+    --text-xl: 1.5rem;
+    /* 24px */
+    --text-2xl: 2rem;
+    /* 32px */
+    --text-3xl: 2.5rem;
+    /* 40px */
+    --text-4xl: 3.5rem;
+    /* 56px */
+
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-bold: 700;
+
+    /* Text colour — minimum contrast enforced */
+    --color-text-primary: #1a1a1a;
+    /* headings — WCAG AAA */
+    --color-text-secondary: #4a4a4a;
+    /* body text — WCAG AA */
+    --color-text-muted: #6b6b6b;
+    /* captions, labels — WCAG AA on white */
+    /* Nothing lighter than #6b6b6b for visible text on a light background */
   }
 
   .dark {
-    /* Dark Mode (Deep Ocean/Lab) */
+    /* Dark Mode */
     --background: 180 50% 5%;
     --foreground: 180 20% 98%;
     --card: 180 50% 8%;
@@ -67,7 +109,6 @@
     --popover: 180 50% 8%;
     --popover-foreground: 180 20% 98%;
     --primary: 175 60% 50%;
-    /* Lighter teal for dark mode */
     --primary-foreground: 180 50% 5%;
     --secondary: 175 30% 15%;
     --secondary-foreground: 180 20% 98%;
@@ -95,7 +136,9 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'DM Sans', sans-serif;
-    /* Subtle organic shapes in background */
+    font-size: var(--text-base);
+    font-weight: var(--weight-regular);
+    color: var(--color-text-secondary);
     background-image:
       radial-gradient(circle at 15% 50%, hsla(var(--primary) / 0.08) 0px, transparent 40%),
       radial-gradient(circle at 85% 30%, hsla(var(--accent) / 0.08) 0px, transparent 40%);
@@ -103,6 +146,7 @@
     background-size: 100% 100%;
   }
 
+  /* ─── HEADING SYSTEM ─── */
   h1,
   h2,
   h3,
@@ -110,36 +154,144 @@
   h5,
   h6 {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    @apply tracking-tight font-bold text-slate-900 dark:text-slate-100;
+    font-weight: var(--weight-bold);
+    color: var(--color-text-primary);
+    @apply tracking-tight;
+  }
+
+  h1 {
+    font-size: var(--text-4xl);
+  }
+
+  h2 {
+    font-size: var(--text-3xl);
+  }
+
+  h3 {
+    font-size: var(--text-xl);
+  }
+
+  h4 {
+    font-size: var(--text-lg);
+  }
+
+  /* Dark-mode headings stay light */
+  .dark h1,
+  .dark h2,
+  .dark h3,
+  .dark h4,
+  .dark h5,
+  .dark h6 {
+    color: #f1f5f9;
+    /* slate-100 */
+  }
+
+  /* ─── FONT-WEIGHT NORMALIZER ─────────────────────────────────────
+     Tailwind's `font-light` (300) is used widely across pages and
+     results in unreadable thin text at small sizes. This global rule
+     prevents any paragraph or span from rendering below weight-400.
+     Headings and intentional bold classes are unaffected.
+  ─────────────────────────────────────────────────────────────── */
+  p,
+  span,
+  li,
+  label,
+  caption,
+  small,
+  figcaption,
+  blockquote {
+    min-font-weight: 400;
+    /* non-standard — see below */
+  }
+
+  /* Real enforcement: override Tailwind's font-light on text elements */
+  .font-light {
+    font-weight: 400 !important;
+  }
+
+  p.font-light,
+  span.font-light,
+  li.font-light {
+    font-weight: 400 !important;
+  }
+
+  /* ─── MOBILE TYPOGRAPHY SCALE ─── */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: var(--text-3xl);
+    }
+
+    /* 40px on mobile */
+    h2 {
+      font-size: var(--text-2xl);
+    }
+
+    /* 32px on mobile */
+    h3 {
+      font-size: var(--text-xl);
+    }
+
+    /* 24px on mobile */
+    body {
+      font-size: var(--text-base);
+    }
+
+    /* never below 16px */
   }
 }
 
 @layer components {
+
+  /* ─── LAYOUT ─── */
   .container-width {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
+  /* ─── SECTION RHYTHM ─────────────────────────────────────────────
+     Uniform vertical spacing for every top-level page section.
+     Uses CSS custom properties so a single change adjusts the whole site.
+  ─────────────────────────────────────────────────────────────── */
+  .section-padding {
+    padding-top: var(--section-padding-y);
+    padding-bottom: var(--section-padding-y);
+  }
+
+  @media (max-width: 768px) {
+    .section-padding {
+      --section-padding-y: 48px;
+    }
+  }
+
+  /* ─── BUTTONS ─── */
   .btn-primary {
     @apply bg-primary text-primary-foreground font-medium px-6 py-3 rounded-lg hover:bg-primary/90 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 active:scale-95 flex items-center gap-2;
+    min-height: 44px;
+    /* WCAG tap target */
   }
 
   .btn-secondary {
     @apply bg-secondary text-secondary-foreground font-medium px-6 py-3 rounded-lg hover:bg-secondary/80 transition-all duration-300 flex items-center gap-2;
+    min-height: 44px;
   }
 
+  /* ─── CARDS ─── */
   .glass-card {
     @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border border-white/40 dark:border-slate-700 shadow-xl rounded-2xl transition-all duration-300 hover:shadow-2xl hover:border-primary/20;
   }
 
-  .section-padding {
-    @apply py-8 md:py-12 lg:py-16;
-  }
-
+  /* ─── TYPOGRAPHY HELPERS ─── */
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-teal-600 bg-clip-text text-transparent;
   }
 
   .tech-border {
     @apply border-b-2 border-primary/20;
+  }
+
+  /* Source / citation text — smallest permitted size */
+  .text-source {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    font-weight: var(--weight-medium);
   }
 }
