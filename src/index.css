@@ -192,19 +192,7 @@
      prevents any paragraph or span from rendering below weight-400.
      Headings and intentional bold classes are unaffected.
   ─────────────────────────────────────────────────────────────── */
-  p,
-  span,
-  li,
-  label,
-  caption,
-  small,
-  figcaption,
-  blockquote {
-    min-font-weight: 400;
-    /* non-standard — see below */
-  }
 
-  /* Real enforcement: override Tailwind's font-light on text elements */
   .font-light {
     font-weight: 400 !important;
   }
@@ -294,4 +282,36 @@
     color: var(--color-text-muted);
     font-weight: var(--weight-medium);
   }
+
+  /* Badge / micro-label — maps arbitrary text-[10px] to token */
+  .text-label {
+    font-size: var(--text-xs);
+    /* 12px — never below this */
+    font-weight: var(--weight-medium);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* ─── GLOBAL ARBITRARY-SIZE NORMALIZER ───────────────────────────
+     Tailwind's text-[10px] is used widely for badge/label elements.
+     Direct overrides floor all sub-12px text sizes to --text-xs (12px)
+     so nothing ever renders below the WCAG supporting-text minimum.
+  ─────────────────────────────────────────────────────────────── */
+
+  /* Direct overrides for the two common sub-12px sizes */
+  .text-\[10px\] {
+    font-size: var(--text-xs) !important;
+  }
+
+  /* 12px */
+  .text-\[11px\] {
+    font-size: var(--text-xs) !important;
+  }
+
+  /* 12px */
+  .text-\[13px\] {
+    font-size: var(--text-sm) !important;
+  }
+
+  /* 14px */
 }
