@@ -13,7 +13,7 @@ export function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground w-full">
       <Navbar />
-      <main key={location.pathname} className="flex-1 pt-16 animate-fade-in">
+      <main key={location.pathname} className="flex-1 pt-20 animate-fade-in">
         {children}
       </main>
       <Footer />
