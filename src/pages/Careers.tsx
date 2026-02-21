@@ -74,7 +74,7 @@ const Careers = () => {
                             <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                                 2 Vacancies
                             </div>
-                            <h3 className="text-xl font-bold mb-2">Junior Researcher (Bio/Food Tech)</h3>
+                            <h3 className="text-xl font-bold mb-2">Junior Research Associate/ Research Associate (Bio/Food Technology)</h3>
                             <div className="flex gap-4 text-sm text-muted-foreground mb-4">
                                 <span>Full Time</span>
                                 <span>•</span>
@@ -84,21 +84,25 @@ const Careers = () => {
                             </div>
 
                             <div className="space-y-4 mb-6">
-                                <p className="text-sm">We are seeking a <strong>Junior Researcher</strong> to join our R&D team at TBI. You will work on developing novel probiotic foods and bio-cosmetic formulations.</p>
+                                <p className="text-sm">We invite applications for the position of <strong>Junior Research Associate</strong> to join our Research & Development division. The selected candidate will contribute to the development of innovative probiotic food products, functional beverages, and bio-based cosmetic formulations. This role offers the opportunity to work in a structured R&D environment focused on scientific rigor, regulatory compliance, and product commercialization.</p>
 
                                 <h4 className="font-bold text-sm">Key Responsibilities:</h4>
                                 <ul className="text-sm space-y-2 list-disc pl-4 text-muted-foreground">
-                                    <li>Formulation of probiotic yogurts, drinks, and functional foods.</li>
-                                    <li>Development of variants for bio-fermented skincare serums.</li>
-                                    <li>Conducting shelf-life studies and sensory evaluation.</li>
-                                    <li>Documentation for patent filing and FSSAI/CDSCO compliance.</li>
+                                    <li>Formulation and development of probiotic foods, functional beverages, and nutraceutical products.</li>
+                                    <li>Development and optimization of bio-fermented cosmetic and skincare formulations.</li>
+                                    <li>Execution of laboratory-scale fermentation experiments and formulation trials.</li>
+                                    <li>Conducting shelf-life studies, stability analysis, and sensory evaluation as per standard protocols.</li>
+                                    <li>Preparation and maintenance of technical documentation, batch records, and regulatory submissions in compliance with FSSAI and CDSCO requirements.</li>
+                                    <li>Support pilot-scale production, validation studies, and product scale-up activities.</li>
+                                    <li>Assistance in intellectual property documentation and technical report preparation.</li>
                                 </ul>
 
-                                <h4 className="font-bold text-sm">Requirements:</h4>
+                                <h4 className="font-bold text-sm">Eligibility Criteria:</h4>
                                 <ul className="text-sm space-y-2 list-disc pl-4 text-muted-foreground">
-                                    <li>B.Tech / M.Sc in Food Technology, Biotechnology, or Cosmetic Science.</li>
-                                    <li>Knowledge of bacterial fermentation and emulsion chemistry.</li>
-                                    <li>Strong willingness to work in a dynamic Startup environment.</li>
+                                    <li>B.Tech / B. Sc. / M.Sc. in Food Technology, Biotechnology, Cosmetic Science, or a related discipline.</li>
+                                    <li>Foundational knowledge of microbial fermentation, food processing, and emulsion systems.</li>
+                                    <li>Strong analytical skills and attention to documentation standards.</li>
+                                    <li>Ability to work effectively in a collaborative and growth-oriented environment.</li>
                                 </ul>
 
                                 <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg border border-slate-100 dark:border-slate-700 space-y-2">
