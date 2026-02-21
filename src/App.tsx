@@ -4,11 +4,12 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import About from "./pages/About";
-import Problem from "./pages/Problem";
+import VisionMission from "./pages/about/VisionMission";
+import FounderTeam from "./pages/about/FounderTeam";
+import TheProblem from "./pages/science/TheProblem";
+import Ingredients from "./pages/science/Ingredients";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
-import Ingredients from "./pages/Ingredients";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
@@ -32,11 +33,12 @@ const App = () => (
             {/* Navbar is handled within each page's Layout component to avoid duplication */}
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/problem" element={<Problem />} />
+              <Route path="/about/vision-mission" element={<VisionMission />} />
+              <Route path="/about/founder-team" element={<FounderTeam />} />
+              <Route path="/science/the-problem" element={<TheProblem />} />
+              <Route path="/science/ingredients" element={<Ingredients />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:id" element={<BlogPost />} />
-              <Route path="/ingredients" element={<Ingredients />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy" element={<Privacy />} />
