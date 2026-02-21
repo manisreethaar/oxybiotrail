@@ -15,13 +15,13 @@ const Ingredients = () => {
     return (
         <Layout>
             {/* Hero */}
-            <section className="pt-32 pb-16">
+            <section className="pt-24 md:pt-32 pb-12 md:pb-16">
                 <div className="container-width px-4 text-center">
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
                         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-6">
                             <FlaskConical size={12} /> Full Transparency
                         </span>
-                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-[1.05] tracking-tighter">
+                        <h1 className="text-3xl md:text-4xl lg:text-6xl font-display font-bold mb-6 text-slate-900 dark:text-white leading-[1.05] tracking-tighter">
                             Every ingredient. <span className="text-primary">Every reason.</span>
                         </h1>
                         <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed font-light">
@@ -93,9 +93,9 @@ const Ingredients = () => {
             </section>
 
             {/* Bottom Note */}
-            <section className="pb-20">
+            <section className="pb-12 md:pb-20">
                 <div className="container-width px-4">
-                    <div className="max-w-3xl mx-auto text-center p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
+                    <div className="max-w-3xl mx-auto text-center p-6 md:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
                         <Leaf size={32} className="text-primary mx-auto mb-4" />
                         <h3 className="text-2xl md:text-3xl font-display font-bold mb-3 text-slate-900 dark:text-white tracking-tight">
                             Full Certificate of Analysis for every batch
@@ -126,7 +126,7 @@ const IngredientCard = ({ ingredient, index, isExpanded, onToggle }: {
             {/* Collapsed Header */}
             <button
                 onClick={onToggle}
-                className="w-full flex items-center gap-4 p-6 text-left"
+                className="w-full flex items-center gap-3 md:gap-4 p-4 md:p-6 text-left"
             >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                     <Leaf size={22} className="text-primary" />
@@ -143,8 +143,8 @@ const IngredientCard = ({ ingredient, index, isExpanded, onToggle }: {
                             </span>
                         ))}
                     </div>
-                    <p className="text-sm text-slate-500 dark:text-slate-400 italic">{ingredient.scientificName}</p>
-                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">{ingredient.tagline}</p>
+                    <p className="text-[13px] md:text-sm text-slate-500 dark:text-slate-400 italic mt-0.5">{ingredient.scientificName}</p>
+                    <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">{ingredient.tagline}</p>
                 </div>
                 <ChevronDown size={20} className={`text-slate-500 dark:text-slate-400 shrink-0 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
             </button>

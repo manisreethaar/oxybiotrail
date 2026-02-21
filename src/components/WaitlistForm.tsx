@@ -56,12 +56,12 @@ export const WaitlistForm = ({ variant = 'hero' }: WaitlistFormProps) => {
 
     return (
         <form onSubmit={handleSubmit} className={`relative max-w-lg w-full ${variant === 'hero' ? 'mx-auto' : ''}`}>
-            <div className="flex flex-col sm:flex-row gap-2">
+            <div className="flex flex-col md:flex-row gap-3 md:gap-2">
                 <Input
                     type="text"
                     placeholder="First Name"
                     required
-                    className={`h-12 rounded-full px-6 transition-all sm:w-1/3 ${variant === 'footer'
+                    className={`h-12 md:h-12 rounded-xl md:rounded-full px-6 transition-all w-full md:w-1/3 ${variant === 'footer'
                         ? 'bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20'
                         : 'bg-white border-slate-200 text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary/20 shadow-sm'
                         }`}
@@ -72,7 +72,7 @@ export const WaitlistForm = ({ variant = 'hero' }: WaitlistFormProps) => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className={`h-12 rounded-full px-6 transition-all sm:w-2/3 ${variant === 'footer'
+                    className={`h-12 md:h-12 rounded-xl md:rounded-full px-6 transition-all w-full md:w-2/3 ${variant === 'footer'
                         ? 'bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20'
                         : 'bg-white border-slate-200 text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary/20 shadow-sm'
                         }`}
@@ -80,9 +80,9 @@ export const WaitlistForm = ({ variant = 'hero' }: WaitlistFormProps) => {
                 <Button
                     type="submit"
                     disabled={isLoading}
-                    className={`h-12 rounded-full px-8 transition-all whitespace-nowrap ${variant === 'footer'
-                        ? 'bg-white text-primary hover:bg-white/90 w-full sm:w-auto mt-2 sm:mt-0'
-                        : 'bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20'
+                    className={`h-12 md:h-12 rounded-xl md:rounded-full px-8 transition-all whitespace-nowrap w-full md:w-auto ${variant === 'footer'
+                        ? 'bg-white text-primary hover:bg-white/90 w-full mt-2 md:mt-0'
+                        : 'bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20 mt-2 md:mt-0'
                         }`}
                 >
                     {isLoading ? (

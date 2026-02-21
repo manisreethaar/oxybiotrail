@@ -42,7 +42,7 @@ const Problem = () => {
   return (
     <Layout>
       {/* ═══ HERO ═══ */}
-      <section className="pt-32 pb-16">
+      <section className="pt-24 md:pt-32 pb-12 md:pb-16">
         <div className="container-width px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 mb-6">
@@ -62,7 +62,7 @@ const Problem = () => {
       <section className="section-padding bg-white dark:bg-slate-950">
         <div className="container-width px-4">
           <div className="max-w-5xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8 md:mb-12">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
                 India Has a Nutrition Crisis
               </h2>
@@ -72,7 +72,7 @@ const Problem = () => {
             </motion.div>
 
             {/* Deficiency Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-8 md:mb-12">
               {[
                 { pct: '70-90%', label: 'Vitamin D Deficient', sub: 'Urban Indians', src: 'ICMR Task Force, 2022', color: 'text-red-500' },
                 { pct: '47%', label: 'B12 Deficient', sub: 'Total population', src: 'J. Nutritional Science', color: 'text-amber-500' },
@@ -172,7 +172,7 @@ const Problem = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.15 }}
-                  className={`p-6 rounded-2xl bg-white dark:bg-slate-800/50 border-t-4 ${barrier.color} shadow-sm hover:shadow-md transition-shadow`}
+                  className={`p-5 md:p-6 rounded-2xl bg-white dark:bg-slate-800/50 border-t-4 ${barrier.color} shadow-sm hover:shadow-md transition-shadow`}
                 >
                   <span className="text-2xl font-display font-bold text-slate-200 dark:text-slate-700 block mb-3">{barrier.num}</span>
                   <h3 className="font-display font-bold text-lg text-slate-900 dark:text-white mb-3">{barrier.title}</h3>
@@ -228,7 +228,7 @@ const Problem = () => {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
+                  className="p-5 md:p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
                 >
                   <h3 className="text-lg font-display font-bold text-slate-900 dark:text-white mb-1">{cat.category}</h3>
                   <p className="text-xs text-slate-500 dark:text-slate-400 mb-4 italic pb-3 border-b border-slate-100 dark:border-slate-800">{cat.examples}</p>

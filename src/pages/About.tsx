@@ -7,7 +7,7 @@ const About = () => {
   return (
     <Layout>
       {/* ─── HERO ─── */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="pt-24 md:pt-32 pb-12 md:pb-16 relative overflow-hidden">
         <div className="container-width px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -37,7 +37,7 @@ const About = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-sm md:text-base font-bold uppercase tracking-widest text-emerald-400/80 block mb-8 text-center"
+              className="text-sm md:text-base font-bold uppercase tracking-widest text-emerald-400/80 block mb-8 text-left md:text-center"
             >
               Our Vision
             </motion.span>

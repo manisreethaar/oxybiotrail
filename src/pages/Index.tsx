@@ -30,10 +30,10 @@ const StatCard = ({ end, suffix, label, source, delay }: { end: number; suffix: 
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay }}
-      className="text-center p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
+      className="text-center p-6 md:p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex flex-col items-center justify-center"
     >
-      <span className="text-6xl md:text-7xl font-display font-bold text-primary">{count}{suffix}</span>
-      <p className="text-sm text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">{label}</p>
+      <span className="text-5xl md:text-7xl font-display font-bold text-primary">{count}{suffix}</span>
+      <p className="text-sm text-slate-600 dark:text-slate-300 mt-3 md:mt-4 leading-relaxed">{label}</p>
       <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-2 uppercase tracking-wider">Source: {source}</p>
     </motion.div>
   );
@@ -68,15 +68,15 @@ const FormulaCard = ({ name, badge, badgeColor, tagline, audience, benefits, ing
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay }}
-      className={`group relative flex flex-col p-8 rounded-3xl bg-white dark:bg-slate-800/50 border ${colors.border} hover:-translate-y-2 hover:shadow-2xl transition-all duration-300`}
+      className={`group relative flex flex-col p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-800/50 border ${colors.border} hover:-translate-y-2 hover:shadow-2xl transition-all duration-300`}
     >
       {/* Badge */}
-      <span className={`inline-block self-start text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full ${colors.bg} ${colors.text} mb-4`}>
+      <span className={`inline-block self-start text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full ${colors.bg} ${colors.text} mb-4`}>
         {badge}
       </span>
 
       {/* Name */}
-      <h3 className={`text-3xl font-display font-bold mb-2 ${colors.text}`}>{name}</h3>
+      <h3 className={`text-2xl sm:text-3xl font-display font-bold mb-2 ${colors.text}`}>{name}</h3>
 
       {/* Tagline */}
       <p className="text-sm text-slate-600 dark:text-slate-300 italic mb-4">{tagline}</p>
@@ -240,7 +240,7 @@ const WaitlistCTA = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 onSubmit={handleSubmit}
-                className="p-8 rounded-3xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 shadow-xl"
+                className="p-5 sm:p-8 rounded-3xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 shadow-xl"
               >
                 <div className="space-y-4 mb-6">
                   <div>
@@ -409,63 +409,63 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section - The "What is this?" */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-[100svh] lg:min-h-[90vh] flex flex-col justify-center overflow-hidden pt-24 pb-12 lg:pt-20 lg:pb-0">
         <div className="container-width z-10 px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
             {/* Left: Copy & Form */}
-            <div className="text-left space-y-8">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+            <div className="text-center lg:text-left space-y-6 lg:space-y-8 w-full max-w-2xl mx-auto lg:mx-0 flex flex-col items-center lg:items-start">
+              <div className="inline-flex flex-wrap justify-center items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
                 <span>🌱 Currently in Development</span>
-                <span>•</span>
-                <span>TBI Incubated</span>
-                <span>•</span>
-                <span>Clinical Study Designed</span>
+                <span className="hidden sm:inline">•</span>
+                <span className="hidden sm:inline">TBI Incubated</span>
+                <span className="hidden sm:inline">•</span>
+                <span className="hidden sm:inline">Clinical Study Designed</span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter font-display text-slate-900 dark:text-white leading-[1.05]">
-                Ancient Ingredients. <br />
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter font-display text-slate-900 dark:text-white leading-[1.1] lg:leading-[1.05]">
+                Ancient Ingredients. <br className="hidden sm:block" />
                 Modern Science. <br />
                 <span className="text-primary">No Compromise.</span>
               </h1>
 
-              <p className="text-base md:text-lg text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed font-light mt-6">
+              <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed font-light mt-4 lg:mt-6">
                 India is building its first precision nutrition system.
                 Built on Millet, Medicinal Mushrooms, and decades of scientific research.
                 Designed for ambitious Indians who deserve better than what currently exists.
               </p>
 
-              <div className="pt-4">
+              <div className="pt-2 lg:pt-4 w-full">
                 <WaitlistForm variant="hero" />
               </div>
             </div>
 
             {/* Right: Abstract Visuals */}
-            <div className="relative h-[500px] flex items-center justify-center">
+            <div className="relative h-[250px] sm:h-[350px] lg:h-[500px] w-full flex items-center justify-center mt-4 border-t lg:border-t-0 border-transparent">
               {/* Circle 1: Millet Gold */}
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
-                className="absolute w-64 h-64 border border-amber-500/30 rounded-full flex items-center justify-center backdrop-blur-md bg-amber-500/5 -translate-x-16 -translate-y-16"
+                className="absolute w-40 h-40 sm:w-48 sm:h-48 lg:w-64 lg:h-64 border border-amber-500/30 rounded-full flex items-center justify-center backdrop-blur-md bg-amber-500/5 -translate-x-8 -translate-y-8 lg:-translate-x-16 lg:-translate-y-16"
               >
-                <span className="font-display text-amber-600/70 font-bold tracking-widest text-xs uppercase transform -rotate-45">Millet Matrix</span>
+                <span className="font-display text-amber-600/70 font-bold tracking-widest text-[10px] sm:text-xs uppercase transform -rotate-45">Millet Matrix</span>
               </motion.div>
 
               {/* Circle 2: Jade Green */}
               <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
-                className="absolute w-64 h-64 border border-emerald-500/30 rounded-full flex items-center justify-center backdrop-blur-md bg-emerald-500/5 translate-x-16 translate-y-16"
+                className="absolute w-40 h-40 sm:w-48 sm:h-48 lg:w-64 lg:h-64 border border-emerald-500/30 rounded-full flex items-center justify-center backdrop-blur-md bg-emerald-500/5 translate-x-8 translate-y-8 lg:translate-x-16 lg:translate-y-16"
               >
-                <span className="font-display text-emerald-600/70 font-bold tracking-widest text-xs uppercase transform rotate-12">Bio-Actives</span>
+                <span className="font-display text-emerald-600/70 font-bold tracking-widest text-[10px] sm:text-xs uppercase transform rotate-12">Bio-Actives</span>
               </motion.div>
 
               {/* Circle 3: Burgundy */}
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 140, repeat: Infinity, ease: "linear" }}
-                className="absolute w-40 h-40 border border-rose-900/20 rounded-full flex items-center justify-center backdrop-blur-md bg-rose-900/5 translate-x-20 -translate-y-4"
+                className="absolute w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 border border-rose-900/20 rounded-full flex items-center justify-center backdrop-blur-md bg-rose-900/5 translate-x-12 -translate-y-2 lg:translate-x-20 lg:-translate-y-4"
               >
-                <span className="font-display text-rose-900/50 font-bold tracking-widest text-xs uppercase">Adaptogens</span>
+                <span className="font-display text-rose-900/50 font-bold tracking-widest text-[8px] sm:text-xs uppercase">Adaptogens</span>
               </motion.div>
             </div>
           </div>
@@ -489,7 +489,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto mb-16 md:mb-20"
+            className="text-center max-w-4xl mx-auto mb-10 md:mb-20"
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold tracking-tight leading-tight text-slate-900 dark:text-white mb-4">
               You are probably <br />
@@ -501,7 +501,7 @@ const Index = () => {
           </motion.div>
 
           {/* Statistics Block */}
-          <div className="grid md:grid-cols-3 gap-8 mb-24 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-8 mb-10 md:mb-24 max-w-5xl mx-auto">
             {[
               { end: 73, suffix: '%', label: 'of urban Indians are Vitamin D deficient', source: 'ICMR National Nutrition Survey' },
               { end: 50, suffix: '%', label: 'of working professionals skip at least one meal per day', source: 'ASSOCHAM Health Survey' },
@@ -512,14 +512,14 @@ const Index = () => {
           </div>
 
           {/* Problem Cards */}
-          <div className="grid md:grid-cols-3 gap-8 mb-24 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-5 md:gap-8 mb-10 md:mb-24 max-w-6xl mx-auto">
             {/* Card 1: Time Problem */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0 }}
-              className="group p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-amber-500/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
+              className="group p-6 md:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-amber-500/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
             >
               <div className="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
                 <Clock size={28} />
@@ -538,7 +538,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="group p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-red-500/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
+              className="group p-6 md:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-red-500/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
             >
               <div className="w-14 h-14 bg-red-100 dark:bg-red-900/30 text-red-600 rounded-2xl flex items-center justify-center mb-6">
                 <ShieldOff size={28} />
@@ -557,7 +557,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="group p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-blue-500/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
+              className="group p-6 md:p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-blue-500/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
             >
               <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
                 <Globe size={28} />
@@ -596,7 +596,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
+            className="text-center max-w-3xl mx-auto mb-10 md:mb-20"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
               Meet <span className="text-primary">Oxygen</span>
@@ -609,7 +609,7 @@ const Index = () => {
           </motion.div>
 
           {/* Three Formula Cards */}
-          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto mb-10 md:mb-16">
             {/* CORE / VITALITY */}
             <FormulaCard
               name="Project VITALITY"
@@ -670,7 +670,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto p-8 md:p-12 rounded-3xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-center"
+            className="max-w-4xl mx-auto p-6 md:p-12 rounded-2xl md:rounded-3xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-center"
           >
             <span className="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">+ Coming Soon</span>
             <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 text-slate-900 dark:text-white">
@@ -709,7 +709,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-16 md:mb-24"
+            className="text-center max-w-3xl mx-auto mb-10 md:mb-24"
           >
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
               We show our work.
@@ -721,7 +721,7 @@ const Index = () => {
           </motion.div>
 
           {/* Three Science Pillars */}
-          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-24">
+          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto mb-16 md:mb-24">
 
             {/* Pillar 1: Active Forms */}
             <motion.div
@@ -729,7 +729,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0 }}
-              className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
+              className="p-6 md:p-8 rounded-2xl md:rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
             >
               <div className="w-14 h-14 bg-amber-100 dark:bg-amber-900/30 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
                 <FlaskConical size={28} />
@@ -766,7 +766,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.15 }}
-              className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
+              className="p-6 md:p-8 rounded-2xl md:rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
             >
               <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">
                 <Microscope size={28} />
@@ -792,7 +792,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
+              className="p-6 md:p-8 rounded-2xl md:rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
             >
               <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
                 <FileCheck size={28} />
@@ -830,7 +830,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto mb-24"
+            className="max-w-3xl mx-auto mb-16 md:mb-24"
           >
             <h3 className="text-2xl font-display font-bold text-center mb-10 text-slate-900 dark:text-white">
               The absorption difference
@@ -907,7 +907,7 @@ const Index = () => {
           </motion.div>
 
           {/* Timeline */}
-          <div className="max-w-3xl mx-auto py-16 relative">
+          <div className="max-w-3xl mx-auto py-10 md:py-16 relative">
             {/* Vertical Line */}
             <motion.div
               initial={{ height: 0 }}

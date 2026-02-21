@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, TestTube, Factory, Calendar, Users, Home, FlaskConical, GraduationCap, Target, BookOpen, Leaf } from 'lucide-react';
+import { Menu, X, TestTube, Factory, Calendar, Users, Home, FlaskConical, GraduationCap, Target, BookOpen, Leaf, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useAuth } from "@/context/AuthContext";
@@ -12,6 +12,7 @@ const navLinks = [
   { name: 'Our Science', path: '/problem', icon: FlaskConical },
   { name: 'Ingredients', path: '/ingredients', icon: Leaf },
   { name: 'About Us', path: '/about', icon: Users },
+  { name: 'Careers', path: '/careers', icon: Briefcase },
   { name: 'Blog', path: '/blog', icon: BookOpen },
 ];
 
@@ -49,7 +50,7 @@ export function Navbar() {
               <span className="text-xl font-bold text-foreground tracking-tight leading-none uppercase">
                 OXYGEN
               </span>
-              <span className="text-[10px] tracking-widest text-muted-foreground font-medium mt-1">
+              <span className="text-[10px] sm:text-xs tracking-widest text-muted-foreground font-medium mt-1">
                 Ancient Ingredients. Modern Science.
               </span>
             </div>

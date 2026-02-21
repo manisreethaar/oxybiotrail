@@ -13,7 +13,7 @@
     /* Scientific Cleanliness */
     background-color: hsl(var(--background));
     /* Subtle grid pattern for technical feel */
-    background-image: 
+    background-image:
       linear-gradient(to right, hsla(var(--primary) / 0.05) 1px, transparent 1px),
       linear-gradient(to bottom, hsla(var(--primary) / 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
@@ -54,7 +54,8 @@
     --input: 175 20% 90%;
     --ring: 175 80% 30%;
 
-    --radius: 0.75rem; /* Slightly more technical/sharp than 1rem */
+    --radius: 0.75rem;
+    /* Slightly more technical/sharp than 1rem */
   }
 
   .dark {
@@ -65,7 +66,8 @@
     --card-foreground: 180 20% 98%;
     --popover: 180 50% 8%;
     --popover-foreground: 180 20% 98%;
-    --primary: 175 60% 50%; /* Lighter teal for dark mode */
+    --primary: 175 60% 50%;
+    /* Lighter teal for dark mode */
     --primary-foreground: 180 50% 5%;
     --secondary: 175 30% 15%;
     --secondary-foreground: 180 20% 98%;
@@ -91,9 +93,9 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
     font-family: 'DM Sans', sans-serif;
-     /* Subtle organic shapes in background */
+    /* Subtle organic shapes in background */
     background-image:
       radial-gradient(circle at 15% 50%, hsla(var(--primary) / 0.08) 0px, transparent 40%),
       radial-gradient(circle at 85% 30%, hsla(var(--accent) / 0.08) 0px, transparent 40%);
@@ -101,7 +103,12 @@
     background-size: 100% 100%;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     @apply tracking-tight font-bold text-slate-900 dark:text-slate-100;
   }
@@ -125,13 +132,13 @@
   }
 
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-12 md:py-20 lg:py-24;
   }
 
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-teal-600 bg-clip-text text-transparent;
   }
-  
+
   .tech-border {
     @apply border-b-2 border-primary/20;
   }
