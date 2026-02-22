@@ -10,6 +10,7 @@ export const config = {
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function handler(req: any, res: any) {
     // Enable CORS
     res.setHeader('Access-Control-Allow-Credentials', true);
@@ -64,6 +65,7 @@ export default async function handler(req: any, res: any) {
 
         console.log("Email sent successfully:", emailData);
         return res.status(200).json({ success: true, data: emailData });
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
         console.error("Serverless Function Error:", error);
         return res.status(500).json({ success: false, error: error.message || 'Internal Server Error', details: error });
