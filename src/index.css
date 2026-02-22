@@ -327,4 +327,156 @@
   }
 
   /* 14px */
+
+  /* ═══════════════════════════════════════════════════════════════
+     MOBILE POLISH & FIXES (Max Width 768px)
+     ═══════════════════════════════════════════════════════════════ */
+  @media (max-width: 768px) {
+
+    /* ISSUE 1: Kill huge blank gaps between sections caused by min-heights */
+    section,
+    .section,
+    [class*="section"] {
+      min-height: unset !important;
+      height: auto !important;
+    }
+
+    div[style*="height"] {
+      height: auto !important;
+      min-height: unset !important;
+    }
+
+    /* ISSUE 2: Enlarge hamburger toggle and menu items for touch targets */
+    .hamburger,
+    .menu-toggle,
+    .nav-toggle,
+    [class*="burger"],
+    [class*="menu-btn"],
+    [class*="nav-icon"],
+    header button,
+    nav button {
+      width: 44px !important;
+      height: 44px !important;
+      min-width: 44px !important;
+      min-height: 44px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      cursor: pointer !important;
+    }
+
+    .hamburger svg,
+    .menu-toggle svg,
+    [class*="burger"] svg,
+    nav button svg {
+      width: 28px !important;
+      height: 28px !important;
+    }
+
+    /* Mobile Nav Overlay Items */
+    .mobile-menu,
+    .nav-menu,
+    .mobile-nav,
+    [class*="mobile-menu"],
+    [class*="nav-drawer"],
+    [role="menu"],
+    [data-radix-popper-content-wrapper] {
+      padding: 16px 24px !important;
+    }
+
+    .mobile-menu a,
+    .nav-menu a,
+    .mobile-nav a,
+    [class*="mobile-menu"] a,
+    [class*="nav-drawer"] a,
+    nav a,
+    [role="menuitem"] {
+      font-size: 18px !important;
+      padding: 14px 0 !important;
+      display: block !important;
+      line-height: 1.4 !important;
+    }
+
+    .mobile-menu .nav-section-label,
+    [class*="nav-group"]>span,
+    [class*="nav-category"] {
+      font-size: 11px !important;
+      letter-spacing: 0.1em !important;
+      padding: 16px 0 6px 0 !important;
+      color: #9a9a9a !important;
+    }
+
+    /* ISSUE 3: Stack Founder / Profile cards vertically */
+    .founder-card,
+    [class*="founder"],
+    [class*="team-card"],
+    [class*="profile-card"] {
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+
+    .founder-card img,
+    [class*="founder"] img,
+    .founder-image,
+    [class*="founder-photo"] {
+      width: 120px !important;
+      height: 120px !important;
+      margin: 0 auto 16px auto !important;
+      border-radius: 12px !important;
+    }
+
+    .founder-card .content,
+    [class*="founder"]>div:last-child {
+      width: 100% !important;
+      padding: 0 !important;
+      text-align: left !important;
+    }
+
+    /* ISSUE 4: Global Mobile Top Clearance (Navbar overlap fix) */
+    .page-content,
+    main,
+    .main-content {
+      padding-top: 64px !important;
+      /* Navbar height */
+    }
+
+    section:first-of-type,
+    .hero-section,
+    [class*="hero"] {
+      margin-top: 0 !important;
+      padding-top: 40px !important;
+    }
+
+    /* ISSUE 5: Universal mobile stacking for grids and forms */
+    .cards-row,
+    .features-grid,
+    [class*="card-grid"],
+    [class*="cards-container"] {
+      flex-direction: column !important;
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+
+    .card,
+    [class*="-card"] {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+    }
+
+    form,
+    .form-row,
+    [class*="form-group"] {
+      flex-direction: column !important;
+      gap: 12px !important;
+    }
+
+    form input,
+    form button {
+      width: 100% !important;
+      min-height: 48px !important;
+      font-size: 16px !important;
+      /* Prevents iOS auto-zoom on focus */
+    }
+  }
 }
