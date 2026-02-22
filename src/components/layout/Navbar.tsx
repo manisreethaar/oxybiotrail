@@ -196,40 +196,54 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-white/20 animate-fade-in bg-white/95 backdrop-blur-2xl shadow-2xl absolute top-full left-0 right-0 border-b">
-            <div className="flex flex-col gap-1 px-4">
-              <Link to="/" onClick={() => setIsOpen(false)} className={cn("flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all", location.pathname === '/' ? "text-primary bg-primary/5" : "text-slate-600 hover:text-primary hover:bg-slate-50")}>
-                <Home size={18} /> Home
+          <div className="lg:hidden animate-fade-in bg-white/95 dark:bg-slate-950/95 backdrop-blur-3xl shadow-2xl fixed top-[73px] left-0 right-0 bottom-0 overflow-y-auto z-40">
+            <div className="flex flex-col">
+              
+              <Link to="/" onClick={() => setIsOpen(false)} className={cn("block w-full text-lg font-medium px-6 py-4 border-b border-slate-100 dark:border-slate-800 transition-colors", location.pathname === '/' ? "text-primary bg-primary/5" : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900/50")}>
+                <div className="flex items-center gap-3"><Home size={20} /> Home</div>
               </Link>
 
-              <div className="py-2 pl-4">
-                <p className="text-xs font-bold uppercase text-slate-400 mb-2">About Us</p>
-                <div className="flex flex-col gap-1 border-l-2 border-slate-100 dark:border-slate-800 ml-2 pl-4">
-                  <Link to="/about/vision-mission" onClick={() => setIsOpen(false)} className={cn("py-2 text-sm font-medium text-slate-600 hover:text-primary", location.pathname === '/about/vision-mission' && "text-primary font-bold")}>Vision & Mission</Link>
-                  <Link to="/about/founder-team" onClick={() => setIsOpen(false)} className={cn("py-2 text-sm font-medium text-slate-600 hover:text-primary", location.pathname === '/about/founder-team' && "text-primary font-bold")}>Founder & Team</Link>
+              {/* About Us Section */}
+              <div className="border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/20">
+                <p className="text-[13px] font-bold uppercase tracking-widest text-slate-500 px-6 pt-5 pb-2">About Us</p>
+                <div className="flex flex-col">
+                  <Link to="/about/vision-mission" onClick={() => setIsOpen(false)} className={cn("block w-full text-lg px-6 py-3.5 pl-10 transition-colors", location.pathname === '/about/vision-mission' ? "text-primary font-bold bg-primary/5 border-l-2 border-primary" : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900 border-l-2 border-transparent")}>
+                    Vision & Mission
+                  </Link>
+                  <Link to="/about/founder-team" onClick={() => setIsOpen(false)} className={cn("block w-full text-lg px-6 py-3.5 pl-10 transition-colors", location.pathname === '/about/founder-team' ? "text-primary font-bold bg-primary/5 border-l-2 border-primary" : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900 border-l-2 border-transparent")}>
+                    Founder & Team
+                  </Link>
                 </div>
               </div>
 
-              <div className="py-2 pl-4">
-                <p className="text-xs font-bold uppercase text-slate-400 mb-2">Our Science</p>
-                <div className="flex flex-col gap-1 border-l-2 border-slate-100 dark:border-slate-800 ml-2 pl-4">
-                  <Link to="/science/the-problem" onClick={() => setIsOpen(false)} className={cn("py-2 text-sm font-medium text-slate-600 hover:text-primary", location.pathname === '/science/the-problem' && "text-primary font-bold")}>The Problem</Link>
-                  <Link to="/science/ingredients" onClick={() => setIsOpen(false)} className={cn("py-2 text-sm font-medium text-slate-600 hover:text-primary", location.pathname === '/science/ingredients' && "text-primary font-bold")}>Ingredients Index</Link>
+              {/* Our Science Section */}
+              <div className="border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/20">
+                <p className="text-[13px] font-bold uppercase tracking-widest text-slate-500 px-6 pt-5 pb-2">Our Science</p>
+                <div className="flex flex-col">
+                  <Link to="/science/the-problem" onClick={() => setIsOpen(false)} className={cn("block w-full text-lg px-6 py-3.5 pl-10 transition-colors", location.pathname === '/science/the-problem' ? "text-primary font-bold bg-primary/5 border-l-2 border-primary" : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900 border-l-2 border-transparent")}>
+                    The Problem
+                  </Link>
+                  <Link to="/science/ingredients" onClick={() => setIsOpen(false)} className={cn("block w-full text-lg px-6 py-3.5 pl-10 transition-colors", location.pathname === '/science/ingredients' ? "text-primary font-bold bg-primary/5 border-l-2 border-primary" : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900 border-l-2 border-transparent")}>
+                    Ingredients Index
+                  </Link>
                 </div>
               </div>
 
-              <Link to="/careers" onClick={() => setIsOpen(false)} className={cn("flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all", location.pathname === '/careers' ? "text-primary bg-primary/5" : "text-slate-600 hover:text-primary hover:bg-slate-50")}>
-                <Briefcase size={18} /> Careers
+              <Link to="/careers" onClick={() => setIsOpen(false)} className={cn("block w-full text-lg font-medium px-6 py-4 border-b border-slate-100 dark:border-slate-800 transition-colors", location.pathname === '/careers' ? "text-primary bg-primary/5" : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900/50")}>
+                <div className="flex items-center gap-3"><Briefcase size={20} /> Careers</div>
               </Link>
-              <Link to="/blog" onClick={() => setIsOpen(false)} className={cn("flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all", location.pathname === '/blog' ? "text-primary bg-primary/5" : "text-slate-600 hover:text-primary hover:bg-slate-50")}>
-                <BookOpen size={18} /> Blog
+              
+              <Link to="/blog" onClick={() => setIsOpen(false)} className={cn("block w-full text-lg font-medium px-6 py-4 border-b border-slate-100 dark:border-slate-800 transition-colors", location.pathname === '/blog' ? "text-primary bg-primary/5" : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900/50")}>
+                <div className="flex items-center gap-3"><BookOpen size={20} /> Blog</div>
               </Link>
-              <div className="h-px bg-slate-100 my-2" />
-              <Button className="mt-2 bg-primary hover:bg-primary/90 text-white w-full shadow-md" asChild>
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  Contact Us
-                </Link>
-              </Button>
+
+              <div className="p-6 mt-4">
+                <Button className="w-full bg-primary hover:bg-primary/90 text-white min-h-[56px] text-lg rounded-xl shadow-lg" asChild>
+                  <Link to="/contact" onClick={() => setIsOpen(false)}>
+                    Contact Us
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         )}
